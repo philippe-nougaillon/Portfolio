@@ -1,5 +1,5 @@
 
-  <div class="card w-96 bg-base-100 shadow-xl">
+  <div class="card bg-base-100 shadow-xl">
     <figure><%= image_tag projet.thumbnail_image_path %></figure>
     <div class="card-body">
       <h2 class="card-title">
@@ -7,8 +7,9 @@
       </h2>
       <%= link_to projet.url, projet.url, target: "_blank" %>
       <div class="card-actions justify-end">
-        <div class="badge badge-outline">Fashion</div> 
-        <div class="badge badge-outline">Products</div>
+        <% projet.tag_list.each do |tag| %>
+          <div class="badge badge-outline"><%= tag %></div>
+        <% end %>
       </div>
     </div>
   </div>
