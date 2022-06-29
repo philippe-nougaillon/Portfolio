@@ -1,6 +1,9 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
+  daisyui: {
+    themes: ["light"],
+  },
   content: [
     './app/helpers/**/*.rb',
     './app/javascript/**/*.js',
@@ -17,5 +20,6 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
+    require("daisyui")
   ]
 }
