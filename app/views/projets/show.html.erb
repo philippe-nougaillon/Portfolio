@@ -1,10 +1,14 @@
-<div class="mx-auto md:w-2/3 w-full flex">
+<div class="mx-auto md:w-2/3 w-full">
   <div class="mx-auto">
     <% if notice.present? %>
       <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
     <% end %>
 
     <div id="<%= dom_id @projet %>">
+
+      <h1 class="text-center text-6xl font-bold">
+        <%= @projet.nom %>
+      </h1>
 
       <div class="carousel w-full">
         <div id="slide1" class="carousel-item relative w-full">
@@ -37,14 +41,11 @@
         </div>
       </div>
 
-      <p class="my-5">
-        <strong class="block font-medium mb-1">Nom:</strong>
-        <%= @projet.nom %>
+      <p>
+        <%= @projet.contenu %>
       </p>
-
-      <p class="my-5">
-        <strong class="block font-medium mb-1">Url:</strong>
-        <%= @projet.url %>
+      <p>
+        <%= link_to @projet.url, @projet.url, target: "_blank" %>
       </p>
     </div>
 
