@@ -1,5 +1,6 @@
 class ProjetsController < ApplicationController
   before_action :set_projet, only: %i[show edit update destroy]
+  before_action :authenticate_user!, except: %i[show]
 
   # GET /projets or /projets.json
   def index

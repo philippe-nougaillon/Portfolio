@@ -1,13 +1,14 @@
-<div class="card w-96 bg-base-100 shadow-xl">
-  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
-  <div class="card-body">
-    <h2 class="card-title">
-      <%= projet.nom %>
-    </h2>
-    <p><%= strip_tags(projet.url) %></p>
-    <div class="card-actions justify-end">
-      <div class="badge badge-outline">Fashion</div> 
-      <div class="badge badge-outline">Products</div>
+
+  <div class="card w-96 bg-base-100 shadow-xl">
+    <figure><%= image_tag projet.thumbnail_image_path %></figure>
+    <div class="card-body">
+      <h2 class="card-title">
+        <%= projet.nom.upcase %>
+      </h2>
+      <%= link_to projet.url, projet.url, target: "_blank" %>
+      <div class="card-actions justify-end">
+        <div class="badge badge-outline">Fashion</div> 
+        <div class="badge badge-outline">Products</div>
+      </div>
     </div>
   </div>
-</div>
