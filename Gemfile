@@ -68,3 +68,6 @@ group :development do
 end
 
 gem 'rspec-rails'
+
+# Flexible authentication solution for Rails with Warden.
+gem 'devise'
