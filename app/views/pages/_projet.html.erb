@@ -5,6 +5,9 @@
       <h2 class="card-title">
         <%= projet.nom.upcase %>
       </h2>
+      <h3>
+        <%= projet.contenu.truncate(200) if projet.contenu %>
+      </h3>
       <%= link_to projet.url, projet.url, target: "_blank" %>
       <div class="card-actions justify-end">
         <% projet.tag_list.each do |tag| %>
