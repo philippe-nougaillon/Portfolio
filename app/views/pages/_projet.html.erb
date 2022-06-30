@@ -1,18 +1,23 @@
 
   <div class="card bg-base-100 shadow-xl">
-    <figure><%= image_tag projet.thumbnail_image_path %></figure>
+    <figure class=""><%= image_tag projet.thumbnail_image_path %></figure>
     <div class="card-body">
-      <h2 class="card-title">
+      <h2 class="card-title text-primary">
         <%= projet.nom.upcase %>
       </h2>
-      <h3>
+      <h3 class="text-secondary">
         <%= projet.contenu.truncate(200) if projet.contenu %>
       </h3>
       <%= link_to projet.url, projet.url, target: "_blank" %>
-      <div class="card-actions justify-end">
-        <% projet.tag_list.each do |tag| %>
-          <div class="badge badge-outline"><%= tag %></div>
-        <% end %>
+      <div class="card-actions mt-3 flex justify-between">
+        <div>
+          <% projet.tag_list.each do |tag| %>
+            <div class="badge badge-outline badge-info"><%= tag %></div>
+          <% end %>
+        </div>
+        <div class="w-32">
+          <%= image_tag projet.logo_image_path if File.exist?("app/assets/images/" + projet.logo_image_path) %>
+        </div>
       </div>
     </div>
   </div>

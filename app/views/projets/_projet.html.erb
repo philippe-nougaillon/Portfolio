@@ -1,6 +1,7 @@
 <div id="<%= dom_id projet %>">
-  <p class="my-5">
+  <p class="my-5 text-primary">
     <%= projet.nom %>
+    (<%= projet.poids %>)
   </p>
 
   <% if action_name != "show" %>

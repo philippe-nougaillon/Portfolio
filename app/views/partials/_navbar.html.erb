@@ -17,6 +17,7 @@
     </ul>
   </div>
   <div class="navbar-end">
+    <%= render "partials/theme" %>
     <% if user_signed_in? %>
       <%= button_to destroy_user_session_path, method: :delete, class: 'btn btn-ghost btn-outline' do %>
         Déconnexion
