@@ -12,16 +12,27 @@
     <%= link_to 'Portfolio', root_path, class: 'btn btn-ghost normal-case text-xl' %>
   </div>
   <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal p-0">
-      <%= navbar_item 'projets', projets_path %>
-    </ul>
-  </div>
-  <div class="navbar-end">
-    <%= render "partials/theme" %>
     <% if user_signed_in? %>
-      <%= button_to destroy_user_session_path, method: :delete, class: 'btn btn-ghost btn-outline' do %>
-        Déconnexion
-      <% end %>
+      <ul class="menu menu-horizontal p-0">
+        <%= navbar_item 'projets', projets_path %>
+      </ul>
     <% end %>
+  </div>
+  <div class="navbar-end lg:mr-6">
+    <%= render "partials/theme" %>
+    <div class="dropdown dropdown-end">
+      <div tabindex="0" class="avatar offline placeholder cursor-pointer">
+        <div class="bg-primary-focus text-neutral-content rounded-full w-8">
+          <i class="fa-solid fa-user text-white"></i>
+        </div>
+      </div>
+      <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-60">
+        <li>
+          <%= link_to contact_path, class:"btn-ghost" do %>
+            <i class="fa-solid fa-comment-dots"></i> Nous contacter
+          <% end %>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

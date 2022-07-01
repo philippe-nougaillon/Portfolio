@@ -1,23 +1,99 @@
-
-  <div class="card bg-base-100 shadow-xl">
-    <figure class=""><%= image_tag projet.thumbnail_image_path %></figure>
-    <div class="card-body">
-      <h2 class="card-title text-primary">
-        <%= projet.nom.upcase %>
-      </h2>
-      <h3 class="text-secondary">
-        <%= projet.contenu.truncate(200) if projet.contenu %>
-      </h3>
-      <%= link_to projet.url, projet.url, target: "_blank" %>
-      <div class="card-actions mt-3 flex justify-between">
-        <div>
-          <% projet.tag_list.each do |tag| %>
-            <div class="badge badge-outline badge-info"><%= tag %></div>
-          <% end %>
-        </div>
-        <div class="w-32">
-          <%= image_tag projet.logo_image_path if File.exist?("app/assets/images/" + projet.logo_image_path) %>
+<!-- The button to open modal -->
+<label for="my-modal-4" class="link-primary mt-3">
+  <div class="mt-3">
+    <div class="card bg-base-100 shadow hover:shadow-xl duration-300">
+      <figure><%= image_tag projet.thumbnail_image_path %></figure>
+      <div class="card-body">
+        <h2 class="card-title text-primary">
+          <%= projet.nom.upcase %>
+        </h2>
+        <h3 class="text-secondary">
+          <%= projet.contenu.truncate(200) if projet.contenu %>
+        </h3>
+        <div class="card-actions mt-3 flex justify-between">
+          <div>
+            <% projet.tag_list.each do |tag| %>
+              <div class="badge badge-ghost"><%= tag %></div>
+            <% end %>
+          </div>
+          <div class="w-32">
+            <%= image_tag projet.logo_image_path if File.exist?("app/assets/images/" + projet.logo_image_path) %>
+          </div>
         </div>
       </div>
     </div>
   </div>
+</label>
+
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="my-modal-4" class="modal-toggle" />
+<label for="my-modal-4" class="modal cursor-pointer">
+  <label class="modal-box w-full max-w-max" for="">
+    <label for="my-modal-4" class="btn btn-primary btn-sm btn-circle absolute right-2 top-2">✕</label>
+    <div class="mx-auto md:w-2/3 w-full">
+      <div class="mx-auto">
+        <% if notice.present? %>
+          <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+        <% end %>
+
+        <div id="<%= dom_id projet %>">
+
+          <h1 class="text-center text-6xl font-bold text-primary">
+            <%= projet.nom %>
+          </h1>
+          <p>
+            <% projet.tag_list.each do |tag| %>
+              <div class="badge badge-outline"><%= tag %></div>
+            <% end %>
+          </p>
+
+          <div class="carousel w-full">
+            <div id="slide1" class="carousel-item relative w-full">
+              <img src="https://api.lorem.space/image/car?w=800&h=200&hash=8B7BCDC2" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide4" class="btn btn-circle">❮</a> 
+                <a href="#slide2" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <div id="slide2" class="carousel-item relative w-full">
+              <img src="https://api.lorem.space/image/car?w=800&h=200&hash=500B67FB" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide1" class="btn btn-circle">❮</a> 
+                <a href="#slide3" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <div id="slide3" class="carousel-item relative w-full">
+              <img src="https://api.lorem.space/image/car?w=800&h=200&hash=A89D0DE6" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide2" class="btn btn-circle">❮</a> 
+                <a href="#slide4" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <div id="slide4" class="carousel-item relative w-full">
+              <img src="https://api.lorem.space/image/car?w=800&h=200&hash=225E6693" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide3" class="btn btn-circle">❮</a> 
+                <a href="#slide1" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            <%= projet.contenu %>
+          </p>
+          <p>
+            <%= link_to projet.url, projet.url, target: "_blank" %>
+          </p>
+        </div>
+
+        <% if user_signed_in? %>
+          <%= link_to 'Edit this projet', edit_projet_path(projet), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+          <div class="inline-block ml-2">
+            <%= button_to 'Destroy this projet', projet_path(projet), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+          </div>
+          <%= link_to 'Back to projets', projets_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+        <% end %>
+      </div>
+    </div>
+  </label>
+</label>
