@@ -76,3 +76,6 @@ gem 'rubocop', require: false
 
 # A tagging plugin for Rails applications that allows for custom tagging along dynamic contexts.
 gem 'acts-as-taggable-on', '~> 9.0'
+
+# Rails 4/5 task to dump your data to db/seeds.rb
+gem 'seed_dump'
