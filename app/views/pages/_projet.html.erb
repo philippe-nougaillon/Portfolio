@@ -7,19 +7,16 @@
         <h2 class="card-title text-primary">
           <%= projet.nom.upcase %>
         </h2>
-        <h3 class="text-secondary">
-          <%= projet.contenu.truncate(200) if projet.contenu %>
-        </h3>
-        <div class="card-actions mt-3 flex justify-between">
+        <div class="card-actions flex justify-between">
           <div>
             <% projet.tag_list.each do |tag| %>
               <div class="badge badge-ghost"><%= tag %></div>
             <% end %>
           </div>
-          <div class="w-32">
-            <%= image_tag projet.logo_image_path if File.exist?("app/assets/images/" + projet.logo_image_path) %>
-          </div>
         </div>
+        <h3 class="text-secondary">
+          <%= projet.contenu.truncate(150) if projet.contenu %>
+        </h3>
       </div>
     </div>
   </div>
@@ -32,12 +29,9 @@
     <label for="my-modal-4" class="btn btn-primary btn-sm btn-circle absolute right-2 top-2">✕</label>
     <div class="mx-auto md:w-2/3 w-full">
       <div class="mx-auto">
-        <% if notice.present? %>
-          <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-        <% end %>
-
         <div id="<%= dom_id projet %>">
 
+          <%= image_tag projet.logo_image_path if File.exist?("app/assets/images/" + projet.logo_image_path) %>
           <h1 class="text-center text-6xl font-bold text-primary">
             <%= projet.nom %>
           </h1>

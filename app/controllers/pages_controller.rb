@@ -11,4 +11,7 @@ class PagesController < ApplicationController
     ContactMailer.submitted(message).deliver_now
     redirect_to root_path, notice: 'Votre message a bien été envoyé.'
   end
+
+  def a_propos
+  end
 end
