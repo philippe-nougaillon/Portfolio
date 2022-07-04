@@ -12,11 +12,11 @@
         <div class="card-actions flex justify-between">
           <div>
             <% projet.tag_list.each do |tag| %>
-              <div class="badge badge-ghost"><%= tag %></div>
+              <div class="badge badge-accent badge-outline"><%= tag %></div>
             <% end %>
           </div>
         </div>
-        <h3 class="text-secondary">
+        <h3 class="text-neutral">
           <%= projet.contenu.truncate(80) if projet.contenu %>
         </h3>
       </div>
@@ -43,7 +43,7 @@
 
           <p class="my-6">
             <% projet.tag_list.each do |tag| %>
-              <div class="badge badge-ghost"><%= tag %></div>
+              <div class="badge badge-accent badge-outline"><%= tag %></div>
             <% end %>
           </p>
 
@@ -52,7 +52,7 @@
           </p>
 
           <div class="columns-2 my-6">
-            <div class="text-primary">
+            <div class="text-secondary align-text-bottom">
               <%= link_to projet.url, projet.url, target: "_blank" %>
             </div>
 
