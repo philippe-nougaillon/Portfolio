@@ -26,10 +26,11 @@
 
 <!-- Put this part before </body> tag -->
 <input type="checkbox" id="my-modal-<%= projet.id %>" class="modal-toggle" />
-<label for="my-modal-<%= projet.id %>" class="modal cursor-pointer bg-slate">
+<label for="my-modal-<%= projet.id %>" class="modal cursor-pointer">
   <label class="modal-box max-w-max">
     <label for="my-modal-<%= projet.id %>" class="btn btn-primary btn-sm btn-circle absolute right-2 top-2">✕</label>
-    <div class="mx-auto lg:w-2/3 shadow-xl p-8">
+
+    <div class="card glass mx-auto lg:w-2/3 p-8 ">
       <div class="mx-auto">
         <div id="<%= dom_id projet %>">
 

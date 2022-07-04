@@ -11,15 +11,14 @@
     
     <%= link_to @sitename, root_path, class: 'btn btn-ghost normal-case text-xl' %>
   </div>
-  <div class="navbar-center hidden lg:flex">
+
+  <div class="navbar-end lg:mr-6">
     <ul class="menu menu-horizontal p-0">
       <%= navbar_item 'À propos', a_propos_path %>
       <% if user_signed_in? %>
         <%= navbar_item 'projets', projets_path %>
       <% end %>
     </ul>
-  </div>
-  <div class="navbar-end lg:mr-6">
     <%= render "partials/theme" %>
     <div class="dropdown dropdown-end">
       <div tabindex="0" class="avatar offline placeholder cursor-pointer">
