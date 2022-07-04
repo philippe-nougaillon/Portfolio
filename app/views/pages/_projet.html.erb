@@ -2,7 +2,9 @@
 <label for="my-modal-<%= projet.id %>" class="link-primary mt-3">
   <div class="mt-3">
     <div class="card bg-base-100 shadow hover:shadow-xl duration-300">
-      <figure><%= image_tag projet.thumbnail_image_path %></figure>
+      <figure>
+        <%= image_tag projet.thumbnail_image_path %>
+      </figure>
       <div class="card-body">
         <h2 class="card-title text-primary">
           <%= projet.nom.upcase %>
@@ -25,57 +27,35 @@
 <!-- Put this part before </body> tag -->
 <input type="checkbox" id="my-modal-<%= projet.id %>" class="modal-toggle" />
 <label for="my-modal-<%= projet.id %>" class="modal cursor-pointer">
-  <label class="modal-box w-full max-w-max" for="">
+  <label class="modal-box max-w-max" for="">
     <label for="my-modal-<%= projet.id %>" class="btn btn-primary btn-sm btn-circle absolute right-2 top-2">✕</label>
-    <div class="mx-auto md:w-2/3 w-full">
+    <div class="mx-auto md:w-2/3 shadow-xl">
       <div class="mx-auto">
         <div id="<%= dom_id projet %>">
 
-          <%= image_tag projet.logo_image_path if File.exist?("app/assets/images/" + projet.logo_image_path) %>
-          <h1 class="text-center text-6xl font-bold text-primary">
-            <%= projet.nom %>
+          <div class="w-16 md:w-32 lg:w-48">
+            <%= image_tag projet.logo_image_path if File.exist?("app/assets/images/" + projet.logo_image_path) %>
+          </div>
+          
+          <h1 class="text-center text-4xl font-bold text-primary">
+            <%= projet.nom.upcase %>
           </h1>
-          <p>
+
+          <div class="">
+            <%= image_tag projet.thumbnail_image_path %>
+          </div>
+
+          <p class="my-6">
             <% projet.tag_list.each do |tag| %>
-              <div class="badge badge-outline"><%= tag %></div>
+              <div class="badge badge-ghost"><%= tag %></div>
             <% end %>
           </p>
 
-          <div class="carousel w-full">
-            <div id="slide1" class="carousel-item relative w-full">
-              <img src="https://api.lorem.space/image/car?w=800&h=200&hash=8B7BCDC2" class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide4" class="btn btn-circle">❮</a> 
-                <a href="#slide2" class="btn btn-circle">❯</a>
-              </div>
-            </div> 
-            <div id="slide2" class="carousel-item relative w-full">
-              <img src="https://api.lorem.space/image/car?w=800&h=200&hash=500B67FB" class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide1" class="btn btn-circle">❮</a> 
-                <a href="#slide3" class="btn btn-circle">❯</a>
-              </div>
-            </div> 
-            <div id="slide3" class="carousel-item relative w-full">
-              <img src="https://api.lorem.space/image/car?w=800&h=200&hash=A89D0DE6" class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide2" class="btn btn-circle">❮</a> 
-                <a href="#slide4" class="btn btn-circle">❯</a>
-              </div>
-            </div> 
-            <div id="slide4" class="carousel-item relative w-full">
-              <img src="https://api.lorem.space/image/car?w=800&h=200&hash=225E6693" class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide3" class="btn btn-circle">❮</a> 
-                <a href="#slide1" class="btn btn-circle">❯</a>
-              </div>
-            </div>
-          </div>
-
-          <p>
+          <p class="my-6 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:text-slate-900 first-letter:mr-3 first-letter:float-left">
             <%= projet.contenu %>
           </p>
-          <p>
+
+          <p class="my-6">
             <%= link_to projet.url, projet.url, target: "_blank" %>
           </p>
         </div>
