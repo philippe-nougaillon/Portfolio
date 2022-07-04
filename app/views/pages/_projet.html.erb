@@ -17,7 +17,7 @@
           </div>
         </div>
         <h3 class="text-secondary">
-          <%= projet.contenu.truncate(150) if projet.contenu %>
+          <%= projet.contenu.truncate(80) if projet.contenu %>
         </h3>
       </div>
     </div>
@@ -26,24 +26,20 @@
 
 <!-- Put this part before </body> tag -->
 <input type="checkbox" id="my-modal-<%= projet.id %>" class="modal-toggle" />
-<label for="my-modal-<%= projet.id %>" class="modal cursor-pointer">
-  <label class="modal-box max-w-max" for="">
+<label for="my-modal-<%= projet.id %>" class="modal cursor-pointer bg-slate">
+  <label class="modal-box max-w-max">
     <label for="my-modal-<%= projet.id %>" class="btn btn-primary btn-sm btn-circle absolute right-2 top-2">✕</label>
-    <div class="mx-auto md:w-2/3 shadow-xl">
+    <div class="mx-auto lg:w-2/3 shadow-xl p-8">
       <div class="mx-auto">
         <div id="<%= dom_id projet %>">
 
-          <div class="w-16 md:w-32 lg:w-48">
-            <%= image_tag projet.logo_image_path if File.exist?("app/assets/images/" + projet.logo_image_path) %>
-          </div>
-          
-          <h1 class="text-center text-4xl font-bold text-primary">
-            <%= projet.nom.upcase %>
-          </h1>
-
-          <div class="">
+          <div class="shadow">
             <%= image_tag projet.thumbnail_image_path %>
           </div>
+          
+          <h1 class="my-6 text-4xl font-bold text-primary">
+            <%= projet.nom.upcase %>
+          </h1>
 
           <p class="my-6">
             <% projet.tag_list.each do |tag| %>
@@ -55,9 +51,16 @@
             <%= projet.contenu %>
           </p>
 
-          <p class="my-6">
-            <%= link_to projet.url, projet.url, target: "_blank" %>
-          </p>
+          <div class="columns-2 my-6">
+            <div class="text-primary">
+              <%= link_to projet.url, projet.url, target: "_blank" %>
+            </div>
+
+            <div class="w-16 md:w-24 lg:w-32 float-right">
+              <%= image_tag projet.logo_image_path if File.exist?("app/assets/images/" + projet.logo_image_path) %>
+            </div>
+          </div>
+
         </div>
 
         <% if user_signed_in? %>
