@@ -15,6 +15,7 @@
   <div class="navbar-end lg:mr-6">
     <ul class="menu menu-horizontal p-0">
       <%= navbar_item 'À propos', a_propos_path %>
+      <%= navbar_item 'Contact', contact_path %>
       <% if user_signed_in? %>
         <%= navbar_item 'projets', projets_path %>
       <% end %>

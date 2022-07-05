@@ -6,7 +6,7 @@ class PagesController < ApplicationController
     else
       @projets = Projet.all
     end
-    @tags = Projet.tag_counts_on(:tags).sort
+    @tags = Projet.tag_counts_on(:tags)
   end
 
   def contact

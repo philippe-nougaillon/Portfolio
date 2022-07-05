@@ -17,7 +17,7 @@
           </div>
         </div>
         <p class="my-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
-          <%= projet.contenu %>
+          <%= truncate(projet.contenu, length: 100) %>
         </p>
       </div>
     </div>
