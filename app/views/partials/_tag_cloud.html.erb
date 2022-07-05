@@ -1,11 +1,10 @@
-<div class="mx-auto max-w-max p-8">
+<div class="mx-auto max-w-max">
     <div class="">
         <% tag_cloud(@tags, %w(badge-xs badge-sm badge-md badge-lg)) do |tag, css_class| %>
             <span class="inline-block align-bottom badge 
-                        <%= params[:tag] == tag.name ? 'badge-primary' : 'badge-secondary' %> 
+                        <%= params[:tag] == tag.name ? 'badge-primary badge-lg' : 'badge-secondary' %> 
                         <%= css_class %>
-                        "
-            >
+                        hover:badge-lg">
                 <%= link_to tag.name, root_path(tag: tag.name) %>
             </span>
         <% end %>
