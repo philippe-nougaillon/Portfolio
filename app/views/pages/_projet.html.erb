@@ -11,7 +11,7 @@
         </h2>
         <div class="card-actions flex justify-between">
           <div>
-            <% projet.tag_list.each do |tag| %>
+            <% projet.tags.each do |tag| %>
               <div class="badge badge-accent badge-outline"><%= tag %></div>
             <% end %>
           </div>
@@ -43,7 +43,7 @@
           </h1>
 
           <p class="my-6">
-            <% projet.tag_list.each do |tag| %>
+            <% projet.tags.each do |tag| %>
               <div class="badge badge-accent badge-outline"><%= tag %></div>
             <% end %>
           </p>

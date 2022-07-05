@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
     @projets = Projet.all
+    @tags = @projets.tag_counts_on(:tags).sort
   end
 
   def contact
