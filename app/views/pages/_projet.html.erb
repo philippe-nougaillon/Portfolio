@@ -1,7 +1,7 @@
 <!-- The button to open modal -->
 <label for="my-modal-<%= projet.id %>" class="link-primary mt-3">
   <div class="mt-3">
-    <div class="card glass shadow hover:shadow-xl duration-300">
+    <div class="card glass shadow hover:bg-neutral duration-300">
       <figure>
         <%= image_tag projet.thumbnail_image_path %>
       </figure>
@@ -16,9 +16,9 @@
             <% end %>
           </div>
         </div>
-        <h3 class="">
+        <p class="text-zinc-300">
           <%= projet.contenu.truncate(80) if projet.contenu %>
-        </h3>
+        </p>
       </div>
     </div>
   </div>
@@ -30,7 +30,7 @@
   <label class="modal-box max-w-max">
     <label for="my-modal-<%= projet.id %>" class="btn btn-primary btn-sm btn-circle absolute right-2 top-2">✕</label>
 
-    <div class="card glass mx-auto lg:w-2/3 p-8 ">
+    <div class="card glass mx-auto lg:w-4/5 p-8 ">
       <div class="mx-auto">
         <div id="<%= dom_id projet %>">
 
@@ -57,7 +57,7 @@
               <%= link_to projet.url, projet.url, target: "_blank" %>
             </div>
 
-            <div class="p-3 w-16 md:w-24 lg:w-32 float-right bg-slate-600 glass">
+            <div class="p-3 w-16 md:w-24 lg:w-32 float-right bg-neutral-50 hover:bg-white glass">
               <%= image_tag projet.logo_image_path if File.exist?("app/assets/images/" + projet.logo_image_path) %>
             </div>
           </div>
