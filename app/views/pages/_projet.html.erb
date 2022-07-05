@@ -6,18 +6,18 @@
         <%= image_tag projet.thumbnail_image_path %>
       </figure>
       <div class="card-body">
-        <h2 class="card-title text-primary">
+        <h2 class="card-title text-primary underline underline-offset-8">
           <%= projet.nom.upcase %>
         </h2>
-        <div class="card-actions flex justify-between">
+        <div class="card-actions flex justify-between mt-4">
           <div>
             <% projet.tags.each do |tag| %>
               <div class="badge badge-accent badge-outline"><%= tag %></div>
             <% end %>
           </div>
         </div>
-        <p class="text-zinc-300">
-          <%= projet.contenu.truncate(80) if projet.contenu %>
+        <p class="my-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
+          <%= projet.contenu %>
         </p>
       </div>
     </div>
@@ -39,7 +39,9 @@
           </div>
           
           <h1 class="my-6 text-4xl font-bold text-primary">
-            <%= projet.nom.upcase %>
+            <span class="underline underline-offset-8">
+              <%= projet.nom.upcase %>
+            </span>
           </h1>
 
           <p class="my-6">
