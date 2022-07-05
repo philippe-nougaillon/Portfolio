@@ -1,7 +1,12 @@
 class PagesController < ApplicationController
+  
   def home
-    @projets = Projet.all
-    @tags = @projets.tag_counts_on(:tags).sort
+    unless params[:tag].blank?
+      @projets = Projet.tagged_with(params[:tag])
+    else
+      @projets = Projet.all
+    end
+    @tags = Projet.tag_counts_on(:tags).sort
   end
 
   def contact
@@ -15,4 +20,5 @@ class PagesController < ApplicationController
 
   def a_propos
   end
+  
 end

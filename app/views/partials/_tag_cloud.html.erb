@@ -2,7 +2,7 @@
     <div class="">
         <% tag_cloud(@tags, %w(badge-xs badge-sm badge-md badge-lg)) do |tag, css_class| %>
             <span class="inline-block align-bottom badge badge-secondary <%= css_class %>">
-                <%= tag.name %>
+                <%= link_to tag.name, root_path(tag: tag.name) %>
             </span>
         <% end %>
     </div>
