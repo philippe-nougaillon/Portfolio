@@ -12,12 +12,12 @@ Projet.create!([
     Comprend : la gestion des adhésions, des cotisations, des contacts, des actions, et des ressources documentaires. 
     Un portail réservé aux membres du RNMA permet la consultations d'informations ciblées et la discussion entre membres via un 'mini réseau social' interne. ",
     poids: 90, 
-    tag_list: "Stimulus, Bulma, Rails 6"},
+    tag_list: "Stimulus, JS, Bulma, Rails 6"},
   {nom: "INNOSERV", 
     url: "https://innoserv-project.herokuapp.com/", 
     contenu: "INNOSERV est un projet développant un programme de recherche à l'échelle de l'UE pour évaluer l'innovation dans le domaine des services sociaux (en particulier pour les services de santé, d'éducation et d'aide sociale). Cela aidera à définir les futures activités de recherche.", 
     poids: 80, 
-    tag_list: "Stimulus, Bootstrap, Rails 6"},
+    tag_list: "JS, Bootstrap, Rails 6"},
   {nom: "PLANNING IAE-PARIS", 
     url: "https://planning-iae.herokuapp.com/", 
     contenu: "Application de gestion de Planning de l'IAE Paris - Sorbonne Business School - Université Paris 1 Panthéon-Sorbonne. Application web de planification de cours. Collaborative, flexible et simple d'utilisation.", 
@@ -37,7 +37,7 @@ Projet.create!([
     url: "https://prestofacto.philnoug.com/", 
     contenu: "Application libre de facturation de services journaliers. PrestoFacto aide les petites organisations dans la gestion et la facturation de leurs prestations journalières (Repas, garderie, péri-scolaire).", 
     poids: 40, 
-    tag_list: "Stimulus, Bulma, Rails 6"},
+    tag_list: "Bulma, Rails 6"},
   {nom: "Affichage-Planning", 
     url: "https://tableau-affichage-horaires-iae.herokuapp.com/", 
     contenu: "Tableau d'affichage dynamique des Horaires de Cours, optimisé pour défilement sur grand écran.", 
@@ -45,7 +45,7 @@ Projet.create!([
     tag_list: "React, Rails 6, React on Rails"},  
   {nom: "Portfolio", 
     url: "http://127.0.0.1:3000/", 
-    contenu: "C'est le portfolio de nos projets de l'année, et il en manque !", 
+    contenu: "C'est le portfolio de l'essentiel de nos projets de l'année, mais il en manque encore quelques-un !", 
     poids: 20, 
     tag_list: "Rails 7, DaisyUI, TailwindCSS" }
 ])
