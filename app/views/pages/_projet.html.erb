@@ -17,7 +17,7 @@
           </div>
         </div>
         <p class="my-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
-          <%= truncate(projet.contenu, length: 100) %>
+          <%= truncate(projet.contenu, length: 90) %>
         </p>
       </div>
     </div>
@@ -30,27 +30,28 @@
   <label class="modal-box max-w-max">
     <label for="my-modal-<%= projet.id %>" class="btn btn-primary btn-sm btn-circle absolute right-2 top-2">✕</label>
 
-    <div class="card shadow mx-auto lg:w-2/3 p-4">
+    <div class="card shadow mx-auto lg:w-4/5 p-4">
       <div class="mx-auto">
         <div id="<%= dom_id projet %>">
 
-          <div class="">
-            <%= image_tag projet.thumbnail_image_path, class: "rounded w-2/3" %>
+          <div class="flex">
+            <%= image_tag projet.thumbnail_image_path, class: "rounded w-1/2" %>
+            <%= image_tag projet.thumbnail_image_path, class: "rounded w-1/2" %>
           </div>
           
-          <h1 class="my-6 text-4xl font-bold text-primary">
+          <h1 class="my-8 text-4xl font-bold text-primary">
             <span class="underline underline-offset-8">
               <%= projet.nom.upcase %>
             </span>
           </h1>
 
-          <p class="my-6">
+          <p class="my-8">
             <% projet.tags.each do |tag| %>
               <div class="badge badge-accent badge-outline"><%= tag %></div>
             <% end %>
           </p>
 
-          <p class="my-6 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
+          <p class="my-8 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
             <%= projet.contenu %>
           </p>
           <br>
