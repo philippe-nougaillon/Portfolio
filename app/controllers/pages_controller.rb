@@ -1,12 +1,19 @@
 class PagesController < ApplicationController
   
   def home
-    unless params[:tag].blank?
-      @projets = Projet.tagged_with(params[:tag])
-    else
-      @projets = Projet.all
+    @projets = Projet.all
+
+    unless params[:tag].blank? 
+      if params[:tag] != session[:tag]
+        @projets = Projet.tagged_with(params[:tag])
+        session[:tag] = params[:tag]
+      else
+        session[:tag] = params[:tag] = nil
+      end
     end
+
     @tags = Projet.tag_counts_on(:tags)
+
   end
 
   def contact

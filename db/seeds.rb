@@ -1,7 +1,8 @@
 Projet.create!([
   {nom: "AEMMS", 
     url: "https://aemms-v3.herokuapp.com/", 
-    contenu: "Système de management de la qualité pour les entreprises de soudage par aluminothermie. Conception, développement et mise en œuvre d'une application Web et mobile sur tablettes Windows (C#/Winform/Ruby on Rails/JSON API).
+    contenu: "Système de management de la qualité pour les entreprises de soudage par aluminothermie. 
+    Conception, développement et mise en œuvre d'une application Web et mobile sur tablettes Windows (C#/Winform/Ruby on Rails/JSON API).
     Le système a pour objet de s’assurer que les soudures aluminothermiques réalisées sur les voies, dont la SNCF a la responsabilité de la maintenance, satisfont en tous points aux exigences spécifiées par à la Norme européenne EN 14730-2. cf “Cahier des prescriptions communes applicables aux marchés de travaux de voie.
     Application déployée chez plusieurs prestataires de la SNCF (ETF, LSF, Colas Rail, SOTRAMEST, ...)", 
     poids: 100, 
