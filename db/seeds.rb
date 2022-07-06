@@ -40,7 +40,7 @@ Projet.create!([
     tag_list: "Stimulus, Bulma, Rails 6"},
   {nom: "Affichage-Planning", 
     url: "https://tableau-affichage-horaires-iae.herokuapp.com/", 
-    contenu: "Tableau d'Affichage des Horaires de Cours.", 
+    contenu: "Tableau d'affichage dynamique des Horaires de Cours, optimisé pour défilement sur grand écran.", 
     poids: 30, 
     tag_list: "React, Rails 6, React on Rails"},  
   {nom: "Portfolio", 
