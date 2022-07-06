@@ -25,7 +25,7 @@ Projet.create!([
     tag_list: "Stimulus, Bootstrap, Rails 6"},
   {nom: "Disturbances", 
     url: "https://disturbances.herokuapp.com/", 
-    contenu: "Outil de collecte et d'analyse des perturbations SNCF-TER Grand Est.", 
+    contenu: "Outil de collecte et d'analyse des perturbations du traffic TER Grand Est, à l'usage de la FNAUT-Est.", 
     poids: 60, 
     tag_list: "Rails 7, DaisyUI, TailwindCSS" },
   {nom: "LTSF pro", 
