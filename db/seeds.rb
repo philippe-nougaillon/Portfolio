@@ -43,10 +43,5 @@ Projet.create!([
     url: "http://127.0.0.1:3000/", 
     contenu: "C'est le portfolio de nos projets de l'année, et il en manque !", 
     poids: 20, 
-    tag_list: "Rails 7, DaisyUI, TailwindCSS" },
-  {nom: "AEMMS-MOBILE", 
-    url: "https://aemms-v3.herokuapp.com/about", 
-    contenu: "Nouvelle application mobile d'AEMMS, à l'usage des opérateurs de terrain.",
-    poids: 10, 
-    tag_list: "Android, Xamarin"}
-  ])
+    tag_list: "Rails 7, DaisyUI, TailwindCSS" }
+])

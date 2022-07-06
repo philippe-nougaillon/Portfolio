@@ -30,12 +30,12 @@
   <label class="modal-box max-w-max">
     <label for="my-modal-<%= projet.id %>" class="btn btn-primary btn-sm btn-circle absolute right-2 top-2">✕</label>
 
-    <div class="card glass mx-auto lg:w-4/5 p-8 ">
+    <div class="card shadow mx-auto lg:w-2/3 p-4">
       <div class="mx-auto">
         <div id="<%= dom_id projet %>">
 
           <div class="">
-            <%= image_tag projet.thumbnail_image_path, class: "rounded" %>
+            <%= image_tag projet.thumbnail_image_path, class: "rounded w-2/3" %>
           </div>
           
           <h1 class="my-6 text-4xl font-bold text-primary">
@@ -53,13 +53,15 @@
           <p class="my-6 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
             <%= projet.contenu %>
           </p>
+          <br>
 
-          <div class="columns-2 my-6">
-            <div class="text-secondary align-text-bottom">
+          <div class="columns-2">
+            <div class="link link-hover text-xl">
+              <br><br>
               <%= link_to projet.url, projet.url, target: "_blank" %>
             </div>
 
-            <div class="p-3 w-16 md:w-24 lg:w-32 float-right bg-neutral-50 rounded">
+            <div class="p-3 w-16 md:w-32 lg:w-64 float-right rounded">
               <%= image_tag projet.logo_image_path if File.exist?("app/assets/images/" + projet.logo_image_path) %>
             </div>
           </div>
