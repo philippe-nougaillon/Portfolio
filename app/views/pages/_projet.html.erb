@@ -54,27 +54,8 @@
           <p class="my-8 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
             <%= projet.contenu %>
           </p>
+
           <br>
-
-          <div class="flex justify-between">
-            <div>
-              <div class="link link-hover text-xl">
-                <br><br>
-                <%= link_to projet.url, projet.url, target: "_blank" %>
-              </div>
-              <% if projet.github %>
-              <p>
-                <i class="fa-brands fa-github fa-2xl"></i>
-                Source :
-                <%= link_to projet.github, class:"link link-hover text-xl", target: "_blank" %>
-              </p>
-              <% end %>
-            </div>
-
-            <div class="p-3 w-16 md:w-32 lg:w-64 float-right rounded">
-              <%= image_tag projet.logo_image_path if File.exist?("app/assets/images/" + projet.logo_image_path) %>
-            </div>
-          </div>
 
           <div class="mx-auto max-w-max p-8">
             <div class="stats stats-vertical lg:stats-horizontal shadow">
@@ -106,6 +87,23 @@
                 <div class="stat-desc">↗︎ 400 (100%)</div>
               </div>
 
+            </div>
+          </div>
+
+          <div class="flex justify-between items-center">
+            <div class="link link-hover">
+              <%= link_to URI.parse(projet.url).host, projet.url, target: "_blank" %>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+            <% if projet.github %>
+              <p class="link link-hover">
+                <i class="fa-brands fa-github"></i>
+                <%= link_to URI.parse(projet.github).path, projet.github, target: "_blank" %>
+              </p>
+            <% end %>
+
+            <div class="flex items-end float-right rounded w-16 md:w-32 lg:w-64 p-3">
+              <%= image_tag projet.logo_image_path if File.exist?("app/assets/images/" + projet.logo_image_path) %>
             </div>
           </div>
 
