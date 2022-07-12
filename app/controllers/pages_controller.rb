@@ -12,6 +12,10 @@ class PagesController < ApplicationController
       end
     end
 
+    @projets_commits = @projets.sum(:commit)
+    @projets_deploys = @projets.sum(:deploy)
+    @projets_coffees = @projets.sum(:coffee)
+
     @tags = Projet.tag_counts_on(:tags)
 
   end
