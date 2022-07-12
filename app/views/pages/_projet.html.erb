@@ -1,7 +1,7 @@
 <!-- The button to open modal -->
-<label for="my-modal-<%= projet.id %>" class="link-primary mt-3">
+<label for="my-modal-<%= projet.id %>" class="tooltip tooltip-primary text-left mt-3" data-tip="Cliquez pour en savoir plus...">
   <div class="mt-3">
-    <div class="card shadow hover:shadow-xl duration-300">
+    <div class="card shadow hover:shadow-xl cursor-pointer duration-300">
       <figure>
         <%= image_tag projet.thumbnail_image_path %>
       </figure>
