@@ -27,6 +27,7 @@ Projet.create!([
     commit: 113, 
     deploy: 38, 
     coffee: 13, 
+    github: "https://github.com/philippe-nougaillon/INNOSERV_WWW",
     tag_list: "JS, Bootstrap, Rails 6"},
   {nom: "PLANNING IAE-PARIS", 
     url: "https://planning-iae.herokuapp.com/", 
@@ -35,6 +36,7 @@ Projet.create!([
     commit: 771, 
     deploy: 482, 
     coffee: 138, 
+    github: "https://github.com/philippe-nougaillon/Planning_IAE",
     tag_list: "Stimulus, Bootstrap, Rails 6"},
   {nom: "Disturbances", 
     url: "https://disturbances.herokuapp.com/", 
@@ -59,6 +61,7 @@ Projet.create!([
     commit: 395, 
     deploy: 226, 
     coffee: 74, 
+    github: "https://github.com/philippe-nougaillon/prestofacto",
     tag_list: "Bulma, Rails 6"},
   {nom: "Affichage-Planning", 
     url: "https://tableau-affichage-horaires-iae.herokuapp.com/", 
@@ -67,6 +70,7 @@ Projet.create!([
     commit: 20, 
     deploy: 20, 
     coffee: 9, 
+    github: "https://github.com/philippe-nougaillon/Planning_IAE-Tableau-Affichage_REACT",
     tag_list: "React, Rails 6, React on Rails"},
   {nom: "Portfolio", 
     url: "https://portfolio-philnoug.herokuapp.com/", 
@@ -75,5 +79,6 @@ Projet.create!([
     commit: 43, 
     deploy: 17, 
     coffee: 13,
+    github: "https://github.com/philippe-nougaillon/portfolio",
     tag_list: "Rails 7, DaisyUI, TailwindCSS" }
 ])
