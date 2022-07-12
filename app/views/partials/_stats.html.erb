@@ -12,7 +12,7 @@
     
     <div class="stat">
       <div class="stat-figure text-secondary">
-        <i class="fa-solid fa-code-commit fa-2xl"></i>
+        <%= image_tag "code-commit-solid.svg", width: "40px" %>
       </div>
       <div class="stat-title">Commits GitHub</div>
       <div class="stat-value"><%= number_with_delimiter(@projets_commits) %></div>
@@ -21,7 +21,7 @@
     
     <div class="stat">
       <div class="stat-figure text-secondary">
-        <i class="fa-solid fa-paper-plane fa-2xl"></i>
+        <%= image_tag "paper-plane-solid.svg", width: "40px" %>
       </div>
       <div class="stat-title">Déploiements Heroku</div>
       <div class="stat-value"><%= number_with_delimiter(@projets_deploys) %></div>
@@ -30,7 +30,7 @@
 
     <div class="stat">
       <div class="stat-figure text-secondary">
-        <i class="fa-solid fa-mug-hot fa-2xl"></i>
+        <%= image_tag "mug-hot-solid.svg", width: "40px" %>
       </div>
       <div class="stat-title">Tasses de café</div>
       <div class="stat-value"><%= number_with_delimiter((@projets_coffees).to_i) %></div>
