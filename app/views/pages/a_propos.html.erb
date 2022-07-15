@@ -1,134 +1,132 @@
-
 <div class="hero min-h-screen bg-base-200">
   <div class="hero-content flex-col lg:flex-row-reverse">
-    <img src="https://pr0.nicelocal.fr/CtB9LI1rSx1CbBMuRS8Rtg/640x427,q85/4px-BW84_n0QJGVPszge3NRBsKw-2VcOifrJIjPYFYkOtaCZxxXQ2aEqD8BXseK9JQ-Em_RGOUBiRnLBwNveeZkv83e2veA8fQ3YJyxLAxI0d06M-Q6EEg" class="max-w-sm rounded-lg shadow-2xl" />
+    <img class="max-w-7xl sm:max-w-full" src="https://pr0.nicelocal.fr/CtB9LI1rSx1CbBMuRS8Rtg/640x427,q85/4px-BW84_n0QJGVPszge3NRBsKw-2VcOifrJIjPYFYkOtaCZxxXQ2aEqD8BXseK9JQ-Em_RGOUBiRnLBwNveeZkv83e2veA8fQ3YJyxLAxI0d06M-Q6EEg" class="max-w-sm rounded-lg shadow-2xl" />
     <div>
-        <div class="fa-3x">
-            <i class="fa-solid fa-people-group fa-bounce" style="--fa-animation-duration: 3s;"></i>
-            <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 3s;"></i>
-            <i class="fa-solid fa-rotate fa-spin" style="--fa-animation-duration: 6s;"></i>
-
-        </div>
-        <h1 class="text-4xl font-bold">Collectif adepte de l'approche 'LEAN'</h1>
-        <p class="py-6">
-            Notre devise est 
-            <span class="underline underline-offset-8">
-                <%= "'Du client au code - du code au client !'".upcase %>
-            </span>
-            <small>(1)</small>
-            <br><br>
-            Quand on code, on code utile et toujours en cherchant à transformer ce code en un processus-métier qui fait sens pour notre client.
-        </p>
-        <button class="btn btn-primary">
-            <%= link_to 'En savoir plus', "#part2" %>
-        </button>        
+      <div class="fa-3x">
+        <i class="fa-solid fa-people-group fa-bounce" style="--fa-animation-duration: 3s;"></i>
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 3s;"></i>
+        <i class="fa-solid fa-rotate fa-spin" style="--fa-animation-duration: 6s;"></i>
+      </div>
+      <h1 class="text-4xl font-bold">Collectif adepte de l'approche 'LEAN'</h1>
+      <p class="py-6">
+        Notre devise est 
+        <span class="underline underline-offset-8">
+          <%= "'Du client au code - du code au client !'".upcase %>
+        </span>
+        <small>(1)</small>
+        <br><br>
+        Quand on code, on code utile et toujours en cherchant à transformer ce code en un processus-métier qui fait sens pour notre client.
+      </p>
+      <button class="btn btn-primary">
+        <%= link_to 'En savoir plus', "#part2" %>
+      </button>
     </div>
   </div>
 </div>
 
 <div id="part2" class="hero min-h-screen bg-base-200 mt-16">
   <div class="p-6">
+  <br>
+
+  <h2 class="text-2xl my-6 underline underline-offset-8">Qui sommes-nous ?</h2>
+
+  <p class="mt-6 mb-3">
+    Notre collectif regroupe des Product Managers, consultants, et développeurs passionnés d'open-source, 
+    avec une expérience (pour certains) de plus de 20 ans....
     <br>
+    Cette expérience inclue le développement coté client, coté serveur ainsi que le développement de produit, 
+    la R&D et le management de développeurs inhouse/nearshore.
+  </p>
 
-    <h2 class="text-2xl my-6 underline underline-offset-8">Qui sommes-nous ?</h2>
+  <h2 class="text-2xl my-6 underline underline-offset-8">Récompenses</h2>
 
-    <p class="mt-6 mb-3">
-        Notre collectif regroupe des Product Managers, consultants, et développeurs passionnés d'open-source, 
-        avec une expérience (pour certains) de plus de 20 ans....
-        <br>
-        Cette expérience inclue le développement coté client, coté serveur ainsi que le développement de produit, 
-        la R&D et le management de développeurs inhouse/nearshore.
-    </p>
-
-    <h2 class="text-2xl my-6 underline underline-offset-8">Récompenses</h2>
-
-    <p>
-        <b>2015 - Prix de l’Innovation VINCI/ETF</b>, catégorie Management, région Île de France. 
-        <br>
-        Conception et réalisation d’une application de suivi de la maintenance ferroviaire (AEMMS). 
-    </p>
+  <p>
+    <b>2015 - Prix de l’Innovation VINCI/ETF</b>, catégorie Management, région Île de France. 
     <br>
+    Conception et réalisation d’une application de suivi de la maintenance ferroviaire (AEMMS). 
+  </p>
+  <br>
 
-    <p>
-        <b>2010 - Concours Smartphones SNCF/TGV Lab</b>
-        <br>
-        Direction d’un projet de développement d’une application mobile qui améliore la qualité de l’information
-        transmise par les chefs de bord durant les trajets. 
-        Pendant quatre semaines, sur les lignes TGV Paris-Lyon et Paris-Nantes, 14 chefs de bord ont testé sept applications
-        avec les smartphones associés. Nous avons atteint la seconde place du podium.
-        Développement sponsorisé par Research in Motion (BlackBerry).
-    </p>
-
-
-    <h2 class="text-2xl my-6 underline underline-offset-8">Certifications</h2>
-
-    <p>
-        <b>Développement</b>
-    </p>
-    - Développez en C pour l’embarqué 
-    - Lancez-vous dans la programmation avec Ruby 
-    - Initiez-vous à Ruby on Rails 
-    - Continuez avec Ruby on Rails 
-    - Optimisez votre déploiement en créant des conteneurs avec Docker 
-    - Construisez des Microservices 
-    - Développez une application mobile React Native 
-    - Organisez votre application avec la logique Redux 
-    - Initiez-vous à Kotlin 
+  <p>
+    <b>2010 - Concours Smartphones SNCF/TGV Lab</b>
     <br>
+    Direction d’un projet de développement d’une application mobile qui améliore la qualité de l’information
+    transmise par les chefs de bord durant les trajets. 
+    Pendant quatre semaines, sur les lignes TGV Paris-Lyon et Paris-Nantes, 14 chefs de bord ont testé sept applications
+    avec les smartphones associés. Nous avons atteint la seconde place du podium.
+    Développement sponsorisé par Research in Motion (BlackBerry).
+  </p>
+
+
+  <h2 class="text-2xl my-6 underline underline-offset-8">Certifications</h2>
+
+  <p>
+    <b>Développement</b>
+  </p>
+  - Développez en C pour l’embarqué 
+  - Lancez-vous dans la programmation avec Ruby 
+  - Initiez-vous à Ruby on Rails 
+  - Continuez avec Ruby on Rails 
+  - Optimisez votre déploiement en créant des conteneurs avec Docker 
+  - Construisez des Microservices 
+  - Développez une application mobile React Native 
+  - Organisez votre application avec la logique Redux 
+  - Initiez-vous à Kotlin 
+  <br>
+  <br>
+
+
+  <p>
+    <b>Gestion de projet</b>
+  </p>
+  - Gérez votre projet avec une équipe Scrum
+  - Passez à l’agilité à l’échelle 
+  <br>
+
+  <h2 class="text-2xl my-6 underline underline-offset-8">Open-Source ? Quelques projets libres</h2>
+
+  <p>
+    <b>Planning</b>
     <br>
+    Planning à l’usage d’un établissement de l’enseignement supérieur
+    Gestion des cours, intervenants, étudiants, états de services, etc…
 
+    Démo: planning4-testing.herokuapp.com
+  </p>
+  <br>
 
-    <p>
-        <b>Gestion de projet</b>
-    </p>
-    - Gérez votre projet avec une équipe Scrum
-    - Passez à l’agilité à l’échelle 
+  <p>
+    <b>Crystal-Data</b> 
     <br>
+    Vos données métier, en ligne et en mobilité
+    Petite base de données en ligne qui permet de créer des tables de données et formulaires, et de les partager en ligne et en mobilité.
 
-    <h2 class="text-2xl my-6 underline underline-offset-8">Open-Source ? Quelques projets libres</h2>
+    Démo: crystal-data.philnoug.com
+  </p>
+  <br>
 
-    <p>
-        <b>Planning</b>
-        <br>
-        Planning à l’usage d’un établissement de l’enseignement supérieur
-        Gestion des cours, intervenants, étudiants, états de services, etc…
-
-        Démo: planning4-testing.herokuapp.com
-    </p>
+  </p>
+    <b>PrestoFacto/openCantine</b> 
     <br>
+    Facturation de cantine et prestations péri-scolaires
+    Développement et maintenance depuis 2009 d’une application de facturation de cantine et autres prestations péri-scolaires, destinée aux petites collectivités, associations, mairies, écoles, etc.
 
-    <p>
-        <b>Crystal-Data</b> 
-        <br>
-        Vos données métier, en ligne et en mobilité
-        Petite base de données en ligne qui permet de créer des tables de données et formulaires, et de les partager en ligne et en mobilité.
+    Nouvelle version 2020 | Ancienne version
+  </p>
 
-        Démo: crystal-data.philnoug.com
-    </p>
-    <br>
-
-    </p>
-        <b>PrestoFacto/openCantine</b> 
-        <br>
-        Facturation de cantine et prestations péri-scolaires
-        Développement et maintenance depuis 2009 d’une application de facturation de cantine et autres prestations péri-scolaires, destinée aux petites collectivités, associations, mairies, écoles, etc.
-
-        Nouvelle version 2020 | Ancienne version
-    </p>
-
-    <h3 class="text-2xl my-6">
-        <%= link_to "Voir d’autres projets libres sur Github…", "https://github.com/philippe-nougaillon" %>
-    </h3>
+  <h3 class="text-2xl my-6">
+    <%= link_to "Voir d’autres projets libres sur Github…", "https://github.com/philippe-nougaillon" %>
+  </h3>
 
   </div>
 </div>
 
 <p>
-    <small>
-        (1) Devise empruntée à Yves CASEAU dans son livre fondamental 
-        <%= link_to "'L'approche LEAN pour la transformation digitale'", 
-                    "https://www.dunod.com/sciences-techniques/approche-lean-pour-transformation-digitale",
-                    target: '_blank' 
-        %>
-    </small>
+  <small>
+    (1) Devise empruntée à Yves CASEAU dans son livre fondamental 
+    <%= link_to "'L'approche LEAN pour la transformation digitale'", 
+          "https://www.dunod.com/sciences-techniques/approche-lean-pour-transformation-digitale",
+          target: '_blank' 
+    %>
+  </small>
 </p>
