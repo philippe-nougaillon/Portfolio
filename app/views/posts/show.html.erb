@@ -4,12 +4,13 @@
       <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
     <% end %>
 
-    <h2 class="text-4xl font-bold"><%= @post.title %></h2>
-    <p><%= @post.date.strftime("%d/%m/%Y") if @post.date %></p>
-    <% @post.tag_list.each do |tag| %>
-      <div class="badge badge-outline"><%= tag %></div>
-    <% end %>
-    <hr />
+    <h2 class="text-4xl font-bold underline underline-offset-8 mb-6"><%= @post.title %></h2>
+    <p class="mb-3"><%= @post.date.strftime("%d/%m/%Y") if @post.date %></p>
+    <div class="mb-6">
+      <% @post.tag_list.each do |tag| %>
+        <div class="badge badge-outline"><%= tag %></div>
+      <% end %>
+    </div>
     <%= markdown(@post.content) %>
 
     <% if user_signed_in? %>
