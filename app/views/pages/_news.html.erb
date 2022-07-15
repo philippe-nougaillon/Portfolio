@@ -4,7 +4,7 @@
       <p class="text-sm opacity-70">
         <%= post.date.strftime("%d/%m/%Y") if post.date %>
       </p>
-      <h2 class="text-2xl font-bold hover:underline">
+      <h2 class="text-3xl font-bold hover:underline">
         <%= post.title %>
       </h2>
       <div class="my-3">
@@ -13,8 +13,10 @@
         <% end %>
       </div>
       <p>
-        <%= truncate(post.content,length: 150) %>
+        <%= markdown(truncate(post.content,length: 220)) %>
       </p>
     </div>
+    <div class="divider"></div> 
+
   <% end %>
 <% end %>
