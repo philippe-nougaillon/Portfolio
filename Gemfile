@@ -82,3 +82,6 @@ gem 'seed_dump'
 
 # SitemapGenerator is a framework-agnostic XML Sitemap generator written in Ruby with automatic Rails integration. It supports Video, News, Image, Mobile, PageMap and Alternate Links sitemap extensions and includes Rake tasks for managing your sitemaps, as well as many other great features.
 gem "sitemap_generator", "~> 6.2"
+
+gem 'redcarpet'
+gem 'coderay'

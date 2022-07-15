@@ -31,5 +31,9 @@ class PagesController < ApplicationController
 
   def a_propos
   end
+
+  def blog
+    @posts = Post.where(published: true)
+  end
   
 end
