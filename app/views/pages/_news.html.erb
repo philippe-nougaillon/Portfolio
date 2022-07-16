@@ -1,6 +1,6 @@
 <% @posts.each do |post| %>
   <%= link_to post do %>
-    <div class="my-6">
+    <div class="my-6 lg:px-24">
       <p class="text-sm opacity-70">
         <%= post.date.strftime("%d/%m/%Y") if post.date %>
       </p>
@@ -15,8 +15,8 @@
       <p>
         <%= markdown(truncate(post.content,length: 220)) %>
       </p>
+      <div class="divider"></div> 
     </div>
-    <div class="divider"></div> 
 
   <% end %>
 <% end %>
