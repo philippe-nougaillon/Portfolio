@@ -35,5 +35,8 @@ class PagesController < ApplicationController
   def blog
     @posts = Post.where(published: true)
   end
+
+  def clients
+  end
   
 end

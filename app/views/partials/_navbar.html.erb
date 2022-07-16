@@ -7,6 +7,7 @@
     <ul class="menu menu-horizontal p-0 hidden lg:flex">
       <%= navbar_item 'home', root_path, 'Portfolio' %>
       <%= navbar_item 'a_propos', a_propos_path, 'À propos' %>
+      <%= navbar_item 'clients', clients_path, 'Clients' %>
       <%= navbar_item 'contact', contact_path, 'Contact' %>
       <%= navbar_item 'blog', blog_path, 'Blog' %>
       <%= render "partials/theme" %>
@@ -18,6 +19,7 @@
       <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
         <%= navbar_item 'home', root_path, 'Portfolio' %>
         <%= navbar_item 'a_propos', a_propos_path, 'À propos' %>
+        <%= navbar_item 'clients', clients_path, 'Clients' %>
         <%= navbar_item 'contact', contact_path, 'Contact' %>
         <%= navbar_item 'blog', blog_path, 'Blog' %>
         <%= render "partials/theme" %>
