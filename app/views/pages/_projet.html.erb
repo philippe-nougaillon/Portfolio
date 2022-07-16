@@ -57,35 +57,12 @@
 
           <br>
 
-          <div class="mx-auto max-w-max px-8">
-            <div class="stats stats-vertical lg:stats-horizontal shadow">
-
-              <div class="stat">
-                <div class="stat-figure text-secondary">
-                  <i class="fa-solid fa-code-commit fa-2xl"></i>
-                </div>
-                <div class="stat-title">Commits GitHub</div>
-                <div class="stat-value"><%= number_with_delimiter(projet.commit) %></div>
-              </div>
-              
-              <div class="stat">
-                <div class="stat-figure text-secondary">
-                  <i class="fa-solid fa-paper-plane fa-2xl"></i>
-                </div>
-                <div class="stat-title">Déploiements Heroku</div>
-                <div class="stat-value"><%= number_with_delimiter(projet.deploy) %></div>
-              </div>
-
-              <div class="stat">
-                <div class="stat-figure text-secondary">
-                  <i class="fa-solid fa-mug-hot fa-2xl"></i>
-                </div>
-                <div class="stat-title">Tasses de café</div>
-                <div class="stat-value"><%= number_with_delimiter((projet.coffee).to_i) %></div>
-              </div>
-
-            </div>
-          </div>
+          <%= render(StatComponent.new(
+              nbr_projets: 0, 
+              nbr_commits: projet.commit, 
+              nbr_deploys: projet.deploy, 
+              nbr_coffees: projet.coffee)) 
+          %>
 
           <div class="flex justify-between items-center">
               <p class="link link-hover">

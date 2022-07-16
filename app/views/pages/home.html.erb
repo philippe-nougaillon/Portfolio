@@ -2,6 +2,11 @@
   <i>PORTFOLIO 2021-2022</i>
 </h1>
 
-<%= render partial: 'partials/stats' %>
+<%= render(StatComponent.new(
+            nbr_projets: @projets.count, 
+            nbr_commits: @projets_commits, 
+            nbr_deploys: @projets_deploys, 
+            nbr_coffees: @projets_coffees)) %>
+
 <%= render partial: 'partials/tag_cloud' %>
 <%= render partial: 'pages/projets', locals: { projets: @projets } %>

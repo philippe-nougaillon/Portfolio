@@ -85,3 +85,4 @@ gem "sitemap_generator", "~> 6.2"
 
 gem 'redcarpet'
 gem 'coderay'
+gem "view_component", "~> 2.59"
