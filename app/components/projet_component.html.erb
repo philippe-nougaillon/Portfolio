@@ -32,10 +32,7 @@
       <div class="mx-auto">
         <div id="<%= dom_id @projet %>">
 
-          <div class="flex">
-            <%= image_tag @projet.thumbnail_image_path, class: "rounded w-1/2" %>
-            <%= image_tag @projet.thumbnail_image_path, class: "rounded w-1/2" %>
-          </div>
+         
           
           <h1 class="my-8 text-4xl font-bold text-primary">
             <span class="underline underline-offset-8">
@@ -49,11 +46,9 @@
             <% end %>
           </p>
 
-          <p class="my-8 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
+          <p class="first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
             <%= @projet.contenu %>
           </p>
-
-          <br>
 
           <%= render(StatComponent.new(
               nbr_projets: 0, 
@@ -82,6 +77,13 @@
 
         </div>
 
+        <% if @user_signed_in %>
+          <%= link_to 'Edit this projet', edit_projet_path(@projet), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+          <div class="inline-block ml-2">
+            <%= button_to 'Destroy this projet', projet_path(@projet), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+          </div>
+          <%= link_to 'Back to projets', projets_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+        <% end %>
       </div>
     </div>
   </label>

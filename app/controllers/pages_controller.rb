@@ -34,6 +34,16 @@ class PagesController < ApplicationController
 
   def blog
     @posts = Post.where(published: true)
+    @tags = @posts.tag_counts_on(:tags)
+
+    unless params[:tag].blank? 
+      if params[:tag] != session[:tag]
+        @posts = Post.tagged_with(params[:tag])
+        session[:tag] = params[:tag]
+      else
+        session[:tag] = params[:tag] = nil
+      end
+    end
   end
 
   def clients

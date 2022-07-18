@@ -1,0 +1,13 @@
+<% tag_cloud(@tags, %w(badge-xs badge-sm badge-md badge-lg)) do |tag, css_class| %>
+    <span class="inline-block align-bottom badge 
+                <%= params[:tag] == tag.name ? 'badge-outline' : 'badge-secondary' %> 
+                <%= css_class %>
+                hover:badge-outline">
+        <%= link_to url_for(params.permit!.merge(tag: tag.name)) do %>
+            <% if params[:tag] == tag.name %>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            <% end %>
+            <%= tag.name %>
+        <% end %>
+    </span>
+<% end %>

@@ -2,4 +2,8 @@
   <i>BLOG</i>
 </h1>
 
-<%= render(NewsComponent.new(posts: @posts)) %>
+<div class="mx-auto max-w-max m-8 lg:px-36">
+  <%= render(TagCloudComponent.new(tags: @tags)) %>
+</div>
+
+<%= render(PostComponent.with_collection(@posts)) %>
