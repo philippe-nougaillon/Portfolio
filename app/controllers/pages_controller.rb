@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   
   def home
+    @tags = Projet.tag_counts_on(:tags)
     @projets = Projet.all
 
     unless params[:tag].blank? 
@@ -11,12 +12,11 @@ class PagesController < ApplicationController
         session[:tag] = params[:tag] = nil
       end
     end
+    @projets = @projets.includes(:tags)
 
     @projets_commits = @projets.sum(:commit)
     @projets_deploys = @projets.sum(:deploy)
     @projets_coffees = @projets.sum(:coffee)
-
-    @tags = Projet.tag_counts_on(:tags)
 
   end
 
