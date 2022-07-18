@@ -2,4 +2,4 @@
   <i>BLOG</i>
 </h1>
 
-<%= render partial: 'pages/news' %>
+<%= render(NewsComponent.new(posts: @posts)) %>

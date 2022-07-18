@@ -8,5 +8,5 @@
             nbr_deploys: @projets_deploys, 
             nbr_coffees: @projets_coffees)) %>
 
-<%= render partial: 'partials/tag_cloud' %>
+<%= render(TagComponent.new(tags: @tags)) %>
 <%= render partial: 'pages/projets', locals: { projets: @projets } %>
