@@ -32,8 +32,6 @@
       <div class="mx-auto">
         <div id="<%= dom_id @projet %>">
 
-         
-          
           <h1 class="my-8 text-4xl font-bold text-primary">
             <span class="underline underline-offset-8">
               <%= @projet.nom.upcase %>
@@ -45,7 +43,8 @@
               <div class="badge badge-accent badge-outline"><%= tag %></div>
             <% end %>
           </p>
-
+          <br>
+          
           <p class="first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
             <%= @projet.contenu %>
           </p>
