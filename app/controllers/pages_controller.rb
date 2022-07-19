@@ -24,7 +24,7 @@ class PagesController < ApplicationController
 
   def contact_submit
     message = Message.create(email: params[:email], objet: params[:objet], contenu: params[:contenu])
-    ContactMailer.submitted(message).deliver_later
+    ContactNotificationJob.perform_later(message)
     redirect_to root_path, notice: 'Votre message a bien été envoyé.'
   end
 
