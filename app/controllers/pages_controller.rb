@@ -45,7 +45,8 @@ class PagesController < ApplicationController
     end
   end
 
-  def clients
+  def nos_clients
+    @clients = Client.all
   end
   
 end
