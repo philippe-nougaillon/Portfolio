@@ -3,7 +3,7 @@
   <div class="mt-3">
     <div class="card shadow hover:shadow-xl cursor-pointer duration-300">
       <div class="h-72">
-        <%= image_tag @projet.thumbnail_image_path, class:"object-fill h-full" %>
+        <%= image_tag @projet.thumbnail_image_path, class:"object-fill h-full", loading: "lazy" %>
       </div>
       <div class="card-body">
         <h2 class="card-title text-primary underline underline-offset-8">
