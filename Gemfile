@@ -87,4 +87,6 @@ gem 'redcarpet'
 gem 'coderay'
 gem "view_component", "~> 2.59"
 
-gem 'sidekiq'
+gem "sidekiq", "~> 6.5"
+
+gem "active_decorator", "~> 1.4"

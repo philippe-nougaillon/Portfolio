@@ -46,6 +46,8 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    active_decorator (1.4.0)
+      activesupport
     activejob (7.0.3)
       activesupport (= 7.0.3)
       globalid (>= 0.3.6)
@@ -262,6 +264,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  active_decorator (~> 1.4)
   acts-as-taggable-on (~> 9.0)
   bootsnap
   coderay
@@ -277,7 +280,7 @@ DEPENDENCIES
   rspec-rails
   rubocop
   seed_dump
-  sidekiq
+  sidekiq (~> 6.5)
   sitemap_generator (~> 6.2)
   sprockets-rails
   stimulus-rails
