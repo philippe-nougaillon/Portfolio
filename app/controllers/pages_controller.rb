@@ -33,7 +33,7 @@ class PagesController < ApplicationController
 
   def blog
     @posts = Post.where(published: true)
-    @tags = @posts.tag_counts_on(:tags).order(:taggings_count)
+    @tags = @posts.tag_counts_on(:tags).order(:taggings_count).reverse
 
     unless params[:tag].blank? 
       if params[:tag] != session[:tag]
