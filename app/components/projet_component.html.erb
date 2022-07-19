@@ -2,7 +2,9 @@
 <label for="my-modal-<%= @projet.id %>" class="tooltip tooltip-primary text-left mt-3" data-tip="Cliquez pour en savoir plus...">
   <div class="mt-3">
     <div class="card shadow hover:shadow-xl cursor-pointer duration-300">
-      <%= image_tag @projet.thumbnail_image_path, class:"aspect-video" %>
+      <div class="h-72">
+        <%= image_tag @projet.thumbnail_image_path, class:"object-fill h-full" %>
+      </div>
       <div class="card-body">
         <h2 class="card-title text-primary underline underline-offset-8">
           <%= @projet.nom.upcase %>
