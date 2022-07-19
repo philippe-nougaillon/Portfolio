@@ -12,12 +12,10 @@ class PagesController < ApplicationController
         session[:tag] = params[:tag] = nil
       end
     end
-    @projets = @projets.includes(:tags)
-
     @projets_commits = @projets.sum(:commit)
     @projets_deploys = @projets.sum(:deploy)
     @projets_coffees = @projets.sum(:coffee)
-
+    @projets = @projets.includes(:tags)
   end
 
   def contact
@@ -34,7 +32,7 @@ class PagesController < ApplicationController
 
   def blog
     @posts = Post.where(published: true)
-    @tags = @posts.tag_counts_on(:tags).order(:taggings_count).reverse
+    @tags = @posts.tag_counts_on(:tags).order(:taggings_count)
 
     unless params[:tag].blank? 
       if params[:tag] != session[:tag]
