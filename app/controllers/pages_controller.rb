@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
-  
+  skip_before_action :authenticate_user!
+
   def home
     @tags = Projet.tag_counts_on(:tags)
     @projets = Projet.all
