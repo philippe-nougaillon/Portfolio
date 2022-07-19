@@ -4,6 +4,10 @@
     <%= client.name %>
   </p>
 
+  <div class="mb-6">
+    <%= render(TagListComponent.new(tags: client.tag_list)) %>
+  </div>
+
   <p class="my-5">
     <strong class="block font-medium mb-1">Description:</strong>
     <%= client.description %>

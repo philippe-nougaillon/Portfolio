@@ -10,9 +10,7 @@
         <%= @projet.nom %>
       </h1>
       <p>
-        <% @projet.tag_list.each do |tag| %>
-          <div class="badge badge-outline"><%= tag %></div>
-        <% end %>
+        <%= render(TagListComponent.new(tags: @projet.tag_list)) %>
       </p>
 
       <div class="carousel w-full">
