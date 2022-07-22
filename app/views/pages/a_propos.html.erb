@@ -16,7 +16,7 @@
         Spécialistes du développement logiciel, quand nous codons, nous codons utile et toujours en cherchant à transformer ce code en un processus-métier qui fait sens pour notre client.
       </p>
       
-      <button class="btn btn-primary">
+      <button class="btn btn-primary btn-outline">
         <div class="fa-2x opacity-25 mr-3">
           <i class="fa-solid fa-people-group fa-bounce" style="--fa-animation-duration: 3s;"></i>
           <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 3s;"></i>
@@ -65,7 +65,7 @@
   <p>
     IAE Paris-Sorbonne, SCOPELEC, L’Oréal/YSL, ALHAMBRA-EIDOS, GROHE, PPRS RESEARCH...
     <br><br>
-    <button class="btn btn-sm btn-primary">
+    <button class="btn btn-sm btn-primary btn-outline">
       <%= link_to "Voir plus de clients", nos_clients_path %>
     </button>
   </p>
@@ -116,7 +116,7 @@
   <br>
 
   </p>
-    <b>PrestoFacto/openCantine</b> 
+    <b>PrestoFacto</b> 
     <br>
     Application libre de facturation de services journaliers<br>
     Aide les petites organisations dans la gestion et la facturation de leurs prestations journalières (repas, activités...)  <br>
@@ -124,10 +124,17 @@
     <br>
     <%= link_to "prestofacto-demo.herokuapp.com", "https://prestofacto-demo.herokuapp.com/" %>
   </p>
+  
+  <hr class="mt-6">
 
-  <h3 class="text-2xl my-6">
-    <%= link_to "Voir d’autres projets libres sur Github…", "https://github.com/philippe-nougaillon" %>
+  <h3 class="font-bold my-6">
+    Vous avez un projet à nous sommettre ?
   </h3>
+
+  <button class="btn btn-primary btn-outline">
+    <%= link_to 'nous contacter', contact_path %>
+  </button>
+
 
   </div>
 </div>
