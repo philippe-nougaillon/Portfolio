@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     get :nos_clients, to: 'pages#nos_clients'
     get :contact, to: 'pages#contact'
     post :contact, to: 'pages#contact_submit'
+    get :confidentialite, to: 'pages#confidentialite'
   end
 
   root 'pages#home'

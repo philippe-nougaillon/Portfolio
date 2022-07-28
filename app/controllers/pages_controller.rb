@@ -48,5 +48,8 @@ class PagesController < ApplicationController
   def nos_clients
     @clients = Client.all
   end
+
+  def confidentialite
+  end
   
 end
