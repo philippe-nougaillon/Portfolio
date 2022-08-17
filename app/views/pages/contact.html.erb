@@ -24,6 +24,11 @@
             <%= label_tag :contenu, "Message *" %>
             <%= text_area_tag :contenu, params[:contenu], class:"textarea textarea-bordered w-full", rows: 3, required: true %>
           </div>
+          <% if @show_checkbox_recaptcha %>
+            <%= recaptcha_tags %>
+          <% else %>
+            <%= recaptcha_v3(action: 'contact', site_key: ENV['RECAPTCHA_SITE_KEY']) %>
+          <% end %>
           <%= submit_tag "Envoyer", class:"btn btn-secondary btn-outline" %>
         </div>
       </div>

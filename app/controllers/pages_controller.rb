@@ -23,9 +23,18 @@ class PagesController < ApplicationController
   end
 
   def contact_submit
-    message = Message.create(email: params[:email], objet: params[:objet], contenu: params[:contenu])
-    ContactNotificationJob.perform_later(message)
-    redirect_to root_path, notice: 'Votre message a bien été envoyé.'
+    success = verify_recaptcha(action: 'contact', minimum_score: 0.5, secret_key: ENV['RECAPTCHA_SECRET_KEY'])
+    checkbox_success = verify_recaptcha unless success
+    if success || checkbox_success
+      message = Message.create(email: params[:email], objet: params[:objet], contenu: params[:contenu])
+      ContactNotificationJob.perform_later(message)
+      redirect_to root_path, notice: 'Votre message a bien été envoyé.'
+    else
+      if !success
+        @show_checkbox_recaptcha = true
+      end
+      render 'contact'
+    end
   end
 
   def a_propos

@@ -90,3 +90,5 @@ gem "view_component", "~> 2.59"
 gem "sidekiq", "~> 6.5"
 
 gem "active_decorator", "~> 1.4"
+
+gem "recaptcha"
