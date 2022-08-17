@@ -10,6 +10,8 @@
             Vous avez une question, une remarque ou une demande à faire ?
             <br>
             Remplissez ce formulaire et nous vous recontacterons dès que possible.
+            <br>
+            Vous pouvez aussi nous contacter directement sur contact @ philnoug.com
           </p>
           <hr class="mb-6">
           <div>
@@ -24,11 +26,7 @@
             <%= label_tag :contenu, "Message *" %>
             <%= text_area_tag :contenu, params[:contenu], class:"textarea textarea-bordered w-full", rows: 3, required: true %>
           </div>
-          <% if @show_checkbox_recaptcha %>
-            <%= recaptcha_tags %>
-          <% else %>
-            <%= recaptcha_v3(action: 'contact', site_key: ENV['RECAPTCHA_SITE_KEY']) %>
-          <% end %>
+          <%= recaptcha_tags %>
           <%= submit_tag "Envoyer", class:"btn btn-secondary btn-outline" %>
         </div>
       </div>
