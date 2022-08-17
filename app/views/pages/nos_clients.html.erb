@@ -2,6 +2,10 @@
   <i>CLIENTS</i>
 </h1>
 
+<div class="mx-auto max-w-max m-16 mt-6 lg:px-24">
+  <%= render(TagCloudComponent.new(tags: @tags)) %>
+</div>
+
 <div class="my-6 lg:px-24">
 
   <%= render(ClientComponent.with_collection(@clients))%>
@@ -11,14 +15,14 @@
     <h1 class="font-bold text-3xl text-accent mb-6">
       Et aussi :
     </h1>
-    BLUELINEA,
-    CHUBB,
+    Bluelinea,
+    Chubb,
     UCAR Location,
     A.C.S.C,
-    Air ALGERIE,
-    Expertise-OTTAVI,
+    Air Algérie,
+    Expertise-Ottavi,
     NOOS/Numericable,
     Kuoni,
-    Ucopia …
+    Ucopia…
   </p>
 </div>

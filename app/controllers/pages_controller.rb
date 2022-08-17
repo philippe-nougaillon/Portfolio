@@ -2,8 +2,8 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!
 
   def home
-    @tags = Projet.tag_counts_on(:tags)
     @projets = Projet.all
+    @tags = @projets.tag_counts_on(:tags).order(:taggings_count).reverse
 
     unless params[:tag].blank? 
       if params[:tag] != session[:tag]
@@ -47,6 +47,16 @@ class PagesController < ApplicationController
 
   def nos_clients
     @clients = Client.all
+    @tags = @clients.tag_counts_on(:tags).order(:taggings_count).reverse
+
+    unless params[:tag].blank? 
+      if params[:tag] != session[:tag]
+        @clients = Client.tagged_with(params[:tag])
+        session[:tag] = params[:tag]
+      else
+        session[:tag] = params[:tag] = nil
+      end
+    end
   end
 
   def confidentialite
