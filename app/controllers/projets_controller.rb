@@ -47,12 +47,13 @@ class ProjetsController < ApplicationController
 
   # DELETE /projets/1 or /projets/1.json
   def destroy
-    @projet.destroy
+    raise
+    # @projet.destroy
 
-    respond_to do |format|
-      format.html { redirect_to projets_url, notice: 'Projet was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    # respond_to do |format|
+    #   format.html { redirect_to projets_url, notice: 'Projet was successfully destroyed.' }
+    #   format.json { head :no_content }
+    # end
   end
 
   private
