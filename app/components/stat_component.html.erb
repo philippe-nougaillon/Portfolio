@@ -20,7 +20,7 @@
       </div>
       <div class="stat-title">Commits GitHub</div>
       <div class="stat-value"><%= number_with_delimiter(@nbr_commits) %></div>
-      <div class="stat-desc">↗︎ 400 (22%)</div>
+      <div class="stat-desc"><%= params[:tag] ? 'n/a' : '↗︎ 980 (31%)' %></div>
     </div>
     
     <div class="stat">
@@ -30,7 +30,7 @@
       </div>
       <div class="stat-title">Déploiements Heroku</div>
       <div class="stat-value"><%= number_with_delimiter(@nbr_deploys) %></div>
-      <div class="stat-desc">↘︎ 90 (14%)</div>
+      <div class="stat-desc"><%= params[:tag] ? 'n/a' : '↗︎ 512 (42%)' %></div>
     </div>
 
     <div class="stat">
@@ -40,7 +40,7 @@
       </div>
       <div class="stat-title">Tasses de café</div>
       <div class="stat-value"><%= number_with_delimiter(@nbr_coffees).to_i %></div>
-      <div class="stat-desc">↗︎ 400 (100%)</div>
+      <div class="stat-desc"><%= params[:tag] ? 'n/a' : '↗︎ 154 (25%)' %></div>
     </div>
 
   </div>
