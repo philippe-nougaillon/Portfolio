@@ -92,3 +92,6 @@ gem "sidekiq", "~> 6.5"
 gem "active_decorator", "~> 1.4"
 
 gem "recaptcha"
+
+# a Ruby memcache client.
+gem 'dalli'

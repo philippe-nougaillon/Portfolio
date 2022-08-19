@@ -1,91 +1,93 @@
-<!-- The button to open modal -->
-<label for="my-modal-<%= @projet.id %>" class="tooltip tooltip-primary text-left mt-3" data-tip="Cliquez pour en savoir plus...">
-  <div class="mt-3">
-    <div class="card shadow hover:shadow-xl cursor-pointer duration-300">
-      <div class="h-72">
-        <%= image_tag @projet.thumbnail_image_path, class:"object-fill h-full", loading: "lazy" %>
-      </div>
-      <div class="card-body">
-        <h2 class="card-title text-primary underline underline-offset-8">
-          <%= @projet.nom.upcase %>
-        </h2>
-        <div class="card-actions flex justify-between mt-4">
-          <div>
-            <% @projet.tags.each do |tag| %>
-              <div class="badge badge-accent badge-outline"><%= tag %></div>
-            <% end %>
-          </div>
+<% cache @projet do %>
+  <!-- The button to open modal -->
+  <label for="my-modal-<%= @projet.id %>" class="tooltip tooltip-primary text-left mt-3" data-tip="Cliquez pour en savoir plus...">
+    <div class="mt-3">
+      <div class="card shadow hover:shadow-xl cursor-pointer duration-300">
+        <div class="h-72">
+          <%= image_tag @projet.thumbnail_image_path, class:"object-fill h-full", loading: "lazy" %>
         </div>
-        <p class="my-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
-          <%= truncate(@projet.contenu, length: 105) %>
-        </p>
-      </div>
-    </div>
-  </div>
-</label>
-
-<!-- Put this part before </body> tag -->
-<input type="checkbox" id="my-modal-<%= @projet.id %>" class="modal-toggle" />
-<label for="my-modal-<%= @projet.id %>" class="modal cursor-pointer">
-  <label class="modal-box max-w-max">
-    <label for="my-modal-<%= @projet.id %>" class="btn btn-primary btn-sm btn-circle absolute right-2 top-2">✕</label>
-
-    <div class="card shadow mx-auto lg:w-4/5 p-4">
-      <div class="mx-auto">
-        <div id="<%= dom_id @projet %>">
-
-          <h1 class="my-8 text-4xl font-bold text-primary">
-            <span class="underline underline-offset-8">
-              <%= @projet.nom.upcase %>
-            </span>
-          </h1>
-
-          <p class="my-8">
-            <% @projet.tags.each do |tag| %>
-              <div class="badge badge-accent badge-outline"><%= tag %></div>
-            <% end %>
-          </p>
-          <br>
-          
-          <p class="first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
-            <%= @projet.contenu %>
-          </p>
-
-          <%= render(StatComponent.new(
-              nbr_projets: 0, 
-              nbr_commits: @projet.commit, 
-              nbr_deploys: @projet.deploy, 
-              nbr_coffees: @projet.coffee)) 
-          %>
-
-          <div class="flex justify-between items-center">
-              <p class="link link-hover">
-                <% if @projet.github %>
-                  <i class="fa-brands fa-github"></i>
-                  <%= link_to URI.parse(@projet.github).path, @projet.github, target: "_blank" %>
-                <% end %>
-              </p>
-    
-            <div class="link link-hover underline underline-offset-8">
-              <%= link_to URI.parse(@projet.url).host, @projet.url, target: "_blank" %>
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </div>
-
-            <div class="flex items-end float-right rounded w-16 md:w-32 lg:w-64 p-3">
-              <%= image_tag @projet.logo_image_path if File.exist?("app/assets/images/" + @projet.logo_image_path) %>
+        <div class="card-body">
+          <h2 class="card-title text-primary underline underline-offset-8">
+            <%= @projet.nom.upcase %>
+          </h2>
+          <div class="card-actions flex justify-between mt-4">
+            <div>
+              <% @projet.tags.each do |tag| %>
+                <div class="badge badge-accent badge-outline"><%= tag %></div>
+              <% end %>
             </div>
           </div>
-
+          <p class="my-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
+            <%= truncate(@projet.contenu, length: 105) %>
+          </p>
         </div>
-
-        <% if @user_signed_in %>
-          <%= link_to 'Edit this projet', edit_projet_path(@projet), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-          <div class="inline-block ml-2">
-            <%= button_to 'Destroy this projet', projet_path(@projet), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
-          </div>
-          <%= link_to 'Back to projets', projets_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-        <% end %>
       </div>
     </div>
   </label>
-</label>
+
+  <!-- Put this part before </body> tag -->
+  <input type="checkbox" id="my-modal-<%= @projet.id %>" class="modal-toggle" />
+  <label for="my-modal-<%= @projet.id %>" class="modal cursor-pointer">
+    <label class="modal-box max-w-max">
+      <label for="my-modal-<%= @projet.id %>" class="btn btn-primary btn-sm btn-circle absolute right-2 top-2">✕</label>
+
+      <div class="card shadow mx-auto lg:w-4/5 p-4">
+        <div class="mx-auto">
+          <div id="<%= dom_id @projet %>">
+
+            <h1 class="my-8 text-4xl font-bold text-primary">
+              <span class="underline underline-offset-8">
+                <%= @projet.nom.upcase %>
+              </span>
+            </h1>
+
+            <p class="my-8">
+              <% @projet.tags.each do |tag| %>
+                <div class="badge badge-accent badge-outline"><%= tag %></div>
+              <% end %>
+            </p>
+            <br>
+            
+            <p class="first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
+              <%= @projet.contenu %>
+            </p>
+
+            <%= render(StatComponent.new(
+                nbr_projets: 0, 
+                nbr_commits: @projet.commit, 
+                nbr_deploys: @projet.deploy, 
+                nbr_coffees: @projet.coffee)) 
+            %>
+
+            <div class="flex justify-between items-center">
+                <p class="link link-hover">
+                  <% if @projet.github %>
+                    <i class="fa-brands fa-github"></i>
+                    <%= link_to URI.parse(@projet.github).path, @projet.github, target: "_blank" %>
+                  <% end %>
+                </p>
+      
+              <div class="link link-hover underline underline-offset-8">
+                <%= link_to URI.parse(@projet.url).host, @projet.url, target: "_blank" %>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </div>
+
+              <div class="flex items-end float-right rounded w-16 md:w-32 lg:w-64 p-3">
+                <%= image_tag @projet.logo_image_path if File.exist?("app/assets/images/" + @projet.logo_image_path) %>
+              </div>
+            </div>
+
+          </div>
+
+          <% if @user_signed_in %>
+            <%= link_to 'Edit this projet', edit_projet_path(@projet), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+            <div class="inline-block ml-2">
+              <%= button_to 'Destroy this projet', projet_path(@projet), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+            </div>
+            <%= link_to 'Back to projets', projets_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+          <% end %>
+        </div>
+      </div>
+    </label>
+  </label>
+<% end %>

@@ -1,12 +1,14 @@
-<div class="my-6">
-  <h2 class="font-bold text-3xl text-accent underline underline-offset-8 mb-6">
-    <%= @client.name %>
-  </h2>
+<% cache @client do %>
+  <div class="my-6">
+    <h2 class="font-bold text-3xl text-accent underline underline-offset-8 mb-6">
+      <%= @client.name %>
+    </h2>
 
-  <p><%= simple_format(@client.description) %></p>
+    <p><%= simple_format(@client.description) %></p>
 
-  <div class="my-3">
-    <%= render(TagListComponent.new(tags: @client.tag_list)) %>
+    <div class="my-3">
+      <%= render(TagListComponent.new(tags: @client.tag_list)) %>
+    </div>
   </div>
-</div>
-<div class="divider"></div>
+  <div class="divider"></div>
+<% end %>

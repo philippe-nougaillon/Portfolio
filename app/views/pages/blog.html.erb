@@ -3,7 +3,7 @@
 </h1>
 
 <div class="mx-auto max-w-max m-16 mt-6 lg:px-24">
-  <%= render(TagCloudComponent.new(tags: @tags)) %>
+  <%= render TagCloudComponent.new(tags: @tags) %>
 </div>
 
-<%= render(PostComponent.with_collection(@posts)) %>
+<%= render PostComponent.with_collection(@posts) %>
