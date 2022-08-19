@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     get :contact, to: 'pages#contact'
     post :contact, to: 'pages#contact_submit'
     get :confidentialite, to: 'pages#confidentialite'
+    get :recherche, to: 'pages#recherche'
   end
 
   root 'pages#home'

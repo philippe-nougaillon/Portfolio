@@ -60,17 +60,16 @@
             %>
 
             <div class="flex justify-between items-center">
-                <p class="link link-hover">
-                  <% if @projet.github %>
-                    <i class="fa-brands fa-github"></i>
-                    <%= link_to URI.parse(@projet.github).path, @projet.github, target: "_blank" %>
-                  <% end %>
-                </p>
-      
               <div class="link link-hover underline underline-offset-8">
                 <%= link_to URI.parse(@projet.url).host, @projet.url, target: "_blank" %>
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </div>
+              <p class="link link-hover">
+                <% if @projet.github %>
+                  <i class="fa-brands fa-github"></i>
+                  <%= link_to URI.parse(@projet.github).path, @projet.github, target: "_blank" %>
+                <% end %>
+              </p>
 
               <div class="flex items-end float-right rounded w-16 md:w-32 lg:w-64 p-3">
                 <%= image_tag @projet.logo_image_path if File.exist?("app/assets/images/" + @projet.logo_image_path) %>

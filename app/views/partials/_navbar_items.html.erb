@@ -3,4 +3,10 @@
 <%= navbar_item 'blog', blog_path, 'Blog' %>
 <%= navbar_item 'a_propos', a_propos_path, 'À propos' %>
 <%= navbar_item 'contact', contact_path, 'Contact' %>
+<li>
+  <%= link_to recherche_path, 
+              class: 'flex gap-4' do %>
+      <i class="fas fa-search"></i>
+  <% end %>
+</li>
 <%= render "partials/theme" %>
