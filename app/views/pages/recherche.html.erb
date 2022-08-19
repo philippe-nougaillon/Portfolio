@@ -9,15 +9,13 @@
 
 <div class="flex justify-center">
   <%= form_tag recherche_path, method: :get do %>
-    <div class="field p-3">
+    <div class="mt-6">
       <%= text_field_tag :search, 
                             params[:search], 
                             class: "input input-bordered", 
                             placeholder: "ex: Ruby, React...",
                             autofocus: true %>
-      <span class="icon is-small is-left">
-        <i class="fas fa-search"></i>
-      </span>
+      <i class="fas fa-search ml-3"></i>
     </div>
   <% end %>
 </div>
@@ -25,6 +23,9 @@
 <% if defined?(@results) %>
   <% if @results.any? %>
     <%= render partial: @results, as: :result %>
+    <%= @results.count %>
+    résultat.s
+
   <% else %>
     <p class="title is-4 has-text-centered p-6">
       Aucun résultat trouvé...

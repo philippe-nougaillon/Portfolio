@@ -1,19 +1,35 @@
-<div>
-  <h3 class="title is-5">
-    <% if result.searchable_type == "Post" %>
-      <%= link_to truncate(result.content, length: 250), 
-                  url_for(controller: result.searchable_type.pluralize.downcase, 
-                  action: 'show', 
-                  id: result.searchable_id) %>
-    <% else %>
-      <%= result.content %>
+<div class="py-6">
+  <% if result.searchable_type == "Post" %>
+    <%= link_to url_for(controller: result.searchable_type.pluralize.downcase, 
+                action: 'show', 
+                id: result.searchable_id) do %>
+      <h3 class="text-3xl font-bold hover:underline">
+        <%= result.searchable_type.constantize.find(result.searchable_id).title %>
+      </h3>
+      <br>
+      <p class="my-8 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
+        <%= truncate(result.searchable_type.constantize.find(result.searchable_id).content, length: 250) %>
+      </p>
     <% end %>
-  </h3>
-  <p class="mt-3">
-    Contenu de type 
+  <% elsif result.searchable_type == "Projet" %>
+    <h3 class="text-3xl text-primary underline underline-offset-8">
+      <%= Projet.find(result.searchable_id).nom %>
+    <h3>
+    <p class="my-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
+      <%= Projet.find(result.searchable_id).contenu %>
+    </p>
+  <% elsif result.searchable_type == "Client" %>
+    <h3 class="font-bold text-3xl text-accent underline underline-offset-8 mb-6">
+      <%= Client.find(result.searchable_id).name %>
+    <h3>
+    <p>
+      <%= simple_format(Client.find(result.searchable_id).description) %>
+    </p>
+  <% end %>
+  <p class="mt-6">
     <%= result.searchable_type %>
     créé il y a 
     <%= time_ago_in_words(result.searchable_type.constantize.find(result.searchable_id).created_at) %>
   </p>
-  <hr>
 </div>
+<hr>
