@@ -77,14 +77,6 @@
             </div>
 
           </div>
-
-          <% if @user_signed_in %>
-            <%= link_to 'Edit this projet', edit_projet_path(@projet), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-            <div class="inline-block ml-2">
-              <%= button_to 'Destroy this projet', projet_path(@projet), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
-            </div>
-            <%= link_to 'Back to projets', projets_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-          <% end %>
         </div>
       </div>
     </label>
