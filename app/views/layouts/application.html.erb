@@ -11,9 +11,15 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
 
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" crossorigin="anonymous"></script>
-
     <%= render 'partials/gtag' %>
+    <script type="text/javascript"> (function() { 
+      var css = document.createElement('link'); 
+      css.href = 'https://use.fontawesome.com/releases/v6.1.2/css/all.css'; 
+      css.rel = 'stylesheet'; 
+      css.type = 'text/css'; 
+      document.getElementsByTagName('head')[0].appendChild(css); 
+      })(); 
+    </script>
 
   </head>
 
