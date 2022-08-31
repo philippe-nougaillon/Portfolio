@@ -29,6 +29,7 @@ SitemapGenerator::Sitemap.create do
   add a_propos_path
   add blog_path
   add clients_path
+  add services_path
 
   Post.where(published: true).find_each do |post|
     add post_path(post), lastmod: post.updated_at
