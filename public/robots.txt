@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://portfolio-philnoug.herokuapp.com/sitemap.xml
+Sitemap: https://www.philnoug.com/sitemap.xml
