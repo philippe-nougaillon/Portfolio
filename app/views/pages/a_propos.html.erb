@@ -4,7 +4,7 @@
     <div>
 
       <h1 class="text-4xl font-bold my-3">Qui sommes-nous ?</h1>
-      <h1 class="text-4xl">Une SQUAD adepte de l'approche 'LEAN' pour vous accompagner dans votre transformation digitale</h1>
+      <h1 class="text-3xl">Une SQUAD adepte de l'approche 'LEAN' pour vous accompagner dans votre transformation digitale</h1>
       
       <p class="py-6">
         Notre devise est 
@@ -17,12 +17,6 @@
       </p>
       
       <button class="btn btn-primary btn-outline">
-        <div class="fa-2x opacity-25 mr-3">
-          <i class="fa-solid fa-people-group fa-bounce" style="--fa-animation-duration: 3s;"></i>
-          <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 3s;"></i>
-          <i class="fa-solid fa-rotate fa-spin" style="--fa-animation-duration: 6s;"></i>
-        </div>
-
         <%= link_to 'En savoir plus', "#part2" %>
       </button>
     </div>
@@ -31,122 +25,119 @@
 
 <div id="part2" class="hero min-h-screen bg-base-200 mt-16">
   <div class="p-6">
-  <br>
 
-  <h2 class="text-2xl my-6 underline underline-offset-8">Qui sommes-nous ?</h2>
+    <h2 class="text-3xl font-bold my-6 underline underline-offset-8">Qui sommes-nous ?</h2>
 
-  <p class="mt-6 mb-3">
-    Notre équipe regroupe des Product Managers, Consultants, CM, Coach, Designer, et Développeurs passionnés d'Open-Source, 
-    avec une expérience (pour certains) de plus de 20 ans.
-    Cette expérience inclue la transformation digitale, le développement coté client, coté serveur ainsi que le développement de produit, 
-    la R&D et le management de développeurs inhouse/nearshore.
-  </p>
+    <p class="mt-6 mb-3">
+      Notre équipe regroupe des Product Managers, Consultants, CM, Coach, Designer, et Développeurs passionnés d'Open-Source, 
+      avec une expérience (pour certains) de plus de 20 ans.
+      Cette expérience inclue la transformation digitale, le développement coté client, coté serveur ainsi que le développement de produit, 
+      la R&D et le management de développeurs inhouse/nearshore.
+    </p>
 
-  <h2 class="text-2xl my-6 underline underline-offset-8">Récompenses</h2>
+    <h2 class="text-3xl font-bold my-6 underline underline-offset-8">Récompenses</h2>
 
-  <p>
-    <b>2015 - Prix de l’Innovation VINCI/ETF</b>, catégorie Management, région Île de France. 
+    <p>
+      <b>2010 - Concours Smartphones SNCF/TGV Lab</b>
+      <br>
+      Direction d’un projet de développement d’une application mobile qui améliore la qualité de l’information
+      transmise par les chefs de bord durant les trajets. 
+      Pendant quatre semaines, sur les lignes TGV Paris-Lyon et Paris-Nantes, 14 chefs de bord ont testé sept applications
+      avec les smartphones associés. Nous avons atteint la seconde place du podium.
+      Développement sponsorisé par Research in Motion (BlackBerry).
+    </p>
+
+    <p class="mt-6">
+      <b>2015 - Prix de l’Innovation VINCI/ETF</b>, catégorie Management, région Île de France. 
+      <br>
+      Conception et réalisation d’une application de suivi de la maintenance ferroviaire (AEMMS). 
+    </p>
+
+    <h2 class="text-3xl font-bold my-6 underline underline-offset-8">Clients</h2>
+
+    <p>
+      <p class="font-bold">
+        <%= Client.pluck(:name).join(', ') %>...
+      <p>
+      <br>
+
+      <button class="btn btn-primary btn-outline mt-3">
+        <%= link_to "Voir plus de clients", nos_clients_path %>
+      </button>
+    </p>
+
+    <h2 class="text-3xl font-bold my-6 underline underline-offset-8">Certifications OC</h2>
+
+    <p>
+      <b>Développement</b>
+    </p>
+    - Développez en C pour l’embarqué 
+    - Lancez-vous dans la programmation avec Ruby 
+    - Initiez-vous à Ruby on Rails 
+    - Continuez avec Ruby on Rails 
+    - Optimisez votre déploiement en créant des conteneurs avec Docker 
+    - Construisez des Microservices 
+    - Développez une application mobile React Native 
+    - Organisez votre application avec la logique Redux 
+    - Initiez-vous à Kotlin 
     <br>
-    Conception et réalisation d’une application de suivi de la maintenance ferroviaire (AEMMS). 
-  </p>
-  <br>
-
-  <p>
-    <b>2010 - Concours Smartphones SNCF/TGV Lab</b>
     <br>
-    Direction d’un projet de développement d’une application mobile qui améliore la qualité de l’information
-    transmise par les chefs de bord durant les trajets. 
-    Pendant quatre semaines, sur les lignes TGV Paris-Lyon et Paris-Nantes, 14 chefs de bord ont testé sept applications
-    avec les smartphones associés. Nous avons atteint la seconde place du podium.
-    Développement sponsorisé par Research in Motion (BlackBerry).
-  </p>
 
-  <h2 class="text-2xl my-6 underline underline-offset-8">Clients</h2>
-  <p>
-    IAE Paris-Sorbonne, SCOPELEC, L’Oréal/YSL, ALHAMBRA-EIDOS, GROHE, PPRS RESEARCH...
-    <br><br>
-    <button class="btn btn-sm btn-primary btn-outline">
-      <%= link_to "Voir plus de clients", nos_clients_path %>
+    <p>
+      <b>Gestion de projet</b>
+    </p>
+    - Gérez votre projet avec une équipe Scrum
+    - Passez à l’agilité à l’échelle 
+    <br>
+
+    <h2 class="text-3xl font-bold my-6 underline underline-offset-8">
+      Open-Source ? Quelques-uns de nos projets libres maison
+    </h2>
+
+    <p class="my-6">
+      <p class="text-2xl font-bold">PrestoFacto</p> 
+      <b>Application libre de facturation de services journaliers.</b><br>
+      Aide les petites organisations dans la gestion et la facturation de leurs prestations journalières (repas, activités...).  <br>
+      Développement et maintenance depuis 2009 d’une application de facturation de cantine et autres prestations péri-scolaires, destinée aux petites collectivités, associations, mairies, écoles, etc.
+      <br>
+      <%= link_to "www.prestofacto.fr", "https://www.prestofacto.fr/", class: "link", target: '_blank' %>
+    </p>
+    
+    <p class="my-6">
+      <p class="text-2xl font-bold">Planning</p>
+      <b>Planning à l’usage d’un établissement de l’enseignement supérieur.</b><br>
+      Plateforme de gestion des cours, intervenants, étudiants, états de services, etc…<br>
+      <%= link_to "www.planning4.com", "https://planning4-testing.herokuapp.com", class: "link", target: '_blank' %>
+    </p>
+
+    <p class="my-6">
+      <p class="text-2xl font-bold">Camino</p> 
+      <b>Gérer, en équipe et en mobilité, vos projets (Suivi d'interventions, GMAO, etc...)</b><br>
+      Découpez vos projets en listes de choses à faire, invitez vos contacts à participer, 
+      assignez aux participants certaines choses à faire et fixez les échéances.
+      <br>
+      Suivez l'activité des participants (commentaires, travaux terminés, etc.)
+      <br>
+      <%= link_to "github.com/camino", "https://github.com/philippe-nougaillon/Camino", class: "link", target: '_blank' %>
+    </p>
+
+    <p class="my-6">
+      <p class="text-2xl font-bold">Crystal-Data</p> 
+      <b>Vos données métier, en ligne et en mobilité !</b><br>
+      Gestionnaire de bases de données en ligne, qui permet de créer des tables et formulaires, et de les partager en ligne et en mobilité.
+      <br>
+      <%= link_to "github.com/crystal-data", "https://github.com/philippe-nougaillon/crystal-data", class: "link", target: '_blank' %>
+    </p>
+
+    <hr class="mt-3">
+
+    <h3 class="font-bold text-3xl my-6">
+      Vous avez un projet à nous soumettre ?
+    </h3>
+
+    <button class="btn btn-primary btn-outline">
+      <%= link_to 'nous contacter', contact_path %>
     </button>
-  </p>
-
-  <h2 class="text-2xl my-6 underline underline-offset-8">Certifications OC</h2>
-
-  <p>
-    <b>Développement</b>
-  </p>
-  - Développez en C pour l’embarqué 
-  - Lancez-vous dans la programmation avec Ruby 
-  - Initiez-vous à Ruby on Rails 
-  - Continuez avec Ruby on Rails 
-  - Optimisez votre déploiement en créant des conteneurs avec Docker 
-  - Construisez des Microservices 
-  - Développez une application mobile React Native 
-  - Organisez votre application avec la logique Redux 
-  - Initiez-vous à Kotlin 
-  <br>
-  <br>
-
-  <p>
-    <b>Gestion de projet</b>
-  </p>
-  - Gérez votre projet avec une équipe Scrum
-  - Passez à l’agilité à l’échelle 
-  <br>
-
-  <h2 class="text-2xl my-6 underline underline-offset-8">Open-Source ? Quelques projets libres</h2>
-
-  </p>
-    <b>PrestoFacto</b> 
-    <br>
-    Application libre de facturation de services journaliers.<br>
-    Aide les petites organisations dans la gestion et la facturation de leurs prestations journalières (repas, activités...).  <br>
-    Développement et maintenance depuis 2009 d’une application de facturation de cantine et autres prestations péri-scolaires, destinée aux petites collectivités, associations, mairies, écoles, etc.
-    <br>
-    <%= link_to "www.prestofacto.fr", "https://www.prestofacto.fr/", class: "link", target: '_blank' %>
-  </p>
-  <br>
-  
-  <p>
-    <b>Planning</b>
-    <br>
-    Planning à l’usage d’un établissement de l’enseignement supérieur.<br>
-    Plateforme de gestion des cours, intervenants, étudiants, états de services, etc…<br>
-    <%= link_to "planning4-testing", "https://planning4-testing.herokuapp.com", class: "link", target: '_blank' %>
-  </p>
-  <br>
-  <p>
-    <b>Crystal-Data</b> 
-    <br>
-    Vos données métier, en ligne et en mobilité !<br>
-    Gestionnaire de bases de données en ligne, qui permet de créer des tables et formulaires, et de les partager en ligne et en mobilité.
-    <br>
-    <%= link_to "github.com/crystal-data", "https://github.com/philippe-nougaillon/crystal-data", class: "link", target: '_blank' %>
-  </p>
-  <br>
-
-  </p>
-    <b>Camino</b> 
-    <br>
-    Gérer, en équipe, vos petits projets<br>
-    Découpez vos projets en listes de choses à faire, invitez vos contacts à participer, assignez aux participants certaines choses à faire et fixez les échéances.
-    <br>
-    Suivez l'activité des participants (commentaires, travaux terminés, etc.)
-    <br>
-    <%= link_to "github.com/camino", "https://github.com/philippe-nougaillon/Camino", class: "link", target: '_blank' %>
-  </p>
-  <br>
-
-  <hr class="mt-6">
-
-  <h3 class="font-bold text-2xl my-6">
-    Vous avez un projet à nous soumettre ?
-  </h3>
-
-  <button class="btn btn-primary">
-    <%= link_to 'nous contacter', contact_path %>
-  </button>
-
 
   </div>
 </div>
