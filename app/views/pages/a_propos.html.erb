@@ -57,15 +57,10 @@
     <h2 class="text-3xl font-bold my-6 underline underline-offset-8">Clients</h2>
 
     <p>
-      <h3>Ils nous ont fait confiance : </h3>
+      <h3>Ils nous font confiance : </h3>
       <p class="font-bold">
         <%= Client.pluck(:name).join(', ') %>...
       <p>
-      <br>
-
-      <button class="btn btn-primary btn-outline mt-3">
-        <%= link_to "Voir plus de clients", nos_clients_path %>
-      </button>
     </p>
 
     <h2 class="text-3xl font-bold my-6 underline underline-offset-8">Certifications OC</h2>
