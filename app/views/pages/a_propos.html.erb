@@ -36,6 +36,15 @@
       la gestion de la qualité des opérations de maintenance ferroviaire, etc...  
     </p>
 
+    <h2 class="text-3xl font-bold my-6 underline underline-offset-8">Clients</h2>
+
+    <p>
+      <h3>Ils nous font confiance : </h3>
+      <p class="font-bold">
+        <%= Client.pluck(:name).join(', ') %>...
+      <p>
+    </p>
+
     <h2 class="text-3xl font-bold my-6 underline underline-offset-8">Récompenses</h2>
 
     <p>
@@ -52,15 +61,6 @@
       <b>2015 - Prix de l’Innovation VINCI/ETF</b>, catégorie Management, région Île de France. 
       <br>
       Conception et réalisation d’une application de suivi de la maintenance ferroviaire (AEMMS). 
-    </p>
-
-    <h2 class="text-3xl font-bold my-6 underline underline-offset-8">Clients</h2>
-
-    <p>
-      <h3>Ils nous font confiance : </h3>
-      <p class="font-bold">
-        <%= Client.pluck(:name).join(', ') %>...
-      <p>
     </p>
 
     <h2 class="text-3xl font-bold my-6 underline underline-offset-8">Certifications OC</h2>
