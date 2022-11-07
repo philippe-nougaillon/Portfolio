@@ -1,6 +1,8 @@
 <div class="hero min-h-screen bg-base-200">
   <div class="hero-content flex-col lg:flex-row-reverse">
-    <img class="sm:max-w-full" src="https://pr0.nicelocal.fr/CtB9LI1rSx1CbBMuRS8Rtg/640x427,q85/4px-BW84_n0QJGVPszge3NRBsKw-2VcOifrJIjPYFYkOtaCZxxXQ2aEqD8BXseK9JQ-Em_RGOUBiRnLBwNveeZkv83e2veA8fQ3YJyxLAxI0d06M-Q6EEg" class="max-w-sm rounded-lg shadow-2xl" />
+
+    <%= image_tag 'lePlateau.webp', class: 'sm:max-w-full max-w-sm rounded-lg shadow-2xl' %>
+
     <div>
 
       <h1 class="text-4xl font-bold my-3">Qui sommes-nous ?</h1>
@@ -93,22 +95,6 @@
     </h2>
 
     <p class="my-6">
-      <p class="text-2xl font-bold">PrestoFacto</p> 
-      <b>Application libre de facturation de services journaliers.</b><br>
-      Aide les petites organisations dans la gestion et la facturation de leurs prestations journalières (repas, activités...).  <br>
-      Développement et maintenance depuis 2009 d’une application de facturation de cantine et autres prestations péri-scolaires, destinée aux petites collectivités, associations, mairies, écoles, etc.
-      <br>
-      <%= link_to "github.com/PrestoFacto", "https://github.com/philippe-nougaillon/PrestoFacto", class: "link", target: '_blank' %>
-    </p>
-    
-    <p class="my-6">
-      <p class="text-2xl font-bold">Planning</p>
-      <b>Planning à l’usage d’un établissement de l’enseignement supérieur.</b><br>
-      Plateforme de gestion des cours, intervenants, étudiants, états de services, etc…<br>
-      <%= link_to "github.com/Planning", "https://github.com/philippe-nougaillon/Planning_IAE", class: "link", target: '_blank' %>
-    </p>
-
-    <p class="my-6">
       <p class="text-2xl font-bold">Camino</p> 
       <b>Gérer, en équipe et en mobilité, vos projets (Suivi d'interventions, GMAO, etc...)</b><br>
       Découpez vos projets en listes de choses à faire, invitez vos contacts à participer, 
@@ -120,6 +106,15 @@
     </p>
 
     <p class="my-6">
+      <p class="text-2xl font-bold">PrestoFacto</p> 
+      <b>Application de facturation de services journaliers.</b><br>
+      Aide les petites organisations dans la gestion et la facturation de leurs prestations journalières (repas, activités...).  <br>
+      Développement et maintenance depuis 2009 d’une application de facturation de cantine et autres prestations péri-scolaires, destinée aux petites collectivités, associations, mairies, écoles, etc.
+      <br>
+      <%= link_to "github.com/PrestoFacto", "https://github.com/philippe-nougaillon/PrestoFacto", class: "link", target: '_blank' %>
+    </p>
+       
+    <p class="my-6">
       <p class="text-2xl font-bold">Crystal-Data</p> 
       <b>Vos données métier, en ligne et en mobilité !</b><br>
       Gestionnaire de bases de données en ligne, qui permet de créer des tables et formulaires, et de les partager en ligne et en mobilité.
@@ -127,7 +122,13 @@
       <%= link_to "github.com/Crystal-Data", "https://github.com/philippe-nougaillon/crystal-data", class: "link", target: '_blank' %>
     </p>
 
-    
+    <p class="my-6">
+      <p class="text-2xl font-bold">Planning</p>
+      <b>Planning à l’usage d’un établissement de l’enseignement supérieur.</b><br>
+      Plateforme de gestion des cours, intervenants, étudiants, états de services, etc…<br>
+      <%= link_to "github.com/Planning", "https://github.com/philippe-nougaillon/Planning_IAE", class: "link", target: '_blank' %>
+    </p>
+
     <hr class="mt-3">
 
     <h2 class="text-3xl font-bold my-6 underline underline-offset-8">
