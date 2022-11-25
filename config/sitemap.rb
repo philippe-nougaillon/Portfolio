@@ -25,11 +25,12 @@ SitemapGenerator::Sitemap.create do
   #     add article_path(article), :lastmod => article.updated_at
   #   end
 
-  add contact_path
+  add portfolio_path
   add a_propos_path
-  add blog_path
-  add clients_path
+  add nos_clients_path
   add services_path
+  add contact_path
+  add blog_path
 
   Post.where(published: true).find_each do |post|
     add post_path(post), lastmod: post.updated_at

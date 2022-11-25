@@ -3,6 +3,13 @@ class PagesController < ApplicationController
 
   def home
     @projets = Projet.all
+    @projets_commits = @projets.sum(:commit)
+    @projets_deploys = @projets.sum(:deploy)
+    @projets_coffees = @projets.sum(:coffee)
+  end
+
+  def portfolio
+    @projets = Projet.all
     @tags = @projets.tag_counts_on(:tags).order(:taggings_count).reverse
 
     unless params[:tag].blank? 

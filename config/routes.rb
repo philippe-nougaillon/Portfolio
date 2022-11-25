@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   controller :pages do
     get :home, to: 'pages#home'
+    get :portfolio, to: 'pages#portfolio'
     get :a_propos, to: 'pages#a_propos'
     get :blog, to: 'pages#blog'
     get :nos_clients, to: 'pages#nos_clients'

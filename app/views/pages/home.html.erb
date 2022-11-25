@@ -1,17 +1,88 @@
-<h1 class="font-bold text-4xl text-center text-accent pt-8">
-  <i>PORTFOLIO</i>
-</h1>
-
-<%= render(StatComponent.new(
-            nbr_projets: @projets.count, 
-            nbr_commits: @projets_commits, 
-            nbr_deploys: @projets_deploys, 
-            nbr_coffees: @projets_coffees)) %>
-
-<div class="mx-auto max-w-max m-8">
-  <%= render(TagCloudComponent.new(tags: @tags)) %>
+<div class="text-center">
+  <h2 class="font-bold text-accent pt-8">
+    Notre ambition
+  </h2>
+  <h1 class="text-4xl font-bold text-accent px-80 mb-6">
+    Développer des applications et plateformes Web évolutives
+  </h1>
 </div>
 
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mx-4 my-6">
-  <%= render(ProjetComponent.with_collection(@projets, user_signed_in: user_signed_in?))%>
+<div class="mt-24">
+  <h2 class="text-center text-3xl font-bold mb-6">
+    Nos outils et domaines d'expertise
+  </h2>
+  <div class="flex flex-wrap justify-center">
+    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center">
+      <%= image_tag 'logos/Ruby.svg', class: 'h-48' %>
+      <h3 class="font-bold text-2xl mt-7">Ruby</h3>
+      <p>Language</p>
+    </div>
+    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center">
+      <%= image_tag 'logos/RoR.svg', class: 'h-48' %>
+      <h3 class="font-bold text-2xl mt-7">Rails</h3>
+      <p>Framework</p>
+    </div>
+    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center">
+      <%= image_tag 'logos/Tailwind.svg', class: 'h-48' %>
+      <h3 class="font-bold text-2xl mt-7">TailwindCSS</h3>
+      <p>Pour le design</p>
+    </div>
+    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center">
+      <%= image_tag 'logos/Heroku.svg', class: 'h-48' %>
+      <h3 class="font-bold text-2xl mt-7">Heroku</h3>
+      <p>Hébergeur</p>
+    </div>
+    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center">
+      <%= image_tag 'logos/PWA.svg', class: 'h-48' %>
+      <h3 class="font-bold text-2xl mt-7">PWA</h3>
+      <p>Mobile</p>
+    </div>
+  </div>
+</div>
+
+<div class="mt-24">
+  <h2 class="text-center text-3xl font-bold mt-12 mb-6">
+    Ils nous font confiance
+  </h2>
+  <div class="flex flex-wrap justify-around items-center gap-4">
+    <div class="w-40 rounded">
+      <%= image_tag "logos/4.png" %>
+    </div>
+    <div class="w-40 rounded">
+      <%= image_tag "logos/1.png" %>
+    </div>
+    <div class="w-40 rounded">
+      <%= image_tag "logos/8.png" %>
+    </div>
+    <div class="w-40 rounded">
+      <%= image_tag "logos/6.png" %>
+    </div>
+  </div>
+  <div class="flex justify-center">
+    <%= link_to 'Voir tous nos clients', nos_clients_path, class: 'btn btn-outline btn-primary mx-auto mt-6' %>
+  </div>
+</div>
+
+<div class="mt-24">
+  <h2 class="text-center text-3xl font-bold mt-12 mb-6">
+    Quelques chiffres
+  </h2>
+
+  <%= render(StatComponent.new(
+              nbr_projets: @projets.count, 
+              nbr_commits: @projets_commits, 
+              nbr_deploys: @projets_deploys, 
+              nbr_coffees: @projets_coffees)) %>
+
+  <div class="flex justify-center">
+    <%= link_to 'Voir les dernières réalisations', portfolio_path, class: 'btn btn-outline btn-primary mx-auto mt-6' %>
+  </div>
+</div>
+
+<div class="flex justify-center flex-col mt-24">
+  <h2 class="font-bold text-3xl my-6 text-center">
+    Vous avez un projet à nous soumettre ?
+  </h2>
+
+  <%= link_to 'nous contacter', contact_path, class: 'btn btn-primary btn-outline mx-auto' %>
 </div>
