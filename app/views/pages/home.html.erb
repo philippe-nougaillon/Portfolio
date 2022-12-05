@@ -1,72 +1,88 @@
 <div class="hero min-h-screen" style="background-image: url(https://placeimg.com/1000/800/arch);">
   <div class="hero-overlay bg-opacity-60"></div>
   <div class="hero-content text-center text-neutral-content">
-    <div class="max-w-md">
+    <div class="">
       <p class="mb-5">Notre ambition</p>
       <h1 class="mb-5 text-5xl font-bold">Développer des applications et plateformes Web évolutives</h1>
-      <button class="btn btn-primary">Nous contacter</button>
     </div>
   </div>
 </div>
 
-<div class="flex flex-col justify-center min-h-screen reveal">
-  <h2 class="text-center text-3xl font-bold mb-6">
+<div class="flex flex-col justify-center min-h-screen mx-4">
+  <h2 class="text-center text-5xl font-bold mb-24 reveal">
     Nos outils et domaines d'expertise
   </h2>
-  <div class="flex flex-wrap justify-center">
-    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center">
-      <%= image_tag 'logos/Ruby.svg', class: 'h-48 mx-auto' %>
+  <div class="flex flex-wrap justify-center gap-4 sm:gap-0">
+    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center reveal">
+      <%= image_tag 'logos/Ruby.svg', class: 'h-44 mx-auto' %>
       <h3 class="font-bold text-2xl mt-7">Ruby</h3>
       <p>Language</p>
     </div>
-    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center">
-      <%= image_tag 'logos/RoR.svg', class: 'h-48 mx-auto' %>
+    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center reveal">
+      <%= image_tag 'logos/RoR.svg', class: 'h-44 mx-auto' %>
       <h3 class="font-bold text-2xl mt-7">Rails</h3>
       <p>Framework</p>
     </div>
-    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center">
-      <%= image_tag 'logos/Tailwind.svg', class: 'h-48 mx-auto' %>
+    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center reveal">
+      <%= image_tag 'logos/Tailwind.svg', class: 'h-44 mx-auto' %>
       <h3 class="font-bold text-2xl mt-7">TailwindCSS</h3>
       <p>Design</p>
     </div>
-    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center">
-      <%= image_tag 'logos/Heroku.svg', class: 'h-48 mx-auto' %>
+    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center reveal">
+      <%= image_tag 'logos/Heroku.svg', class: 'h-44 mx-auto' %>
       <h3 class="font-bold text-2xl mt-7">Heroku</h3>
       <p>Hébergeur</p>
     </div>
-    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center">
-      <%= image_tag 'logos/PWA.svg', class: 'h-48 mx-auto' %>
-      <h3 class="font-bold text-2xl mt-7">PWA</h3>
-      <p>Mobile</p>
-    </div>
   </div>
 </div>
 
-<div class="flex flex-col justify-center min-h-screen reveal">
-  <h2 class="text-center text-3xl font-bold mt-12 mb-6">
+<div class="flex flex-col justify-center min-h-screen">
+  <h2 class="text-center text-5xl font-bold mt-12 mb-6 reveal">
     Ils nous font confiance
   </h2>
-  <div class="flex flex-wrap justify-around items-center gap-4">
-    <div class="w-40 rounded">
-      <%= image_tag "logos/4.png" %>
-    </div>
-    <div class="w-40 rounded">
+  <div class="flex flex-wrap justify-around items-center">
+    <div class="w-64 rounded reveal">
       <%= image_tag "logos/1.png" %>
     </div>
-    <div class="w-40 rounded">
+    <div class="w-64 rounded reveal">
+      <%= image_tag "logos/6.png" %>
+    </div>
+    <div class="w-64 rounded reveal">
       <%= image_tag "logos/8.png" %>
     </div>
-    <div class="w-40 rounded">
-      <%= image_tag "logos/6.png" %>
+  </div>
+  <div class="flex flex-wrap justify-around items-center">
+    <div class="w-64 rounded reveal">
+      <%= image_tag "logos/4.png" %>
+    </div>
+    <div class="w-64 rounded reveal">
+      <%= image_tag "logos/5.png" %>
+    </div>
+    <div class="w-64 rounded reveal">
+      <%= image_tag "logos/9.png" %>
+    </div>
+    <div class="w-64 rounded reveal">
+      <%= image_tag "logos/2.png" %>
+    </div>
+  </div>
+  <div class="flex flex-wrap justify-around items-center">
+    <div class="w-64 rounded reveal">
+      <%= image_tag "logos/10.png" %>
+    </div>
+    <div class="w-64 rounded reveal">
+      <%= image_tag "logos/3.png" %>
+    </div>
+    <div class="w-64 rounded reveal">
+      <%= image_tag "logos/7.png" %>
     </div>
   </div>
   <div class="flex justify-center">
-    <%= link_to 'Voir tous nos clients', nos_clients_path, class: 'btn btn-outline btn-primary mx-auto mt-6' %>
+    <%= link_to 'En savoir plus', nos_clients_path, class: 'btn btn-outline btn-primary mx-auto mt-6' %>
   </div>
 </div>
 
-<div class="flex flex-col justify-center min-h-screen reveal">
-  <h2 class="text-center text-3xl font-bold mt-12 mb-6">
+<div class="flex flex-col justify-center min-h-screen">
+  <h2 class="text-center text-5xl font-bold mt-12 mb-6 reveal">
     Quelques chiffres
   </h2>
 
@@ -76,12 +92,12 @@
               nbr_deploys: @projets_deploys, 
               nbr_coffees: @projets_coffees)) %>
 
-  <div class="flex justify-center">
+  <div class="flex justify-center reveal">
     <%= link_to 'Voir les dernières réalisations', portfolio_path, class: 'btn btn-outline btn-primary mx-auto mt-6' %>
   </div>
 </div>
 
-<div class="flex justify-center flex-col min-h-screen reveal">
+<div class="flex justify-center flex-col">
   <h2 class="font-bold text-3xl my-6 text-center">
     Vous avez un projet à nous soumettre ?
   </h2>
