@@ -25,7 +25,7 @@
   <body>
     <%= render partial: "partials/navbar" %>
     <%= render partial: "partials/notification" %>
-    <main class="mt-6 px-2 sm:px-5 mb-12">
+    <main class="mb-12">
       <%= yield %>
     </main>
     <% if cookies[:axeptio_cookies].blank? %>
