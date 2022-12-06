@@ -2,7 +2,7 @@
   <div class="hero-overlay bg-opacity-60"></div>
   <div class="hero-content text-center text-neutral-content">
     <div class="">
-      <p class="mb-5">Notre ambition</p>
+      <p class="mb-5 text-2xl">Notre ambition</p>
       <h1 class="mb-5 text-5xl font-bold">Développer des applications et plateformes Web évolutives</h1>
     </div>
   </div>
@@ -37,10 +37,26 @@
 </div>
 
 <div class="flex flex-col justify-center min-h-screen">
+  <h2 class="text-center text-5xl font-bold mt-12 mb-6 reveal">
+    Quelques chiffres
+  </h2>
+
+  <%= render(StatComponent.new(
+              nbr_projets: @projets.count, 
+              nbr_commits: @projets_commits, 
+              nbr_deploys: @projets_deploys, 
+              nbr_coffees: @projets_coffees)) %>
+
+  <div class="flex justify-center reveal">
+    <%= link_to 'Voir les dernières réalisations', portfolio_path, class: 'btn btn-outline btn-primary mx-auto mt-6' %>
+  </div>
+</div>
+
+<div class="flex flex-col justify-center min-h-screen">
   <h2 class="text-center text-5xl font-bold mt-24 mb-6 reveal">
     Ils nous font confiance
   </h2>
-  <div class="flex flex-wrap justify-around items-center">
+  <div class="flex flex-wrap justify-around items-center gap-4">
     <div class="w-64 rounded reveal">
       <%= image_tag "logos/1.png" %>
     </div>
@@ -51,7 +67,7 @@
       <%= image_tag "logos/8.png" %>
     </div>
   </div>
-  <div class="flex flex-wrap justify-around items-center">
+  <div class="flex flex-wrap justify-around items-center gap-4">
     <div class="w-64 rounded reveal">
       <%= image_tag "logos/4.png" %>
     </div>
@@ -65,7 +81,7 @@
       <%= image_tag "logos/5.png" %>
     </div>
   </div>
-  <div class="flex flex-wrap justify-around items-center">
+  <div class="flex flex-wrap justify-around items-center gap-4">
     <div class="w-64 rounded reveal">
       <%= image_tag "logos/3.png" %>
     </div>
@@ -84,26 +100,10 @@
   </div>
 </div>
 
-<div class="flex flex-col justify-center min-h-screen">
-  <h2 class="text-center text-5xl font-bold mt-12 mb-6 reveal">
-    Quelques chiffres
-  </h2>
-
-  <%= render(StatComponent.new(
-              nbr_projets: @projets.count, 
-              nbr_commits: @projets_commits, 
-              nbr_deploys: @projets_deploys, 
-              nbr_coffees: @projets_coffees)) %>
-
-  <div class="flex justify-center reveal">
-    <%= link_to 'Voir les dernières réalisations', portfolio_path, class: 'btn btn-outline btn-primary mx-auto mt-6' %>
-  </div>
-</div>
-
-<div class="flex justify-center flex-col">
-  <h2 class="font-bold text-3xl my-6 text-center">
+<div class="flex justify-center flex-col min-h-screen">
+  <h2 class="font-bold text-5xl mb-16 text-center reveal">
     Vous avez un projet à nous soumettre ?
   </h2>
 
-  <%= link_to 'nous contacter', contact_path, class: 'btn btn-primary btn-outline mx-auto' %>
+  <%= link_to 'nous contacter', contact_path, class: 'btn btn-primary btn-outline mx-auto reveal' %>
 </div>
