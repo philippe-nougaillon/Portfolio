@@ -83,6 +83,6 @@ class PagesController < ApplicationController
     end
   end
 
-  def logiciels
+  def camino
   end
 end
