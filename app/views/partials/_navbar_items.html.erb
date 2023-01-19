@@ -1,18 +1,18 @@
 <%= navbar_item 'portfolio', portfolio_path, 'Portfolio' %>
 <%= navbar_item 'a_propos', a_propos_path, 'À propos' %>
+<%= navbar_item 'nos_clients', nos_clients_path, 'Clients' %>
+<%= navbar_item 'services', services_path, 'Services' %>
 <li tabindex="0">
   <a>
-    Logiciels
+    Solutions
     <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
   </a>
   <ul class="p-2 bg-base-100">
-    <%= navbar_item 'logiciels', logiciels_path(projet: "camino"), 'Camino' %>
-    <%= navbar_item 'logiciels', logiciels_path(projet: "prestofacto"), 'PrestoFacto' %>
-    <%= navbar_item 'logiciels', logiciels_path(projet: "Planning"), 'Planning' %>
+    <%= navbar_item 'logiciels', logiciels_path(projet: "camino"), 'Camino (Gestion de projets 2.0)' %>
+    <%= navbar_item 'logiciels', logiciels_path(projet: "prestofacto"), 'PrestoFacto (Facturation)' %>
+    <%= navbar_item 'logiciels', logiciels_path(projet: "Planning"), "Planning <small>(Outil de planification pour l'enseignement supérieur)</small>" %>
   </ul>
 </li>
-<%= navbar_item 'nos_clients', nos_clients_path, 'Clients' %>
-<%= navbar_item 'services', services_path, 'Services' %>
 <%= navbar_item 'contact', contact_path, 'Contact' %>
 <%= navbar_item 'blog', blog_path, 'Blog' %>
 <li>
