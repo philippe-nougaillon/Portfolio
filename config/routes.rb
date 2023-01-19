@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     get :confidentialite, to: 'pages#confidentialite'
     get :recherche, to: 'pages#recherche'
     get :services, to: 'pages#services'
+    get :logiciels, to: 'pages#logiciels'
   end
 
   root 'pages#home'

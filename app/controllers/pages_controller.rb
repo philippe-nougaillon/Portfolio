@@ -82,5 +82,7 @@ class PagesController < ApplicationController
       # @results = @results.page(params[:page]).per(12)
     end
   end
-  
+
+  def logiciels
+  end
 end
