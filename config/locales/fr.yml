@@ -237,3 +237,26 @@ fr:
       truncate: "&hellip;"
   "true": OUI
   "false": NON
+  pages:
+    home:
+      title: P&P
+    portfolio:
+      title: Portfolio
+    a_propos:
+      title: À propos
+    nos_clients:
+      title: Clients
+    services:
+      title: Services
+    camino:
+      title: Camino
+    prestofacto:
+      title: PrestoFacto
+    planning:
+      title: Planning
+    contact:
+      title: Contact
+    blog:
+      title: Blog
+    recherche:
+      title: Recherche

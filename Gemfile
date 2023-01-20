@@ -96,3 +96,5 @@ gem "recaptcha"
 # a Ruby memcache client.
 gem 'dalli'
 gem "pg_search", "~> 2.3"
+
+gem "page_title_helper", "~> 6.0"
