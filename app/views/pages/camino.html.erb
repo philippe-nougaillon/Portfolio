@@ -17,21 +17,30 @@
 </head>
 
 <style>
-#welcome li {
-  list-style-type: none;
-  padding-top: 3px;
-  padding-left: 1em;
-  text-indent: -0.7em;
-  margin: 0 0 3px 0;
-}
-#welcome li:before {
-  content: "• ";
-  color: darkred;
-}
-#welcome * {
-  font-size: 20px;
-}
+  #welcome li {
+    list-style-type: none;
+    padding-top: 3px;
+    padding-left: 1em;
+    text-indent: -0.7em;
+    margin: 0 0 3px 0;
+  }
+  #welcome li:before {
+    content: "• ";
+    color: darkred;
+  }
+  #welcome * {
+    font-size: 20px;
+  }
 </style>
+
+<div class="text-center mb-16">
+  <h1 class="font-bold text-4xl text-accent mb-6 pt-8">
+    <i>CAMINO</i>
+  </h1>
+  <h2 class="xl:text-2xl text-accent mt-6 px-10">
+    La gestion de projets 2.0
+  </h2>
+</div>
 
 <div class="mx-auto px-2 lg:px-12">
   <div id="welcome">
@@ -107,31 +116,31 @@
         </div>
         <div class="carousel-inner relative w-full overflow-hidden">
           <div class="carousel-item active float-left w-full">
-            <%= image_tag "carousel/projets.png" %>
+            <%= image_tag "camino/projets.png" %>
           </div>
           <div class="carousel-item float-left w-full">
-            <%= image_tag "carousel/projet.png" %>
+            <%= image_tag "camino/projet.png" %>
           </div>
           <div class="carousel-item float-left w-full">
-            <%= image_tag "carousel/todolist.png" %>
+            <%= image_tag "camino/todolist.png" %>
           </div>
           <div class="carousel-item float-left w-full">
-            <%= image_tag "carousel/todo.png" %>
+            <%= image_tag "camino/todo.png" %>
           </div>
           <div class="carousel-item float-left w-full">
-            <%= image_tag "carousel/agenda.png" %>
+            <%= image_tag "camino/agenda.png" %>
           </div>
           <div class="carousel-item float-left w-full">
-            <%= image_tag "carousel/documents.png" %>
+            <%= image_tag "camino/documents.png" %>
           </div>
           <div class="carousel-item float-left w-full">
-            <%= image_tag "carousel/tables.png" %>
+            <%= image_tag "camino/tables.png" %>
           </div>
           <div class="carousel-item float-left w-full">
-            <%= image_tag "carousel/dashboard.png" %>
+            <%= image_tag "camino/dashboard.png" %>
           </div>
           <div class="carousel-item float-left w-full">
-            <%= image_tag "carousel/user.png" %>
+            <%= image_tag "camino/user.png" %>
           </div>
         </div>
         <button
@@ -198,7 +207,7 @@
         <div class="camera"></div> 
         <div class="display">
           <div class="artboard artboard-demo phone-1 pt-8">
-            <%= image_tag "carousel/mobile_projets.png" %>
+            <%= image_tag "camino/mobile_projets.png" %>
           </div>
         </div>
       </div>
@@ -206,7 +215,7 @@
         <div class="camera"></div> 
         <div class="display">
           <div class="artboard artboard-demo phone-1 pt-8">
-            <%= image_tag "carousel/mobile_projet.png" %>
+            <%= image_tag "camino/mobile_projet.png" %>
           </div>
         </div>
       </div>
@@ -214,7 +223,7 @@
         <div class="camera"></div> 
         <div class="display">
           <div class="artboard artboard-demo phone-1 pt-8">
-            <%= image_tag "carousel/mobile_todolist.png" %>
+            <%= image_tag "camino/mobile_todolist.png" %>
           </div>
         </div>
       </div>
@@ -222,7 +231,7 @@
         <div class="camera"></div> 
         <div class="display">
           <div class="artboard artboard-demo phone-1 pt-8">
-            <%= image_tag "carousel/mobile_todo.png" %>
+            <%= image_tag "camino/mobile_todo.png" %>
           </div>
         </div>
       </div>
@@ -230,7 +239,7 @@
         <div class="camera"></div> 
         <div class="display">
           <div class="artboard artboard-demo phone-1 pt-8">
-            <%= image_tag "carousel/mobile_todos.png" %>
+            <%= image_tag "camino/mobile_todos.png" %>
           </div>
         </div>
       </div>
@@ -238,7 +247,7 @@
         <div class="camera"></div> 
         <div class="display">
           <div class="artboard artboard-demo phone-1 pt-8">
-            <%= image_tag "carousel/mobile_dashboard.png" %>
+            <%= image_tag "camino/mobile_dashboard.png" %>
           </div>
         </div>
       </div>
@@ -247,30 +256,21 @@
     <h2 class="camino">Projet Open-Source</h2>
     <p>
       Les sources de ce projet sont disponibles ici :
-      <%= link_to "https://github.com/philippe-nougaillon/Camino2", "https://github.com/philippe-nougaillon/Camino2" %>
+      <%= link_to "https://github.com/philippe-nougaillon/Camino2", "https://github.com/philippe-nougaillon/Camino2", class:'link' %>
     </p>
 
     <h2 class="camino">Développement</h2>
     <p>
       CAMINO est développé et maintenu par 
-      <%= link_to 'Philnoug & Partners', 'https://philnoug.com', class:'link', target: '_blank' %>
+      <%= link_to 'Philnoug & Partners', root_path, class:'link' %>
     </p>
 
     <h2 class="camino">Support et services</h2>
     <p>
       Vous souhaitez une nouvelle fonctionnalité ou installer CAMINO sur votre serveur Linux ?
       <br>
-      <%= link_to 'Consultez notre offre de services', 'https://philnoug.com/services', class:'link', target: '_blank' %>
+      <%= link_to 'Consultez notre offre de services', '/services', class:'link' %>
     </p>
-
-    <h2 class="camino">Contact</h2>
-    <p>
-      Vous avez une question, une remarque ou un projet à nous soumettre ?
-
-      <br>
-      <%= link_to 'Contactez-nous', 'https://philnoug.com/contact', class:'link', target: '_blank' %>
-    </p>
-
 
   </div>
 </div>
