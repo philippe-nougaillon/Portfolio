@@ -86,6 +86,16 @@ class PagesController < ApplicationController
   def partenaires
   end
 
+  def solutions
+  end
+
   def camino
   end
+
+  def prestofacto
+  end
+
+  def planning
+  end
+
 end

@@ -248,6 +248,8 @@ fr:
       title: Clients
     services:
       title: Services
+    solutions:
+      title: Solutions
     camino:
       title: Camino
     prestofacto:

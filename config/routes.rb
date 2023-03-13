@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     get :confidentialite, to: 'pages#confidentialite'
     get :recherche, to: 'pages#recherche'
     get :services, to: 'pages#services'
+    get :solutions, to: 'pages#solutions'
     get :camino, to: 'pages#camino'
     get :prestofacto, to: 'pages#prestofacto'
     get :planning, to: 'pages#planning'
