@@ -4,7 +4,7 @@
 
 @layer components {
 
-  h2.camino{
+  h2.solutions-title{
     @apply !text-2xl !font-bold my-4
   }
 
