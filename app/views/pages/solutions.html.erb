@@ -1,6 +1,6 @@
 <div class="text-center">
   <h1 class="font-bold text-4xl text-accent pt-8">
-    <i>SOLUTIONS</i>
+    <i>Nos APPS</i>
   </h1>
 
   <h2 class="xl:text-2xl text-accent mt-6 px-10 mb-6">
@@ -11,18 +11,19 @@
 </div>
 
 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mx-4 my-6">
-  <%= link_to camino_path do %>
+
+  <%= link_to planning_path do %>
     <div class="mt-3">
       <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white">
         <div class="h-72">
-          <%= image_tag "projets/camino/screen_0.png", class:"object-fill h-full", loading: "lazy" %>
+          <%= image_tag "projets/planning iae-paris/screen_0.png", class:"object-fill h-full", loading: "lazy" %>
         </div>
         <div class="card-body h-60">
           <h2 class="card-title text-primary underline underline-offset-8">
-            CAMINO
+            PLANNING
           </h2>
           <p class="my-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
-            Gérer, en équipe et en mobilité, vos projets (Suivi d'interventions, GMAO, etc...).
+            Planning à l’usage d’un établissement de l’enseignement supérieur
           </p>
         </div>
       </div>
@@ -40,28 +41,29 @@
             PrestoFacto
           </h2>
           <p class="my-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
-            Application de facturation de services journaliers.
+            Application de facturation de services journaliers
           </p>
         </div>
       </div>
     </div>
   <% end %>
 
-  <%= link_to planning_path do %>
+  <%= link_to camino_path do %>
     <div class="mt-3">
       <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white">
         <div class="h-72">
-          <%= image_tag "projets/planning iae-paris/screen_0.png", class:"object-fill h-full", loading: "lazy" %>
+          <%= image_tag "projets/camino/screen_0.png", class:"object-fill h-full", loading: "lazy" %>
         </div>
         <div class="card-body h-60">
           <h2 class="card-title text-primary underline underline-offset-8">
-            PLANNING
+            CAMINO
           </h2>
           <p class="my-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
-            Planning à l’usage d’un établissement de l’enseignement supérieur.
+            Gérer, en équipe et en mobilité, vos projets (Suivi d'interventions, GMAO, etc...)
           </p>
         </div>
       </div>
     </div>
   <% end %>
+
 </div>
