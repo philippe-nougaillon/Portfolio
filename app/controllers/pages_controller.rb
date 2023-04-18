@@ -98,4 +98,7 @@ class PagesController < ApplicationController
   def planning
   end
 
+  def guide_planning
+  end
+
 end

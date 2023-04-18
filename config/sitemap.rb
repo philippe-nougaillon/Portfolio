@@ -27,15 +27,17 @@ SitemapGenerator::Sitemap.create do
 
   add portfolio_path
   add a_propos_path
-  add nos_clients_path
-  add services_path
-  add contact_path
   add blog_path
-  add partenaires_path
+  add nos_clients_path
+  add contact_path
+  add confidentialite_path
+  add services_path
   add apps_path
   add camino_path
   add prestofacto_path
   add planning_path
+  add guide_planning_path
+  add partenaires_path
 
   Post.where(published: true).find_each do |post|
     add post_path(post), lastmod: post.updated_at

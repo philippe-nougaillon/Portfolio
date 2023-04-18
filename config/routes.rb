@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     get :camino, to: 'pages#camino'
     get :prestofacto, to: 'pages#prestofacto'
     get :planning, to: 'pages#planning'
+    get :guide_planning, to: 'pages#guide_planning'
     get :partenaires, to: 'pages#partenaires'
   end
 

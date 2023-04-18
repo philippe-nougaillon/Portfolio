@@ -8,4 +8,8 @@
     @apply !text-2xl !font-bold my-4
   }
 
+  #guide_planning ul{
+    @apply pl-4
+  }
+
 }
