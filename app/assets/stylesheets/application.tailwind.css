@@ -4,7 +4,7 @@
 
 @layer components {
 
-  h2.solutions-title{
+  h2.apps-title{
     @apply !text-2xl !font-bold my-4
   }
 

@@ -86,7 +86,7 @@ class PagesController < ApplicationController
   def partenaires
   end
 
-  def solutions
+  def apps
   end
 
   def camino

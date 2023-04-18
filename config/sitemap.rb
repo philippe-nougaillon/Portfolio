@@ -32,7 +32,7 @@ SitemapGenerator::Sitemap.create do
   add contact_path
   add blog_path
   add partenaires_path
-  add solutions_path
+  add apps_path
   add camino_path
   add prestofacto_path
   add planning_path
