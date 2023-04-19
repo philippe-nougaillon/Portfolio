@@ -1,11 +1,65 @@
-<footer class="flex flex-wrap justify-around bg-base-300 mt-12 py-8 text-black shadow-xl">
-  <%= mail_to "contact@philnoug.com" %>
-  <%= link_to "https://www.linkedin.com/in/philnoug", target: "_blank" do %>
-    <i class="fa-brands fa-linkedin"></i>
-    philnoug
-  <% end %>
-  <%= link_to "https://github.com/philippe-nougaillon", target: "_blank" do %>
-    <i class="fa-brands fa-github"></i>
-    philippe-nougaillon
-  <% end %>
+<footer class="footer p-10 bg-base-300 text-base-content text-base">
+  <div>
+    <p>
+      <span class="text-2xl font-bold">Studio Philnoug & Partners</span>
+      <br>
+      Siret : 384 396 719 00047
+      <br>
+      APE : 5829C
+      <br>
+      112 All. de Notre Dame des Anges,
+      <br>
+      93370 Montfermeil
+    </p>
+  </div>
+  <div>
+    <span class="footer-title mx-auto">Sitemap</span>
+    <div class="flex justify-between gap-8">
+      <ul>
+        <%= navbar_item 'a_propos', a_propos_path, 'À propos' %>
+        <%= navbar_item 'nos_clients', nos_clients_path, 'Clients' %>
+        <%= navbar_item 'portfolio', portfolio_path, 'Portfolio' %>
+      </ul>
+      <ul>
+        <%= navbar_item 'partenaires', partenaires_path, 'Partners' %>
+        <%= navbar_item 'services', services_path, 'Services' %>
+        <%= navbar_item 'contact', contact_path, 'Contact' %>
+      </ul>
+    </div>
+  </div> 
+  <div>
+    <span class="footer-title">Nos apps</span>
+    <ul>
+      <%= navbar_item 'planning', planning_path, 'Planning' %>
+      <%= navbar_item 'prestofacto', prestofacto_path, 'PrestoFacto' %>
+      <%= navbar_item 'camino', camino_path, 'Camino' %>
+      <li>
+        <%= link_to 'https://mes-petits-abonnements.flutterflow.app/', target: "_blank", class: 'flex gap-4' do %>
+          <span class="flex-1 whitespace-nowrap">Mes petis abonnements</span>
+        <% end %>
+      </li>
+    </ul>
+  </div> 
+  <div>
+    <span class="footer-title">Legal</span> 
+    <a class="link link-hover">Terms of use</a> 
+    <a class="link link-hover">Privacy policy</a> 
+    <a class="link link-hover">Cookie policy</a>
+  </div>
+</footer>
+<footer class="footer px-10 py-4 border-t bg-base-content text-neutral-content border-base-300">
+  <p>Copyright © 2023 - Tout droits réservés à Studio Philnoug & Partners</p>
+  <div class="md:place-self-center md:justify-self-end">
+    <div class="grid grid-flow-col gap-4">
+      <%= mail_to "contact@philnoug.com" do %>
+        <i class="fa-solid fa-envelope fa-2xl"></i>
+      <% end %>
+      <%= link_to "https://www.linkedin.com/in/philnoug", target: "_blank" do %>
+        <i class="fa-brands fa-linkedin fa-2xl"></i>
+      <% end %>
+      <%= link_to "https://github.com/philippe-nougaillon", target: "_blank" do %>
+        <i class="fa-brands fa-github fa-2xl"></i>
+      <% end %>
+    </div>
+  </div>
 </footer>
