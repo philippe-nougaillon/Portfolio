@@ -39,30 +39,32 @@
   <ul class="list-disc">
     <li>Chaque cours est associé à une Formation, un ou deux Intervenants, une Salle et un Etat (Planifié, Confirmé, Reporté, Annulé, Réalisé)</li>
     <li>Affichage des cours sous forme de Liste, de Calendrier (semaine/mois) ou Etat d'Occupation des salles</li>
-    <li>Recheche multi-critères (Filtre sur Date, Formation, Intervenant, Etat, Cours passés ou futurs)</li>
-    <li>Export des cours vers Excel (CSV), Outlook/Google Agenda(iCal), PDF</li>
+    <li>Recheche multi-critères (Filtres sur Date, Formation, Intervenant, Etat, Cours passés ou futurs)</li>
+    <li>Export des cours vers Microsoft Excel (.XLS), Outlook/Google Agenda(.iCal) et PDF</li>
     <li>Sélection d'un ensemble de cours pour effectuer une action groupée :
       <ul style="list-style-type: circle;">
         <li>Changement d'état</li>
-        <li>Changement de salle (avec proposition des salles disponibles)</li>
+        <li>Changement de salle (avec proposition des salles immédiatement disponibles)</li>
         <li>Changement de date</li>
         <li>Changement d'intervenant</li>
+        <li>Intervertir les intervenants de 2 cours</li>
+        <li>Générer une feuille d'émargement (Cours/Examens)</li>
         <li>Export CSV</li>
         <li>Export iCal</li>
         <li>Export PDF</li>
-        <li>Supression (Seul le créateur d'un cours peut le supprimer)</li>
+        <li>Suppression (Seul le créateur d'un cours peut le supprimer)</li>
       </ul>
     </li>
     <li>Saisie d'une réservation :
       <ul style="list-style-type: circle;">
-        <li>Cochez <b>HSS?</b> pour que les heures de cours ne soient pas imputées sur l'état de service de l'intervenant (HSS = Hors Service Statutaire)</li>
+        <li>Cochez <b>HSS?</b> pour que les heures de cours ne soient pas imputées sur l'état de services de l'intervenant (HSS = Hors Service Statutaire)</li>
         <li>Cochez <b>E-learning?</b> pour indiquer que ce cours est de l'E-learning</li>
         <li>Pour signaler que le cours utilise l'outil <b>ZOOM</b>; entrez comme nom de cours le lien ZOOM, puis son intitulé, séparés par un espace. Le lien ZOOM sera alors cliquable dans la liste publique des cours (PC/Mobile)</li>
-        <li>Les salles disponibles sont affichés automatiquement si elles remplissent les conditions suivantes :
+        <li>Les salles disponibles sont affichées automatiquement si elles remplissent les conditions suivantes :
           <ul style="list-style-type: square;">
             <li>Pas de chevauchement horaire pour un même intervenant. Il n'est pas possible de saisir un nouveau cours si le formateur intervient déjà sur un autre cours aux mêmes heures (sauf si les doublons sont autorisés pour cet intervenant)</li>
             <li>Pas de chevauchement horaire pour une même salle. <strong>Pour autoriser les doublons : entrez 0 dans la capacité de la salle.</strong></li>
-            <li>Impossibilité de saisir un nouveau cours ayant lieu un dimanche ou un jour de fermeture de l'établissement</li>
+            <li>Impossibilité de saisir un nouveau cours ayant lieu un dimanche ou un jour de fermeture de l'établissement (cf. Outils/Fermetures)</li>
           </ul>
         </li>
       </ul>
@@ -71,11 +73,15 @@
       <ul style="list-style-position: inside; list-style-type: circle;">
         <li>Dépassement de capacité de la salle (le nbr de places est inférieur au nbr d'étudiants de la formation)</li>
         <li>Le cours est dans l'état 'Confirmé' mais aucune salle n'a été réservée</li>
+        <li>Un commentaire est présent pour ce cours</li>
       </ul>
     </li>
   </ul>
 
-  <h2 class="text-3xl font-medium mt-8 mb-4 pb-4 border-b"><i class="fa fa-chalkboard"></i> Liste des salles</h2>
+  <h2 class="text-3xl font-medium mt-8 mb-4 pb-4 border-b">
+    <i class="fa fa-chalkboard"></i> 
+    Salles
+  </h2>
   <div class="flex flex-wrap justify-center gap-4 mb-4">
     <div>
       <a href="/Images/guide/salles1.png" class="link text-info shadow rounded p-1">
@@ -101,6 +107,7 @@
   <ul class="list-disc">
     <li>Gestion de la capacité (alerte si dépassement)</li>
     <li>Visualisation des créneaux horaires libres/occupés pour une date, une salle</li>
+    <li>Création d'un nouveau cours en cliquant sur un créneau libre (en vert)</li>
   </ul>
 
   <h2 class="text-3xl font-medium mt-8 mb-4 pb-4 border-b"><i class="fa fa-briefcase"></i> Formations</h2>
@@ -120,7 +127,7 @@
   </div>
   <ul class="list-disc">
     <li>Chaque formation est associée à un code couleur pour un répérage rapide dans le planning</li>
-    <li>Gestion des UE (une liste d'UE est associée à chaque formation, avec indication du nombre d'heures)</li>
+    <li>Gestion des UE (une liste d'UE est associée à chaque formation, avec indication du nombre d'heures, nbr de cours planifiés et restant à planifier)</li>
     <li>Gestion des étudiants liés à la formation</li>
     <li>Gestion des vacations votées (nom de l'intervenant, nbr heures)</li>
     <li>Archivage des formations</li>
@@ -158,7 +165,10 @@
     </a>
   </div>
   <ul class="list-disc">
-    <li>Profil des intervenants avec photo (option), status, formations dispensées (affichage dynamique basé sur les cours enregistrés, avec le nombre d'heures planifiées et la date du premier cours)</li>
+    <li>
+      Profil des intervenants avec photo (option), status, formations dispensées, de ses salles préférées, ainsi que
+      le nombre d'heures planifiées et la date du premier cours
+    </li>
     <li>Gestion des responsabilités (Titre, nbr heures attribuées)</li>
     <ul style="list-style-type: circle;">
       <li>
@@ -168,9 +178,10 @@
         Ex: "DE LA MARRE Henry" sera compris comme nom=DE, prénom=LA MARRE Henry. Il convient donc de remplacer l'espace par un '_', ce qui donnera "DE_LA_MARRE Henry".
         Le nom et le prénom sont obligatoires. Remplissez un champ vide par un point si besoin.
       </li>
-      <li>Cochez 'Autoriser les doublons' si vous souhaitez que l'intervenant puisse être sur plusieurs cours sur le même créneau horaire. C'est généralement le cas pour les groupes et non les individus.</li>
+      <li>Cochez 'Autoriser les doublons' si vous souhaitez que l'intervenant puisse être sur plusieurs cours sur le même créneau horaire. 
+      C'est généralement le cas pour les groupes et non les individus (Ex: Alumnis, Direction, Service RH...).</li>
     </ul>
-    <li>La saisie des Responsabilités n'est accessible que par les membres du groupe RH</li>
+    <li>La saisie des Responsabilités n'est accessible que par les membres du rôle 'RH'</li>
   </ul>
 
   <h2 class="text-3xl font-medium mt-8 mb-4 pb-4 border-b"><i class="fa fa-graduation-cap"></i> Etudiants</h2>
@@ -190,17 +201,20 @@
   </div>
   <ul class="list-disc">
     <li>Chaque étudiant est associé à une formation</li>
-    <li>La saisie des coordonnées de l'étudiant permet de lui envoyer une notification par email/SMS en cas d'annulation de cours (option)</li>
+    <li>La saisie des coordonnées de l'étudiant permet de lui envoyer une notification par email/SMS(option) en cas d'annulation de cours</li>
   </ul>
 
   <h2 class="text-3xl font-medium mt-8 mb-4 pb-4 border-b"><i class="fa fa-users"></i> Utilisateurs</h2>
   <ul class="list-disc">
-    <li>Il existe 4 rôles utilisateur :</li>
+    <li>Il existe 7 rôles utilisateur :</li>
     <ul style="list-style-type: circle;">
       <li>Visiteur (utilisateur non authentifié)</li>
-      <li>Utilisateur (utilisateur authentifié, généralement un membre du service Scolarité)</li>
-      <li>Super utilisateur (peut réserver des salles, généralement un membre du service Planning)</li>
-      <li>Admin (peut administrer les cours et les utilisateurs)</li>
+      <li>Etudiant</li>
+      <li>Intervenant</li>
+      <li>Enseignant</li>
+      <li>RH</li>
+      <li>Gestionnaire</li>
+      <li>Administrateur</li>
     </ul>
   </ul>
 
@@ -222,10 +236,14 @@
   </div>
   <ul class="list-disc">
     <li>Gestion des jours de fermeture</li>
-    <li>Réservation de créneaux horaires</li>
+    <li>Réservation de créneaux horaires en massse</li>
     <li>Etats de services</li>
     <li>Taux d'occupation jours ou salles</li>
-    <li>Import/Export de cours, intervenants, étudiants</li>
+    <li>Import/Export de cours, intervenants, étudiants, formations, etc.</li>
+    <li>Invitations (Workflow de gestion des propositions de créneaux horaires)</li>
+    <li>MailLog (Historique des envois de mail avec état [envoyé, ouvert])</li>
+    <li>Audit Trail (historique des modifications utilisateurs)</li>
+    <li>Rappel des cours (Envoyer un rappel des cours à tous les intervenants)</li>
     <li>Outils pour le rôle admin :</li>
     <ul style="list-style-type: circle;">
       <li>Gestion des Utilisateurs</li>
@@ -233,7 +251,7 @@
       <li>Intervertir deux intervenants</li>
       <li>Audit des modifications</li>
       <li>Gestion des Salles</li>
-      <li>Nouvelle saison (Réservation de cours sur une année)</li>
+      <li>Nouvelle saison (Réservation de cours en masse simplifiée, sur une année)</li>
     </ul>
   </ul>
 
@@ -258,7 +276,7 @@
     </li>
     <br>
     <li>
-      Les formations, intervenants, étudiants peuvent être importés en masse à partir d'un fichier XLS
+      Les formations, intervenants, étudiants peuvent être importés en masse à partir d'un fichier .XLS (Microsoft Excel 2003)
     </li>
 
     <br>
@@ -292,13 +310,13 @@
     </a>
   </div>
   <ul class="list-disc">
-    <li>Chaque modification apportée aux données est enregistrée dans un journal, avec la date, l'utilisateur, la table, le champs et la valeur avant/après modification</li>
+    <li>Chaque modification apportée aux données est enregistrée dans un journal, avec la date, l'utilisateur, son IP, la table, le champs et la valeur avant/après la dite modification</li>
   </ul>
 
 
   <h2 class="text-3xl font-medium mt-8 mb-4 pb-4 border-b"><i class="fa fa-list-alt"></i> Etats de services</h2>
   <ul class="list-disc">
-    <li>Récapitule les cours <b>réalisés</b> par un intervenant sur une période donnée </li>
+    <li>Récapitule et valorise les cours <b>réalisés</b> par un intervenant, sur une période donnée </li>
     <li>Visualisation des états de services par statut</li>
     <li>Etat liquidatif en PDF</li>
   </ul>
@@ -310,8 +328,8 @@
 
   <h2 class="text-3xl font-medium mt-8 mb-4 pb-4 border-b"><i class="fa fa-asterisk"></i> Notification</h2>
   <ul class="list-disc">
-    <li>Les chargés de scolarité et les étudiants peuvent recevoir une notification par email/SMS(à venir) lors de l'annulation de cours(option)</li>
-    <li>Chaque fin de semaine, les intervenants recoivent leur planning de la semaine à venir (option)</li>
+    <li>Les chargés de scolarité et les étudiants peuvent recevoir une notification par email/SMS(option) lors de l'annulation de cours</li>
+    <li>Chaque fin de mois, les intervenants recoivent leur planning du mois à venir</li>
   </ul>
 
   <h2 class="text-3xl font-medium mt-8 mb-4 pb-4 border-b"><i class="fa fa-mobile-alt"></i> Mobile</h2>
@@ -374,6 +392,11 @@
     </a>
   </div>
   <ul class="list-disc">
-    <li>Planning du jour optimisé pour la diffusion sur un grands écrans, généralement installés à l'entrée des salles de cours, dans les couloirs ou à l'accueil</li>
+    <li>
+      Planning du jour optimisé pour la diffusion sur grands écrans, généralement installés 
+      à l'entrée des salles de cours, dans les couloirs ou à l'accueil de chaque batiment.
+    </li>
+    <li>Rotation automatique des pages</li>
+    <li>Indication de la progression des cours</li>
   </ul>
 </div>
