@@ -1,19 +1,17 @@
-<footer class="footer p-10 bg-base-300 text-base-content text-base">
+<footer class="footer p-10 bg-base-300 text-base-content text-base mt-24">
   <div>
     <p>
       <span class="text-2xl font-bold">Studio Philnoug & Partners</span>
       <br>
-      Siret : 384 396 719 00047
-      <br>
-      APE : 5829C
-      <br>
-      112 All. de Notre Dame des Anges,
-      <br>
-      93370 Montfermeil
-    </p>
+      <span class="opacity-50">
+        Siret : 384 396 719 00047
+        <br>
+        APE : 5829C
+      </span>
+    </span>
   </div>
   <div>
-    <span class="footer-title mx-auto">Sitemap</span>
+    <span class="footer-title mx-auto">Navigation</span>
     <div class="flex justify-between gap-8">
       <ul>
         <%= navbar_item 'a_propos', a_propos_path, 'À propos' %>
@@ -35,13 +33,13 @@
       <%= navbar_item 'camino', camino_path, 'Camino' %>
       <li>
         <%= link_to 'https://mes-petits-abonnements.flutterflow.app/', target: "_blank", class: 'flex gap-4' do %>
-          <span class="flex-1 whitespace-nowrap">Mes petis abonnements</span>
+          <span class="flex-1 whitespace-nowrap">MyMoneyPenny</span>
         <% end %>
       </li>
     </ul>
   </div> 
   <div>
-    <span class="footer-title">Legal</span> 
+    <span class="footer-title">Légal</span> 
     <a class="link link-hover">Terms of use</a> 
     <a class="link link-hover">Privacy policy</a> 
     <a class="link link-hover">Cookie policy</a>
