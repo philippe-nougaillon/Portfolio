@@ -1,5 +1,5 @@
 <% cache @client do %>
-  <div class="flex flex-col lg:flex-row items-center justify-between lg:gap-16 reveal">
+  <div id= <%= @client.id %> class="client-component flex flex-col lg:flex-row items-center justify-between lg:gap-16">
     <div class="my-6">
       <h2 class="font-bold text-3xl text-accent underline underline-offset-8 mb-6">
         <%= @client.name %>
