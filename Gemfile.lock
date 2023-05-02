@@ -285,7 +285,6 @@ DEPENDENCIES
   rails (~> 7.0.4)
   recaptcha
   redcarpet
-  redis (~> 4.0)
   rspec-rails
   rubocop
   seed_dump
