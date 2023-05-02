@@ -258,6 +258,8 @@ fr:
       title: Planning
     contact:
       title: Contact
+    contact_submit:
+      title: Contact
     blog:
       title: Blog
     recherche:
