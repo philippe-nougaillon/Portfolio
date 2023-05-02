@@ -32,7 +32,7 @@ class PagesController < ApplicationController
   def contact_submit
     if verify_recaptcha
       message = Message.create(email: params[:email], objet: params[:objet], contenu: params[:contenu])
-      ContactNotificationJob.perform_later(message)
+      ContactMailer.submitted(message).deliver_now
       redirect_to root_path, notice: 'Votre message a bien été envoyé.'
     else
       render 'contact'
