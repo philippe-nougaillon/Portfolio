@@ -13,12 +13,36 @@
   </h3>
 
   <div class="flex flex-col mx-8 md:mx-36 mt-24 gap-12">
-    <div class="flex flex-wrap sm:flex-nowrap gap-8 reveal">
-      <div class="mask mask-squircle grayscale  opacity-70">
-        <%= image_tag "https://media.licdn.com/dms/image/C4E03AQG3P_kSXgKJ1g/profile-displayphoto-shrink_400_400/0/1632397665330?e=1689206400&v=beta&t=AhKIWD6P_8jfi9Qrfc5GDE-dm1o-RltTgo3g2DGxyrg", 
-            class: "object-contain h-48 w-96"
-        %>
+    <div class="flex flex-col-reverse sm:flex-row flex-wrap sm:flex-nowrap gap-8 reveal">
+      <div>
+        <h4 class="sm:text-right font-bold text-2xl">
+          Philippe (alias Philnoug)
+        </h4>
+        <h5 class="text-right italic text-xl">
+          
+        </h5>
+        <p class="text-justify mt-4">
+          Entrepreneur, Développeur et Consultant, passionné d'informatique Open-Source, 
+          avec une expérience de plus de 30 ans, je suis adepte des approches 'XP / RAD / AGILE / LEAN / SCRUM'. 
+          J'ai mené à bien plus de 50 projets (développement, transformation digitale, rénovation de système d'information)
+          et développé 5 applications open-source, tout en continuant à me former. 
+          A l'écoute et force de proposition, j'aime répondre au mieux aux besoins client en livrant (dans les temps) des solutions économiques et adaptées. 
+          Et comme j'ai maintenant plein d'histoires à raconter, je me suis engagé dans la formation et le mentorat de jeunes Développeurs et Product Managers (WebSchoolFactory / OpenClassrooms / Simplon).  
+          <%= link_to "https://www.linkedin.com/in/philnoug/" do %>
+            <i class="fa-brands fa-linkedin"></i>
+          <% end %>
+        </p>
+        
       </div>
+      <%= image_tag "partners/philippe.webp",
+          class: "mask mask-hexagon-2 object-contain h-48 w-96 mx-auto grayscale opacity-70"
+      %>
+    </div>
+
+    <div class="flex flex-wrap sm:flex-nowrap gap-8 reveal">
+      <%= image_tag "partners/pierre-emmanuel.webp", 
+          class: "mask mask-hexagon-2 object-contain h-48 w-96 mx-auto grayscale opacity-70"
+      %>
       <div>
         <h4 class="font-bold text-2xl">
           Pierre-Emmanuel
@@ -38,12 +62,12 @@
       </div>
     </div>
 
-    <div class="flex flex-wrap sm:flex-nowrap gap-8 reveal">
+    <div class="flex flex-col-reverse sm:flex-row flex-wrap sm:flex-nowrap gap-8 reveal">
       <div>
-        <h4 class="text-right font-bold text-2xl">
+        <h4 class="sm:text-right font-bold text-2xl">
           Nathan
         </h4>
-        <h5 class="text-right italic text-xl">
+        <h5 class="sm:text-right italic text-xl">
           Product Manager
         </h5>
         <p class="text-justify mt-4">
@@ -54,17 +78,15 @@
           <% end %>
         </p>
       </div>
-      <div class="mask mask-squircle grayscale opacity-70">
-        <%= image_tag "https://media.licdn.com/dms/image/D5603AQGVBZyQyq_duA/profile-displayphoto-shrink_400_400/0/1674316090425?e=1689206400&v=beta&t=GBQ7FJpC0mt2QCG2YouLrIZ52JVPQd4lLjm3K5o9_rY" %>
-      </div>
+        <%= image_tag "partners/nathan.webp",
+            class: "mask mask-hexagon-2 object-contain h-48 w-96 mx-auto grayscale opacity-70"
+        %>
     </div>
 
     <div class="flex flex-wrap sm:flex-nowrap gap-8 reveal">
-      <div class="mask mask-squircle grayscale w-96 opacity-70">
-        <%= image_tag "https://dam.malt.com/tegi8xa7kbgkfapnj91i?gravity=face&func=face&face_margin=60&w=440&h=440&force_format=webp",
-            class: "object-contain h-48 w-96" 
-        %>
-      </div>
+      <%= image_tag "partners/claire.webp",
+          class: "mask mask-hexagon-2 object-contain h-48 w-96 mx-auto grayscale opacity-70"
+      %>
       <div>
         <h4 class="font-bold text-2xl">
           Claire
@@ -83,12 +105,12 @@
       </div>
     </div>
 
-    <div class="flex flex-wrap sm:flex-nowrap gap-8 reveal">
+    <div class="flex flex-col-reverse sm:flex-row flex-wrap sm:flex-nowrap gap-8 reveal">
       <div>
-        <h4 class="text-right font-bold text-2xl">
+        <h4 class="sm:text-right font-bold text-2xl">
           Jean-Baptiste
         </h4>
-        <h5 class="text-right italic text-xl">
+        <h5 class="sm:text-right italic text-xl">
           UI-UX Designer
         </h5>
         <p class="text-justify mt-4">
@@ -100,19 +122,15 @@
           <% end %>
         </p>
       </div>
-      <div class="mask mask-squircle w-full grayscale opacity-70">
-        <%= image_tag "https://media.licdn.com/dms/image/C5603AQFrdQ94yCzTBw/profile-displayphoto-shrink_400_400/0/1593444673332?e=1684368000&v=beta&t=QTNNegK8zqy-vqDoqwdmU-4d3Y-erF3VywJzZSVxOWE",
-            class: "object-contain h-48 w-96" 
-        %>
-      </div>
+      <%= image_tag "partners/jean-baptiste.webp",
+          class: "mask mask-hexagon-2 object-contain h-48 w-96 mx-auto grayscale opacity-70"
+      %>
     </div>
 
     <div class="flex flex-wrap sm:flex-nowrap gap-8 reveal">
-      <div class="mask mask-squircle w-full grayscale opacity-70">
-        <%= image_tag "https://media.licdn.com/dms/image/C4E03AQGuWrNY6z_cMw/profile-displayphoto-shrink_400_400/0/1557207908956?e=1684368000&v=beta&t=FtrL2HwYSkRF5db-SgUUQ_9yws_p6O_NeLPEaTLoJ10",
-            class: "object-contain h-48 w-96" 
-        %>
-      </div>
+      <%= image_tag "partners/sylvie.webp",
+          class: "mask mask-hexagon-2 object-contain h-48 w-96 mx-auto grayscale opacity-70"
+      %>
       <div>
         <h4 class="font-bold text-2xl">
           Sylvie
@@ -129,34 +147,6 @@
             <i class="fa-brands fa-linkedin"></i>
           <% end %>
         </p>
-      </div>
-    </div>
-    
-    <div class="flex flex-wrap sm:flex-nowrap gap-8 reveal">
-      <div>
-        <h4 class="text-right font-bold text-2xl">
-          Philippe (alias Philnoug)
-        </h4>
-        <h5 class="text-right italic text-xl">
-          
-        </h5>
-        <p class="text-justify mt-4">
-          Entrepreneur, Développeur et Consultant, passionné d'informatique Open-Source, 
-          avec une expérience de plus de 30 ans, je suis adepte des approches 'XP/RAD/AGILE/LEAN/SCRUM'. 
-          J'ai mené à bien plus de 50 projets (développement, transformation digitale, rénovation de système d'information)
-          et développé 5 applications open-source, tout en continuant à me former. 
-          A l'écoute et force de proposition, j'aime répondre au mieux aux besoins client en livrant (dans les temps) des solutions économiques et adaptées. 
-          Et comme j'ai maintenant plein d'histoires à raconter, je me suis engagé dans la formation et le mentorat de jeunes Développeurs et Product Managers (WebSchoolFactory/OpenClassrooms/Simplon).  
-          <%= link_to "https://www.linkedin.com/in/philnoug/" do %>
-            <i class="fa-brands fa-linkedin"></i>
-          <% end %>
-        </p>
-        
-      </div>
-      <div class="mask mask-squircle w-full grayscale opacity-70">
-        <%= image_tag "https://media.licdn.com/dms/image/C4E03AQG0zsYlvbAZpQ/profile-displayphoto-shrink_400_400/0/1656574717843?e=1684368000&v=beta&t=Aqs9PqqHTG4BV9_EGEYRV5G6vVfNtZI6xPy-tVeC-fI",
-            class: "object-contain h-48 w-96"
-        %>
       </div>
     </div>
 
