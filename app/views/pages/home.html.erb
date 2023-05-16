@@ -24,6 +24,69 @@
   </div>
 </div>
 
+<div class="flex flex-col justify-center min-h-screen mx-4">
+  <h2 class="text-center text-5xl font-bold my-24 reveal">
+    Nos outils et domaines d'expertise
+  </h2>
+  <div class="flex flex-wrap justify-center gap-4 sm:gap-0">
+    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center reveal">
+      <%= image_tag 'logos/Ruby.svg', class: 'h-44 mx-auto' %>
+      <h3 class="font-bold text-2xl mt-7">Ruby</h3>
+      <p>
+        Un langage de programmation open source dynamique axé sur la simplicité et la productivité. 
+        <br><br>
+        Is Ruby the new COBOL?
+      </p>
+    </div>
+    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center reveal">
+      <%= image_tag 'logos/RoR.svg', class: 'h-44 mx-auto' %>
+      <h3 class="font-bold text-2xl mt-7">Rails</h3>
+      <p>
+        THE Full-Stack Web Framework
+        <br>
+        <br>
+        Utilisé par Airbnb, Shopify, GitHub, Twitch, SoudCloud, Coinbase, Heroku...
+      </p>
+    </div>
+    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center reveal">
+      <%= image_tag 'logos/Tailwind.svg', class: 'h-44 mx-auto' %>
+      <h3 class="font-bold text-2xl mt-7">TailwindCSS</h3>
+      <p>
+        Framework CSS open-source à la mode et pas comme les autres.
+        <br>
+        <br>
+        Parce que vous le valez bien !
+      </p>
+    </div>
+    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center reveal">
+      <%= image_tag 'logos/Heroku.svg', class: 'h-44 mx-auto' %>
+      <h3 class="font-bold text-2xl mt-7">Heroku</h3>
+      <p>
+        L'hébergement selon Salesforce.
+        <br><br> 
+        Plateforme Cloud en tant que service (PaaS) axée sur les conteneurs
+      </p>
+    </div>
+  </div>
+  <div class="flex flex-wrap justify-center gap-12 sm:gap-0 mt-12">
+    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center reveal">
+      <%= image_tag 'logos/Flutter.svg', class: 'h-44 mx-auto' %>
+      <h3 class="font-bold text-2xl mt-7">Flutter</h3>
+      <p>Si vous comptez créer une application multiplateforme, Flutter est l'une des meilleures plateformes en termes de coûts. Le Framework de l'avenir ? Nous nous y préparons</p>
+    </div>
+    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center reveal">
+      <%= image_tag 'logos/Flutterflow.png', class: 'h-44 mx-auto' %>
+      <h3 class="font-bold text-2xl mt-7">FlutterFlow</h3>
+      <p>
+        Plateforme No code
+        <br>
+        <br>
+        Permet de réduire les coûts de développement, et d'évoluer vers une approche "hybride", dite de "Low code"
+      </p>
+    </div>
+  </div>
+</div>
+
 <div class="flex flex-col justify-center min-h-screen">
   <h2 class="text-center text-5xl font-bold mt-24 mb-6 reveal">
     Ils nous ont fait confiance : pourquoi pas vous ?
@@ -88,72 +151,61 @@
     </div>
   </div>
   <div class="flex justify-center reveal">
-    <%= link_to 'En savoir plus', nos_clients_path, class: 'btn btn-outline btn-primary mx-auto mt-6' %>
+    <%= link_to 'En savoir plus', nos_clients_path, class: 'btn btn-outline btn-primary mx-auto mt-12' %>
+  </div>
+  <h2 class="text-center text-5xl font-bold mt-24 mb-6 reveal">
+    Quelques avis clients
+  </h2>
+  <div class="flex flex-wrap justify-center gap-16 mt-12 lg:px-24 reveal">
+    <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg w-72">
+      <div>
+        <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
+        <br>
+        <cite>
+          Fiable, ultra compétent, engagé et persévérant, Philippe est quelqu'un qui délivre ses projets en temps et en heure avec une qualité que je n'ai jamais vu ailleurs.
+        </cite>
+      </div>
+      <div>
+        <%= link_to "Sébastien Pourchaire", "https://www.linkedin.com/in/pourchaire/", class:"font-bold" %>
+        <p>
+          CEO @ AirJin
+        </p>
+      </div>
+    </div>
+    <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg w-72">
+      <div>
+        <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
+        <br>
+        <cite>
+          Philippe a été à notre écoute et a parfaitement répondu à notre besoin -
+          Je recommande.
+        </cite>
+      </div>
+      <div>
+        <%= link_to "Christophe Pallandre", "https://www.linkedin.com/in/christophe-pallandre/", class:"font-bold" %>
+        <p>
+          DAF @ Grohe France
+        </p>
+      </div>
+    </div>
+    <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg w-72">
+      <div>
+        <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
+        <br>
+        <cite>
+          A l'écoute, réactif et compétent. Même sur un secteur d'activité pas habituel, Philippe propose et trouve des solutions adaptées.
+        </cite>
+      </div>
+      <div>
+        <%= link_to "Clément Hallé", "https://www.linkedin.com/in/cl%C3%A9ment-hall%C3%A9-780949137/", class:"font-bold" %>
+        <p>
+          CEO @ Le T-shirt français
+        </p>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="flex flex-col justify-center min-h-screen mx-4">
-  <h2 class="text-center text-5xl font-bold my-24 reveal">
-    Nos outils et domaines d'expertise
-  </h2>
-  <div class="flex flex-wrap justify-center gap-4 sm:gap-0">
-    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center reveal">
-      <%= image_tag 'logos/Ruby.svg', class: 'h-44 mx-auto' %>
-      <h3 class="font-bold text-2xl mt-7">Ruby</h3>
-      <p>
-        Un langage de programmation open source dynamique axé sur la simplicité et la productivité. 
-        <br><br>
-        Is Ruby the new COBOL?
-      </p>
-    </div>
-    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center reveal">
-      <%= image_tag 'logos/RoR.svg', class: 'h-44 mx-auto' %>
-      <h3 class="font-bold text-2xl mt-7">Rails</h3>
-      <p>
-        THE Full-Stack Web Framework
-        <br>
-        <br>
-        Utilisé par Airbnb, Shopify, GitHub, Twitch, SoudCloud, Coinbase, Heroku...
-      </p>
-    </div>
-    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center reveal">
-      <%= image_tag 'logos/Tailwind.svg', class: 'h-44 mx-auto' %>
-      <h3 class="font-bold text-2xl mt-7">TailwindCSS</h3>
-      <p>
-        Framework CSS open-source à la mode et pas comme les autres.
-        <br>
-        <br>
-        Parce que vous le valez bien !
-      </p>
-    </div>
-    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center reveal">
-      <%= image_tag 'logos/Heroku.svg', class: 'h-44 mx-auto' %>
-      <h3 class="font-bold text-2xl mt-7">Heroku</h3>
-      <p>
-        L'hébergement selon Salesforce.
-        <br><br> 
-        Plateforme Cloud en tant que service (PaaS) axée sur les conteneurs
-      </p>
-    </div>
-  </div>
-  <div class="flex flex-wrap justify-center gap-12 sm:gap-0 mt-12">
-    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center reveal">
-      <%= image_tag 'logos/Flutter.svg', class: 'h-44 mx-auto' %>
-      <h3 class="font-bold text-2xl mt-7">Flutter</h3>
-      <p>Si vous comptez créer une application multiplateforme, Flutter est l'une des meilleures plateformes en termes de coûts. Le Framework de l'avenir ? Nous nous y préparons</p>
-    </div>
-    <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center reveal">
-      <%= image_tag 'logos/Flutterflow.png', class: 'h-44 mx-auto' %>
-      <h3 class="font-bold text-2xl mt-7">FlutterFlow</h3>
-      <p>
-        Plateforme No code
-        <br>
-        <br>
-        Permet de réduire les coûts de développement, et d'évoluer vers une approche "hybride", dite de "Low code"
-      </p>
-    </div>
-  </div>
-</div>
 
 <div class="flex justify-center flex-col min-h-screen">
   <h2 class="font-bold text-5xl mb-16 text-center reveal">
