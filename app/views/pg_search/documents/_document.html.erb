@@ -26,10 +26,5 @@
       <%= simple_format(Client.find(result.searchable_id).description) %>
     </p>
   <% end %>
-  <p class="mt-6">
-    <%= result.searchable_type %>
-    créé il y a 
-    <%= time_ago_in_words(result.searchable_type.constantize.find(result.searchable_id).created_at) %>
-  </p>
 </div>
 <hr>

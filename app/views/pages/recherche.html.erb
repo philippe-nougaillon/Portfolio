@@ -20,14 +20,18 @@
 </div>
 
 <% if defined?(@results) %>
-  <% if @results.any? %>
-    <%= render partial: @results, as: :result %>
-    <%= @results.count %>
-    résultat.s
+  <div class="mx-12">
+    <% if @results.any? %>
+      <%= render partial: @results, as: :result %>
+      <p class="mt-4">
+        <%= @results.count %>
+        résultat.s
+      </p>
 
-  <% else %>
-    <p class="title is-4 has-text-centered p-6">
-      Aucun résultat trouvé...
-    </p>
-  <% end %>
+    <% else %>
+      <p class="title is-4 has-text-centered p-6">
+        Aucun résultat trouvé...
+      </p>
+    <% end %>
+  </div>
 <% end %>

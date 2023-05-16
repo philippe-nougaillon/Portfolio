@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="lofi">
+<html lang="fr" data-theme="winter">
   <head>
     <title><%= page_title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -24,10 +24,10 @@
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
   </head>
 
-  <body class="bg-base-200 min-h-screen">
+  <body class="flex flex-col justify-between bg-base-200 min-h-screen">
     <%= render partial: "partials/navbar" %>
     <%= render partial: "partials/notification" %>
-    <main>
+    <main class="mb-auto">
       <%= yield %>
     </main>
     <% if cookies[:axeptio_cookies].blank? %>
