@@ -8,7 +8,7 @@
   </div>
 </div>
 
-<div class="flex flex-col justify-center min-h-screen">
+<section id="stats" class="flex flex-col justify-center min-h-screen">
   <h2 class="text-center text-5xl font-bold text-accent mt-12 mb-6 reveal">
     Quelques chiffres
   </h2>
@@ -22,9 +22,9 @@
   <div class="flex justify-center reveal">
     <%= link_to 'Voir les dernières réalisations', portfolio_path, class: 'btn btn-outline btn-primary mx-auto mt-6' %>
   </div>
-</div>
+</section>
 
-<div class="flex flex-col justify-center min-h-screen mx-4">
+<section id="outils" class="flex flex-col justify-center min-h-screen mx-4">
   <h2 class="text-center text-5xl font-bold text-accent my-24 reveal">
     Nos outils et domaines d'expertise
   </h2>
@@ -85,9 +85,9 @@
       </p>
     </div>
   </div>
-</div>
+</section>
 
-<div class="flex flex-col justify-center min-h-screen">
+<section id="clients" class="flex flex-col justify-center min-h-screen">
   <h2 class="text-center text-5xl font-bold text-accent mt-24 mb-6 reveal">
     Ils nous ont fait confiance : pourquoi pas vous ?
   </h2>
@@ -153,62 +153,119 @@
   <div class="flex justify-center reveal">
     <%= link_to 'En savoir plus', nos_clients_path, class: 'btn btn-outline btn-primary mx-auto mt-12' %>
   </div>
+</div>
+
+<section id="avis">
   <h2 class="text-center text-5xl font-bold text-accent mt-24 mb-6 reveal">
     Quelques avis clients
   </h2>
-  <div class="flex flex-wrap justify-center gap-16 mt-12 lg:px-24 reveal">
-    <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg w-72">
-      <div>
-        <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
-        <br>
-        <cite>
-          Fiable, ultra compétent, engagé et persévérant, Philippe est quelqu'un qui délivre ses projets en temps et en heure avec une qualité que je n'ai jamais vu ailleurs.
-        </cite>
+  <div class="px-4">
+    <div class="flex flex-wrap lg:flex-nowrap justify-center gap-16 mt-12 lg:px-24 reveal">
+      <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
+        <div>
+          <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
+          <br>
+          <cite>
+            Fiable, ultra compétent, engagé et persévérant, Philippe est quelqu'un qui délivre ses projets en temps et en heure avec une qualité que je n'ai jamais vu ailleurs.
+          </cite>
+        </div>
+        <div>
+          <%= link_to "Sébastien Pourchaire", "https://www.linkedin.com/in/pourchaire/", class:"font-bold" %>
+          <p>
+            CEO @ AirJin
+          </p>
+        </div>
       </div>
-      <div>
-        <%= link_to "Sébastien Pourchaire", "https://www.linkedin.com/in/pourchaire/", class:"font-bold" %>
-        <p>
-          CEO @ AirJin
-        </p>
+      <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
+        <div>
+          <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
+          <br>
+          <cite>
+            Philippe a été à notre écoute et a parfaitement répondu à notre besoin -
+            Je recommande.
+          </cite>
+        </div>
+        <div>
+          <%= link_to "Christophe Pallandre", "https://www.linkedin.com/in/christophe-pallandre/", class:"font-bold" %>
+          <p>
+            DAF @ Grohe France
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
+        <div>
+          <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
+          <br>
+          <cite>
+            A l'écoute, réactif et compétent. Même sur un secteur d'activité pas habituel, Philippe propose et trouve des solutions adaptées.
+          </cite>
+        </div>
+        <div>
+          <%= link_to "Clément Hallé", "https://www.linkedin.com/in/cl%C3%A9ment-hall%C3%A9-780949137/", class:"font-bold" %>
+          <p>
+            CEO @ Le T-shirt français
+          </p>
+        </div>
       </div>
     </div>
-    <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg w-72">
-      <div>
-        <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
-        <br>
-        <cite>
-          Philippe a été à notre écoute et a parfaitement répondu à notre besoin -
-          Je recommande.
-        </cite>
+    <div class="flex flex-wrap lg:flex-nowrap justify-center gap-16 my-12 lg:px-24 reveal">
+      <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
+        <div>
+          <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
+          <br>
+          <cite>
+            Philippe est un développeur compétent et passionné par son métier, il a créé notre application de suivi de portefeuille en Ruby on rails il y a plusieurs années et en a assuré la maintenance et les évolutions par la suite. C’est un plaisir de travailler avec lui, je le recommande.
+          </cite>
+        </div>
+        <div>
+          <%= link_to "Léa Gheerardyn", "https://www.linkedin.com/in/l%C3%A9a-gheerardyn-26417869/", class:"font-bold" %>
+          <p>
+            Chef de projet SI @ Scopelec
+          </p>
+        </div>
       </div>
-      <div>
-        <%= link_to "Christophe Pallandre", "https://www.linkedin.com/in/christophe-pallandre/", class:"font-bold" %>
-        <p>
-          DAF @ Grohe France
-        </p>
+      <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
+        <div>
+          <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
+          <br>
+          <cite>
+            Philippe Nougaillon est quelqu'un de très pédagogue qui m'a beaucoup appris. Il m'a permis de gagner en confiance, en cas de difficultés,
+            en cas de difficultés, il prenait le temps de m'expliquer et de m'aider à formuler une solution par moi-même. 
+            C'est aussi quelqu'un de très impliqué dans son travail, très à jour sur les dernières technologies.
+          </cite>
+        </div>
+        <div>
+          <%= link_to "Alexandre Cukier", "https://www.linkedin.com/in/alexandre-cukier/", class:"font-bold" %>
+          <p>
+            Software Developer @ Ridge
+          </p>
+        </div>
       </div>
     </div>
-    <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg w-72">
-      <div>
-        <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
-        <br>
-        <cite>
-          A l'écoute, réactif et compétent. Même sur un secteur d'activité pas habituel, Philippe propose et trouve des solutions adaptées.
-        </cite>
-      </div>
-      <div>
-        <%= link_to "Clément Hallé", "https://www.linkedin.com/in/cl%C3%A9ment-hall%C3%A9-780949137/", class:"font-bold" %>
-        <p>
-          CEO @ Le T-shirt français
-        </p>
+    <div class="lg:px-24 reveal">
+      <div class="mx-auto flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
+        <div>
+          <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
+          <br>
+          <cite>
+            J'ai eu l'occasion de collaborer avec Philippe Nougaillon sur de nombreux projets (dont un projet européen). Philippe Nougaillon a toujours su faire preuve d'un grand professionnalisme. Il allie les qualités d'écoute, de compréhension et de créativité. Il maîtrise parfaitement l'art de la traduction des besoins clients en solutions agiles, robustes et durables.
+            C'est un développeur hors pair et il est toujours à l'affût des technologies prometteuses, et notamment des solutions libres. D'une grande modestie, il est très accessible et sait faire preuve de beaucoup de pédagogie.
+            C’est un professionnel de haut niveau qui sait se mettre au diapason des besoins exprimés. Il propose des solutions pérennes, fiables et fait primer dans sa vision du développement la simplicité de la solution. Partisan de l’innovation frugale, il fournit à ses clients des solutions originales, robustes et parfaitement adaptées. Il a le sens de l’écoute et sait faire preuve d’une grande pédagogie dans les démarches agiles. Il a une expertise étendue sur des secteurs variés. Je le connais principalement pour l’accompagnement fourni dans le cadre de systèmes d’information pédagogiques. Je le recommande sans réserve.
+          </cite>
+        </div>
+        <div>
+          <%= link_to "Philippe Eynaud", "https://www.linkedin.com/in/philippe-eynaud-3a3ab835/", class:"font-bold" %>
+          <p>
+            Professeur des universités @ IAE-Paris Sorbonne Business School
+          </p>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
+</section>
 
 <div class="flex justify-center flex-col mt-28 mb-24">
-  <h2 class="font-bold text-5xl mb-16 text-center reveal">
+  <h2 class="font-bold text-5xl mb-16 text-accent text-center reveal">
     Vous avez un projet à nous soumettre ?
   </h2>
 
