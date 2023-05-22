@@ -8,22 +8,6 @@
   </div>
 </div>
 
-<section id="stats" class="flex flex-col justify-center min-h-screen">
-  <h2 class="text-center text-5xl font-bold text-accent mt-12 mb-6 reveal">
-    Quelques chiffres
-  </h2>
-
-  <%= render(StatComponent.new(
-              nbr_projets: @projets.count, 
-              nbr_commits: @projets_commits, 
-              nbr_deploys: @projets_deploys, 
-              nbr_coffees: @projets_coffees)) %>
-
-  <div class="flex justify-center reveal">
-    <%= link_to 'Voir les dernières réalisations', portfolio_path, class: 'btn btn-outline btn-primary mx-auto mt-6' %>
-  </div>
-</section>
-
 <section id="outils" class="flex flex-col justify-center min-h-screen mx-4">
   <h2 class="text-center text-5xl font-bold text-accent my-24 reveal">
     Nos outils et domaines d'expertise
@@ -84,6 +68,66 @@
         Permet de réduire les coûts de développement, et d'évoluer vers une approche "hybride", dite de "Low code"
       </p>
     </div>
+  </div>
+</section>
+
+<section id="stats" class="flex flex-col justify-center min-h-screen">
+  <h2 class="text-center text-5xl font-bold text-accent mt-12 mb-6 reveal">
+    Quelques chiffres
+  </h2>
+
+  <%= render(StatComponent.new(
+              nbr_projets: @projets.count, 
+              nbr_commits: @projets_commits, 
+              nbr_deploys: @projets_deploys, 
+              nbr_coffees: @projets_coffees)) %>
+
+  <div class="flex justify-center reveal">
+    <%= link_to 'Voir les dernières réalisations', portfolio_path, class: 'btn btn-outline btn-primary mx-auto mt-6' %>
+  </div>
+</section>
+
+<section id="apps" class="flex flex-col justify-center min-h-screen mx-4 md:mx-8 lg:mx-16">
+  <h2 class="text-center text-5xl font-bold text-accent mt-12 mb-6 reveal">
+    Nos Apps
+  </h2>
+  <div class="flex flex-wrap justify-between w-full gap-4 md:gap-8 lg:gap-16 mb">
+    <%= link_to planning_path, class:"flex-1" do %>
+      <div class="mt-3">
+        <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white">
+          <%= image_tag "projets/planning iae-paris/screen_0.png", class:"object-fill w-full", loading: "lazy" %>
+          <div class="card-body">
+            <hr>
+            <h2 class="card-title text-primary underline underline-offset-8">
+              PLANNING
+            </h2>
+            <p class="my-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
+              Planning à l’usage d’un établissement de l’enseignement supérieur
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+    <%= link_to camino_path, class:"flex-1" do %>
+      <div class="mt-3">
+        <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white">
+          <%= image_tag "projets/camino/screen_0.png", class:"object-fill w-full", loading: "lazy" %>
+          <div class="card-body">
+            <hr>
+            <h2 class="card-title text-primary underline underline-offset-8">
+              CAMINO
+            </h2>
+            <p class="my-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
+              Gérer, en équipe et en mobilité, vos projets (Suivi d'interventions, GMAO, etc...)
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="flex justify-center reveal mt-12">
+    <%= link_to 'Voir toutes nos applications', apps_path, class: 'btn lg:btn-lg btn-primary btn-outline' %>
   </div>
 </section>
 
@@ -208,56 +252,64 @@
         </div>
       </div>
     </div>
-    <div class="flex flex-wrap lg:flex-nowrap justify-center gap-16 my-12 lg:px-24 reveal">
-      <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
-        <div>
-          <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
-          <br>
-          <cite>
-            Philippe est un développeur compétent et passionné par son métier, il a créé notre application de suivi de portefeuille en Ruby on rails il y a plusieurs années et en a assuré la maintenance et les évolutions par la suite. C’est un plaisir de travailler avec lui, je le recommande.
-          </cite>
-        </div>
-        <div>
-          <%= link_to "Léa Gheerardyn", "https://www.linkedin.com/in/l%C3%A9a-gheerardyn-26417869/", class:"font-bold" %>
-          <p>
-            Chef de projet SI @ Scopelec
-          </p>
-        </div>
+    <div class="collapse mt-6 lg:px-24">
+      <input type="checkbox" />
+      <div class="collapse-title sm:text-xl font-medium btn btn-primary btn-outline">
+        Voir toutes les recommandations
       </div>
-      <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
-        <div>
-          <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
-          <br>
-          <cite>
-            Philippe Nougaillon est quelqu'un de très pédagogue qui m'a beaucoup appris. Il m'a permis de gagner en confiance, en cas de difficultés,
-            en cas de difficultés, il prenait le temps de m'expliquer et de m'aider à formuler une solution par moi-même. 
-            C'est aussi quelqu'un de très impliqué dans son travail, très à jour sur les dernières technologies.
-          </cite>
+      <div class="collapse-content p-0">
+        <div class="flex flex-wrap lg:flex-nowrap justify-center gap-16 my-12">
+          <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
+            <div>
+              <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
+              <br>
+              <cite>
+                Philippe est un développeur compétent et passionné par son métier, il a créé notre application de suivi de portefeuille en Ruby on rails il y a plusieurs années et en a assuré la maintenance et les évolutions par la suite. C’est un plaisir de travailler avec lui, je le recommande.
+              </cite>
+            </div>
+            <div>
+              <%= link_to "Léa Gheerardyn", "https://www.linkedin.com/in/l%C3%A9a-gheerardyn-26417869/", class:"font-bold" %>
+              <p>
+                Chef de projet SI @ Scopelec
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
+            <div>
+              <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
+              <br>
+              <cite>
+                Philippe Nougaillon est quelqu'un de très pédagogue qui m'a beaucoup appris. Il m'a permis de gagner en confiance, en cas de difficultés,
+                en cas de difficultés, il prenait le temps de m'expliquer et de m'aider à formuler une solution par moi-même. 
+                C'est aussi quelqu'un de très impliqué dans son travail, très à jour sur les dernières technologies.
+              </cite>
+            </div>
+            <div>
+              <%= link_to "Alexandre Cukier", "https://www.linkedin.com/in/alexandre-cukier/", class:"font-bold" %>
+              <p>
+                Software Developer @ Ridge
+              </p>
+            </div>
+          </div>
         </div>
         <div>
-          <%= link_to "Alexandre Cukier", "https://www.linkedin.com/in/alexandre-cukier/", class:"font-bold" %>
-          <p>
-            Software Developer @ Ridge
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="lg:px-24 reveal">
-      <div class="mx-auto flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
-        <div>
-          <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
-          <br>
-          <cite>
-            J'ai eu l'occasion de collaborer avec Philippe Nougaillon sur de nombreux projets (dont un projet européen). Philippe Nougaillon a toujours su faire preuve d'un grand professionnalisme. Il allie les qualités d'écoute, de compréhension et de créativité. Il maîtrise parfaitement l'art de la traduction des besoins clients en solutions agiles, robustes et durables.
-            C'est un développeur hors pair et il est toujours à l'affût des technologies prometteuses, et notamment des solutions libres. D'une grande modestie, il est très accessible et sait faire preuve de beaucoup de pédagogie.
-            C’est un professionnel de haut niveau qui sait se mettre au diapason des besoins exprimés. Il propose des solutions pérennes, fiables et fait primer dans sa vision du développement la simplicité de la solution. Partisan de l’innovation frugale, il fournit à ses clients des solutions originales, robustes et parfaitement adaptées. Il a le sens de l’écoute et sait faire preuve d’une grande pédagogie dans les démarches agiles. Il a une expertise étendue sur des secteurs variés. Je le connais principalement pour l’accompagnement fourni dans le cadre de systèmes d’information pédagogiques. Je le recommande sans réserve.
-          </cite>
-        </div>
-        <div>
-          <%= link_to "Philippe Eynaud", "https://www.linkedin.com/in/philippe-eynaud-3a3ab835/", class:"font-bold" %>
-          <p>
-            Professeur des universités @ IAE-Paris Sorbonne Business School
-          </p>
+          <div class="mx-auto flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
+            <div>
+              <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
+              <br>
+              <cite>
+                J'ai eu l'occasion de collaborer avec Philippe Nougaillon sur de nombreux projets (dont un projet européen). Philippe Nougaillon a toujours su faire preuve d'un grand professionnalisme. Il allie les qualités d'écoute, de compréhension et de créativité. Il maîtrise parfaitement l'art de la traduction des besoins clients en solutions agiles, robustes et durables.
+                C'est un développeur hors pair et il est toujours à l'affût des technologies prometteuses, et notamment des solutions libres. D'une grande modestie, il est très accessible et sait faire preuve de beaucoup de pédagogie.
+                C’est un professionnel de haut niveau qui sait se mettre au diapason des besoins exprimés. Il propose des solutions pérennes, fiables et fait primer dans sa vision du développement la simplicité de la solution. Partisan de l’innovation frugale, il fournit à ses clients des solutions originales, robustes et parfaitement adaptées. Il a le sens de l’écoute et sait faire preuve d’une grande pédagogie dans les démarches agiles. Il a une expertise étendue sur des secteurs variés. Je le connais principalement pour l’accompagnement fourni dans le cadre de systèmes d’information pédagogiques. Je le recommande sans réserve.
+              </cite>
+            </div>
+            <div>
+              <%= link_to "Philippe Eynaud", "https://www.linkedin.com/in/philippe-eynaud-3a3ab835/", class:"font-bold" %>
+              <p>
+                Professeur des universités @ IAE-Paris Sorbonne Business School
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -269,5 +321,7 @@
     Vous avez un projet à nous soumettre ?
   </h2>
 
-  <%= link_to 'nous contacter', contact_path, class: 'btn btn-primary btn-outline mx-auto reveal' %>
+  <div class="flex justify-center reveal">
+    <%= link_to 'nous contacter', contact_path, class: 'btn btn-primary btn-outline' %>
+  </div>
 </div>
