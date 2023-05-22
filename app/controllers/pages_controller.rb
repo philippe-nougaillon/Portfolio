@@ -101,4 +101,7 @@ class PagesController < ApplicationController
   def guide_planning
   end
 
+  def mentions_légales
+  end
+
 end

@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     get :planning, to: 'pages#planning'
     get :guide_planning, to: 'pages#guide_planning'
     get :partenaires, to: 'pages#partenaires'
+    get :mentions_légales, to: 'pages#mentions_légales', as: :mentions_legales
   end
 
   root 'pages#home'

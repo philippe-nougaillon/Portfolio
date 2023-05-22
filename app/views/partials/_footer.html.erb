@@ -41,7 +41,7 @@
     <span class="footer-title mx-auto sm:mx-0">Nos apps</span>
     <ul>
       <%= navbar_item 'camino', camino_path, 'Camino' %>
-      <%= navbar_item 'planning', planning_path, 'Planning' %>
+      <%= navbar_item 'planning', planning_path, 'Planning IAE' %>
       <%= navbar_item 'prestofacto', prestofacto_path, 'PrestoFacto' %>
       <li>
         <%= link_to 'https://my-money-penny.flutterflow.app/', target: "_blank", class: 'flex gap-4' do %>
@@ -52,7 +52,10 @@
   </div>
 </footer>
 <footer class="footer px-10 py-4 border-t bg-base-content text-neutral-content border-base-300">
-  <p>Copyright © 2023 - Tout droits réservés</p>
+  <p>
+    Copyright © 2023 - Tout droits réservés
+    <%= link_to "Mentions Légales", mentions_legales_path %>
+  </p>
   <div class="md:place-self-center md:justify-self-end">
     <div class="grid grid-flow-col gap-4">
       <%= mail_to "contact@philnoug.com" do %>
