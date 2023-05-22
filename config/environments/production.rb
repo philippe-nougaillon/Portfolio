@@ -48,6 +48,9 @@ Rails.application.configure do
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   config.force_ssl = true
 
+  # If set will tell browsers, “Hey, I’m only supposed to use https” which in supported browsers can act as a positive signal as it improves security. If you intend to support https in the long term, setting this option will improve performance slightly.
+  config.ssl_options = { hsts: { preload: true } }
+
   # Include generic and useful information about system operation, but avoid logging too much
   # information to avoid inadvertent exposure of personally identifiable information (PII).
   config.log_level = :info
