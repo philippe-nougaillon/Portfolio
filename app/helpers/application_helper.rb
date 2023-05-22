@@ -1,12 +1,12 @@
 module ApplicationHelper
-  def navbar_item(action_name, path, label = nil)
+  def navbar_item(action_name, path, label = nil, classes = nil)
 
     is_active = params[:action] == action_name
 
     render(inline: %{
         <li>
           <%= link_to '#{ url_for(path) }', 
-                      class: 'flex gap-4 #{ "underline underline-offset-8" if is_active }' do %>
+                      class: 'flex gap-4 #{ "underline underline-offset-8" if is_active } #{ classes if classes }' do %>
               <span class="flex-1 whitespace-nowrap">#{ label ? label : controller_name.humanize }</span>
           <% end %>
         </li>
