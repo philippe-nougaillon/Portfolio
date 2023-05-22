@@ -36,5 +36,9 @@ module Portfolio
 
     config.time_zone = "Paris"
     config.i18n.default_locale = :fr
+
+    config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
+      r301 %r{^/(.*)/$}, '/$1'
+    end
   end
 end
