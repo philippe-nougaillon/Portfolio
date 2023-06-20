@@ -48,6 +48,7 @@
   </div>
 
   <div class="flex flex-wrap justify-between w-full gap-4 md:gap-8 lg:gap-16">
+
     <%= link_to prestofacto_path, class:"flex-1" do %>
       <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white h-full">
         <%= image_tag "projets/prestofacto/screen_0.png", class:"object-fill w-full", loading: "lazy" %>
@@ -63,23 +64,58 @@
       </div>
     <% end %>
 
-    <%= link_to "https://my-money-penny.flutterflow.app/", target:"_blank", class:"flex-1" do %>
-        <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white h-full">
-          <div class="flex flex-wrap gap-8 mx-auto mt-4 pt-4">
-            <%= image_tag "mes_abonnements.png", class:"object-fill w-48 inline", loading: "lazy" %>
-            <%= image_tag "mes_abonnements.png", class:"object-fill w-48 hidden lg:inline", loading: "lazy" %>
-          </div>
-          <div class="card-body flex-end">
-            <hr>
-            <h2 class="card-title text-primary underline underline-offset-8">
-              MyMoneyPenny
-            </h2>
-            <p class="mt-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
-              Voir d'un seul coup d'oeil tous vos abonnements
-            </p>
-          </div>
-        </div>
-    <% end %>
+    <div class="card shadow bg-white h-full w-1/2">
+      <div class="card-body flex-end">
+
+        <h2 class="card-title text-primary underline underline-offset-8">
+          <%= link_to 'Planning_IAE/Tableau-Affichage_REACT', 
+                      'https://github.com/philippe-nougaillon/Planning_IAE-Tableau-Affichage_REACT',
+                      target: '_blank' %>
+        </h2>
+        <p class="py-4">
+          Tableau d'affichage des horaires de cours sur grands écrans
+        </p>
+        <hr>
+
+        <h2 class="card-title text-primary underline underline-offset-8">
+          <%= link_to 'Planning_IAE/Client Mobile_REACT', 
+                      'https://github.com/philippe-nougaillon/Planning_IAE-Client-Mobile_REACT',
+                      target: '_blank' %> 
+        </h2>
+        <p class="py-4">
+          Client léger pour consulter le planning sur smartphone
+        </p>
+        <hr>
+        
+        <h2 class="card-title text-primary underline underline-offset-8">
+          <%= link_to 'Planning_IAE-Client-Mobile_FLUTTER', 
+                      'https://github.com/philippe-nougaillon/Planning_IAE-Client-Mobile_FLUTTER',
+                      target: '_blank' %> 
+        </h2>
+        <p class="py-4">
+          Application légère pour la consultation du planning des cours
+        </p>
+        <hr>
+
+        <h2 class="card-title text-primary underline underline-offset-8">
+          <%= link_to 'OpenCantine', 'https://github.com/philippe-nougaillon/open-cantine', target: '_blank' %>
+        </h2>
+        <p class="py-4">
+          Application de facturation de prestations périscolaires
+        </p>
+        <hr>
+
+        <h2 class="card-title text-primary underline underline-offset-8">
+          <%= link_to 'Crystal RING', 'https://github.com/philippe-nougaillon/Crystal-Ring', target: '_blank' %>
+        </h2>
+        <p class="py-4">
+          Workflow sur mesure de validation de factures
+        </p>
+        <hr>
+
+      </div>
+    </div>
+
   </div>
 
 </div>
