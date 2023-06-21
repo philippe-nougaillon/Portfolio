@@ -1,18 +1,22 @@
-<div class="text-center mb-8">
+<div class="text-center mb-16">
   <h1 class="font-bold text-4xl text-accent mb-16 pt-8">
     <i>PLANNING IAE</i>
   </h1>
   <h2 class="xl:text-2xl text-accent mt-6 px-6">
-    Logiciel libre et coopératif de gestion de planning, à l’usage d’établissement de l’enseignement supérieur
+    Logiciel libre et coopératif de gestion de planification de salles, <br>
+    à l’usage d’établissement de l’enseignement supérieur
   </h2>
 </div>
 
-<%= image_tag "projets/planning iae-paris/screen_0.png", width: "80%", class: "mx-auto shadow reveal" %>
+<%= image_tag "projets/planning iae-paris/screen_0.png", width: "75%", class: "mx-auto shadow reveal" %>
 
-<div class="p-8">
+<div class="p-8 mt-6">
   <p class="text-2xl">
-    Collaborative, flexible et simple d'utilisation, cette application a été initialement développée pour l'IAE de Paris (Sorbonne Business School - Université Paris 1 Panthéon-Sorbonne) dans le but d'offrir une alternative à l'outil en place (HYPERplanning), qui était complexe, fermé et surdimensionné pour un usage courant.
-  </p>
+    Collaborative, flexible et simple d'utilisation, 
+    cette application Web a été développée pour l'IAE de Paris (Sorbonne Business School - Université Paris 1 Panthéon-Sorbonne) 
+    dans le but de remplacer HYPERplanning, qui était surdimensionné, 
+    par une solution sur-mesure, co-développée avec ses équipes (gestionnaires de formations, SRH),
+    au plus près de ses vrais besoins.
 </div>
 
 <div class="p-8">
@@ -20,7 +24,7 @@
     Principaux atouts :
   </p>
   <ul class="list-disc p-3">
-    <li>Gestion coopérative des emplois du temps (planning) et des salles</li> 
+    <li>Gestion coopérative des emplois du temps et de planification de salles</li> 
     <li>Algorithme de vérification des contraintes à l'enregistrement d'un cours (capacité, intervenant libre, jours de fermeture, etc.)</li>
     <li>Recherche automatique d'une salle disponible</li>
     <li>Système d'envoi et de gestion de propositions de créneaux horaires par email à plusieurs intervenants (Workflow)</li>
@@ -32,12 +36,6 @@
 </div>
 
 <div class="p-8">
-
-  <h2 class="apps-title">En savoir plus ?</h2>
-  <p>
-    <%= link_to "Voir le mémo de l'utilisateur", guide_planning_path, class:"link" %>
-  </p>
-
   <h2 class="text-2xl font-bold my-4">Projet Open-Source</h2>
   <p>
     Les sources de ce projet sont disponibles ici :
@@ -47,19 +45,24 @@
   <h2 class="apps-title">Développement</h2>
   <p>
     PLANNING IAE est développé et maintenu par 
-    <%= link_to 'Philnoug & Partners', root_path, class:'link' %>
-  </p>
-
-  <h2 class="apps-title">Support et services</h2>
-  <p>
-    Vous souhaitez une nouvelle fonctionnalité ou installer PLANNING IAE sur votre serveur Linux ?
-    <%= link_to 'Consultez notre offre de services', '/services', class:'link' %>
+    <%= link_to 'Philnoug & Partners', root_path, class: 'link' %>
   </p>
 
   <h2 class="apps-title">Démonstration</h2>
   <p>
     Envie de tester le produit ?
-    <%= link_to 'Demander une démonstration', '/contact', class:'link' %>
+    <%= link_to 'Demander une démonstration', '/contact', class: 'link' %>
+  </p>
+
+  <h2 class="apps-title">Support et services</h2>
+  <p>
+    Vous souhaitez une nouvelle fonctionnalité ou installer PLANNING IAE sur votre serveur Linux ?
+    <%= link_to 'Consultez-nous', '/contact', class: 'link' %>
+  </p>
+
+  <h2 class="apps-title">En savoir plus ?</h2>
+  <p>
+    <%= link_to "Voir le mémo de l'utilisateur", guide_planning_path, class: 'link' %>
   </p>
 
 </div>
