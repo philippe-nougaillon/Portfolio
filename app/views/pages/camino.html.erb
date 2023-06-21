@@ -21,7 +21,7 @@
 </style>
 
 <div class="text-center mb-16">
-  <h1 class="font-bold text-4xl text-accent mb-6 pt-8">
+  <h1 class="font-bold text-4xl text-accent mb-16 pt-8">
     <i>CAMINO</i>
   </h1>
   <h2 class="xl:text-2xl text-accent mt-6 px-10">
@@ -38,70 +38,72 @@
           <%= image_tag "camino/projets.png" %>
           <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
             <a href="#slide9" class="btn btn-circle btn-warning btn-outline">❮</a> 
-            <a href="#slide2" class="btn btn-circle btn-warning btn-outline">❯</a>
+            <a href="#slide2" class="btn btn-circle btn-warning">❯</a>
           </div>
         </div> 
         <div id="slide2" class="carousel-item relative w-full">
           <%= image_tag "camino/projet.png" %>
           <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
             <a href="#slide1" class="btn btn-circle btn-warning btn-outline">❮</a> 
-            <a href="#slide3" class="btn btn-circle btn-warning btn-outline">❯</a>
+            <a href="#slide3" class="btn btn-circle btn-warning">❯</a>
           </div>
         </div> 
         <div id="slide3" class="carousel-item relative w-full">
           <%= image_tag "camino/todolist.png" %>
           <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
             <a href="#slide2" class="btn btn-circle btn-warning btn-outline">❮</a> 
-            <a href="#slide4" class="btn btn-circle btn-warning btn-outline">❯</a>
+            <a href="#slide4" class="btn btn-circle btn-warning">❯</a>
           </div>
         </div>
         <div id="slide4" class="carousel-item relative w-full">
           <%= image_tag "camino/todo.png" %>
           <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
             <a href="#slide3" class="btn btn-circle btn-warning btn-outline">❮</a> 
-            <a href="#slide5" class="btn btn-circle btn-warning btn-outline">❯</a>
+            <a href="#slide5" class="btn btn-circle btn-warning">❯</a>
           </div>
         </div>
         <div id="slide5" class="carousel-item relative w-full">
           <%= image_tag "camino/agenda.png" %>
           <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
             <a href="#slide4" class="btn btn-circle btn-warning btn-outline">❮</a> 
-            <a href="#slide6" class="btn btn-circle btn-warning btn-outline">❯</a>
+            <a href="#slide6" class="btn btn-circle btn-warning">❯</a>
           </div>
         </div>
         <div id="slide6" class="carousel-item relative w-full">
           <%= image_tag "camino/documents.png" %>
           <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
             <a href="#slide5" class="btn btn-circle btn-warning btn-outline">❮</a> 
-            <a href="#slide7" class="btn btn-circle btn-warning btn-outline">❯</a>
+            <a href="#slide7" class="btn btn-circle btn-warning">❯</a>
           </div>
         </div>
         <div id="slide7" class="carousel-item relative w-full">
           <%= image_tag "camino/tables.png" %>
           <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
             <a href="#slide6" class="btn btn-circle btn-warning btn-outline">❮</a> 
-            <a href="#slide8" class="btn btn-circle btn-warning btn-outline">❯</a>
+            <a href="#slide8" class="btn btn-circle btn-warning">❯</a>
           </div>
         </div>
         <div id="slide8" class="carousel-item relative w-full">
           <%= image_tag "camino/dashboard.png" %>
           <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
             <a href="#slide7" class="btn btn-circle btn-warning btn-outline">❮</a> 
-            <a href="#slide9" class="btn btn-circle btn-warning btn-outline">❯</a>
+            <a href="#slide9" class="btn btn-circle btn-warning">❯</a>
           </div>
         </div>
         <div id="slide9" class="carousel-item relative w-full">
           <%= image_tag "camino/user.png" %>
           <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
             <a href="#slide8" class="btn btn-circle btn-warning btn-outline">❮</a> 
-            <a href="#slide1" class="btn btn-circle btn-warning btn-outline">❯</a>
+            <a href="#slide1" class="btn btn-circle btn-warning">❯</a>
           </div>
         </div>
       </div>
     </div>
     <br>
 
-    <h2 class="apps-title">Gérez vos projets, en équipe et en mobilité (Suivi d'interventions, GMAO, etc...)</h2>
+    <h2 class="apps-title">
+      Gérez vos projets, en équipe et en mobilité (Suivi d'interventions, GMAO, etc...)
+    </h2>
     <ul>
       <li>Découpez vos projets en listes de choses à faire</li>
       <li>Invitez vos contacts à participer aux projets</li>
@@ -115,25 +117,12 @@
     <div>
       <ul>
         <li>Création rapide de projets à partir de vos <b>modèles de projets</b></li>
-        <li>Choix du <b>workflow</b> (type de déroulement de projet) :
-          <ol>
-            <li>Libre; les tâches peuvent être terminées librement, dans n'importe quel ordre</li>
-            <li>Linéaire; toutes les tâches d'une liste doivent être terminées avant de pouvoir passer à la liste suivante<br>
-            Quand une tâche est terminée, le participant assigné à la tâche suivante en est immédiatement informé</li>
-          </ol>
-        </li>
+        <li>Choix du <b>workflow</b> (type de déroulement de projet, Libre ou Linéaire)</li>
         <li>Un <b>journal</b> recense, minute par minute, l'activité des participants. Toutes les modifications y sont consignées</li>
         <li>Un <b>agenda</b> permet de visualiser les échéances globales</li>
         <li>La <b>'To-do'</b> liste les choses à faire, en attente, en souffrance ou faites par participant</b>
         <li>Les participants peuvent mener des <b>discussions</b> autour de choses à faire</li>
-        <li>Une <b>notification</b> (via courriel) peut être envoyée aux participants du projet :
-          <ol>
-            <li>Après chaque modification, ajout ou suppression d'information</li>
-            <li>Lors de l'assignation d'une tâche à un participant</li>
-            <li>Avant chaque échéance</li>
-          </ol>
-        </li>
-        <li>Une notification peut être envoyée à un <b>participant extérieur</b> au projet (client) à la réalisation d'une tâche</li>
+        <li>Un système de <b>notification</b> par email informe les participants du projet</li>
         <li>Regroupement des projets par <b>mots-clés</b></li> 
         <li>Une <b>couleur</b> pour chaque projet afin de mieux repérer les informations s'y rapportant</li>
       </ul>
@@ -142,12 +131,11 @@
     <h2 class="apps-title">Formulaires & Tables de données</h2>
     <p>
       Créez vos propres formulaires pour collecter des informations complémentaires à vos projets (temps passé, ressources consommées, rapports d'intervention, etc.).
-      Ces formulaires peuvent contenir des données variées (texte, nombre, euros, oui/non, liste déroulante).
-      Les données sont collectées dans des tables de données que vous pouvez ensuite exporter vers Excel.</p>
+      Les données sont collectées dans des tables de données que vous pouvez ensuite exporter vers Excel
+    .</p>
 
     <h2 class="apps-title">Mobilité</h2>
     <p>Accédez à Camino depuis votre smartphone</p>
-    <p>Saisissez l'URL https://camino2.herokuapp.com dans le navigateur Web de votre téléphone.</p>
 
     <div class="flex flex-wrap gap-2 my-4 ">
       <div class="mockup-phone">
@@ -174,30 +162,6 @@
           </div>
         </div>
       </div>
-      <div class="mockup-phone">
-        <div class="camera"></div> 
-        <div class="display">
-          <div class="artboard artboard-demo phone-1 pt-8">
-            <%= image_tag "camino/mobile_todo.png" %>
-          </div>
-        </div>
-      </div>
-      <div class="mockup-phone">
-        <div class="camera"></div> 
-        <div class="display">
-          <div class="artboard artboard-demo phone-1 pt-8">
-            <%= image_tag "camino/mobile_todos.png" %>
-          </div>
-        </div>
-      </div>
-      <div class="mockup-phone">
-        <div class="camera"></div> 
-        <div class="display">
-          <div class="artboard artboard-demo phone-1 pt-8">
-            <%= image_tag "camino/mobile_dashboard.png" %>
-          </div>
-        </div>
-      </div>
     </div>
     <br>
 
@@ -210,21 +174,25 @@
     <h2 class="apps-title">Développement</h2>
     <p>
       CAMINO est développé et maintenu par 
-      <%= link_to 'Philnoug & Partners', root_path, class:'link' %>
-    </p>
-
-    <h2 class="apps-title">Support et services</h2>
-    <p>
-      Vous souhaitez une nouvelle fonctionnalité ou installer CAMINO sur votre serveur Linux ?
-      <%= link_to 'Consultez notre offre de services', '/services', class:'link' %>
+      <%= link_to 'Philnoug & Partners', root_path, class: 'link' %>
     </p>
 
     <h2 class="apps-title">Démonstration</h2>
     <p>
       Envie de tester le produit ?
-      <%= link_to 'Lancer la démonstration', 'https://camino2.herokuapp.com/', class:'link', target: '_blank' %>
+      <%= link_to "Lancer l'instance de démonstration", 'https://camino2.herokuapp.com/', class:'link', target: '_blank' %>
     </p>
-    <br><br>
+
+    <h2 class="apps-title">Support et services</h2>
+    <p>
+      Vous souhaitez une nouvelle fonctionnalité ou installer CAMINO sur votre serveur Linux ?
+      <%= link_to 'Consultez-nous', '/contact', class: 'link' %>
+    </p>
+
+    <h2 class="apps-title">En savoir plus ?</h2>
+    <p>
+      <%= link_to "Voir en détail les fonctionnalités", 'https://camino2.herokuapp.com/about', class: 'link' %>
+    </p>
 
   </div>
 </div>
