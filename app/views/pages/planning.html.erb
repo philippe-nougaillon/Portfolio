@@ -9,6 +9,261 @@
 
 <%= image_tag "projets/planning iae-paris/screen_0.png", width: "80%", class: "mx-auto shadow reveal" %>
 
+<section id="bref" class="w-full text-center mt-24">
+  <strong class="text-xl">Un outil complet & adaptés aux universités et écoles</strong>
+  <div class="flex flex-wrap justify-around gap-4 mt-12">
+    <div class="flex flex-col w-80">
+      <strong>Gestion des <br>plannings des cours</strong>
+      <p>En quelques clics, choisissez la formation <br>
+      concernée, le ou les intervenants, la salle du <br>
+      cours, et retrouvez la sur le planning</p>
+    </div>
+    <div class="flex flex-col w-80">
+      <strong>Gestion des salles <br>de cours</strong>
+      <p>Visualisez les créneaux disponibles sur toutes<br>
+      les salles de l’établissement et leur taux <br>
+      d’occupation, avec une alerte si ce dernier <br>
+      dépasse un certain seuil </p>
+    </div>
+    <div class="flex flex-col w-80">
+      <strong>Gestion des plans <br>d’activités</strong>
+      <p>Par intervenant <br>Export csv & Excel</p>
+    </div>
+    <div class="flex flex-col w-80">
+      <strong>Open Source & <br>Personnalisable à l’envie</strong>
+      <p>Intégrer l’outil à vos outils existants avec l’API.<br>
+      Notre équipe de développeur est disponible <br>
+      pour ajouter et modifier selon votre demande<br>
+      votre intégration.</p>
+    </div>
+  </div>
+</section>
+
+<section id="responsive" class="flex flex-wrap px-48 my-24">
+  <div class="flex-1"></div>
+  <div class="flex-1">
+    <p>Visibilité de l’information</p>
+    <p class="text-2xl font-black my-4">Planning accessible sur tous les supports, tout le temps</p>
+    <p>
+      L’application est optimisée pour s’afficher sur toutes les tailles d’écrans.
+      Vos étudiants peuvent ainsi en un seul coup d’œil, sur leur téléphones, ordinateurs,
+      mais aussi dans les salles de cours et couloirs, 24h/24 7 jours sur 7.
+      Un flux .ics permet à vos utilisateurs d’intégrer le planning dans leur outil préféré
+    </p>
+    <div class="flex gap-4 my-4">
+      <%= image_tag "logos/Outlook.svg", width: "50px" %>
+      <%= image_tag "logos/MacOSCalendar.png", width: "50px" %>
+      <%= image_tag "logos/GoogleCalendar.svg", width: "50px" %>
+    </div>
+    <%= link_to "Demandez une présentation ->", contact_path, class: "link-primary" %>
+  </div>
+</section>
+
+<section id="fonctionnalités" class="w-full text-center bg-secondary text-secondary-content p-24">
+  <p class="text-xl font-black">Un outil complet & adaptés aux universités et écoles</p>
+  <p>
+    Découvrez quelques fonctionnalités clef. <br>
+    Vous voulez une fonctionnalité sur mesure? Nous vous la développons.
+  </p>
+  <div class="flex flex-col w-full gap-16 lg:gap-8 mt-12">
+    <div class="flex flex-1 flex-wrap justify-around gap-16 lg:gap-8">
+      <div class="flex flex-col flex-1">
+        <p class="font-black my-4">Cours</p>
+        <p>
+          Création d’un cours en quelques clics<br>
+          Gestion des états<br>
+          Affichage liste, Calendrier<br>
+          Recherche avancée<br>
+          Sms & Emails de notification
+        </p>
+      </div>
+      <div class="flex flex-col flex-1">
+        <p class="font-black my-4">Salles</p>
+        <p>
+          Gestion de la capacité<br>
+          Visualisation des<br>
+          créneaux horaires<br>
+          libres/occupés
+        </p>
+      </div>
+      <div class="flex flex-col flex-1">
+        <p class="font-black my-4">Outils</p>
+        <p>
+          Gestion des plans d’activités<br>
+          Jours de fermeture<br>
+          Invitations emails<br>
+          Historique des notifications emails<br>
+          Outils d’administration<br>
+          API Json
+        </p>
+      </div>
+    </div>
+    <div class="flex flex-1 flex-wrap justify-around gap-16 lg:gap-8">
+      <div class="flex flex-col flex-1">
+        <p class="font-black my-4">Comptes & Profils</p>
+        <p>
+          Profil & Compte<br>
+          Intervenants, Étudiants & RH<br>
+          Salles préférées Intervenants<br>
+          Export du temps de cours effectif<br>
+          Alertes emails & sms<br>
+        </p>
+      </div>
+      <div class="flex flex-col flex-1">
+        <p class="font-black my-4">Imports & Exports</p>
+        <p>
+          Import/Export de cours,<br>
+          intervenants, étudiants,<br>
+          formations, ...<br>
+          Format Excel & Csv<br>
+          Illimités et Instantanés
+        </p>
+      </div>
+      <div class="flex flex-col flex-1">
+        <p class="font-black my-4">Audits</p>
+        <p>
+          Enregistrement de chaque action<br>
+          de chaque utilisateur<br>
+          Export du journal
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="légal" class="flex flex-wrap gap-8 p-48">
+  <div class="flex-1">
+    <p class="text-warning mb-8">Transparence, fiabilité, coûts, collaboration</p>
+    <p class="text-xl font-black mb-12">Logiciel Libre, Open Source & Francais</p>
+    <div>
+      <!-- TODO: mettre l'icone de la balance ici -->
+      <p class="mb-12">GNU General Public License v3.0</p>
+    </div>
+    <p class="mb-12">
+      CurricuLoom est open source, libre et française. Avec notre solution, vous bénéficiez de la<br>
+      puissance de l'open source, ainsi que de la liberté de personnalisation et de contrôle total<br>
+      sur votre système de planification.<br>
+      Notre équipe passionnée est prête à répondre à vos besoins spécifiques en apportant des<br>
+      modifications sur demande, et ce, en respectant vos exigences et votre budget.<br>
+      Nous nous chargeons également de l'hébergement et de la maintenance, vous permettant<br>
+      ainsi de vous concentrer sur l'essentiel.
+    </p>
+    <%= link_to "Ouvrir le GitHub du projet et déployez l'application ->", "", class: "link-primary" %>
+  </div>
+  <div class="flex-1 mx-auto">
+    <%= image_tag "logos/GouvTech-Catalogue.png" %>
+    <%= image_tag "logos/framalibre.png" %>
+  </div>
+</section>
+
+<section id="offres" class="bg-warning py-24">
+  <p class="text-xl text-center text-base-100 font-black mb-12">
+    Hébergement, maintenance &<br>
+    améliorations continues
+  </p>
+  <div class="flex flex-wrap gap-16 justify-center px-48">
+    <div class="card flex-1 bg-base-100 text-base-content">
+      <div class="card-body items-center text-center">
+        <p class="card-title">Gratuit</p>
+        <hr>
+        <ul class="text-sm text-left">
+          <li><span class="text-error text-lg mr-4">-</span>Déployez gratuitement l’application Ruby depuis le GitHub</li>
+          <li><span class="text-error text-lg mr-4">-</span>Hébergez le projet sur votre propre infrastructure</li>
+          <li><span class="text-error text-lg mr-4">-</span>Vos équipes IT se chargent de la maintenance</li>
+          <li><span class="text-error text-lg mr-4">-</span>Vous profitez gratuitement des dernières mises à jour</li>
+          <li><span class="text-error text-lg mr-4">-</span>Développez l’intégration à vos outils existants avec l’API REST</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card flex-1 bg-base-100 text-base-content">
+      <div class="card-body items-center text-center">
+        <div class="flex">
+          <p class="flex-1 card-title">
+            750€ HT / Mois,<br>
+            utilisateurs illimité
+          </p>
+          <div class="badge badge-secondary">PRO</div>
+        </div>
+        <hr>
+        <ul class="text-sm text-left">
+          <li><span class="text-success text-lg mr-4">✓</span>Nous assurons le déploiement de votre outil</li>
+          <li><span class="text-success text-lg mr-4">✓</span>Nous importons vos utilisateurs, cours et données existantes</li>
+          <li><span class="text-success text-lg mr-4">✓</span>Nous assurons la maintenance 24h24 7j/7</li>
+          <li><span class="text-success text-lg mr-4">✓</span>Nous développons l’intégration à vos outils existants</li>
+          <li><span class="text-success text-lg mr-4">✓</span>Nous développons vos fonctionnalités sur-mesure</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="confiance" class="text-center p-24">
+  <p class="text-warning mb-4">Il nous font confiance</p>
+  <p class="text-lg font-black mb-12">Plus de 50.000 cours gérés depuis 2016</p>
+  <div class="flex justify-center gap-8">
+  <div class="flex-1">
+    <%= image_tag "misc/amphi_iae.jpg", width: "400px" %>
+  </div>
+  <div class="flex-1">
+    <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
+    <blockquote>
+      Lorem ipsum dolor sit amet consectetur. Fames aliquet egestas ut facilisis eu
+      turpis vel facilisi. Eget nulla porttitor id pulvinar integer at. Leo felis fringilla laoreet
+      lobortis placerat cras lobortis. Netus vivamus lorem quis tempor erat.
+
+      <div class="flex rounded-full bg-base-100 py-2 pr-4 w-fit mx-auto mt-4">
+        <%= image_tag "misc/amphi_iae.jpg", class:"mask mask-circle w-16" %>
+        <div class="flex flex-col">
+          <p class="font-bold">Barbara</p>
+          <p>Gestionnaire</p>
+        </div>
+      </div>
+    </blockquote>
+  </div>
+</section>
+
+<section id="contact" class="p-24">
+  <p class="text-center text-warning">Contact</p>
+  <p class="text-center text-lg font-black mb-12">Contactez nous et recevez aujourd’hui votre lien de démonstration</p>
+  <div class="flex">
+    <div class="flex">
+      <div class="flex flex-col items-center">
+        <%= image_tag "partners/philippe.webp",
+          class: "mask mask-circle object-contain h-48 w-96 mx-auto grayscale opacity-70"
+        %>
+        <h4 class="font-bold text-2xl">
+          Philippe
+        </h4>
+        <h5 class="italic text-xl">
+          Product Owner
+        </h5>
+      </div>
+      <div class="flex flex-col items-center">
+        <%= image_tag "partners/pierre-emmanuel.webp",
+          class: "mask mask-circle object-contain h-48 w-96 mx-auto grayscale opacity-70"
+        %>
+        <h4 class="font-bold text-2xl">
+          Pierre-Emmanuel
+        </h4>
+        <h5 class="italic text-xl">
+          Développeur
+        </h5>
+      </div>
+    </div>
+    <div class="flex flex-col">
+    <p class="text-6xl font-bold mb-12">CurricuLoom</p>
+    <%= form_for( root_path) do |f| %>
+      <div class="flex flex-col gap-2">
+        <%= f.text_field :zef, class: "input input-bordered", placeholder: "Votre adresse email" %>
+        <%= f.text_field :azdd, class: "input input-bordered", placeholder: "Votre prénom nom" %>
+        <%= f.text_field :azdad, class: "input input-bordered", placeholder: "Détails de votre demande" %>
+      </div>
+
+    <% end %>
+    </div>
+  </div>
+</section>
+
 <div class="p-8">
   <p class="text-2xl">
     Collaborative, flexible et simple d'utilisation, cette application a été initialement développée pour l'IAE de Paris (Sorbonne Business School - Université Paris 1 Panthéon-Sorbonne) dans le but d'offrir une alternative à l'outil en place (HYPERplanning), qui était complexe, fermé et surdimensionné pour un usage courant.
@@ -20,7 +275,7 @@
     Principaux atouts :
   </p>
   <ul class="list-disc p-3">
-    <li>Gestion coopérative des emplois du temps (planning) et des salles</li> 
+    <li>Gestion coopérative des emplois du temps (planning) et des salles</li>
     <li>Vérification des contraintes au moment de l'enregistrement d'un cours (capacité, intervenant libre, jours de fermeture, etc.)</li>
     <li>Recherche automatique d'une salle disponible</li>
     <li>Système d'envoi et de gestion de propositions de créneaux horaires par email à plusieurs intervenants (Workflow)</li>
@@ -45,7 +300,7 @@
 
   <h2 class="apps-title">Développement</h2>
   <p>
-    PLANNING IAE est développé et maintenu par 
+    PLANNING IAE est développé et maintenu par
     <%= link_to 'Philnoug & Partners', root_path, class:'link' %>
   </p>
 
