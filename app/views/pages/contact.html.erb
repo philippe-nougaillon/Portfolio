@@ -15,15 +15,15 @@
           </p>
           <hr class="mb-6">
           <div>
-            <%= label_tag :objet, "Objet *" %>
+            <%= label_tag :objet, "Objet" %>
             <%= text_field_tag :objet, params[:objet], class:"input input-sm input-bordered w-full", required: true %>
           </div>
           <div>
-            <%= label_tag :email, "E-mail *" %>
+            <%= label_tag :email, "Email" %>
             <%= email_field_tag :email, params[:email], class:"input input-sm input-bordered w-full", required: true %>
           </div>
           <div>
-            <%= label_tag :contenu, "Message *" %>
+            <%= label_tag :contenu, "Message" %>
             <%= text_area_tag :contenu, params[:contenu], class:"textarea textarea-bordered w-full", rows: 3, required: true %>
           </div>
           <%= recaptcha_tags %>
