@@ -35,6 +35,7 @@ class PagesController < ApplicationController
       ContactMailer.submitted(message).deliver_now
       redirect_to root_path, notice: 'Votre message a bien été envoyé.'
     else
+      flash[:alert] = "Problème avec reCAPTCHA, merci de réessayer"
       render 'contact'
     end
   end
