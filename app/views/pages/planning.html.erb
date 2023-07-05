@@ -280,21 +280,22 @@
     <div class="flex flex-col flex-1">
       <p class="text-lg font-bold mb-12">Comme l’IAE de Paris, faites le choix d’un outil accessible, personnalisable à l’envie, et bénéficiez d’un accompagnement et d’un support technique humain.</p>
 
-      <%= form_tag(contact_path) do %>
-        <div class="flex flex-col gap-2">
-          <%= hidden_field_tag :objet, value:"[PLANNING] Demande démonstration" %>
-          <%= hidden_field_tag :contenu, value:"" %>
-          <div class="form-control">
-            <label class="input-group">
-              <span>Email</span>
-              <input type="email" class="input input-bordered w-full" required="true" />
-            </label>
+      <div data-turbo="false">
+        <%= form_tag(contact_path) do %>
+          <div class="flex flex-col gap-2">
+            <%= hidden_field_tag :objet, value:"[PLANNING] Demande démonstration" %>
+            <%= hidden_field_tag :contenu, value:"" %>
+            <div class="form-control">
+              <label class="input-group">
+                <span>Email</span>
+                <input type="email" class="input input-bordered w-full" required="true" />
+              </label>
+            </div>
+            <%= recaptcha_tags %>
+            <button class="btn btn-primary btn-outline">Demander une démonstration</button>
           </div>
-          <%= recaptcha_tags %>
-          <button class="btn btn-primary btn-outline">Demander une démonstration</button>
-        </div>
-      <% end %>
-
+        <% end %>
+      </div>
     </div>
   </div>
 </section>
