@@ -1,8 +1,8 @@
 <div class="text-center mb-16">
-  <h1 class="font-bold text-4xl text-accent mb-16 pt-8">
+  <h1 class="font-bold text-4xl text-accent mb-6 pt-8">
     <i>PLANNING IAE</i>
   </h1>
-  <h2 class="xl:text-2xl text-accent mt-6 px-6">
+  <h2 class="text-lg xl:text-2xl px-6">
     Logiciel libre et coopératif de gestion de planification de salles, <br>
     à l’usage d’établissement de l’enseignement supérieur
   </h2>
@@ -11,37 +11,39 @@
 <%= image_tag "projets/planning iae-paris/screen_0.png", width: "75%", class: "mx-auto shadow reveal" %>
 
 <section id="bref" class="w-full text-center mt-24">
-  <strong class="text-xl">Un outil complet & adaptés aux universités et écoles</strong>
-  <div class="flex flex-wrap justify-around gap-4 mt-12">
+  <strong class="text-lg xl:text-2xl">Un outil complet & adapté aux universités, écoles et instituts spécialisés</strong>
+  <div class="flex flex-wrap justify-around gap-4 mt-12 px-8">
     <div class="flex flex-col w-80">
-      <strong>Gestion des <br>plannings des cours</strong>
-      <p>En quelques clics, choisissez la formation <br>
-      concernée, le ou les intervenants, la salle du <br>
+      <b class="lg:text-lg mb-2">Gestion des <br>plannings des cours</b>
+      <p>En quelques clics, choisissez la formation
+      concernée, le ou les intervenants, la salle du
       cours, et retrouvez la sur le planning</p>
     </div>
     <div class="flex flex-col w-80">
-      <strong>Gestion des salles <br>de cours</strong>
-      <p>Visualisez les créneaux disponibles sur toutes<br>
-      les salles de l’établissement et leur taux <br>
-      d’occupation, avec une alerte si ce dernier <br>
+      <b class="lg:text-lg mb-2">Gestion des salles <br>de cours</b>
+      <p>Visualisez les créneaux disponibles sur toutes
+      les salles de l’établissement et leur taux
+      d’occupation, avec une alerte si ce dernier
       dépasse un certain seuil </p>
     </div>
     <div class="flex flex-col w-80">
-      <strong>Gestion des plans <br>d’activités</strong>
-      <p>Par intervenant <br>Export csv & Excel</p>
+      <b class="lg:text-lg mb-2">Gestion des plans <br>d’activités</b>
+      <p>Par intervenant <br>Export PDF & Excel</p>
     </div>
     <div class="flex flex-col w-80">
-      <strong>Open Source & <br>Personnalisable à l’envie</strong>
-      <p>Intégrer l’outil à vos outils existants avec l’API.<br>
-      Notre équipe de développeur est disponible <br>
-      pour ajouter et modifier selon votre demande<br>
+      <b class="lg:text-lg mb-2">Open-Source & <br>Personnalisable à l’envie</b>
+      <p>Intégrer l’outil à vos outils existants avec l’API.
+      Notre équipe de développeur est disponible
+      pour ajouter et modifier selon votre demande
       votre intégration.</p>
     </div>
   </div>
 </section>
 
-<section id="responsive" class="flex flex-wrap px-48 my-24">
-  <div class="flex-1"></div>
+<section id="responsive" class="flex flex-col md:flex-row flex-wrap gap-16 px-4 lg:px-48 my-24">
+  <div class="flex-1">
+    <%= image_tag "misc/planning-responsive.png" %>
+  </div>
   <div class="flex-1">
     <p>Visibilité de l’information</p>
     <p class="text-2xl font-black my-4">Planning accessible sur tous les supports, tout le temps</p>
@@ -56,18 +58,17 @@
       <%= image_tag "logos/MacOSCalendar.png", width: "50px" %>
       <%= image_tag "logos/GoogleCalendar.svg", width: "50px" %>
     </div>
-    <%= link_to "Demandez une présentation ->", contact_path, class: "link-primary" %>
+    <%# link_to "Demandez une présentation ->", contact_path, class: "link-primary" %>
   </div>
 </section>
 
-<section id="fonctionnalités" class="w-full text-center bg-secondary text-secondary-content p-24">
-  <p class="text-xl font-black">Un outil complet & adaptés aux universités et écoles</p>
+<section id="fonctionnalités" class="w-full text-center bg-secondary text-secondary-content p-8 lg:p-24">
+  <p class="text-xl font-black">Un outil complet et simple d'utilisation</p>
   <p>
-    Découvrez quelques fonctionnalités clef. <br>
-    Vous voulez une fonctionnalité sur mesure? Nous vous la développons.
+    Découvrez quelques fonctionnalités clées :
   </p>
   <div class="flex flex-col w-full gap-16 lg:gap-8 mt-12">
-    <div class="flex flex-1 flex-wrap justify-around gap-16 lg:gap-8">
+    <div class="flex-1 flex flex-col md:flex-row flex-wrap justify-around gap-16 lg:gap-8">
       <div class="flex flex-col flex-1">
         <p class="font-black my-4">Cours</p>
         <p>
@@ -99,7 +100,7 @@
         </p>
       </div>
     </div>
-    <div class="flex flex-1 flex-wrap justify-around gap-16 lg:gap-8">
+    <div class="flex-1 flex flex-col md:flex-row flex-wrap justify-around gap-16 lg:gap-8">
       <div class="flex flex-col flex-1">
         <p class="font-black my-4">Comptes & Profils</p>
         <p>
@@ -129,40 +130,40 @@
         </p>
       </div>
     </div>
+    <div class="mx-auto mt-12">
+      <p>Besoin d'une fonctionnalité sur mesure ? Nous vous la développons.</p>
+    </div>
   </div>
 </section>
 
-<section id="légal" class="flex flex-wrap gap-8 p-48">
+<section id="légal" class="flex flex-col md:flex-row flex-wrap items-center gap-8 p-8 lg:p-48">
   <div class="flex-1">
-    <p class="text-warning mb-8">Transparence, fiabilité, coûts, collaboration</p>
-    <p class="text-xl font-black mb-12">Logiciel Libre, Open Source & Francais</p>
+    <p class="text-secondary mb-8">Transparence, fiabilité, coûts, collaboration</p>
+    <p class="text-xl font-black mb-12">Logiciel Libre, Open-Source & Français</p>
     <div>
-      <!-- TODO: mettre l'icone de la balance ici -->
-      <p class="mb-12">GNU General Public License v3.0</p>
+      <p class="mb-12">
+        <i class="fa-solid fa-scale-balanced fa-2xl mr-4"></i>
+        GNU General Public License v3.0
+      </p>
     </div>
     <p class="mb-12">
-      CurricuLoom est open source, libre et française. Avec notre solution, vous bénéficiez de la<br>
-      puissance de l'open source, ainsi que de la liberté de personnalisation et de contrôle total<br>
-      sur votre système de planification.<br>
-      Notre équipe passionnée est prête à répondre à vos besoins spécifiques en apportant des<br>
-      modifications sur demande, et ce, en respectant vos exigences et votre budget.<br>
-      Nous nous chargeons également de l'hébergement et de la maintenance, vous permettant<br>
-      ainsi de vous concentrer sur l'essentiel.
+      L'application Planning est Open-Source, libre et française. Avec notre solution, vous bénéficiez de la puissance de l'Open-Source, ainsi que de la liberté de personnalisation et de contrôle total sur votre système de planification.<br>
+      Notre équipe passionnée est prête à répondre à vos besoins spécifiques en apportant des modifications sur demande, et ce, en respectant vos exigences et votre budget.<br>
+      Nous nous chargeons également de l'hébergement et de la maintenance, vous permettant ainsi de vous concentrer sur l'essentiel.
     </p>
-    <%= link_to "Ouvrir le GitHub du projet et déployez l'application ->", "", class: "link-primary" %>
+    <%= link_to "Voir la page GitHub du projet ->", "https://github.com/philippe-nougaillon/Planning_IAE", class: "link-primary hover:underline" %>
   </div>
   <div class="flex-1 mx-auto">
-    <%= image_tag "logos/GouvTech-Catalogue.png" %>
     <%= image_tag "logos/framalibre.png" %>
   </div>
 </section>
 
-<section id="offres" class="bg-warning py-24">
-  <p class="text-xl text-center text-base-100 font-black mb-12">
-    Hébergement, maintenance &<br>
-    améliorations continues
+<section id="offres" class="bg-secondary py-24">
+  <p class="text-lg lg:text-2xl text-center text-base-100 font-black mb-12">
+    Hébergement, maintenance &
+    amélioration continue
   </p>
-  <div class="flex flex-wrap gap-16 justify-center px-48">
+  <div class="flex flex-col md:flex-row flex-wrap gap-16 justify-center px-4 lg:px-48">
     <div class="card flex-1 bg-base-100 text-base-content">
       <div class="card-body items-center text-center">
         <p class="card-title">Gratuit</p>
@@ -180,106 +181,56 @@
       <div class="card-body items-center text-center">
         <div class="flex">
           <p class="flex-1 card-title">
-            750€ HT / Mois,<br>
-            utilisateurs illimité
+            750€ HT / Mois<br>
+            Utilisateurs illimités
           </p>
-          <div class="badge badge-secondary">PRO</div>
+          <div class="badge badge-secondary"><b>PRO</b></div>
         </div>
         <hr>
         <ul class="text-sm text-left">
-          <li><span class="text-success text-lg mr-4">✓</span>Nous assurons le déploiement de votre outil</li>
-          <li><span class="text-success text-lg mr-4">✓</span>Nous importons vos utilisateurs, cours et données existantes</li>
-          <li><span class="text-success text-lg mr-4">✓</span>Nous assurons la maintenance 24h24 7j/7</li>
-          <li><span class="text-success text-lg mr-4">✓</span>Nous développons l’intégration à vos outils existants</li>
-          <li><span class="text-success text-lg mr-4">✓</span>Nous développons vos fonctionnalités sur-mesure</li>
+          <li><span class="text-success text-lg mr-4"><b>✓</b></span>Nous assurons le déploiement de votre outil</li>
+          <li><span class="text-success text-lg mr-4"><b>✓</b></span>Nous importons vos utilisateurs, cours et données existantes</li>
+          <li><span class="text-success text-lg mr-4"><b>✓</b></span>Nous assurons la maintenance 24h24 7j/7</li>
+          <li><span class="text-success text-lg mr-4"><b>✓</b></span>Nous développons l’intégration à vos outils existants</li>
+          <li><span class="text-success text-lg mr-4"><b>✓</b></span>Nous développons vos fonctionnalités sur-mesure</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section id="confiance" class="text-center p-24">
-  <p class="text-warning mb-4">Il nous font confiance</p>
-  <p class="text-lg font-black mb-12">Plus de 50.000 cours gérés depuis 2016</p>
-  <div class="flex justify-center gap-8">
+<section id="confiance" class="text-center px-2 py-8 lg:p-24">
+  <p class="text-secondary text-lg lg:text-2xl mb-4">Il nous font confiance</p>
+  <p class="text-lg font-black mb-12">Plus de 50 000 cours, 500 formations et 900 intervenants gérés depuis 2017 par 25 gestionnaires de formations</p>
+  <div class="flex flex-col md:flex-row items-center justify-center gap-8">
   <div class="flex-1">
-    <%= image_tag "misc/amphi_iae.jpg", width: "400px" %>
+    <%= image_tag "misc/amphi_iae.jpg", width: "650px" %>
   </div>
   <div class="flex-1">
-    <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
+    <i class="fa-solid fa-quote-left fa-2xl mb-8 self-start" style="color: #000000;"></i>
     <blockquote>
-      Lorem ipsum dolor sit amet consectetur. Fames aliquet egestas ut facilisis eu
-      turpis vel facilisi. Eget nulla porttitor id pulvinar integer at. Leo felis fringilla laoreet
-      lobortis placerat cras lobortis. Netus vivamus lorem quis tempor erat.
-
-      <div class="flex rounded-full bg-base-100 py-2 pr-4 w-fit mx-auto mt-4">
-        <%= image_tag "misc/amphi_iae.jpg", class:"mask mask-circle w-16" %>
+      Philippe propose des solutions pérennes, fiables et fait primer dans sa vision du développement la simplicité de la solution. Partisan de l’innovation frugale, il fournit à ses clients des solutions originales, robustes et parfaitement adaptées. Il a le sens de l’écoute et sait faire preuve d’une grande pédagogie dans les démarches agiles. Je le connais principalement pour l’accompagnement fourni dans le cadre de systèmes d’information pédagogiques.
+      <div class="flex items-center jutify-center md:items-start md:justify-start flex-wrap md:flex-nowrap rounded-full bg-base-100 py-2 md:pr-4 w-full md:w-fit mx-auto mt-4">
+        <%= image_tag "https://www.iae-paris.com/sites/default/files/styles/360x265/public/2022-05/Eynaud.jpg?itok=Kp7pAjfj", class:"mask mask-circle h-24 mx-auto hidden md:block" %>
         <div class="flex flex-col">
-          <p class="font-bold">Barbara</p>
-          <p>Gestionnaire</p>
+          <p class="font-bold">Philippe Eynaud</p>
+          <p>
+            Professeur en sciences de gestion à l'IAE de Paris
+            <br>
+            <%= link_to "'Le management du système d’information dans sa complexité'", 
+                      "https://www.amazon.fr/management-syst%C3%A8me-dinformation-dans-complexit%C3%A9/dp/1784055026/ref=sr_1_5?qid=1687595735", class: "link" %> (2018) ISTE Editions
+          </p>
         </div>
       </div>
     </blockquote>
   </div>
 </section>
 
-<section id="contact" class="p-24">
-  <p class="text-center text-warning">Contact</p>
-  <p class="text-center text-lg font-black mb-12">Contactez nous et recevez aujourd’hui votre lien de démonstration</p>
-  <div class="flex">
-    <div class="flex">
-      <div class="flex flex-col items-center">
-        <%= image_tag "partners/philippe.webp",
-          class: "mask mask-circle object-contain h-48 w-96 mx-auto grayscale opacity-70"
-        %>
-        <h4 class="font-bold text-2xl">
-          Philippe
-        </h4>
-        <h5 class="italic text-xl">
-          Product Owner
-        </h5>
-      </div>
-      <div class="flex flex-col items-center">
-        <%= image_tag "partners/pierre-emmanuel.webp",
-          class: "mask mask-circle object-contain h-48 w-96 mx-auto grayscale opacity-70"
-        %>
-        <h4 class="font-bold text-2xl">
-          Pierre-Emmanuel
-        </h4>
-        <h5 class="italic text-xl">
-          Développeur
-        </h5>
-      </div>
-    </div>
-    <div class="flex flex-col">
-    <p class="text-6xl font-bold mb-12">CurricuLoom</p>
-    <%= form_for( root_path) do |f| %>
-      <div class="flex flex-col gap-2">
-        <%= f.text_field :zef, class: "input input-bordered", placeholder: "Votre adresse email" %>
-        <%= f.text_field :azdd, class: "input input-bordered", placeholder: "Votre prénom nom" %>
-        <%= f.text_field :azdad, class: "input input-bordered", placeholder: "Détails de votre demande" %>
-      </div>
-
-    <% end %>
-    </div>
-  </div>
-</section>
-
-<div class="p-8 mt-6">
-  <p class="text-2xl">
-    Collaborative, flexible et simple d'utilisation, 
-    cette application Web a été développée pour l'IAE de Paris 
-    (Sorbonne Business School - Université Paris 1 Panthéon-Sorbonne) 
-    dans le but de remplacer HYPERplanning 
-    par une solution sur-mesure, co-développée avec ses équipes (gestionnaires de formations, SRH)
-    et au plus près de ses besoins.
-</div>
-
-<div class="p-8">
-  <p class="text-2xl">
-    Principaux atouts :
-  </p>
-  <ul class="list-disc p-3">
+<section id="rappel_fonctionnalités" class="bg-secondary text-secondary-content mx-auto w-full p-8">
+  <h2 class="apps-title text-center">
+    Les grandes fonctionnalités
+  </h2>
+  <ul class="list-disc py-4 w-full mx-auto lg:px-28">
     <li>Gestion coopérative des emplois du temps et de la planification des salles</li> 
     <li>Algorithme de vérification des contraintes (capacité, intervenant libre, hors jours de fermeture, etc.)</li>
     <li>Recherche automatique d'une salle disponible</li>
@@ -290,36 +241,60 @@
     <li>En bref; c'est une solution libre, pas HYPER compliquée, HYPER pas chère mais HYPER simple et performante :)</li> 
     <li>BONUS : Le simulateur de planning prévisionnel des regroupements ! <%= link_to "Tester le simulateur", "https://simul-groupes-demo-4be11b165e7a.herokuapp.com/", class: 'link' %></li>
   </ul>
-</div>
 
-<div class="p-8">
-  <h2 class="text-2xl font-bold my-4">Projet Open-Source</h2>
-  <p>
-    Les sources de ce projet sont disponibles ici :
-    <%= link_to "https://github.com/philippe-nougaillon/Planning_IAE", "https://github.com/philippe-nougaillon/Planning_IAE", class:'link' %>
-  </p>
+  <div class="p-8">
+    <p class="text-2xl text-center">
+      Pour toutes informations complémentaires,
+      <%= link_to "consultez le mémo de l'utilisateur", guide_planning_path, class: 'link' %>
+    </p>
+  </div>
+</section>
 
-  <h2 class="apps-title">Développement</h2>
-  <p>
-    PLANNING IAE est développé et maintenu par 
-    <%= link_to 'Philnoug & Partners', root_path, class: 'link' %>
-  </p>
+<section id="contact" class="p-8 lg:p-24">
+  <p class="text-center text-lg lg:text-2xl text-secondary">Nous contacter</p>
+  <div class="flex flex-wrap gap-8 mt-12">
+    <div class="flex flex-1">
+      <div class="flex flex-col items-center text-center">
+        <%= image_tag "partners/philippe.webp",
+          class: "mask mask-circle object-contain h-32 w-72 mx-auto grayscale opacity-70"
+        %>
+        <h4 class="font-bold text-xl">
+          Philippe
+        </h4>
+        <h5 class="italic">
+          Product Owner
+        </h5>
+      </div>
+      <div class="flex flex-col items-center text-center">
+        <%= image_tag "partners/pierre-emmanuel.webp",
+          class: "mask mask-circle object-contain h-32 w-72 mx-auto grayscale opacity-70"
+        %>
+        <h4 class="font-bold text-xl">
+          Pierre-Emmanuel
+        </h4>
+        <h5 class="italic">
+          Développeur
+        </h5>
+      </div>
+    </div>
+    <div class="flex flex-col flex-1">
+      <p class="text-lg font-bold mb-12">Comme l’IAE de Paris, faites le choix d’un outil accessible, personnalisable à l’envie, et bénéficiez d’un accompagnement et d’un support technique humain.</p>
 
-  <h2 class="apps-title">Démonstration</h2>
-  <p>
-    Envie de tester le produit ?
-    <%= link_to 'Demander une démonstration', '/contact', class: 'link' %>
-  </p>
+      <%= form_tag(contact_path) do %>
+        <div class="flex flex-col gap-2">
+          <%= hidden_field_tag :objet, value:"[PLANNING] Demande démonstration" %>
+          <%= hidden_field_tag :contenu, value:"" %>
+          <div class="form-control">
+            <label class="input-group">
+              <span>Email</span>
+              <input type="email" class="input input-bordered w-full" required="true" />
+            </label>
+          </div>
+          <%= recaptcha_tags %>
+          <button class="btn btn-primary btn-outline">Demander une démonstration</button>
+        </div>
+      <% end %>
 
-  <h2 class="apps-title">Support et services</h2>
-  <p>
-    Vous souhaitez une nouvelle fonctionnalité ou installer PLANNING IAE sur votre serveur Linux ?
-    <%= link_to 'Consultez-nous', '/contact', class: 'link' %>
-  </p>
-
-  <h2 class="apps-title">En savoir plus ?</h2>
-  <p>
-    <%= link_to "Voir le mémo de l'utilisateur", guide_planning_path, class: 'link' %>
-  </p>
-
-</div>
+    </div>
+  </div>
+</section>
