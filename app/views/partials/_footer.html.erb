@@ -41,13 +41,8 @@
     <span class="footer-title mx-auto sm:mx-0">Nos apps</span>
     <ul>
       <%= navbar_item 'camino', camino_path, 'Camino', 'underline-offset-4 mb-1' %>
-      <%= navbar_item 'planning', planning_path, 'Planning IAE', 'underline-offset-4 mb-1' %>
       <%= navbar_item 'prestofacto', prestofacto_path, 'PrestoFacto', 'underline-offset-4 mb-1' %>
-      <li>
-        <%= link_to 'https://my-money-penny.flutterflow.app/', target: "_blank", class: 'flex gap-4' do %>
-          <span class="flex-1 whitespace-nowrap">(MyMoneyPenny)</span>
-        <% end %>
-      </li>
+      <%= navbar_item 'planning', planning_path, 'Planning IAE', 'underline-offset-4 mb-1' %>
     </ul>
   </div>
 </footer>
