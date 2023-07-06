@@ -10,7 +10,7 @@
 
 <%= image_tag "projets/planning iae-paris/screen_0.png", width: "75%", class: "mx-auto shadow reveal" %>
 
-<section id="bref" class="w-full text-center mt-24">
+<section id="bref" class="w-full text-center bg-secondary text-secondary-content py-8 lg:py-24 mt-24">
   <strong class="text-lg xl:text-2xl">Un outil complet & adapté aux universités, écoles et instituts spécialisés</strong>
   <div class="flex flex-wrap justify-around gap-4 mt-12 px-8">
     <div class="flex flex-col w-80">
@@ -63,14 +63,15 @@
 </section>
 
 <section id="fonctionnalités" class="w-full text-center bg-secondary text-secondary-content p-8 lg:p-24">
-  <p class="text-xl font-black">Un outil complet et simple d'utilisation</p>
+  <h2 class="apps-title">Un outil complet et simple d'utilisation</h2>
   <p>
     Découvrez quelques fonctionnalités clées :
   </p>
   <div class="flex flex-col w-full gap-16 lg:gap-8 mt-12">
     <div class="flex-1 flex flex-col md:flex-row flex-wrap justify-around gap-16 lg:gap-8">
       <div class="flex flex-col flex-1">
-        <p class="font-black my-4">Cours</p>
+        <i class="fa-regular fa-calendar-days fa-2xl mb-4"></i>
+        <p class="text-xl font-black my-4">Cours</p>
         <p>
           Création d’un cours en quelques clics<br>
           Gestion des états<br>
@@ -80,7 +81,8 @@
         </p>
       </div>
       <div class="flex flex-col flex-1">
-        <p class="font-black my-4">Salles</p>
+        <i class="fa-solid fa-chalkboard-teacher fa-2xl mb-4"></i>
+        <p class="text-xl font-black my-4">Salles</p>
         <p>
           Gestion de la capacité<br>
           Visualisation des<br>
@@ -89,20 +91,21 @@
         </p>
       </div>
       <div class="flex flex-col flex-1">
-        <p class="font-black my-4">Outils</p>
+      <i class="fa-solid fa-wrench fa-2xl mb-4"></i>
+        <p class="text-xl font-black my-4">Outils</p>
         <p>
           Gestion des plans d’activités<br>
           Jours de fermeture<br>
           Invitations emails<br>
           Historique des notifications emails<br>
           Outils d’administration<br>
-          API Json
         </p>
       </div>
     </div>
     <div class="flex-1 flex flex-col md:flex-row flex-wrap justify-around gap-16 lg:gap-8">
       <div class="flex flex-col flex-1">
-        <p class="font-black my-4">Comptes & Profils</p>
+        <i class="fa-solid fa-users fa-2xl mb-4"></i>
+        <p class="text-xl font-black my-4">Comptes & Profils</p>
         <p>
           Profil & Compte<br>
           Intervenants, Étudiants & RH<br>
@@ -112,7 +115,8 @@
         </p>
       </div>
       <div class="flex flex-col flex-1">
-        <p class="font-black my-4">Imports & Exports</p>
+        <i class="fa-solid fa-download fa-2xl mb-4"></i>
+        <p class="text-xl font-black my-4">Imports & Exports</p>
         <p>
           Import/Export de cours,<br>
           intervenants, étudiants,<br>
@@ -122,7 +126,8 @@
         </p>
       </div>
       <div class="flex flex-col flex-1">
-        <p class="font-black my-4">Audits</p>
+        <i class="fa-solid fa-search fa-2xl mb-4"></i>
+        <p class="text-xl font-black my-4">Audits</p>
         <p>
           Enregistrement de chaque action<br>
           de chaque utilisateur<br>
@@ -131,12 +136,12 @@
       </div>
     </div>
     <div class="mx-auto mt-12">
-      <p>Besoin d'une fonctionnalité sur mesure ? Nous vous la développons.</p>
+      <p class="text-xl">Besoin d'une fonctionnalité sur mesure ? Nous vous la développons.</p>
     </div>
   </div>
 </section>
 
-<section id="légal" class="flex flex-col md:flex-row flex-wrap items-center gap-8 p-8 lg:p-48">
+<section id="légal" class="flex flex-col md:flex-row flex-wrap gap-8 p-8 lg:py-24 lg:px-48">
   <div class="flex-1">
     <p class="text-secondary mb-8">Transparence, fiabilité, coûts, collaboration</p>
     <p class="text-xl font-black mb-12">Logiciel Libre, Open-Source & Français</p>
@@ -155,6 +160,58 @@
   </div>
   <div class="flex-1 mx-auto">
     <%= image_tag "logos/framalibre.png" %>
+  </div>
+</section>
+
+<section id="détails_fonctionnalités" class="bg-secondary text-secondary-content mx-auto w-full p-8">
+  <h2 class="apps-title text-center">
+    Les grandes fonctionnalités
+  </h2>
+  <ul class="list-disc py-4 w-full mx-auto lg:px-28">
+    <li>Gestion coopérative des emplois du temps et de la planification des salles</li> 
+    <li>Algorithme de vérification des contraintes (capacité, intervenant libre, hors jours de fermeture, etc.)</li>
+    <li>Recherche automatique d'une salle disponible</li>
+    <li>Système d'envoi et de gestion de propositions de créneaux horaires par email à une liste d'intervenants potentiels (Workflow)</li>
+    <li>Facturation des heures effectuées par CEV (états de services)</li>
+    <li>Workflow documentaire pour la gestion des dossiers de candidature</li>
+    <li>Système de notification par mail (Rappel des cours du mois suivant, Cours annulé, Changement de salle)</li>
+    <li>En bref; c'est une solution libre, pas HYPER compliquée, HYPER pas chère mais HYPER simple et performante :)</li> 
+    <li>BONUS : Le simulateur de planning prévisionnel des regroupements ! <%= link_to "Tester le simulateur", "https://simul-groupes-demo-4be11b165e7a.herokuapp.com/", class: 'link' %></li>
+  </ul>
+
+  <div class="p-8">
+    <p class="text-2xl text-center">
+      Pour toutes informations complémentaires,
+      <%= link_to "consultez le mémo de l'utilisateur", guide_planning_path, class: 'link' %>
+    </p>
+  </div>
+</section>
+
+<section id="confiance" class="text-center px-2 py-8 lg:p-24">
+  <h2 class="apps-title text-secondary">Ils nous font confiance</h2>
+  <p class="text-lg mb-12">Plus de 50 000 cours, 500 formations et 900 intervenants gérés depuis 2017 par 25 gestionnaires de formations</p>
+  <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+  <div class="flex-1">
+    <%= image_tag "misc/amphi_iae.jpg", width: "650px" %>
+  </div>
+  <div class="flex-1">
+    <%= image_tag "projets/planning iae-paris/logo.png", class:"mx-auto mb-8" %>
+    <i class="fa-solid fa-quote-left" style="color: #000000;"></i>
+    <blockquote>
+      Philippe propose des solutions pérennes, fiables et fait primer dans sa vision du développement la simplicité de la solution. Partisan de l’innovation frugale, il fournit à ses clients des solutions originales, robustes et parfaitement adaptées. Il a le sens de l’écoute et sait faire preuve d’une grande pédagogie dans les démarches agiles. Je le connais principalement pour l’accompagnement fourni dans le cadre de systèmes d’information pédagogiques.
+      <div class="flex items-center jutify-center md:items-start md:justify-start flex-wrap md:flex-nowrap rounded-full bg-base-100 py-2 md:pr-4 w-full md:w-fit mx-auto mt-4">
+        <%= image_tag "https://www.iae-paris.com/sites/default/files/styles/360x265/public/2022-05/Eynaud.jpg?itok=Kp7pAjfj", class:"mask mask-circle h-24 mx-auto hidden md:block" %>
+        <div class="flex flex-col">
+          <p class="font-bold">Philippe Eynaud</p>
+          <p>
+            Professeur en sciences de gestion à l'IAE de Paris
+            <br>
+            <%= link_to "'Le management du système d’information dans sa complexité'", 
+                      "https://www.amazon.fr/management-syst%C3%A8me-dinformation-dans-complexit%C3%A9/dp/1784055026/ref=sr_1_5?qid=1687595735", class: "link" %> (2018) ISTE Editions
+          </p>
+        </div>
+      </div>
+    </blockquote>
   </div>
 </section>
 
@@ -199,62 +256,11 @@
   </div>
 </section>
 
-<section id="confiance" class="text-center px-2 py-8 lg:p-24">
-  <p class="text-secondary text-lg lg:text-2xl mb-4">Il nous font confiance</p>
-  <p class="text-lg font-black mb-12">Plus de 50 000 cours, 500 formations et 900 intervenants gérés depuis 2017 par 25 gestionnaires de formations</p>
-  <div class="flex flex-col md:flex-row items-center justify-center gap-8">
-  <div class="flex-1">
-    <%= image_tag "misc/amphi_iae.jpg", width: "650px" %>
-  </div>
-  <div class="flex-1">
-    <i class="fa-solid fa-quote-left fa-2xl mb-8 self-start" style="color: #000000;"></i>
-    <blockquote>
-      Philippe propose des solutions pérennes, fiables et fait primer dans sa vision du développement la simplicité de la solution. Partisan de l’innovation frugale, il fournit à ses clients des solutions originales, robustes et parfaitement adaptées. Il a le sens de l’écoute et sait faire preuve d’une grande pédagogie dans les démarches agiles. Je le connais principalement pour l’accompagnement fourni dans le cadre de systèmes d’information pédagogiques.
-      <div class="flex items-center jutify-center md:items-start md:justify-start flex-wrap md:flex-nowrap rounded-full bg-base-100 py-2 md:pr-4 w-full md:w-fit mx-auto mt-4">
-        <%= image_tag "https://www.iae-paris.com/sites/default/files/styles/360x265/public/2022-05/Eynaud.jpg?itok=Kp7pAjfj", class:"mask mask-circle h-24 mx-auto hidden md:block" %>
-        <div class="flex flex-col">
-          <p class="font-bold">Philippe Eynaud</p>
-          <p>
-            Professeur en sciences de gestion à l'IAE de Paris
-            <br>
-            <%= link_to "'Le management du système d’information dans sa complexité'", 
-                      "https://www.amazon.fr/management-syst%C3%A8me-dinformation-dans-complexit%C3%A9/dp/1784055026/ref=sr_1_5?qid=1687595735", class: "link" %> (2018) ISTE Editions
-          </p>
-        </div>
-      </div>
-    </blockquote>
-  </div>
-</section>
-
-<section id="rappel_fonctionnalités" class="bg-secondary text-secondary-content mx-auto w-full p-8">
-  <h2 class="apps-title text-center">
-    Les grandes fonctionnalités
-  </h2>
-  <ul class="list-disc py-4 w-full mx-auto lg:px-28">
-    <li>Gestion coopérative des emplois du temps et de la planification des salles</li> 
-    <li>Algorithme de vérification des contraintes (capacité, intervenant libre, hors jours de fermeture, etc.)</li>
-    <li>Recherche automatique d'une salle disponible</li>
-    <li>Système d'envoi et de gestion de propositions de créneaux horaires par email à une liste d'intervenants potentiels (Workflow)</li>
-    <li>Facturation des heures effectuées par CEV (états de services)</li>
-    <li>Workflow documentaire pour la gestion des dossiers de candidature</li>
-    <li>Système de notification par mail (Rappel des cours du mois suivant, Cours annulé, Changement de salle)</li>
-    <li>En bref; c'est une solution libre, pas HYPER compliquée, HYPER pas chère mais HYPER simple et performante :)</li> 
-    <li>BONUS : Le simulateur de planning prévisionnel des regroupements ! <%= link_to "Tester le simulateur", "https://simul-groupes-demo-4be11b165e7a.herokuapp.com/", class: 'link' %></li>
-  </ul>
-
-  <div class="p-8">
-    <p class="text-2xl text-center">
-      Pour toutes informations complémentaires,
-      <%= link_to "consultez le mémo de l'utilisateur", guide_planning_path, class: 'link' %>
-    </p>
-  </div>
-</section>
-
-<section id="contact" class="p-8 lg:p-24">
-  <p class="text-center text-lg lg:text-2xl text-secondary">Nous contacter</p>
+<section id="contact" class="p-8 lg:p-24 text-center">
+  <h2 class="apps-title text-secondary">Contact</h2>
   <div class="flex flex-wrap gap-8 mt-12">
     <div class="flex flex-1">
-      <div class="flex flex-col items-center text-center">
+      <div class="flex flex-col items-center">
         <%= image_tag "partners/philippe.webp",
           class: "mask mask-circle object-contain h-32 w-72 mx-auto grayscale opacity-70"
         %>
@@ -265,7 +271,7 @@
           Product Owner
         </h5>
       </div>
-      <div class="flex flex-col items-center text-center">
+      <div class="flex flex-col items-center">
         <%= image_tag "partners/pierre-emmanuel.webp",
           class: "mask mask-circle object-contain h-32 w-72 mx-auto grayscale opacity-70"
         %>
@@ -278,7 +284,7 @@
       </div>
     </div>
     <div class="flex flex-col flex-1">
-      <p class="text-lg font-bold mb-12">Comme l’IAE de Paris, faites le choix d’un outil accessible, personnalisable à l’envie, et bénéficiez d’un accompagnement et d’un support technique humain.</p>
+      <p class="text-lg text-left font-bold mb-12">Comme l’IAE de Paris, faites le choix d’un outil accessible, personnalisable à l’envie, et bénéficiez d’un accompagnement et d’un support technique humain.</p>
       <%= form_tag(contact_path) do %>
         <div class="flex flex-col gap-2">
           <%= hidden_field_tag :objet, "[PLANNING] Demande démonstration" %>
