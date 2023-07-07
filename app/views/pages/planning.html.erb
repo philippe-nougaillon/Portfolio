@@ -8,41 +8,102 @@
   </h2>
 </div>
 
-<%= image_tag "projets/planning iae-paris/screen_0.png", width: "75%", class: "mx-auto shadow hover:shadow-xl cursor-pointer duration-300 rounded-2xl" %>
+<div class="carousel w-3/4 mx-auto" data-turbo="false">
+  <div id="slide1" class="carousel-item relative w-full">
+    <%= image_tag "projets/planning iae-paris/screen_0.png", alt:"Liste des cours à venir" %>
+    <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
+      <a href="#slide8" class="btn btn-circle btn-warning btn-outline">❮</a> 
+      <a href="#slide2" class="btn btn-circle btn-warning">❯</a>
+    </div>
+  </div> 
+  <div id="slide2" class="carousel-item relative w-full">
+    <img src="/Images/guide/salles1.png" alt="Occupation des salles (jour)">
+    <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
+      <a href="#slide1" class="btn btn-circle btn-warning btn-outline">❮</a> 
+      <a href="#slide3" class="btn btn-circle btn-warning">❯</a>
+    </div>
+  </div> 
+  <div id="slide3" class="carousel-item relative w-full">
+    <img src="/Images/guide/formation.png" alt="Une formation en détail">
+    <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
+      <a href="#slide2" class="btn btn-circle btn-warning btn-outline">❮</a> 
+      <a href="#slide4" class="btn btn-circle btn-warning">❯</a>
+    </div>
+  </div>
+  <div id="slide4" class="carousel-item relative w-full">
+    <img src="/Images/guide/intervenant.png" alt="Un intervenant en détail">
+    <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
+      <a href="#slide3" class="btn btn-circle btn-warning btn-outline">❮</a> 
+      <a href="#slide5" class="btn btn-circle btn-warning">❯</a>
+    </div>
+  </div>
+  <div id="slide5" class="carousel-item relative w-full">
+    <img src="/Images/guide/etudiants.png" alt="Liste des étudiants">
+    <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
+      <a href="#slide4" class="btn btn-circle btn-warning btn-outline">❮</a> 
+      <a href="#slide6" class="btn btn-circle btn-warning">❯</a>
+    </div>
+  </div>
+  <div id="slide6" class="carousel-item relative w-full">
+    <img src="/Images/guide/afficheur.png" alt="Planning sur afficheur 1/2">
+    <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
+      <a href="#slide5" class="btn btn-circle btn-warning btn-outline">❮</a> 
+      <a href="#slide7" class="btn btn-circle btn-warning">❯</a>
+    </div>
+  </div>
+  <div id="slide7" class="carousel-item relative w-full">
+    <img src="/Images/guide/reservation-saison.png" alt="Réservation de créneaux horaires pour une saison">
+    <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
+      <a href="#slide6" class="btn btn-circle btn-warning btn-outline">❮</a> 
+      <a href="#slide8" class="btn btn-circle btn-warning">❯</a>
+    </div>
+  </div>
+  <div id="slide8" class="carousel-item relative w-full">
+    <img src="/Images/guide/audit3.png" alt="Audit des connexions">
+    <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
+      <a href="#slide7" class="btn btn-circle btn-warning btn-outline">❮</a> 
+      <a href="#slide1" class="btn btn-circle btn-warning">❯</a>
+    </div>
+  </div>
+</div>
 
 <section id="bref" class="section w-full text-center bg-secondary text-secondary-content mt-24">
   <strong class="text-lg xl:text-2xl">Un outil complet & adapté aux universités, écoles et instituts spécialisés</strong>
-  <div class="flex flex-wrap justify-around gap-4 mt-12 px-8">
-    <div class="flex flex-col w-80">
-      <b class="lg:text-lg mb-2">Gestion des <br>plannings des cours</b>
-      <p>En quelques clics, choisissez la formation
-      concernée, le ou les intervenants, la salle du
-      cours, et retrouvez la sur le planning</p>
+  <div class="flex flex-wrap justify-around gap-8 mt-12 px-8">
+    <div class="flex flex-wrap justify-around gap-8 w-full">
+      <div class="flex flex-col w-80">
+        <b class="lg:text-lg mb-2">Gestion des <br>plannings des cours</b>
+        <p>En quelques clics, choisissez la formation
+        concernée, le ou les intervenants, la salle du
+        cours, et retrouvez la sur le planning</p>
+      </div>
+      <div class="flex flex-col w-80">
+        <b class="lg:text-lg mb-2">Gestion des salles <br>de cours</b>
+        <p>Visualisez les créneaux disponibles sur toutes
+        les salles de l’établissement et leur taux
+        d’occupation, avec une alerte si ce dernier
+        dépasse un certain seuil </p>
+      </div>
     </div>
-    <div class="flex flex-col w-80">
-      <b class="lg:text-lg mb-2">Gestion des salles <br>de cours</b>
-      <p>Visualisez les créneaux disponibles sur toutes
-      les salles de l’établissement et leur taux
-      d’occupation, avec une alerte si ce dernier
-      dépasse un certain seuil </p>
-    </div>
-    <div class="flex flex-col w-80">
-      <b class="lg:text-lg mb-2">Gestion des plans <br>d’activités</b>
-      <p>Par intervenant <br>Export PDF & Excel</p>
-    </div>
-    <div class="flex flex-col w-80">
-      <b class="lg:text-lg mb-2">Open-Source & <br>Personnalisable à l’envie</b>
-      <p>Intégrer l’outil à vos outils existants avec l’API.
-      Notre équipe de développeur est disponible
-      pour ajouter et modifier selon votre demande
-      votre intégration.</p>
+    <div class="flex flex-wrap justify-around gap-8 w-full">
+      <div class="flex flex-col w-80">
+        <b class="lg:text-lg mb-2">Gestion des plans <br>d’activités</b>
+        <p>Par intervenant <br>Export PDF & Excel</p>
+      </div>
+      <div class="flex flex-col w-80">
+        <b class="lg:text-lg mb-2">Open-Source & <br>Personnalisable à l’envie</b>
+        <p>Intégrer l’outil à vos outils existants avec l’API.
+        Notre équipe de développeur est disponible
+        pour ajouter et modifier selon votre demande
+        votre intégration.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="responsive" class="section flex flex-col md:flex-row flex-wrap gap-16 lg:px-48">
+<section id="responsive" class="section flex flex-col md:flex-row flex-wrap items-center gap-16 lg:px-48">
   <div class="flex-1">
-    <%= image_tag "misc/planning-responsive.png" %>
+    <%= image_tag "misc/planning-responsive.png", class:"shadow rounded-2xl" %>
   </div>
   <div class="flex-1">
     <p>Visibilité de l’information</p>
