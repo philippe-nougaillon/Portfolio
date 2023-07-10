@@ -2,4 +2,4 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-Turbo.setFormMode("off")
+// Turbo.setFormMode("off")
