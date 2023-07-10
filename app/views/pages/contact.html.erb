@@ -1,35 +1,33 @@
-<div data-turbo="false">
-  <%= form_tag do %>
-    <div class="mx-auto md:w-1/2 ">
-      <div class="card shadow mt-4 mb-6">
-        <div class="card-body pt-4">
-          <h1 class="font-bold text-4xl text-center text-accent mb-6">
-            <i>CONTACT</i>
-          </h1>
-          <p>
-            <b>Vous avez une question, une remarque ou un projet à nous soumettre ?</b>
-            <br>
-            Remplissez ce formulaire et nous vous recontacterons dès que possible.
-            <br>
-            Vous pouvez aussi nous contacter directement sur contact @ philnoug.com
-          </p>
-          <hr class="mb-6">
-          <div>
-            <%= label_tag :objet, "Objet" %>
-            <%= text_field_tag :objet, params[:objet], class:"input input-sm input-bordered w-full", required: true %>
-          </div>
-          <div>
-            <%= label_tag :email, "Email" %>
-            <%= email_field_tag :email, params[:email], class:"input input-sm input-bordered w-full", required: true %>
-          </div>
-          <div>
-            <%= label_tag :contenu, "Message" %>
-            <%= text_area_tag :contenu, params[:contenu], class:"textarea textarea-bordered w-full", rows: 3, required: true %>
-          </div>
-          <%= recaptcha_tags %>
-          <%= submit_tag "Envoyer", class:"btn btn-secondary btn-outline" %>
+<%= form_tag do %>
+  <div class="mx-auto md:w-1/2 ">
+    <div class="card shadow mt-4 mb-6">
+      <div class="card-body pt-4">
+        <h1 class="font-bold text-4xl text-center text-accent mb-6">
+          <i>CONTACT</i>
+        </h1>
+        <p>
+          <b>Vous avez une question, une remarque ou un projet à nous soumettre ?</b>
+          <br>
+          Remplissez ce formulaire et nous vous recontacterons dès que possible.
+          <br>
+          Vous pouvez aussi nous contacter directement sur contact @ philnoug.com
+        </p>
+        <hr class="mb-6">
+        <div>
+          <%= label_tag :objet, "Objet" %>
+          <%= text_field_tag :objet, params[:objet], class:"input input-sm input-bordered w-full", required: true %>
         </div>
+        <div>
+          <%= label_tag :email, "Email" %>
+          <%= email_field_tag :email, params[:email], class:"input input-sm input-bordered w-full", required: true %>
+        </div>
+        <div>
+          <%= label_tag :contenu, "Message" %>
+          <%= text_area_tag :contenu, params[:contenu], class:"textarea textarea-bordered w-full", rows: 3, required: true %>
+        </div>
+        <%= recaptcha_tags %>
+        <%= submit_tag "Envoyer", class:"btn btn-secondary btn-outline" %>
       </div>
     </div>
-  <% end %>
-</div>
+  </div>
+<% end %>
