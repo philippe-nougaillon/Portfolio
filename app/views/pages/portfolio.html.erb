@@ -12,6 +12,8 @@
   <%= render(TagCloudComponent.new(tags: @tags)) %>
 </div>
 
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mx-4 my-6">
-  <%= render(ProjetComponent.with_collection(@projets, user_signed_in: user_signed_in?))%>
-</div>
+<%= turbo_frame_tag "results_frame" do %>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mx-4 my-6">
+    <%= render(ProjetComponent.with_collection(@projets, user_signed_in: user_signed_in?))%>
+  </div>
+<% end %>
