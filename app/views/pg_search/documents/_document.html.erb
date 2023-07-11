@@ -2,7 +2,8 @@
   <% if result.searchable_type == "Post" %>
     <%= link_to url_for(controller: result.searchable_type.pluralize.downcase, 
                 action: 'show', 
-                id: result.searchable_id) do %>
+                id: result.searchable_id),
+                data: { turbo_frame: "_top" } do %>
       <h3 class="text-3xl font-bold hover:underline">
         <%= result.searchable_type.constantize.find(result.searchable_id).title %>
       </h3>
@@ -12,11 +13,17 @@
       </p>
     <% end %>
   <% elsif result.searchable_type == "Projet" %>
-    <h3 class="text-3xl text-primary underline underline-offset-8">
-      <%= Projet.find(result.searchable_id).nom %>
+    <% projet = Projet.find(result.searchable_id) %>
+    <h3 class="text-3xl text-primary underline underline-offset-8 mb-8">
+      <%= projet.nom %>
     <h3>
     <p class="my-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
-      <%= Projet.find(result.searchable_id).contenu %>
+      <%= projet.contenu %>
+    </p>
+    <br>
+    <p>
+      Pour en savoir plus :
+      <%= link_to projet.url, projet.url, class:'link' %>
     </p>
   <% elsif result.searchable_type == "Client" %>
     <h3 class="font-bold text-3xl text-accent underline underline-offset-8 mb-6">
