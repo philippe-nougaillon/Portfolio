@@ -18,6 +18,10 @@ html{
   scroll-padding-top: 80px;
 }
 
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
 .reveal{
   position: relative;
   transform: translateY(75px);
