@@ -77,7 +77,7 @@ class PagesController < ApplicationController
   def services
   end
 
-  def recherche
+  def rechercher
     unless params[:search].blank?
       @results = PgSearch.multisearch("%#{ params[:search] }%")
     end

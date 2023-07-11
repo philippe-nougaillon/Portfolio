@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     get :contact, to: 'pages#contact'
     post :contact, to: 'pages#contact_submit'
     get :confidentialite, to: 'pages#confidentialite'
-    get :recherche, to: 'pages#recherche'
+    get :rechercher, to: 'pages#rechercher'
     get :services, to: 'pages#services'
     get :apps, to: 'pages#apps'
     get :camino, to: 'pages#camino'
