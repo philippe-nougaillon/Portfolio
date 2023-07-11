@@ -150,7 +150,7 @@
 
 <section id="apps" class="flex flex-col justify-center min-h-screen mx-4 md:mx-8 lg:mx-16 mt-28">
   <h2 class="text-center text-5xl font-bold text-accent my-12 reveal">
-    Nos Apps
+    Nos applications 'maison'
   </h2>
   <div class="flex flex-wrap justify-between w-full gap-4 md:gap-8 lg:gap-16 mb reveal">
     <%= link_to planning_path, class:"flex-1" do %>
@@ -331,7 +331,7 @@
       </div>
     </div>
 
-    <div class="mx-auto px-24 mt-16 p-8 pb-12 bg-white shadow rounded-lg reveal">
+    <div class="mx-auto md:px-24 mt-16 p-8 pb-12 bg-white shadow rounded-lg reveal">
       <div>
         <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
         <br>
@@ -354,55 +354,47 @@
       </div>
     </div>
 
-    <div class="collapse mt-6 lg:px-24 mt-12">
-      <input type="checkbox" class="peer" />
-      <div class="collapse-title lg:text-lg btn btn-primary btn-outline peer-checked:btn-disabled text-center p-0">
-        Voir tous les avis clients
-      </div>
-
-      <div class="collapse-content p-0">
-        <div class="flex flex-wrap lg:flex-nowrap justify-center gap-16 my-12">
-          <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
-            <div>
-              <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
-              <br>
-              <cite>
-                Philippe Nougaillon est quelqu'un de très pédagogue qui m'a beaucoup appris. Il m'a permis de gagner en confiance, en cas de difficultés,
-                en cas de difficultés, il prenait le temps de m'expliquer et de m'aider à formuler une solution par moi-même. 
-                C'est aussi quelqu'un de très impliqué dans son travail, très à jour sur les dernières technologies.
-              </cite>
-            </div>
-            <div>
-              <%= link_to "Alexandre Cukier", "https://www.linkedin.com/in/alexandre-cukier/", class:"font-bold" %>
-              <p>
-                Software Developer @ Ridge
-              </p>
-            </div>
-          </div>
-        </div>
-
+    <div class="flex flex-wrap lg:flex-nowrap justify-center gap-16 mt-12 lg:px-24 reveal">
+      <div class="flex flex-wrap lg:flex-nowrap justify-center gap-16 my-12">
         <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
           <div>
             <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
             <br>
             <cite>
-              Fiable, ultra compétent, engagé et persévérant, Philippe est quelqu'un qui délivre ses projets en temps et en heure avec une qualité que je n'ai jamais vu ailleurs.
+              Philippe Nougaillon est quelqu'un de très pédagogue qui m'a beaucoup appris. Il m'a permis de gagner en confiance, en cas de difficultés,
+              en cas de difficultés, il prenait le temps de m'expliquer et de m'aider à formuler une solution par moi-même. 
+              C'est aussi quelqu'un de très impliqué dans son travail, très à jour sur les dernières technologies.
             </cite>
           </div>
           <div>
-            <%= link_to "Sébastien Pourchaire", "https://www.linkedin.com/in/pourchaire/", class:"font-bold" %>
+            <%= link_to "Alexandre Cukier", "https://www.linkedin.com/in/alexandre-cukier/", class:"font-bold" %>
             <p>
-              CEO @ AirJin
+              Software Developer @ Ridge
             </p>
           </div>
         </div>
+      </div>
 
+      <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
+        <div>
+          <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
+          <br>
+          <cite>
+            Fiable, ultra compétent, engagé et persévérant, Philippe est quelqu'un qui délivre ses projets en temps et en heure avec une qualité que je n'ai jamais vu ailleurs.
+          </cite>
+        </div>
+        <div>
+          <%= link_to "Sébastien Pourchaire", "https://www.linkedin.com/in/pourchaire/", class:"font-bold" %>
+          <p>
+            CEO @ AirJin
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="contact" class="flex justify-center flex-col mt-28 min-h-screen">
+<section id="contact" class="flex justify-center flex-col mt-48 mb-24">
   <h2 class="font-bold text-5xl mb-16 text-accent text-center reveal">
     Vous avez un projet à nous soumettre ?
   </h2>
