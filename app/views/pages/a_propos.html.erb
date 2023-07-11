@@ -1,9 +1,11 @@
 <div class="hero min-h-screen">
   <div class="hero-content flex-col lg:flex-row-reverse gap-8">
 
-    <%= image_tag 'lePlateau.webp', class: 'max-w-xs sm:max-w-full rounded-lg shadow-2xl opacity-70' %>
+    <%= link_to "https://www.google.com/maps/place/Le+Plateau+de+Montfermeil+(93)+-+CoWorking/@48.9020773,2.549413,16.3z/data=!4m6!3m5!1s0x47e6112b2f246e53:0xb269496908c8880b!8m2!3d48.9019126!4d2.5532963!16s%2Fg%2F11lhyhzhsp?entry=ttu", target: "_blank", class:'flex-1' do %>
+      <%= image_tag 'lePlateau.webp', class: 'max-w-xs sm:max-w-full rounded-lg shadow-2xl opacity-80' %>
+    <% end %>
 
-    <div>
+    <div class="flex-1">
       <h1 class="text-4xl font-bold my-3">Qui sommes-nous ?</h1>
       <h1 class="text-3xl">
         Studio de conseil en transformation numérique des organisations et
