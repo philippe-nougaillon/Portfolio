@@ -1,5 +1,5 @@
 <% cache @post do %>
-  <%= link_to @post do %>
+  <%= link_to @post, data: { turbo_frame: "_top" } do %>
     <div class="my-6 lg:px-24">
       <p class="text-sm opacity-70">
         <%= @post.date.strftime("%d/%m/%Y") if @post.date %>
