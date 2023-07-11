@@ -9,11 +9,11 @@
         <label class="input-group bg-inherit">
           <%= text_field_tag :search, 
                               params[:search], 
-                              class: "input w-full sm:w-96", 
+                              class: "input input-bordered w-full sm:w-96", 
                               placeholder: "Entrez un terme à rechercher dans tout le site...", autofocus: true %>
           <%= button_to recherche_path,
                         data: { turbo_frame: "results_frame" },
-                        class: "btn btn-ghost" do %>
+                        class: "btn btn-ghost btn-active rounded-e-lg" do %>
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
           <% end %>
         </label>
