@@ -1,7 +1,10 @@
 <% tag_cloud(@tags, %w(badge-sm badge badge-md badge-lg)) do |tag, css_class| %>
-    <span class="inline-block align-bottom badge <%= css_class %> <%= tag.name == session[:tag] ? "badge-primary" : "badge-outline" %> hover:badge-ghost">
+    <span class="inline-block align-bottom badge <%= css_class %> <%= tag.name == session[:tag] ? "badge-primary" : "badge-outline hover:badge-ghost" %>">
         <%= link_to url_for(params.permit!.merge(tag: tag.name)), data: { turbo_frame: "results_frame" } do %>
-            <%= tag.name %>
+            <%= tag.name.humanize %>
+            <% if params[:tag] == tag.name %>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            <% end %>
         <% end %>
     </span>
 <% end %>
