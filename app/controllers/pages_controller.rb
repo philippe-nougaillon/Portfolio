@@ -54,8 +54,6 @@ class PagesController < ApplicationController
       else
         session[:tag] = params[:tag] = nil
       end
-    else
-      session[:tag] = nil
     end
   end
 
