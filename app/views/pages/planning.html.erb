@@ -99,64 +99,8 @@
   </div>
 </div>
 
-<section id="bref" class="section w-full text-center bg-secondary text-secondary-content mt-24">
-  <strong class="text-lg xl:text-2xl">Un outil complet & adapté aux universités, écoles et instituts spécialisés</strong>
-  <div class="flex flex-wrap justify-around gap-8 mt-12 px-8">
-    <div class="flex flex-wrap justify-around gap-8 w-full">
-      <div class="flex flex-col w-80">
-        <b class="lg:text-lg mb-2">Gestion des <br>plannings des cours</b>
-        <p>En quelques clics, choisissez la formation
-        concernée, le ou les intervenants, la salle du
-        cours, et retrouvez la sur le planning</p>
-      </div>
-      <div class="flex flex-col w-80">
-        <b class="lg:text-lg mb-2">Gestion des salles <br>de cours</b>
-        <p>Visualisez les créneaux disponibles sur toutes
-        les salles de l’établissement et leur taux
-        d’occupation, avec une alerte si ce dernier
-        dépasse un certain seuil </p>
-      </div>
-    </div>
-    <div class="flex flex-wrap justify-around gap-8 w-full">
-      <div class="flex flex-col w-80">
-        <b class="lg:text-lg mb-2">Gestion des plans <br>d’activités</b>
-        <p>Par intervenant <br>Export PDF & Excel</p>
-      </div>
-      <div class="flex flex-col w-80">
-        <b class="lg:text-lg mb-2">Open-Source & <br>Personnalisable à l’envie</b>
-        <p>Intégrer l’outil à vos outils existants avec l’API.
-        Notre équipe de développeurs est disponible
-        pour ajouter et modifier selon votre demande
-        votre intégration.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="responsive" class="section flex flex-col md:flex-row flex-wrap items-center gap-16 lg:px-48">
-  <div class="flex-1">
-    <%= image_tag "misc/planning-responsive.png", class:"shadow rounded-2xl" %>
-  </div>
-  <div class="flex-1">
-    <p>Visibilité de l’information</p>
-    <p class="text-2xl font-black my-4">Planning accessible sur tous les supports, tout le temps</p>
-    <p>
-      L’application est optimisée pour s’afficher sur toutes les tailles d’écrans.
-      Vos étudiants peuvent ainsi en un seul coup d’œil, sur leur téléphones, ordinateurs,
-      mais aussi dans les salles de cours et couloirs, voir le planning des cours  24h/24 et 7 jours sur 7.
-      Un flux .ics permet à vos utilisateurs de synchroniser le planning avec leur outil d'agenda préféré.
-    </p>
-    <div class="flex gap-4 my-4">
-      <%= image_tag "logos/Outlook.svg", width: "50px" %>
-      <%= image_tag "logos/MacOSCalendar.png", width: "50px" %>
-      <%= image_tag "logos/GoogleCalendar.svg", width: "50px" %>
-    </div>
-    <%# link_to "Demandez une présentation ->", contact_path, class: "link-primary" %>
-  </div>
-</section>
-
-<section id="fonctionnalités" class="section w-full text-center bg-secondary text-secondary-content">
-  <h2 class="apps-title">Un outil puissant et simple d'utilisation</h2>
+<section id="fonctionnalités" class="section w-full text-center bg-secondary text-secondary-content mt-24">
+  <h2 class="apps-title">Un outil adapté aux universités, écoles de commerce et instituts spécialisés</h2>
   <p>
     Découvrez quelques fonctionnalités clés :
   </p>
@@ -238,50 +182,59 @@
   </div>
 </section>
 
-<section id="légal" class="section flex flex-col md:flex-row flex-wrap gap-8 lg:px-48">
+<section id="responsive" class="section flex flex-col md:flex-row flex-wrap items-center gap-16 lg:px-48">
   <div class="flex-1">
-    <p class="text-secondary mb-8">Transparence, fiabilité, coûts, collaboration</p>
-    <p class="text-xl font-black mb-12">Logiciel Libre, Open-Source & Français</p>
-    <div>
-      <p class="mb-12">
-        <i class="fa-solid fa-scale-balanced fa-2xl mr-4"></i>
-        GNU General Public License v3.0
-      </p>
-    </div>
-    <p class="mb-12">
-      L'application Planning est Open-Source, libre et française. Avec notre solution, vous bénéficiez de la puissance de l'Open-Source, ainsi que de la liberté de personnalisation et de contrôle total sur votre système de planification.<br>
-      Notre équipe passionnée est prête à répondre à vos besoins spécifiques en apportant des modifications sur demande, et ce, en respectant vos exigences et votre budget.<br>
-      Nous nous chargeons également de l'hébergement et de la maintenance, vous permettant ainsi de vous concentrer sur l'essentiel.
-    </p>
-    <%= link_to "Voir la page GitHub du projet ->", "https://github.com/philippe-nougaillon/Planning_IAE", class: "link-primary hover:underline" %>
+    <%= image_tag "misc/planning-responsive.png", class:"shadow rounded-2xl" %>
   </div>
-  <div class="flex-1 mx-auto">
-    <%= image_tag "logos/framalibre.png", class:"mb-24" %>
-    <%= image_tag "logos/adullact.png" %>
+  <div class="flex-1">
+    <p>Visibilité de l’information</p>
+    <p class="text-2xl font-black my-4">Planning accessible sur tous les supports, tout le temps</p>
+    <p>
+      L’application est optimisée pour s’afficher sur toutes les tailles d’écrans.
+      Vos étudiants peuvent ainsi en un seul coup d’œil, sur leur téléphones, ordinateurs,
+      mais aussi dans les salles de cours et couloirs, voir le planning des cours  24h/24 et 7 jours sur 7.
+      Un flux .ics permet à vos utilisateurs de synchroniser le planning avec leur outil d'agenda préféré.
+    </p>
+    <div class="flex gap-4 my-4">
+      <%= image_tag "logos/Outlook.svg", width: "50px" %>
+      <%= image_tag "logos/MacOSCalendar.png", width: "50px" %>
+      <%= image_tag "logos/GoogleCalendar.svg", width: "50px" %>
+    </div>
+    <%# link_to "Demandez une présentation ->", contact_path, class: "link-primary" %>
   </div>
 </section>
 
-<section id="détails_fonctionnalités" class="section bg-secondary text-secondary-content mx-auto w-full">
-  <h2 class="apps-title text-center">
-    Les grandes fonctionnalités
-  </h2>
-  <ul class="list-disc py-4 w-full mx-auto lg:px-28">
-    <li class="mb-2">Gestion coopérative des emplois du temps et de la planification des salles</li> 
-    <li class="mb-2">Algorithme de vérification des contraintes (capacité, intervenant libre, hors jours de fermeture, etc.)</li>
-    <li class="mb-2">Recherche automatique d'une salle disponible</li>
-    <li class="mb-2">Système d'envoi et de gestion de propositions de créneaux horaires par email à une liste d'intervenants potentiels (Workflow)</li>
-    <li class="mb-2">Facturation des heures effectuées par CEV (états de services)</li>
-    <li class="mb-2">Workflow documentaire pour la gestion des dossiers de candidature</li>
-    <li class="mb-2">Système de notification par mail (Rappel des cours du mois suivant, Cours annulé, Changement de salle)</li>
-    <li class="mb-2">BONUS : Le simulateur de planning prévisionnel des regroupements ! <%= link_to "Tester le simulateur", "https://simul-groupes-demo-4be11b165e7a.herokuapp.com/", class: 'link' %></li>
-    <li>En somme, c'est une solution libre, pas HYPER compliquée et pas HYPER chère <i class="fa-regular fa-face-smile-wink"></i></li> 
-  </ul>
-
-  <div class="p-8">
-    <p class="text-2xl text-center">
-      Pour en savoir plus,
-      <%= link_to "consultez le mémo de l'utilisateur", guide_planning_path, class: 'link' %>
-    </p>
+<section id="bref" class="section w-full text-center bg-secondary text-secondary-content mt-24">
+  <strong class="text-lg xl:text-2xl">Un outil complet, puissant et simple d'utilisation</strong>
+  <div class="flex flex-wrap justify-around gap-8 mt-12 px-8">
+    <div class="flex flex-wrap justify-around gap-8 w-full">
+      <div class="flex flex-col w-80">
+        <b class="lg:text-lg mb-2">Gestion des <br>plannings des cours</b>
+        <p>En quelques clics, choisissez la formation
+        concernée, le ou les intervenants, la salle du
+        cours, et retrouvez la sur le planning</p>
+      </div>
+      <div class="flex flex-col w-80">
+        <b class="lg:text-lg mb-2">Gestion des salles <br>de cours</b>
+        <p>Visualisez les créneaux disponibles sur toutes
+        les salles de l’établissement et leur taux
+        d’occupation, avec une alerte si ce dernier
+        dépasse un certain seuil </p>
+      </div>
+    </div>
+    <div class="flex flex-wrap justify-around gap-8 w-full">
+      <div class="flex flex-col w-80">
+        <b class="lg:text-lg mb-2">Gestion des plans <br>d’activités</b>
+        <p>Par intervenant <br>Export PDF & Excel</p>
+      </div>
+      <div class="flex flex-col w-80">
+        <b class="lg:text-lg mb-2">Open-Source & <br>Personnalisable à l’envie</b>
+        <p>Intégrer l’outil à vos outils existants avec l’API.
+        Notre équipe de développeurs est disponible
+        pour ajouter et modifier selon votre demande
+        votre intégration.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -313,22 +266,74 @@
   </div>
 </section>
 
+<section id="détails_fonctionnalités" class="section bg-secondary text-secondary-content mx-auto w-full">
+  <h2 class="apps-title text-center">
+    Les grandes fonctionnalités
+  </h2>
+  <ul class="list-disc py-4 w-full mx-auto lg:px-28">
+    <li class="mb-2">Gestion coopérative des emplois du temps et de la planification des salles</li> 
+    <li class="mb-2">Algorithme de vérification des contraintes (capacité, intervenant libre, hors jours de fermeture, etc.)</li>
+    <li class="mb-2">Recherche automatique d'une salle disponible</li>
+    <li class="mb-2">Système d'envoi et de gestion de propositions de créneaux horaires par email à une liste d'intervenants potentiels (Workflow)</li>
+    <li class="mb-2">Facturation des heures effectuées par CEV (états de services)</li>
+    <li class="mb-2">Workflow documentaire pour la gestion des dossiers de candidature</li>
+    <li class="mb-2">Système de notification par mail (Rappel des cours du mois suivant, Cours annulé, Changement de salle)</li>
+    <li class="mb-2">BONUS : Le simulateur de planning prévisionnel des regroupements ! <%= link_to "Tester le simulateur", "https://simul-groupes-demo-4be11b165e7a.herokuapp.com/", class: 'link' %></li>
+    <li>En somme, c'est une solution libre, pas HYPER compliquée et pas HYPER chère <i class="fa-regular fa-face-smile-wink"></i></li> 
+  </ul>
+
+  <div class="p-8">
+    <p class="text-2xl text-center">
+      Pour en savoir plus,
+      <%= link_to "consultez le mémo de l'utilisateur", guide_planning_path, class: 'link' %>
+    </p>
+  </div>
+</section>
+
+<section id="légal" class="section flex flex-col md:flex-row flex-wrap gap-8 lg:px-48">
+  <div class="flex-1">
+    <p class="text-secondary mb-8">Transparence, fiabilité, coûts, collaboration</p>
+    <p class="text-xl font-black mb-12">Logiciel Libre, Open-Source & Français</p>
+    <div>
+      <p class="mb-12">
+        <i class="fa-solid fa-scale-balanced fa-2xl mr-4"></i>
+        GNU General Public License v3.0
+      </p>
+    </div>
+    <p class="mb-12">
+      <b>L'application Planning est Open-Source, libre et française. </b>
+      <br><br>
+      Avec notre solution, vous bénéficiez de la puissance de l'Open-Source, ainsi que de la liberté de personnalisation et de contrôle total sur votre système de planification.<br>
+      <br>
+      Notre équipe passionnée est prête à répondre à vos besoins spécifiques en apportant des modifications sur demande, et ce, en respectant vos exigences et votre budget.<br>
+      <br>
+      Nous nous chargeons également de l'hébergement et de la maintenance, vous permettant ainsi de vous concentrer sur l'essentiel.
+    </p>
+    <%= link_to "Voir la page GitHub du projet ->", "https://github.com/philippe-nougaillon/Planning_IAE", class: "link-primary hover:underline" %>
+  </div>
+  <div class="flex-1 mx-auto">
+    <%= image_tag "logos/framalibre.png", class:"mb-24" %>
+    <%= image_tag "logos/adullact.png" %>
+  </div>
+</section>
+
+
 <section id="offres" class="section bg-secondary">
   <p class="text-lg lg:text-2xl text-center text-base-100 font-black mb-12">
-    Hébergement, maintenance &
+    Offre d'hébergement, maintenance &
     amélioration continue
   </p>
   <div class="flex flex-col md:flex-row flex-wrap gap-16 justify-center">
     <div class="card flex-1 bg-base-100 text-base-content">
       <div class="card-body items-center text-center">
-        <p class="card-title">Gratuit</p>
+        <p class="card-title">Open-Source</p>
         <hr>
         <ul class="text-left">
-          <li><span class="text-error text-2xl mr-4"><b>-</b></span>Déployez gratuitement l’application Ruby depuis le GitHub</li>
-          <li><span class="text-error text-2xl mr-4"><b>-</b></span>Hébergez le projet sur votre propre infrastructure</li>
-          <li><span class="text-error text-2xl mr-4"><b>-</b></span>Vos équipes IT se chargent de la maintenance</li>
-          <li><span class="text-error text-2xl mr-4"><b>-</b></span>Vous profitez gratuitement des dernières mises à jour</li>
-          <li><span class="text-error text-2xl mr-4"><b>-</b></span>Développez l’intégration à vos outils existants avec l’API REST</li>
+          <li><span class="text-success text-2xl mr-4"><b>-</b></span>Déployez gratuitement l’application Ruby depuis le GitHub</li>
+          <li><span class="text-success text-2xl mr-4"><b>-</b></span>Hébergez le projet sur votre propre infrastructure</li>
+          <li><span class="text-success text-2xl mr-4"><b>-</b></span>Vos équipes IT se chargent de la maintenance</li>
+          <li><span class="text-success text-2xl mr-4"><b>-</b></span>Vous profitez gratuitement des dernières mises à jour</li>
+          <li><span class="text-success text-2xl mr-4"><b>-</b></span>Développez l’intégration à vos outils existants avec l’API REST</li>
         </ul>
       </div>
     </div>
@@ -339,7 +344,7 @@
             750€ HT / Mois<br>
             Utilisateurs illimités
           </p>
-          <div class="badge badge-secondary"><b>PRO</b></div>
+          <div class="badge badge-error"><b>PRO</b></div>
         </div>
         <hr>
         <ul class="text-left">
@@ -393,7 +398,7 @@
               <input type="email" class="input input-bordered w-full" required="true" />
             </label>
           </div>
-          <%= recaptcha_tags %>
+          <%= recaptcha_tags unless request.host == 'localhost' %>
           <button class="btn btn-primary btn-outline">Demander une démonstration</button>
         </div>
       <% end %>
