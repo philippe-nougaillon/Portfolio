@@ -47,7 +47,7 @@ class PagesController < ApplicationController
     @posts = Post.where(published: true)
     @tags = @posts.tag_counts_on(:tags).order(:taggings_count).reverse
 
-    unless params[:tag].blank? 
+    unless params[:tag].blank?
       if params[:tag] != session[:tag]
         @posts = Post.tagged_with(params[:tag])
         session[:tag] = params[:tag]

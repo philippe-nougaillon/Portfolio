@@ -1,29 +1,31 @@
-<h1 class="font-bold text-4xl text-center text-accent mb-6 pt-8">
-  <i>Clients</i>
-</h1>
-
-<div class="mx-auto max-w-max m-16 mt-6 lg:px-24">
-  <%= render(TagCloudComponent.new(tags: @tags)) %>
-</div>
-
-<div class="my-6 lg:px-24">
+<%= turbo_frame_tag "main_frame" do %>
+  <h1 class="font-bold text-4xl text-center text-accent mb-6 pt-8">
+    <i>Clients</i>
+  </h1>
 
   <%= turbo_frame_tag "results_frame" do %>
-    <%= render(ClientComponent.with_collection(@clients))%>
+    <div class="mx-auto max-w-max m-16 mt-6 lg:px-24">
+      <%= render(TagCloudComponent.new(tags: @tags)) %>
+    </div>
 
-    <% if @clients.count == Client.all.count %>
-      <p class="my-6">
-        <h1 class="font-bold text-3xl text-accent mb-6">
-          Et aussi :
-        </h1>
-        Bluelinea,
-        Chubb,
-        A.C.S.C,
-        Expertise-Ottavi,
-        NOOS/Numericable,
-        Kuoni,
-        Ucopia…
-      </p>
-    <% end %>
+    <div class="my-6 lg:px-24">
+
+      <%= render(ClientComponent.with_collection(@clients))%>
+
+      <% if @clients.count == Client.all.count %>
+        <p class="my-6">
+          <h1 class="font-bold text-3xl text-accent mb-6">
+            Et aussi :
+          </h1>
+          Bluelinea,
+          Chubb,
+          A.C.S.C,
+          Expertise-Ottavi,
+          NOOS/Numericable,
+          Kuoni,
+          Ucopia…
+        </p>
+      <% end %>
+    </div>
   <% end %>
-</div>
+<% end %>
