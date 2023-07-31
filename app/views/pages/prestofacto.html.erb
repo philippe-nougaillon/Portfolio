@@ -3,14 +3,14 @@
     <i>PrestoFacto</i>
   </h1>
   <h2 class="text-lg xl:text-2xl px-6">
-    Application de facturation de services journaliers.
+    Application de gestion et de facturation des services journaliers.
   </h2>
 </div>
 
 <div class="p-8">
   <p class="text-2xl font-bold mb-8">
     PrestoFacto aide les petites organisations dans la gestion 
-    et la facturation de leurs prestations journalières (repas, garderie, activités, etc.)
+    et la facturation de leurs prestations journalières (repas, garderie, activités périscolaires, hébergement à la nuitée, colonie de vacances, etc.)
   </p>
 
   <p class="text-xl mb-4">
@@ -30,13 +30,20 @@
   </p>
 
   <p class="text-xl">
-    Pour en savoir plus, veuillez consulter 
-    <%= link_to "le guide d'utilisation", "https://www.prestofacto.fr", class: 'link' %>
+    Pour en savoir plus, veuillez consulter le
+    <%= link_to "guide d'utilisation", "https://www.prestofacto.fr", class: 'link' %>
   </p>
+
 </div>
 
 <div class="p-8">
-  <h2 class="apps-title">Projet Open-Source</h2>
+  <h2 class="apps-title">Démonstration</h2>
+  <p>
+    Envie de tester l'application ?
+    <%= link_to 'Lancer la démonstration', 'https://www.prestofacto.fr/', class:'link', target: '_blank' %>
+  </p>
+
+  <h2 class="apps-title">Projet libre (Open-Source)</h2>
   <p>
     Les sources de ce projet sont disponibles ici :
     <%= link_to "https://github.com/philippe-nougaillon/PrestoFacto", "https://github.com/philippe-nougaillon/PrestoFacto", class:'link' %>
@@ -54,10 +61,5 @@
     <%= link_to 'Consultez notre offre de services', '/services', class:'link' %>
   </p>
 
-  <h2 class="apps-title">Démonstration</h2>
-    <p>
-      Envie de tester le produit ?
-      <%= link_to 'Lancer la démonstration', 'https://www.prestofacto.fr/', class:'link', target: '_blank' %>
-    </p>
-    <br><br>  
+  <br><br>  
 </div>
