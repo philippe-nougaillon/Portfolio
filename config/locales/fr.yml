@@ -256,6 +256,8 @@ fr:
       title: PrestoFacto
     planning:
       title: Planning
+    crystal_data:
+      title: Crystal Data
     contact:
       title: Contact
     contact_submit:

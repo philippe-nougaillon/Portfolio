@@ -104,4 +104,7 @@ class PagesController < ApplicationController
   def mentions_légales
   end
 
+  def crystal_data
+  end
+
 end

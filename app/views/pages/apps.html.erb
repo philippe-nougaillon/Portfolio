@@ -65,58 +65,73 @@
       </div>
     <% end %>
 
-    <div class="flex-1 card shadow hover:shadow-xl duration-300 bg-white h-full">
-      <div class="card-body flex-end">
-
-        <h2 class="card-title text-primary underline underline-offset-8">
-          <%= link_to 'Planning_IAE/Tableau-Affichage (REACT)', 
-                      'https://github.com/philippe-nougaillon/Planning_IAE-Tableau-Affichage_REACT',
-                      target: '_blank' %>
-        </h2>
-        <p class="py-4">
-          Affichage des horaires de cours sur grands écrans (tableaux lumineux)
-        </p>
-        <hr>
-
-        <h2 class="card-title text-primary underline underline-offset-8">
-          <%= link_to 'Planning_IAE/Client Mobile (REACT)', 
-                      'https://github.com/philippe-nougaillon/Planning_IAE-Client-Mobile_REACT',
-                      target: '_blank' %> 
-        </h2>
-        <p class="py-4">
-          Client léger pour consulter le planning sur smartphone
-        </p>
-        <hr>
-        
-        <h2 class="card-title text-primary underline underline-offset-8">
-          <%= link_to 'Planning_IAE/Client-Mobile (FLUTTER)', 
-                      'https://github.com/philippe-nougaillon/Planning_IAE-Client-Mobile_FLUTTER',
-                      target: '_blank' %> 
-        </h2>
-        <p class="py-4">
-          Client léger pour smartphone écrit en DART/FLUTTER
-        </p>
-        <hr>
-
-        <h2 class="card-title text-primary underline underline-offset-8">
-          <%= link_to 'OpenCantine', 'https://github.com/philippe-nougaillon/open-cantine', target: '_blank' %>
-        </h2>
-        <p class="py-4">
-          Application de facturation de prestations périscolaires
-        </p>
-        <hr>
-
-        <h2 class="card-title text-primary underline underline-offset-8">
-          <%= link_to 'Crystal RING', 'https://github.com/philippe-nougaillon/Crystal-Ring', target: '_blank' %>
-        </h2>
-        <p class="py-4">
-          Workflow de validation de factures, développé sur mesure pour GROHE
-        </p>
-        <hr>
-
+    <%= link_to crystal_data_path, class:"flex-1" do %>
+      <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white h-full">
+        <%= image_tag "projets/crystal_data/screen_0.png", class:"object-fill w-full" %>
+        <div class="card-body">
+          <hr>
+          <h2 class="card-title text-primary underline underline-offset-8">
+            Crystal Data
+          </h2>
+          <p class="my-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
+            Vos données métier, en ligne et en mobilité
+          </p>
+        </div>
       </div>
-    </div>
+    <% end %>
 
+  </div>
+
+  <div class="flex-1 card shadow hover:shadow-xl duration-300 bg-white h-full">
+    <div class="card-body flex-end">
+
+      <h2 class="card-title text-primary underline underline-offset-8">
+        <%= link_to 'Planning_IAE/Tableau-Affichage (REACT)', 
+                    'https://github.com/philippe-nougaillon/Planning_IAE-Tableau-Affichage_REACT',
+                    target: '_blank' %>
+      </h2>
+      <p class="py-4">
+        Affichage des horaires de cours sur grands écrans (tableaux lumineux)
+      </p>
+      <hr>
+
+      <h2 class="card-title text-primary underline underline-offset-8">
+        <%= link_to 'Planning_IAE/Client Mobile (REACT)', 
+                    'https://github.com/philippe-nougaillon/Planning_IAE-Client-Mobile_REACT',
+                    target: '_blank' %> 
+      </h2>
+      <p class="py-4">
+        Client léger pour consulter le planning sur smartphone
+      </p>
+      <hr>
+      
+      <h2 class="card-title text-primary underline underline-offset-8">
+        <%= link_to 'Planning_IAE/Client-Mobile (FLUTTER)', 
+                    'https://github.com/philippe-nougaillon/Planning_IAE-Client-Mobile_FLUTTER',
+                    target: '_blank' %> 
+      </h2>
+      <p class="py-4">
+        Client léger pour smartphone écrit en DART/FLUTTER
+      </p>
+      <hr>
+
+      <h2 class="card-title text-primary underline underline-offset-8">
+        <%= link_to 'OpenCantine', 'https://github.com/philippe-nougaillon/open-cantine', target: '_blank' %>
+      </h2>
+      <p class="py-4">
+        Application de facturation de prestations périscolaires
+      </p>
+      <hr>
+
+      <h2 class="card-title text-primary underline underline-offset-8">
+        <%= link_to 'Crystal RING', 'https://github.com/philippe-nougaillon/Crystal-Ring', target: '_blank' %>
+      </h2>
+      <p class="py-4">
+        Workflow de validation de factures, développé sur mesure pour GROHE
+      </p>
+      <hr>
+
+    </div>
   </div>
 
 </div>

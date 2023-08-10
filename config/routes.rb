@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     get :apps, to: 'pages#apps'
     get :camino, to: 'pages#camino'
     get :prestofacto, to: 'pages#prestofacto'
+    get :crystal_data, to: 'pages#crystal_data'
     get :planning, to: 'pages#planning'
     get :guide_planning, to: 'pages#guide_planning'
     get :partenaires, to: 'pages#partenaires'
