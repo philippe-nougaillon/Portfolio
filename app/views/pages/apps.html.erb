@@ -12,7 +12,7 @@
 
 <div class="flex flex-col justify-between gap-4 md:gap-8 lg:gap-16 mx-4 md:mx-8 lg:mx-16 my-6">
   <div class="flex flex-wrap justify-between w-full gap-4 md:gap-8 lg:gap-16">
-    <%= link_to planning_path, class:"flex-1" do %>
+    <%= link_to planning_path, class:"flex-1 min-w-fit sm:min-w-min" do %>
       <div class="mt-3">
         <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white">
           <%= image_tag "projets/planning iae-paris/screen_0.png", class:"object-fill w-full" %>
@@ -30,7 +30,7 @@
       </div>
     <% end %>
 
-    <%= link_to camino_path, class:"flex-1" do %>
+    <%= link_to camino_path, class:"flex-1 min-w-fit sm:min-w-min" do %>
       <div class="mt-3">
         <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white">
           <%= image_tag "projets/camino/screen_0.png", class:"object-fill w-full" %>
@@ -50,7 +50,7 @@
 
   <div class="flex flex-wrap justify-between w-full gap-4 md:gap-8 lg:gap-16">
 
-    <%= link_to prestofacto_path, class:"flex-1" do %>
+    <%= link_to prestofacto_path, class:"flex-1 min-w-fit sm:min-w-min" do %>
       <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white h-full">
         <%= image_tag "projets/prestofacto/screen_0.png", class:"object-fill w-full" %>
         <div class="card-body">
@@ -65,7 +65,7 @@
       </div>
     <% end %>
 
-    <%= link_to crystal_data_path, class:"flex-1" do %>
+    <%= link_to crystal_data_path, class:"flex-1 min-w-fit sm:min-w-min" do %>
       <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white h-full">
         <%= image_tag "projets/crystal_data/screen_0.png", class:"object-fill w-full" %>
         <div class="card-body">
