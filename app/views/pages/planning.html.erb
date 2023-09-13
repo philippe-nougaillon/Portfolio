@@ -1,14 +1,225 @@
 <div class="text-center mb-16">
-  <h1 class="font-bold text-4xl text-accent mb-6 pt-8">
+  <h1 class="font-bold text-6xl text-accent mb-6 pt-8">
     <i>Planning IAE</i>
   </h1>
-  <h2 class="text-lg xl:text-2xl px-6">
+  <h2 class="text-lg xl:text-4xl px-6">
+    Un outil adapté aux universités,
+    <br>
+    écoles de commerce et instituts spécialisés
+  </h2>
+  <h3 class="text-2xl px-6 mt-4">
     Logiciel libre et coopératif de gestion de planification de salles et d'emplois du temps (EDT), <br>
     à l’usage d’établissements de l’enseignement supérieur
-  </h2>
+  </h3>
+
+  <div class="flex justify-center gap-4 mt-24">
+    <%= link_to "Vous êtes une direction d'établissement", planning_path(anchor: "bref"), class: 'btn btn-success btn-lg' %>
+    <%= link_to "Vous êtes une D.S.I", planning_path(anchor: "details_fonctionnalites"), class: 'btn btn-success btn-lg' %>
+  </div>
 </div>
 
-<div class="carousel min-w-16 sm:w-3/4 mx-auto" data-turbo="false">
+<%
+=begin%>
+ <section id="qui" class="section w-full text-center bg-secondary text-secondary-content mt-24 py-12">
+
+</section> 
+<%
+=end%>
+
+<section id="bref" class="section w-full text-center bg-secondary text-secondary-content">
+  <h2 class="apps-title">Un outil complet, puissant et simple d'utilisation</h2>
+  <div class="flex justify-around gap-16 mt-12 px-4">
+    <div class="flex flex-col">
+      <b class="lg:text-2xl mb-6">Gestion des <br>plannings des cours</b>
+      <p>En quelques clics, choisissez la formation
+      concernée, le ou les intervenants, la salle du
+      cours, et retrouvez la sur le planning</p>
+    </div>
+    <div class="flex flex-col">
+      <b class="lg:text-2xl mb-6">Gestion des salles <br>de cours</b>
+      <p>Visualisez les créneaux disponibles sur toutes
+      les salles de l’établissement et leur taux
+      d’occupation, avec une alerte si ce dernier
+      dépasse un certain seuil </p>
+    </div>
+    <div class="flex flex-col">
+      <b class="lg:text-2xl mb-6">Open-Source & <br>Personnalisable à l’envie</b>
+      <p>Intégrer l’outil à vos outils existants avec l’API.
+      Notre équipe de développeurs est disponible
+      pour ajouter et modifier selon votre demande
+      votre intégration.</p>
+    </div>
+  </div>
+</section>
+
+<section id="responsive" class="section flex flex-col md:flex-row flex-wrap items-center gap-16 lg:px-24">
+  <div class="flex-1">
+    <%= image_tag "misc/planning-responsive.png", class:"shadow rounded-2xl" %>
+  </div>
+  <div class="flex-1">
+    <p class="text-2xl">Visibilité de l’information</p>
+    <p class="text-4xl font-black my-4">Planning accessible sur tous les supports, tout le temps</p>
+    <p class="text-xl">
+      L’application est optimisée pour s’afficher sur toutes les tailles d’écrans.
+      Vos étudiants peuvent ainsi en un seul coup d’œil, sur leur téléphones, ordinateurs,
+      mais aussi dans les salles de cours et couloirs, voir le planning des cours  24h/24 et 7 jours sur 7.
+      Un flux .ics permet à vos utilisateurs de synchroniser le planning avec leur outil d'agenda préféré.
+    </p>
+    <div class="flex gap-4 my-4">
+      <%= image_tag "logos/Outlook.svg", width: "50px" %>
+      <%= image_tag "logos/MacOSCalendar.png", width: "50px" %>
+      <%= image_tag "logos/GoogleCalendar.svg", width: "50px" %>
+    </div>
+    <%# link_to "Demandez une présentation ->", contact_path, class: "link-primary" %>
+  </div>
+</section>
+
+<!--  Visuel à ajouter -->
+
+<section id="fonctionnalités" class="section w-full text-center bg-secondary text-secondary-content mt-24">
+  <h2 class="apps-title">Gérez l'ensemble de vos formations et salles grâce à un seul outil !</h2>
+  <h3 class="text-2xl mb-6"></h3>
+  <p>
+    Découvrez quelques fonctionnalités clés :
+  </p>
+  <div class="flex flex-col w-full gap-16 mt-12">
+    <div class="flex-1 flex flex-col md:flex-row flex-wrap justify-around gap-16">
+      <div class="flex flex-col flex-1">
+        <i class="fa-regular fa-calendar-days fa-2xl mb-4"></i>
+        <p class="text-2xl font-black my-4"><b>Cours</b></p>
+        <p class="!font-thin">
+          Création d’un cours en quelques clics<br>
+          Gestion des états<br>
+          Affichage liste, Calendrier<br>
+          Recherche avancée<br>
+          Sms & Emails de notification
+        </p>
+      </div>
+      <div class="flex flex-col flex-1">
+        <i class="fa-solid fa-chalkboard-teacher fa-2xl mb-4"></i>
+        <p class="text-2xl font-black my-4">Salles</p>
+        <p>
+          Gestion de la capacité des salles<br>
+          Visualisation des<br>
+          créneaux horaires<br>
+          libres/occupés
+        </p>
+      </div>
+      <div class="flex flex-col flex-1">
+      <i class="fa-solid fa-wrench fa-2xl mb-4"></i>
+        <p class="text-2xl font-black my-4">Outils</p>
+        <p>
+          Gestion des plans d’activités<br>
+          Jours de fermeture<br>
+          Proposition de nouveau créneaux aux intervenants par emails<br>
+          Historique des notifications emails<br>
+          Outils d’administration<br>
+        </p>
+      </div>
+    </div>
+    <div class="flex-1 flex flex-col md:flex-row flex-wrap justify-around gap-16 lg:gap-8">
+      <div class="flex flex-col flex-1">
+        <i class="fa-solid fa-users fa-2xl mb-4"></i>
+        <p class="text-2xl font-black my-4">Comptes & Profils</p>
+        <p>
+          Profil & Compte<br>
+          Intervenants, Étudiants & RH<br>
+          Salles préférées Intervenants<br>
+          Export du temps de cours effectif<br>
+          Alertes emails & sms<br>
+        </p>
+      </div>
+      <div class="flex flex-col flex-1">
+        <i class="fa-solid fa-download fa-2xl mb-4"></i>
+        <p class="text-2xl font-black my-4">Imports & Exports</p>
+        <p>
+          Import/Export de cours,<br>
+          intervenants, étudiants,<br>
+          formations, ...<br>
+          Formats Excel & CSV<br>
+          Gestion des accès selon les rôles 
+        </p>
+      </div>
+      <div class="flex flex-col flex-1">
+        <i class="fa-solid fa-search fa-2xl mb-4"></i>
+        <p class="text-2xl font-black my-4">Audit Trail</p>
+        <p>
+          Enregistrement de chaque action<br>
+          de chaque utilisateur<br>
+          Historique des données modifiées.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="mx-auto mt-8">
+    <p class="text-2xl text-center mt-24 mb-12">
+      Pour en savoir plus,
+      <%= link_to "consultez le mémo de l'utilisateur", guide_planning_path, class: 'link' %>
+    </p>
+    <p class="text-2xl">Besoin d'une fonctionnalité sur mesure ? Nous vous la développons !</p>
+  </div>
+</section>
+
+<section id="confiance" class="section text-center">
+  <h2 class="apps-title">Ils nous font confiance</h2>
+  <p class="text-2xl mb-12">
+    Plus de <strong class="font-black">500</strong> formations, <strong class="font-black">900</strong> intervenants et <strong class="font-black">50 000</strong> cours gérés depuis <strong class="font-black">2017</strong>
+    <br>
+    par <strong class="font-black">25</strong> gestionnaires de formations
+  </p>
+  <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+  <div class="flex-1">
+    <%= image_tag "misc/amphi_iae.jpg", width: "650px" %>
+  </div>
+  <div class="flex-1">
+    <%= image_tag "projets/planning iae-paris/logo.png", class:"mx-auto mb-8" %>
+    <i class="fa-solid fa-quote-left" style="color: #000000;"></i>
+    <blockquote>
+      <p class="text-lg">
+        Le Studio 'Philnoug & Partners' propose des solutions pérennes, fiables et fait primer dans sa vision du développement la simplicité de la solution. Partisans de l’innovation frugale, ils fournissent à leurs clients des solutions originales, robustes et parfaitement adaptées. Ils ont le sens de l’écoute et savent faire preuve d’une grande pédagogie dans les démarches agiles.
+      </p>
+      <div class="flex items-center jutify-center md:items-start md:justify-start flex-wrap md:flex-nowrap rounded-full bg-base-100 py-2 md:pr-4 w-full md:w-fit mx-auto mt-4">
+        <%= image_tag "https://www.iae-paris.com/sites/default/files/styles/360x265/public/2022-05/Eynaud.jpg?itok=Kp7pAjfj", class:"mask mask-circle h-24 mx-auto hidden md:block" %>
+        <div class="flex flex-col">
+          <p class="font-bold">Philippe Eynaud</p>
+          <p>
+            Professeur en sciences de gestion à l'IAE de Paris
+            <br>
+            <%= link_to "'Le management du système d’information dans sa complexité'", 
+                      "https://www.amazon.fr/management-syst%C3%A8me-dinformation-dans-complexit%C3%A9/dp/1784055026/ref=sr_1_5?qid=1687595735", class: "link" %> (2018) ISTE Editions
+          </p>
+        </div>
+      </div>
+    </blockquote>
+  </div>
+</section>
+
+<section id="details_fonctionnalites" class="section bg-secondary text-secondary-content mx-auto w-full">
+  <h2 class="apps-title text-center">
+    Avantages S.I
+  </h2>
+  <ul class="list-disc py-4 w-full mx-auto lg:px-28">
+    <li class="text-xl mb-2">Gestion coopérative des emplois du temps et de la planification des salles</li> 
+    <li class="text-xl mb-2">Algorithme de vérification des contraintes (capacité, intervenant libre, hors jours de fermeture, etc.)</li>
+    <li class="text-xl mb-2">Recherche automatique d'une salle disponible</li>
+    <li class="text-xl mb-2">Système d'envoi et de gestion de propositions de créneaux horaires par email à une liste d'intervenants potentiels (Workflow)</li>
+    <li class="text-xl mb-2">Facturation des heures effectuées par CEV (états de services)</li>
+    <li class="text-xl mb-2">Workflow documentaire pour la gestion des dossiers de candidature</li>
+    <li class="text-xl mb-2">Système de notification par mail (Rappel des cours du mois suivant, Cours annulé, Changement de salle)</li>
+    <li class="text-xl mb-2">BONUS : Le simulateur de planning prévisionnel des regroupements ! <%= link_to "Tester le simulateur", "https://simul-groupes-demo-4be11b165e7a.herokuapp.com/", class: 'link' %></li>
+    <li class="text-xl">En somme, c'est une solution libre, simple, et abordable <i class="fa-regular fa-face-smile-wink"></i></li> 
+  </ul>
+
+  <div class="p-8">
+    <p class="text-2xl text-center">
+      Pour en savoir plus,
+      <%= link_to "consultez le mémo de l'administrateur", guide_planning_path(anchor: 'administration'), class: 'link' %>
+    </p>
+    <p class="text-xl text-center mt-8">Besoin d'une fonctionnalité sur mesure ? Nous vous la développons !</p>
+  </div>
+</section>
+
+<div class="carousel min-w-16 sm:w-3/4 mx-auto my-24" data-turbo="false">
   <div id="slide1" class="carousel-item relative w-full">
     <%= image_tag "projets/planning iae-paris/screen_0.png", alt:"Liste des cours à venir" %>
     <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
@@ -97,232 +308,16 @@
       <a href="#slide1" class="btn btn-circle btn-primary btn-outline shadow-lg">❯</a>
     </div>
   </div>
-</div>
+</div> 
 
-<section id="fonctionnalités" class="section w-full text-center bg-secondary text-secondary-content mt-24">
-  <h2 class="apps-title">Un outil adapté aux universités, écoles de commerce et instituts spécialisés</h2>
-  <p>
-    Découvrez quelques fonctionnalités clés :
-  </p>
-  <div class="flex flex-col w-full gap-16 mt-12">
-    <div class="flex-1 flex flex-col md:flex-row flex-wrap justify-around gap-16">
-      <div class="flex flex-col flex-1">
-        <i class="fa-regular fa-calendar-days fa-2xl mb-4"></i>
-        <p class="text-xl font-black my-4">Cours</p>
-        <p>
-          Création d’un cours en quelques clics<br>
-          Gestion des états<br>
-          Affichage liste, Calendrier<br>
-          Recherche avancée<br>
-          Sms & Emails de notification
-        </p>
-      </div>
-      <div class="flex flex-col flex-1">
-        <i class="fa-solid fa-chalkboard-teacher fa-2xl mb-4"></i>
-        <p class="text-xl font-black my-4">Salles</p>
-        <p>
-          Gestion de la capacité des salles<br>
-          Visualisation des<br>
-          créneaux horaires<br>
-          libres/occupés
-        </p>
-      </div>
-      <div class="flex flex-col flex-1">
-      <i class="fa-solid fa-wrench fa-2xl mb-4"></i>
-        <p class="text-xl font-black my-4">Outils</p>
-        <p>
-          Gestion des plans d’activités<br>
-          Jours de fermeture<br>
-          Proposition de nouveau créneaux aux intervenants par emails<br>
-          Historique des notifications emails<br>
-          Outils d’administration<br>
-        </p>
-      </div>
-    </div>
-    <div class="flex-1 flex flex-col md:flex-row flex-wrap justify-around gap-16 lg:gap-8">
-      <div class="flex flex-col flex-1">
-        <i class="fa-solid fa-users fa-2xl mb-4"></i>
-        <p class="text-xl font-black my-4">Comptes & Profils</p>
-        <p>
-          Profil & Compte<br>
-          Intervenants, Étudiants & RH<br>
-          Salles préférées Intervenants<br>
-          Export du temps de cours effectif<br>
-          Alertes emails & sms<br>
-        </p>
-      </div>
-      <div class="flex flex-col flex-1">
-        <i class="fa-solid fa-download fa-2xl mb-4"></i>
-        <p class="text-xl font-black my-4">Imports & Exports</p>
-        <p>
-          Import/Export de cours,<br>
-          intervenants, étudiants,<br>
-          formations, ...<br>
-          Formats Excel & CSV<br>
-          Gestion des accès selon les rôles 
-        </p>
-      </div>
-      <div class="flex flex-col flex-1">
-        <i class="fa-solid fa-search fa-2xl mb-4"></i>
-        <p class="text-xl font-black my-4">Audit Trail</p>
-        <p>
-          Enregistrement de chaque action<br>
-          de chaque utilisateur<br>
-          Historique des données modifiées.
-        </p>
-      </div>
-    </div>
-    <div class="mx-auto">
-      <p class="text-2xl text-center mb-12">
-        Pour en savoir plus,
-        <%= link_to "consultez le mémo de l'utilisateur", guide_planning_path, class: 'link' %>
-      </p>
-      <p class="text-xl">Besoin d'une fonctionnalité sur mesure ? Nous vous la développons !</p>
-    </div>
-  </div>
-</section>
-
-<section id="responsive" class="section flex flex-col md:flex-row flex-wrap items-center gap-16 lg:px-48">
-  <div class="flex-1">
-    <%= image_tag "misc/planning-responsive.png", class:"shadow rounded-2xl" %>
-  </div>
-  <div class="flex-1">
-    <p>Visibilité de l’information</p>
-    <p class="text-2xl font-black my-4">Planning accessible sur tous les supports, tout le temps</p>
-    <p>
-      L’application est optimisée pour s’afficher sur toutes les tailles d’écrans.
-      Vos étudiants peuvent ainsi en un seul coup d’œil, sur leur téléphones, ordinateurs,
-      mais aussi dans les salles de cours et couloirs, voir le planning des cours  24h/24 et 7 jours sur 7.
-      Un flux .ics permet à vos utilisateurs de synchroniser le planning avec leur outil d'agenda préféré.
-    </p>
-    <div class="flex gap-4 my-4">
-      <%= image_tag "logos/Outlook.svg", width: "50px" %>
-      <%= image_tag "logos/MacOSCalendar.png", width: "50px" %>
-      <%= image_tag "logos/GoogleCalendar.svg", width: "50px" %>
-    </div>
-    <%# link_to "Demandez une présentation ->", contact_path, class: "link-primary" %>
-  </div>
-</section>
-
-<section id="bref" class="section w-full text-center bg-secondary text-secondary-content mt-24">
-  <strong class="text-lg xl:text-2xl">Un outil complet, puissant et simple d'utilisation</strong>
-  <div class="flex flex-wrap justify-around gap-8 mt-12 px-8">
-    <div class="flex flex-wrap justify-around gap-8 w-full">
-      <div class="flex flex-col w-80">
-        <b class="lg:text-lg mb-2">Gestion des <br>plannings des cours</b>
-        <p>En quelques clics, choisissez la formation
-        concernée, le ou les intervenants, la salle du
-        cours, et retrouvez la sur le planning</p>
-      </div>
-      <div class="flex flex-col w-80">
-        <b class="lg:text-lg mb-2">Gestion des salles <br>de cours</b>
-        <p>Visualisez les créneaux disponibles sur toutes
-        les salles de l’établissement et leur taux
-        d’occupation, avec une alerte si ce dernier
-        dépasse un certain seuil </p>
-      </div>
-    </div>
-    <div class="flex flex-wrap justify-around gap-8 w-full">
-      <div class="flex flex-col w-80">
-        <b class="lg:text-lg mb-2">Gestion des plans <br>d’activités</b>
-        <p>Par intervenant <br>Export PDF & Excel</p>
-      </div>
-      <div class="flex flex-col w-80">
-        <b class="lg:text-lg mb-2">Open-Source & <br>Personnalisable à l’envie</b>
-        <p>Intégrer l’outil à vos outils existants avec l’API.
-        Notre équipe de développeurs est disponible
-        pour ajouter et modifier selon votre demande
-        votre intégration.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="confiance" class="section text-center">
-  <h2 class="apps-title text-secondary">Ils nous font confiance</h2>
-  <p class="text-lg mb-12">Plus de 50 000 cours, 500 formations et 900 intervenants gérés depuis 2017 par 25 gestionnaires de formations</p>
-  <div class="flex flex-col md:flex-row items-center justify-center gap-8">
-  <div class="flex-1">
-    <%= image_tag "misc/amphi_iae.jpg", width: "650px" %>
-  </div>
-  <div class="flex-1">
-    <%= image_tag "projets/planning iae-paris/logo.png", class:"mx-auto mb-8" %>
-    <i class="fa-solid fa-quote-left" style="color: #000000;"></i>
-    <blockquote>
-      Le Studio 'Philnoug & Partners' propose des solutions pérennes, fiables et fait primer dans sa vision du développement la simplicité de la solution. Partisans de l’innovation frugale, ils fournissent à leurs clients des solutions originales, robustes et parfaitement adaptées. Ils ont le sens de l’écoute et savent faire preuve d’une grande pédagogie dans les démarches agiles.
-      <div class="flex items-center jutify-center md:items-start md:justify-start flex-wrap md:flex-nowrap rounded-full bg-base-100 py-2 md:pr-4 w-full md:w-fit mx-auto mt-4">
-        <%= image_tag "https://www.iae-paris.com/sites/default/files/styles/360x265/public/2022-05/Eynaud.jpg?itok=Kp7pAjfj", class:"mask mask-circle h-24 mx-auto hidden md:block" %>
-        <div class="flex flex-col">
-          <p class="font-bold">Philippe Eynaud</p>
-          <p>
-            Professeur en sciences de gestion à l'IAE de Paris
-            <br>
-            <%= link_to "'Le management du système d’information dans sa complexité'", 
-                      "https://www.amazon.fr/management-syst%C3%A8me-dinformation-dans-complexit%C3%A9/dp/1784055026/ref=sr_1_5?qid=1687595735", class: "link" %> (2018) ISTE Editions
-          </p>
-        </div>
-      </div>
-    </blockquote>
-  </div>
-</section>
-
-<section id="détails_fonctionnalités" class="section bg-secondary text-secondary-content mx-auto w-full">
-  <h2 class="apps-title text-center">
-    Les grandes fonctionnalités
+<section id="offres" class="section bg-secondary text-secondary-content">
+  <h2 class="apps-title text-content text-center mb-12">
+    Plus qu'une application, un service
   </h2>
-  <ul class="list-disc py-4 w-full mx-auto lg:px-28">
-    <li class="mb-2">Gestion coopérative des emplois du temps et de la planification des salles</li> 
-    <li class="mb-2">Algorithme de vérification des contraintes (capacité, intervenant libre, hors jours de fermeture, etc.)</li>
-    <li class="mb-2">Recherche automatique d'une salle disponible</li>
-    <li class="mb-2">Système d'envoi et de gestion de propositions de créneaux horaires par email à une liste d'intervenants potentiels (Workflow)</li>
-    <li class="mb-2">Facturation des heures effectuées par CEV (états de services)</li>
-    <li class="mb-2">Workflow documentaire pour la gestion des dossiers de candidature</li>
-    <li class="mb-2">Système de notification par mail (Rappel des cours du mois suivant, Cours annulé, Changement de salle)</li>
-    <li class="mb-2">BONUS : Le simulateur de planning prévisionnel des regroupements ! <%= link_to "Tester le simulateur", "https://simul-groupes-demo-4be11b165e7a.herokuapp.com/", class: 'link' %></li>
-    <li>En somme, c'est une solution libre, pas HYPER compliquée et pas HYPER chère <i class="fa-regular fa-face-smile-wink"></i></li> 
-  </ul>
-
-  <div class="p-8">
-    <p class="text-2xl text-center">
-      Pour en savoir plus,
-      <%= link_to "consultez le mémo de l'utilisateur", guide_planning_path, class: 'link' %>
-    </p>
-  </div>
-</section>
-
-<section id="légal" class="section flex flex-col md:flex-row flex-wrap gap-8 lg:px-48">
-  <div class="flex-1">
-    <p class="text-secondary mb-8">Transparence, fiabilité, coûts, collaboration</p>
-    <p class="text-xl font-black mb-12">Logiciel Libre, Open-Source & Français</p>
-    <div>
-      <p class="mb-12">
-        <i class="fa-solid fa-scale-balanced fa-2xl mr-4"></i>
-        GNU General Public License v3.0
-      </p>
-    </div>
-    <p class="mb-12">
-      <b>L'application Planning est Open-Source, libre et française. </b>
-      <br><br>
-      Avec notre solution, vous bénéficiez de la puissance de l'Open-Source, ainsi que de la liberté de personnalisation et de contrôle total sur votre système de planification.<br>
-      <br>
-      Notre équipe passionnée est prête à répondre à vos besoins spécifiques en apportant des modifications sur demande, et ce, en respectant vos exigences et votre budget.<br>
-      <br>
-      Nous nous chargeons également de l'hébergement et de la maintenance, vous permettant ainsi de vous concentrer sur l'essentiel.
-    </p>
-    <%= link_to "Voir la page GitHub du projet ->", "https://github.com/philippe-nougaillon/Planning_IAE", class: "link-primary hover:underline" %>
-  </div>
-  <div class="flex-1 mx-auto">
-    <%= image_tag "logos/framalibre.png", class:"mb-24" %>
-    <%= image_tag "logos/adullact.png" %>
-  </div>
-</section>
-
-
-<section id="offres" class="section bg-secondary">
-  <p class="text-lg lg:text-2xl text-center text-base-100 font-black mb-12">
+  <h3 class="text-center text-2xl mb-12">
     Offre d'hébergement, maintenance &
     amélioration continue
-  </p>
+  </h3>
   <div class="flex flex-col md:flex-row flex-wrap gap-16 justify-center">
     <div class="card flex-1 bg-base-100 text-base-content">
       <div class="card-body items-center text-center">
@@ -359,14 +354,42 @@
   </div>
 </section>
 
-<section id="contact" class="section text-center">
-  <h2 class="apps-title text-secondary">Contact</h2>
-  <p class="text-lg px-8 lg:px-48">Comme l’IAE de Paris, faites le choix d’un outil accessible, personnalisable à l’envie, et bénéficiez d’un accompagnement et d’un support technique humain.</p>
+<section id="légal" class="section flex flex-col md:flex-row flex-wrap gap-16 lg:px-24 items-center">
+  <div class="flex-auto w-1/3">
+    <p class="text-secondary mb-8 text-2xl">Transparence, fiabilité, coûts, collaboration</p>
+    <p class="text-4xl font-black mb-12">Logiciel Libre, Open-Source & Français</p>
+    <p class="text-xl mb-12">
+      <b>L'application Planning est Open-Source, libre et française. </b>
+      <br><br>
+      Avec notre solution, vous bénéficiez de la puissance de l'Open-Source, ainsi que de la liberté de personnalisation et de contrôle total sur votre système de planification.<br>
+      <br>
+      Notre équipe passionnée est prête à répondre à vos besoins spécifiques en apportant des modifications sur demande, et ce, en respectant vos exigences et votre budget.<br>
+      <br>
+      Nous nous chargeons également de l'hébergement et de la maintenance, vous permettant ainsi de vous concentrer sur l'essentiel.
+    </p>
+    <div>
+      <p class="mb-12">
+        <i class="fa-solid fa-scale-balanced fa-xl mr-4"></i>
+        GNU General Public License v3.0
+      </p>
+    </div>
+    <%= link_to "Voir la page GitHub du projet ->", "https://github.com/philippe-nougaillon/Planning_IAE", class: "link-primary hover:underline text-xl" %>
+  </div>
+  <div class="flex-1 mx-auto w-2/3">
+    <%= image_tag "logos/framalibre.png", class:"mb-24" %>
+    <%= image_tag "logos/adullact.png" %>
+  </div>
+</section>
+
+<section id="contact" class="section text-center bg-secondary text-secondary-content">
+  <h2 class="apps-title">Contact</h2>
+  <p class="text-2xl px-8 lg:px-48">Comme l’IAE de Paris, faites le choix d’un outil accessible, personnalisable à l’envie, et bénéficiez d’un accompagnement et d’un support technique humain.</p>
   <div class="flex flex-wrap gap-8 mt-24">
     <div class="flex flex-1">
       <div class="flex flex-col items-center">
+      <!-- Ajouter ring de daisyUI (avatar)-->
         <%= image_tag "partners/philippe.webp",
-          class: "mask mask-circle object-contain h-32 w-72 mx-auto grayscale opacity-70"
+          class: "mask mask-circle object-contain h-48 w-96 mx-auto opacity-70"
         %>
         <h4 class="font-bold text-xl">
           Philippe
@@ -377,7 +400,7 @@
       </div>
       <div class="flex flex-col items-center">
         <%= image_tag "partners/pierre-emmanuel.webp",
-          class: "mask mask-circle object-contain h-32 w-72 mx-auto grayscale opacity-70"
+          class: "mask mask-circle object-contain h-48 w-96 mx-auto opacity-70"
         %>
         <h4 class="font-bold text-xl">
           Pierre-Emmanuel
@@ -394,12 +417,12 @@
           <%= hidden_field_tag :contenu, "" %>
           <div class="form-control">
             <label class="input-group">
-              <span>Email</span>
+              <span class="text-success">Email</span>
               <input type="email" class="input input-bordered w-full" required="true" />
             </label>
           </div>
           <%= recaptcha_tags unless request.host == 'localhost' %>
-          <button class="btn btn-primary btn-outline">Demander une démonstration</button>
+          <button class="btn btn-success">Demander une démonstration</button>
         </div>
       <% end %>
     </div>

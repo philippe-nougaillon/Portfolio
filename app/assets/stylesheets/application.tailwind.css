@@ -5,7 +5,7 @@
 @layer components {
 
   h2.apps-title{
-    @apply !text-2xl !font-bold my-4
+    @apply !text-4xl !font-bold my-4
   }
 
   #guide_planning ul{
