@@ -152,11 +152,11 @@
     </div>
   </div>
   <div class="mx-auto mt-8">
+    <p class="text-2xl">Besoin d'une fonctionnalité sur mesure ? Nous vous la développons !</p>
     <p class="text-2xl text-center mt-24 mb-12">
       Pour en savoir plus,
-      <%= link_to "consultez le mémo de l'utilisateur", guide_planning_path, class: 'link' %>
+      <%= link_to "contactez-nous", planning_path(anchor: "contact"), class: 'link' %>
     </p>
-    <p class="text-2xl">Besoin d'une fonctionnalité sur mesure ? Nous vous la développons !</p>
   </div>
 </section>
 
@@ -206,14 +206,14 @@
     <li class="text-xl mb-2">Facturation des heures effectuées par CEV (états de services)</li>
     <li class="text-xl mb-2">Workflow documentaire pour la gestion des dossiers de candidature</li>
     <li class="text-xl mb-2">Système de notification par mail (Rappel des cours du mois suivant, Cours annulé, Changement de salle)</li>
-    <li class="text-xl mb-2">BONUS : Le simulateur de planning prévisionnel des regroupements ! <%= link_to "Tester le simulateur", "https://simul-groupes-demo-4be11b165e7a.herokuapp.com/", class: 'link' %></li>
+    <li class="text-xl mb-2">Simulateur de planning prévisionnel des regroupements ! <%= link_to "Tester le simulateur", "https://simul-groupes-demo-4be11b165e7a.herokuapp.com/", class: 'link' %></li>
     <li class="text-xl">En somme, c'est une solution libre, simple, et abordable <i class="fa-regular fa-face-smile-wink"></i></li> 
   </ul>
 
   <div class="p-8">
     <p class="text-2xl text-center">
       Pour en savoir plus,
-      <%= link_to "consultez le mémo de l'administrateur", guide_planning_path(anchor: 'administration'), class: 'link' %>
+      <%= link_to "contactez-nous", planning_path(anchor: 'contact'), class: 'link' %>
     </p>
     <p class="text-xl text-center mt-8">Besoin d'une fonctionnalité sur mesure ? Nous vous la développons !</p>
   </div>
@@ -321,14 +321,19 @@
   <div class="flex flex-col md:flex-row flex-wrap gap-16 justify-center">
     <div class="card flex-1 bg-base-100 text-base-content">
       <div class="card-body items-center text-center">
-        <p class="card-title">Open-Source</p>
+        <div class="flex">
+          <p class="flex-1 card-title">
+            Open-Source<br>
+            Utilisateurs illimités
+          </p>
+          <div class="badge badge-error"><b>PRO</b></div>
+        </div>
         <hr>
         <ul class="text-left">
           <li><span class="text-success text-2xl mr-4"><b>-</b></span>Déployez gratuitement l’application Ruby depuis le GitHub</li>
           <li><span class="text-success text-2xl mr-4"><b>-</b></span>Hébergez le projet sur votre propre infrastructure</li>
           <li><span class="text-success text-2xl mr-4"><b>-</b></span>Vos équipes IT se chargent de la maintenance</li>
           <li><span class="text-success text-2xl mr-4"><b>-</b></span>Vous profitez gratuitement des dernières mises à jour</li>
-          <li><span class="text-success text-2xl mr-4"><b>-</b></span>Développez l’intégration à vos outils existants avec l’API REST</li>
         </ul>
       </div>
     </div>
@@ -346,7 +351,6 @@
           <li><span class="text-success text-2xl mr-4"><b>✓</b></span>Nous assurons le déploiement de votre outil</li>
           <li><span class="text-success text-2xl mr-4"><b>✓</b></span>Nous importons vos utilisateurs, cours et données existantes</li>
           <li><span class="text-success text-2xl mr-4"><b>✓</b></span>Nous assurons la maintenance 24h24 7j/7</li>
-          <li><span class="text-success text-2xl mr-4"><b>✓</b></span>Nous développons l’intégration à vos outils existants</li>
           <li><span class="text-success text-2xl mr-4"><b>✓</b></span>Nous développons vos fonctionnalités sur-mesure</li>
         </ul>
       </div>
@@ -395,7 +399,7 @@
           Philippe
         </h4>
         <h5 class="italic">
-          Product Owner
+          Product Manager/Product Owner/Développeur Rails
         </h5>
       </div>
       <div class="flex flex-col items-center">
@@ -406,7 +410,7 @@
           Pierre-Emmanuel
         </h4>
         <h5 class="italic">
-          Développeur
+          Développeur Rails
         </h5>
       </div>
     </div>
