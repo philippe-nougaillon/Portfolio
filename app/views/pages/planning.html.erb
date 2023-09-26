@@ -51,40 +51,32 @@
 
 <section id="responsive" class="section flex flex-col md:flex-row flex-wrap items-center gap-16 lg:px-24">
   <div class="flex-1 card w-full sm:w-full">
-    <div class="carousel" data-turbo="false">
-      <div id="slide0" class="carousel-item relative w-full">
+    <div class="carousel">
+      <div id="slide1" class="carousel-item relative w-full">
         <%= image_tag "misc/planning-responsive.png", alt: "3 formats" %>
         <div class="absolute flex justify-end transform -translate-y-1/2 left-2 right-5 top-1/2">
-          <a href="#slide1" class="btn btn-circle btn-primary shadow-lg" style="animation: pulse 2s infinite;">❯</a>
-        </div>
-      </div>
-
-      <div id="slide1" class="carousel-item relative w-full">
-        <%= image_tag "projets/planning iae-paris/screen_0.png", alt:"Liste des cours à venir" %>
-        <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
-          <a href="#slide0" class="btn btn-circle btn-primary btn-outline shadow-lg">❮</a> 
-          <a href="#slide2" class="btn btn-circle btn-primary btn-outline shadow-lg" style="animation: pulse 2s infinite;">❯</a>
+          <a href="#slide2" class="btn btn-circle btn-primary shadow-lg" style="animation: pulse 2s infinite;">❯</a>
         </div>
       </div>
 
       <div id="slide2" class="carousel-item relative w-full">
-        <img src="/Images/guide/salles1.png" alt="Occupation des salles (jour)">
+        <%= image_tag "projets/planning iae-paris/screen_0.png", alt:"Liste des cours à venir" %>
         <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
           <a href="#slide1" class="btn btn-circle btn-primary btn-outline shadow-lg">❮</a> 
-          <a href="#slide3" class="btn btn-circle btn-primary btn-outline shadow-lg">❯</a>
+          <a href="#slide3" class="btn btn-circle btn-primary btn-outline shadow-lg" style="animation: pulse 2s infinite;">❯</a>
         </div>
-      </div> 
+      </div>
 
       <div id="slide3" class="carousel-item relative w-full">
-        <img src="/Images/guide/salles2.png" alt="Occupation des salles (semaine)">
+        <img src="/Images/guide/salles1.png" alt="Occupation des salles (jour)">
         <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
           <a href="#slide2" class="btn btn-circle btn-primary btn-outline shadow-lg">❮</a> 
           <a href="#slide4" class="btn btn-circle btn-primary btn-outline shadow-lg">❯</a>
         </div>
-      </div>
+      </div> 
 
       <div id="slide4" class="carousel-item relative w-full">
-        <img src="/Images/guide/cours3.png" alt="Occupation salles en détail (semaine)">
+        <img src="/Images/guide/salles2.png" alt="Occupation des salles (semaine)">
         <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
           <a href="#slide3" class="btn btn-circle btn-primary btn-outline shadow-lg">❮</a> 
           <a href="#slide5" class="btn btn-circle btn-primary btn-outline shadow-lg">❯</a>
@@ -92,7 +84,7 @@
       </div>
 
       <div id="slide5" class="carousel-item relative w-full">
-        <img src="/Images/guide/afficheur.png" alt="Planning sur afficheur 1/2">
+        <img src="/Images/guide/cours3.png" alt="Occupation salles en détail (semaine)">
         <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
           <a href="#slide4" class="btn btn-circle btn-primary btn-outline shadow-lg">❮</a> 
           <a href="#slide6" class="btn btn-circle btn-primary btn-outline shadow-lg">❯</a>
@@ -100,7 +92,7 @@
       </div>
 
       <div id="slide6" class="carousel-item relative w-full">
-        <img src="/Images/guide/cours_new.png" alt="Formulaire de réservation de salle">
+        <img src="/Images/guide/afficheur.png" alt="Planning sur afficheur 1/2">
         <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
           <a href="#slide5" class="btn btn-circle btn-primary btn-outline shadow-lg">❮</a> 
           <a href="#slide7" class="btn btn-circle btn-primary btn-outline shadow-lg">❯</a>
@@ -108,7 +100,7 @@
       </div>
 
       <div id="slide7" class="carousel-item relative w-full">
-        <img src="/Images/guide/reservation-saison.png" alt="Réservation de créneaux horaires pour une saison">
+        <img src="/Images/guide/cours_new.png" alt="Formulaire de réservation de salle">
         <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
           <a href="#slide6" class="btn btn-circle btn-primary btn-outline shadow-lg">❮</a> 
           <a href="#slide8" class="btn btn-circle btn-primary btn-outline shadow-lg">❯</a>
@@ -116,7 +108,7 @@
       </div>
 
       <div id="slide8" class="carousel-item relative w-full">
-        <img src="/Images/guide/formation.png" alt="Une formation en détail">
+        <img src="/Images/guide/reservation-saison.png" alt="Réservation de créneaux horaires pour une saison">
         <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
           <a href="#slide7" class="btn btn-circle btn-primary btn-outline shadow-lg">❮</a> 
           <a href="#slide9" class="btn btn-circle btn-primary btn-outline shadow-lg">❯</a>
@@ -124,7 +116,7 @@
       </div>
 
       <div id="slide9" class="carousel-item relative w-full">
-        <img src="/Images/guide/intervenant.png" alt="Un intervenant en détail">
+        <img src="/Images/guide/formation.png" alt="Une formation en détail">
         <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
           <a href="#slide8" class="btn btn-circle btn-primary btn-outline shadow-lg">❮</a> 
           <a href="#slide10" class="btn btn-circle btn-primary btn-outline shadow-lg">❯</a>
@@ -132,7 +124,7 @@
       </div>
 
       <div id="slide10" class="carousel-item relative w-full">
-        <img src="/Images/guide/a_booker.png" alt="Liste des cours 'à booker'">
+        <img src="/Images/guide/intervenant.png" alt="Un intervenant en détail">
         <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
           <a href="#slide9" class="btn btn-circle btn-primary btn-outline shadow-lg">❮</a> 
           <a href="#slide11" class="btn btn-circle btn-primary btn-outline shadow-lg">❯</a>
@@ -140,7 +132,7 @@
       </div>
 
       <div id="slide11" class="carousel-item relative w-full">
-        <img src="/Images/guide/invits.png" alt="Liste des invitations (Propositions de créneaux horaires)">
+        <img src="/Images/guide/a_booker.png" alt="Liste des cours 'à booker'">
         <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
           <a href="#slide10" class="btn btn-circle btn-primary btn-outline shadow-lg">❮</a> 
           <a href="#slide12" class="btn btn-circle btn-primary btn-outline shadow-lg">❯</a>
@@ -148,15 +140,22 @@
       </div>
 
       <div id="slide12" class="carousel-item relative w-full">
-        <img src="/Images/guide/outils.png" alt="Liste des outils">
+        <img src="/Images/guide/invits.png" alt="Liste des invitations (Propositions de créneaux horaires)">
         <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
           <a href="#slide11" class="btn btn-circle btn-primary btn-outline shadow-lg">❮</a> 
-          <a href="#slide0" class="btn btn-circle btn-primary btn-outline shadow-lg">❯</a>
+          <a href="#slide13" class="btn btn-circle btn-primary btn-outline shadow-lg">❯</a>
+        </div>
+      </div>
+
+      <div id="slide13" class="carousel-item relative w-full">
+        <img src="/Images/guide/outils.png" alt="Liste des outils">
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
+          <a href="#slide12" class="btn btn-circle btn-primary btn-outline shadow-lg">❮</a> 
+          <a href="#slide1" class="btn btn-circle btn-primary btn-outline shadow-lg">❯</a>
         </div>
       </div>
     </div>
-    <div class="flex flex-wrap justify-center w-full py-2 gap-2 mt-6  ">
-      <a href="#slide0" class="btn btn-primary btn-outline btn-xs">0</a> 
+    <div class="flex flex-wrap justify-center w-full py-2 gap-2 mt-6">
       <a href="#slide1" class="btn btn-primary btn-outline btn-xs">1</a> 
       <a href="#slide2" class="btn btn-primary btn-outline btn-xs">2</a> 
       <a href="#slide3" class="btn btn-primary btn-outline btn-xs">3</a> 
@@ -169,6 +168,7 @@
       <a href="#slide10" class="btn btn-primary btn-outline btn-xs">10</a> 
       <a href="#slide11" class="btn btn-primary btn-outline btn-xs">11</a> 
       <a href="#slide12" class="btn btn-primary btn-outline btn-xs">12</a> 
+      <a href="#slide13" class="btn btn-primary btn-outline btn-xs">13</a>
 
     </div>
   </div>
