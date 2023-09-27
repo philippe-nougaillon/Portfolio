@@ -5,7 +5,11 @@
 @layer components {
 
   h2.apps-title{
-    @apply !text-4xl !font-bold my-4
+    @apply !text-4xl !font-black my-4
+  }
+
+  h3.apps-title{
+    @apply !text-2xl !font-black my-4 text-accent
   }
 
   #guide_planning ul{

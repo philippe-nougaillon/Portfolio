@@ -29,7 +29,7 @@
   </h2>
 </div>
 
-<div id="carousel" class="carousel min-w-16 sm:w-3/4 mx-auto" data-turbo="false">
+<div id="carousel" class="carousel min-w-16 sm:w-3/4 mx-auto mt-24">
   <div id="slide1" class="carousel-item relative w-full">
     <%= image_tag "camino/projets.png" %>
     <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
@@ -94,12 +94,24 @@
     </div>
   </div>
 </div>
+<div class="flex flex-wrap justify-center w-full gap-2 mt-4 mb-12">
+  <a href="#slide1" class="btn btn-primary btn-outline btn-xs">1</a> 
+  <a href="#slide2" class="btn btn-primary btn-outline btn-xs">2</a> 
+  <a href="#slide3" class="btn btn-primary btn-outline btn-xs">3</a> 
+  <a href="#slide4" class="btn btn-primary btn-outline btn-xs">4</a> 
+  <a href="#slide5" class="btn btn-primary btn-outline btn-xs">5</a> 
+  <a href="#slide6" class="btn btn-primary btn-outline btn-xs">6</a> 
+  <a href="#slide7" class="btn btn-primary btn-outline btn-xs">7</a> 
+  <a href="#slide8" class="btn btn-primary btn-outline btn-xs">8</a> 
+  <a href="#slide9" class="btn btn-primary btn-outline btn-xs">9</a>
+</div>
+
 <div class="mx-auto px-2 lg:px-12">
   <div id="camino">
 
-    <h2 class="apps-title">
+    <h3 class="apps-title">
       Gérez vos projets, en équipe et en mobilité (Suivi d'interventions, GMAO, etc...)
-    </h2>
+    </h3>
     <ul>
       <li>Découpez vos projets en listes de choses à faire</li>
       <li>Invitez vos contacts à participer aux projets</li>
@@ -109,7 +121,7 @@
     </ul>
 
 
-    <h2 class="apps-title">Fonctionnalités</h2>
+    <h3 class="apps-title">Fonctionnalités</h3>
     <div>
       <ul>
         <li>Création rapide de projets à partir de vos <b>modèles de projets</b></li>
@@ -124,13 +136,13 @@
       </ul>
     </div>
 
-    <h2 class="apps-title">Formulaires & Tables de données</h2>
+    <h3 class="apps-title">Formulaires & Tables de données</h3>
     <p>
       Créez vos propres formulaires pour collecter des informations complémentaires à vos projets (temps passé, ressources consommées, rapports d'intervention, etc.).
       Les données sont collectées dans des tables de données que vous pouvez ensuite exporter vers Excel
     .</p>
 
-    <h2 class="apps-title">Mobilité</h2>
+    <h3 class="apps-title">Mobilité</h3>
     <p>Accédez à Camino depuis votre smartphone</p>
 
     <div class="flex flex-wrap gap-2 my-4 ">
@@ -161,31 +173,31 @@
     </div>
     <br>
 
-    <h2 class="apps-title">Projet Open-Source</h2>
+    <h3 class="apps-title">Projet Open-Source</h3>
     <p>
       Les sources de ce projet sont disponibles ici :
       <%= link_to "https://github.com/philippe-nougaillon/Camino2", "https://github.com/philippe-nougaillon/Camino2", class:'link' %>
     </p>
 
-    <h2 class="apps-title">Développement</h2>
+    <h3 class="apps-title">Développement</h3>
     <p>
       CAMINO est développé et maintenu par 
       <%= link_to 'Philnoug & Partners', root_path, class: 'link' %>
     </p>
 
-    <h2 class="apps-title">Démonstration</h2>
+    <h3 class="apps-title">Démonstration</h3>
     <p>
       Envie de tester le produit ?
       <%= link_to "Lancer l'instance de démonstration", 'https://camino2.herokuapp.com/', class:'link', target: '_blank' %>
     </p>
 
-    <h2 class="apps-title">Support et services</h2>
+    <h3 class="apps-title">Support et services</h3>
     <p>
       Vous souhaitez une nouvelle fonctionnalité ou installer CAMINO sur votre serveur Linux ?
       <%= link_to 'Consultez-nous', '/contact', class: 'link' %>
     </p>
 
-    <h2 class="apps-title">En savoir plus ?</h2>
+    <h3 class="apps-title">En savoir plus ?</h3>
     <p>
       <%= link_to "Voir en détail les fonctionnalités", 'https://camino2.herokuapp.com/about', class: 'link' %>
     </p>

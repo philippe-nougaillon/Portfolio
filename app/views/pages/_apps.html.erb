@@ -30,7 +30,7 @@
       </div>
     <% end %>
 
-    <%= link_to camino_path, class:"flex-1 min-w-fit sm:min-w-min" do %>
+    <%= link_to camino_path, class:"flex-1 min-w-fit sm:min-w-min", 'data-turbo': false do %>
       <div class="mt-3">
         <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white">
           <%= image_tag "projets/camino/screen_0.png", class:"object-fill w-full" %>
