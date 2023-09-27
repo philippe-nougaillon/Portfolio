@@ -1,7 +1,7 @@
 <% cache @client do %>
-  <div id= <%= @client.id %> class="flex flex-col lg:flex-row items-center justify-between lg:gap-16">
+  <div id= <%= @client.id %> class="flex flex-col-reverse lg:flex-row items-center justify-between mb-12 ">
     <div class="my-6">
-      <h2 class="font-black text-3xl text-accent underline underline-offset-8 mb-6">
+      <h2 class="hidden lg:block font-black text-3xl text-accent underline underline-offset-8 mb-6">
         <%= @client.name %>
       </h2>
 
@@ -11,7 +11,7 @@
         <%= render(TagListComponent.new(tags: @client.tag_list)) %>
       </div>
     </div>
-    <div class="w-64">
+    <div class="lg:w-64">
       <%= image_tag "logos/#{@client.id}.png" %>
     </div>
   </div>
