@@ -1,13 +1,13 @@
-<div class="text-center mb-16">
+<section class="text-center mb-16">
   <h1 class="font-bold text-6xl text-accent mb-6 pt-8">
     <i>Planning IAE</i>
   </h1>
-  <h2 class="text-lg xl:text-4xl px-6">
+  <h2 class="text-3xl lg:text-4xl">
     Gérez toutes vos formations et vos salles
     <br>
     avec une solution simple, abordable et personnalisable
   </h2>
-  <h3 class="text-2xl px-6 lg:px-24 mt-4">
+  <h3 class="text-lg lg:text-2xl mt-4">
     Développé en collaboration avec IAE Paris-Sorbonne, Planning IAE est un logiciel libre de planification d'emplois du temps (EDT) et de gestion de salles de cours. Il est adapté aux besoins des universités, écoles de commerce et instituts de formation spécialisés.
   </h3>
 
@@ -15,13 +15,13 @@
     <%= link_to "Vous êtes gestionnaire de formation", planning_path(anchor: "bref"), class: 'btn btn-success sm:btn-lg' %>
     <%= link_to "Vous êtes administrateur", planning_path(anchor: "details_fonctionnalites"), class: 'btn btn-success sm:btn-lg' %>
   </div>
-</div>
+</section>
 
-<section id="bref" class="section w-full text-center bg-secondary text-secondary-content">
+<section id="bref" class="w-full text-center bg-secondary text-secondary-content">
   <h2 class="apps-title">
     Un outil puissant. Des fonctionnalités pour gagner en efficacité
   </h2>
-  <div class="flex flex-wrap justify-around gap-16 mt-12 px-4">
+  <div class="flex flex-wrap justify-around gap-16 mt-12">
     <div class="flex flex-col flex-1">
       <p class="text-2xl font-black mb-6">
         Planifiez rapidement les cours
@@ -49,7 +49,7 @@
   </div>
 </section>
 
-<section id="responsive" class="section flex flex-col md:flex-row flex-wrap items-center gap-16 lg:px-24">
+<section id="responsive" class="flex flex-col md:flex-row flex-wrap items-center gap-16 lg:px-24">
   <div class="flex-1 card w-full sm:w-full">
     <div class="carousel">
       <div id="slide1" class="carousel-item relative w-full">
@@ -196,7 +196,7 @@
   </div>
 </section>
 
-<section id="fonctionnalités" class="section w-full text-center bg-secondary text-secondary-content mt-24">
+<section id="fonctionnalités" class="w-full text-center bg-secondary text-secondary-content mt-24">
   <h2 class="apps-title">Un logiciel complet, adapté à chaque rôle dans votre établissement</h2>
   <div class="flex flex-col w-full gap-16 mt-24">
     <div class="flex-1 flex flex-col md:flex-row flex-wrap justify-around gap-16">
@@ -256,7 +256,7 @@
   </div>
 </section>
 
-<section id="confiance" class="section text-center">
+<section id="confiance" class="text-center">
   <h2 class="apps-title ">Ils nous font confiance</h2>
   <p class="text-2xl my-12">
     Plus de <strong class="font-black">500</strong> formations, <strong class="font-black">900</strong> intervenants et <strong class="font-black">50 000</strong> cours gérés depuis <strong class="font-black">2017</strong>
@@ -290,7 +290,7 @@
   </div>
 </section>
 
-<section id="details_fonctionnalites" class="section bg-secondary text-secondary-content mx-auto w-full">
+<section id="details_fonctionnalites" class="bg-secondary text-secondary-content mx-auto w-full">
   <h2 class="apps-title text-center !mb-12">
     Une solution fiable et durable.
     <br>
@@ -326,7 +326,7 @@
   </div>
 </section> 
 
-<section id="légal" class="section flex flex-col md:flex-row flex-wrap gap-16 lg:px-24 items-center">
+<section id="légal" class="flex flex-col md:flex-row flex-wrap gap-16 lg:px-24 items-center">
   <div class="flex-auto w-1/3">
     <p class="text-secondary mb-8 text-2xl">Transparence, coûts, collaboration</p>
     <p class="text-4xl font-black mb-12">Un logiciel libre, open source et français</p>
@@ -351,7 +351,7 @@
   </div>
 </section>
 
-<section id="offres" class="section bg-secondary text-secondary-content">
+<section id="offres" class="bg-secondary text-secondary-content">
   <h2 class="apps-title text-content text-center mb-12">
     Plus qu'un logiciel, un service
   </h2>
@@ -398,7 +398,7 @@
   </div>
 </section>
 
-<section id="contact" class="section text-center">
+<section id="contact" class="text-center">
   <h2 class="apps-title">Contactez-nous</h2>
   <p class="text-2xl px-8 lg:px-48">
     Notre équipe s'engage à vous proposer des solutions parfaitement adaptées à vos besoins, un accompagnement humain et un support technique disponible en cas de besoin.
@@ -443,7 +443,7 @@
             </label>
           </div>
           <%= recaptcha_tags unless %w[localhost 127.0.0.1].include?(request.host) %>
-          <button class="btn btn-success">Demander une démonstration</button>
+          <button class="btn btn-success" data-turbo="false">Demandez une démonstration</button>
         </div>
       <% end %>
     </div>

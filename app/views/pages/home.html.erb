@@ -2,29 +2,27 @@
   <div class="hero-overlay bg-opacity-60"></div>
   <div class="hero-content text-center text-neutral-content flex-col">
     <p class="mb-5 text-2xl">Notre ambition</p>
-    <h1 class="mb-5 text-4xl sm:text-5xl font-bold">
+    <h1 class="mb-5 text-4xl lg:text-5xl font-bold">
       Traduire les besoins clients en une solution simple, robuste, pérenne et parfaitement adaptée.
     </h1>
   </div>
 </div>
 
 <section id="outils" class="flex flex-col justify-center min-h-screen mx-4">
-  <h2 class="text-center text-5xl font-bold text-accent my-24 reveal">
+  <h2 class="text-center text-4xl lg:text-5xl font-bold text-accent my-24 reveal">
     Nos outils et domaines d'expertise
   </h2>
-  <div class="flex flex-wrap justify-center gap-4 sm:gap-0">
+  <div class="flex flex-wrap justify-center gap-8 sm:gap-0">
     <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center reveal">
       <%= image_tag 'logos/Ruby.svg', class: 'h-44 mx-auto' %>
-      <h3 class="font-bold text-2xl mt-7">Ruby</h3>
+      <h3 class="font-black text-accent text-2xl mt-7 mb-4">Ruby</h3>
       <p>
-        Un langage de programmation open source dynamique axé sur la simplicité et la productivité. 
-        <br><br>
-        Is Ruby the new COBOL?
+        Un langage de programmation open source dynamique axé sur la simplicité et la productivité.
       </p>
     </div>
     <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center reveal">
       <%= image_tag 'logos/RoR.svg', class: 'h-44 mx-auto' %>
-      <h3 class="font-bold text-2xl mt-7">Rails</h3>
+      <h3 class="font-black text-accent text-2xl mt-7 mb-4">Rails</h3>
       <p>
         THE Full-Stack Web Framework
         <br>
@@ -34,7 +32,7 @@
     </div>
     <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center reveal">
       <%= image_tag 'logos/Tailwind.svg', class: 'h-44 mx-auto' %>
-      <h3 class="font-bold text-2xl mt-7">TailwindCSS</h3>
+      <h3 class="font-black text-accent text-2xl mt-7 mb-4">TailwindCSS</h3>
       <p>
         Framework CSS open-source à la mode et pas comme les autres.
         <br>
@@ -44,7 +42,7 @@
     </div>
     <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center reveal">
       <%= image_tag 'logos/Heroku.svg', class: 'h-44 mx-auto' %>
-      <h3 class="font-bold text-2xl mt-7">Heroku</h3>
+      <h3 class="font-black text-accent text-2xl mt-7 mb-4">Heroku</h3>
       <p>
         L'hébergement selon Salesforce.
         <br><br> 
@@ -55,12 +53,12 @@
   <div class="flex flex-wrap justify-center gap-12 sm:gap-0 mt-12">
     <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center reveal">
       <%= image_tag 'logos/Flutter.svg', class: 'h-44 mx-auto' %>
-      <h3 class="font-bold text-2xl mt-7">Flutter</h3>
+      <h3 class="font-black text-accent text-2xl mt-7 mb-4">Flutter</h3>
       <p>Si vous comptez créer une application multiplateforme, Flutter est l'une des meilleures plateformes en termes de coûts. Le Framework de l'avenir ? Nous nous y préparons</p>
     </div>
     <div class="w-full sm:w-1/2 lg:w-1/5 sm:px-5 xl:px-10 text-center reveal">
       <%= image_tag 'logos/Flutterflow.png', class: 'h-44 mx-auto' %>
-      <h3 class="font-bold text-2xl mt-7">FlutterFlow</h3>
+      <h3 class="font-black text-accent text-2xl mt-7 mb-4">FlutterFlow</h3>
       <p>
         Plateforme No code
         <br>
@@ -71,178 +69,38 @@
   </div>
 </section>
 
-<section id="partenaires" class="min-h-screen mt-28">
-  <h1 class="font-bold text-5xl text-center text-accent reveal mb-12">
-    <i>Les 'Partners', une SQUAD pour un service à 360°</i>
-  </h1>
-  <div class="flex flex-wrap justify-center mx-4 mt-12 gap-4 md:gap-8 lg:gap-16 reveal">
-    <div class="flex flex-col items-center lg:basis-1/5">
-      <%= image_tag "partners/philippe.webp",
-      class: "mask mask-circle object-contain h-48  mx-auto grayscale opacity-70 mb-4"
-      %>
-      <h4 class="sm:text-right font-bold text-2xl">
-        Philippe
-      </h4>
-      <h5 class="text-right italic text-xl">
-        Product Owner
-      </h5>
-    </div>
-    <div class="flex flex-col items-center lg:basis-1/5">
-      <%= image_tag "partners/pierre-emmanuel.webp",
-      class: "mask mask-circle object-contain h-48  mx-auto grayscale opacity-70 mb-4"
-      %>
-      <h4 class="font-bold text-2xl">
-        Pierre-Emmanuel
-      </h4>
-      <h5 class="italic text-xl">
-        Développeur
-      </h5>
-    </div>
-    <div class="flex flex-col items-center lg:basis-1/5">
-      <%= image_tag "partners/nathan.webp",
-      class: "mask mask-circle object-contain h-48  mx-auto grayscale opacity-70 mb-4"
-      %>
-      <h4 class="sm:text-right font-bold text-2xl">
-        Nathan
-      </h4>
-      <h5 class="sm:text-right italic text-xl">
-        Product Manager
-      </h5>
-    </div>
-    <div class="flex flex-col items-center lg:basis-1/5">
-      <%= image_tag "partners/claire.webp",
-      class: "mask mask-circle object-contain h-48  mx-auto grayscale opacity-70 mb-4"
-      %>
-      <h4 class="font-bold text-2xl">
-        Claire
-      </h4>
-      <h5 class="italic text-xl">
-        Graphiste
-      </h5>
-    </div>
-    <div class="flex flex-col items-center lg:basis-1/5">
-      <%= image_tag "partners/jean-baptiste.webp",
-      class: "mask mask-circle object-contain h-48  mx-auto grayscale opacity-70 mb-4"
-      %>
-      <h4 class="sm:text-right font-bold text-2xl">
-        Jean-Baptiste
-      </h4>
-      <h5 class="sm:text-right italic text-xl">
-        UI-UX Designer
-      </h5>
-    </div>
-    <div class="flex flex-col items-center lg:basis-1/5">
-      <%= image_tag "partners/sylvie.webp",
-      class: "mask mask-circle object-contain h-48  mx-auto grayscale opacity-70 mb-4"
-      %>
-      <h4 class="font-bold text-2xl">
-        Sylvie
-      </h4>
-      <h5 class="italic text-xl">
-        Executive Coach
-      </h5>
-    </div>
-  </div>
-  <div class="flex justify-center">
-    <%= link_to 'Voir les partners en détails', partenaires_path, class: 'btn lg:btn-lg btn-primary btn-outline mt-12' %>
-  </div>
-</section>
-
-<section id="apps" class="flex flex-col justify-center min-h-screen mx-4 md:mx-8 lg:mx-16 mt-28">
-  <h2 class="text-center text-5xl font-bold text-accent my-12 reveal">
-    Nos applications 'maison'
-  </h2>
-  <div class="flex flex-wrap justify-between w-full gap-4 md:gap-8 lg:gap-16 mb reveal">
-    <%= link_to planning_path, class:"flex-1" do %>
-      <div class="mt-3">
-        <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white">
-          <%= image_tag "projets/planning iae-paris/screen_0.png", class:"object-fill w-full", loading: "lazy" %>
-          <div class="card-body">
-            <hr>
-            <h2 class="card-title text-primary underline underline-offset-8">
-              PLANNING
-            </h2>
-            <p class="my-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
-              Planning à l’usage d’un établissement de l’enseignement supérieur
-            </p>
-          </div>
-        </div>
-      </div>
-    <% end %>
-
-    <%= link_to camino_path, class:"flex-1" do %>
-      <div class="mt-3">
-        <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white">
-          <%= image_tag "projets/camino/screen_0.png", class:"object-fill w-full", loading: "lazy" %>
-          <div class="card-body">
-            <hr>
-            <h2 class="card-title text-primary underline underline-offset-8">
-              CAMINO
-            </h2>
-            <p class="my-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
-              Gérer, en équipe et en mobilité, vos projets (Suivi d'interventions, GMAO, etc...)
-            </p>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
-  <div class="flex justify-center mt-12">
-    <%= link_to 'Voir toutes nos applications', apps_path, class: 'btn lg:btn-lg btn-primary btn-outline' %>
-  </div>
-</section>
-
-<section id="stats" class="flex flex-col justify-center min-h-screen">
-  <h2 class="text-center text-5xl font-bold text-accent mt-12 mb-6 reveal">
-    Quelques chiffres
-  </h2>
-
-  <%= render(StatComponent.new(
-              nbr_projets: @projets.count, 
-              nbr_commits: @projets_commits, 
-              nbr_deploys: @projets_deploys, 
-              nbr_coffees: @projets_coffees)) %>
-
-  <div class="flex justify-center reveal">
-    <%= link_to 'Voir les dernières réalisations', portfolio_path, class: 'btn lg:btn-lg btn-outline btn-primary mx-auto mt-6' %>
-  </div>
-</section>
+<%= render partial: 'pages/apps' %>
 
 <section id="clients" class="flex flex-col justify-center min-h-screen">
-  <h2 class="text-center text-5xl font-bold text-accent mt-24 mb-12 reveal">
+  <h2 class="text-center text-4xl lg:text-5xl font-bold text-accent mt-24 mb-12 reveal">
     Ils nous ont fait confiance : pourquoi pas vous ?
   </h2>
   <div class="flex flex-wrap justify-around items-center gap-4">
-    <div class="w-64 rounded reveal">
-      <%= link_to nos_clients_path(anchor: 1) do %>
-        <%= image_tag "logos/1.png", class:"mx-auto" %>
-      <% end %>
-    </div>
-    <div class="w-64 rounded reveal">
-      <%= link_to nos_clients_path(anchor: 6) do %>
-        <%= image_tag "logos/6.png", class:"mx-auto" %>
-      <% end %>
-    </div>
-    <div class="w-64 rounded reveal">
-      <%= link_to nos_clients_path(anchor: 8) do %>
-        <%= image_tag "logos/8.png", class:"mx-auto" %>
-      <% end %>
-    </div>
-  </div>
-  <div class="flex flex-wrap justify-around items-center gap-4">
-    <div class="w-64 rounded reveal">
-      <%= link_to nos_clients_path(anchor: 4) do %>
-        <%= image_tag "logos/4.png", class:"mx-auto" %>
-      <% end %>
-    </div>
     <div class="w-64 rounded reveal">
       <%= link_to nos_clients_path(anchor: 2) do %>
         <%= image_tag "logos/2.png", class:"mx-auto" %>
       <% end %>
     </div>
     <div class="w-64 rounded reveal">
+      <%= link_to nos_clients_path(anchor: 1) do %>
+        <%= image_tag "logos/1.png", class:"mx-auto" %>
+      <% end %>
+    </div>
+    <div class="w-64 rounded reveal">
+      <%= link_to nos_clients_path(anchor: 4) do %>
+        <%= image_tag "logos/4.png", class:"mx-auto" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="flex flex-wrap justify-around items-center gap-4">
+    <div class="w-64 rounded reveal">
       <%= link_to nos_clients_path(anchor: 9) do %>
         <%= image_tag "logos/9.png", class:"mx-auto" %>
+      <% end %>
+    </div>
+    <div class="w-64 rounded reveal">
+      <%= link_to nos_clients_path(anchor: 8) do %>
+        <%= image_tag "logos/8.png", class:"mx-auto" %>
       <% end %>
     </div>
     <div class="w-64 rounded reveal">
@@ -251,155 +109,7 @@
       <% end %>
     </div>
   </div>
-  <div class="flex flex-wrap justify-around items-center gap-4">
-    <div class="w-64 rounded reveal">
-      <%= link_to nos_clients_path(anchor: 3) do %>
-        <%= image_tag "logos/3.png", class:"mx-auto" %>
-      <% end %>
-    </div>
-    <div class="w-64 rounded reveal">
-      <%= image_tag "logos/11.png", class:"mx-auto" %>
-    </div>
-    <div class="w-64 rounded reveal">
-      <%= link_to nos_clients_path(anchor: 7) do %>
-        <%= image_tag "logos/7.png", class:"mx-auto" %>
-      <% end %>
-    </div>
-    <div class="w-64 rounded reveal">
-      <%= link_to nos_clients_path(anchor: 10) do %>
-        <%= image_tag "logos/10.png", class:"mx-auto" %>
-      <% end %>
-    </div>
-  </div>
   <div class="flex justify-center reveal">
     <%= link_to 'En savoir plus', nos_clients_path, class: 'btn lg:btn-lg btn-outline btn-primary mx-auto mt-12' %>
   </div>
 </div>
-
-<section id="avis" class="min-h-screen mt-14">
-  <h2 class="text-center text-5xl font-bold text-accent mb-12 reveal">
-    Quelques avis clients
-  </h2>
-  <div class="px-4">
-    <div class="flex flex-wrap lg:flex-nowrap justify-center gap-16 mt-12 lg:px-24 reveal">
-      <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
-        <div>
-          <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
-          <br>
-          <cite>
-            Philippe est un développeur compétent et passionné par son métier, il a créé notre application de suivi de portefeuille en Ruby on rails il y a plusieurs années et en a assuré la maintenance et les évolutions par la suite. C’est un plaisir de travailler avec lui, je le recommande.
-          </cite>
-        </div>
-        <div>
-          <%= link_to "Léa Gheerardyn", "https://www.linkedin.com/in/l%C3%A9a-gheerardyn-26417869/", class:"font-bold" %>
-          <p>
-            Chef de projet SI @ Scopelec
-          </p>
-        </div>
-      </div>
-
-      <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
-        <div>
-          <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
-          <br>
-          <cite>
-            Philippe a été à notre écoute et a parfaitement répondu à notre besoin -
-            Je recommande.
-          </cite>
-        </div>
-        <div>
-          <%= link_to "Christophe Pallandre", "https://www.linkedin.com/in/christophe-pallandre/", class:"font-bold" %>
-          <p>
-            DAF @ Grohe France
-          </p>
-        </div>
-      </div>
-      <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
-        <div>
-          <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
-          <br>
-          <cite>
-            A l'écoute, réactif et compétent. Même sur un secteur d'activité pas habituel, Philippe propose et trouve des solutions adaptées.
-          </cite>
-        </div>
-        <div>
-          <%= link_to "Clément Hallé", "https://www.linkedin.com/in/cl%C3%A9ment-hall%C3%A9-780949137/", class:"font-bold" %>
-          <p>
-            CEO @ Le T-shirt français
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="mx-auto md:px-24 mt-16 p-8 pb-12 bg-white shadow rounded-lg reveal">
-      <div>
-        <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
-        <br>
-        <cite>
-          J'ai eu l'occasion de collaborer avec Philippe Nougaillon sur de nombreux projets (dont un projet européen). Philippe Nougaillon a toujours su faire preuve d'un grand professionnalisme. Il allie les qualités d'écoute, de compréhension et de créativité. Il maîtrise parfaitement l'art de la traduction des besoins clients en solutions agiles, robustes et durables.
-          C'est un développeur hors pair et il est toujours à l'affût des technologies prometteuses, et notamment des solutions libres. D'une grande modestie, il est très accessible et sait faire preuve de beaucoup de pédagogie.
-          C’est un professionnel de haut niveau qui sait se mettre au diapason des besoins exprimés. Il propose des solutions pérennes, fiables et fait primer dans sa vision du développement la simplicité de la solution. Partisan de l’innovation frugale, il fournit à ses clients des solutions originales, robustes et parfaitement adaptées. Il a le sens de l’écoute et sait faire preuve d’une grande pédagogie dans les démarches agiles. Il a une expertise étendue sur des secteurs variés. Je le connais principalement pour l’accompagnement fourni dans le cadre de systèmes d’information pédagogiques. Je le recommande sans réserve.
-        </cite>
-      </div>
-      <div class="mt-10">
-        <%= link_to "Philippe Eynaud", "https://www.linkedin.com/in/philippe-eynaud-3a3ab835/", class:"font-bold" %>
-        <p>
-          Professeur en sciences de gestion à l'IAE de Paris, Université Paris 1 Panthéon-Sorbonne
-        </p>
-        <p>
-          Auteur de 
-          <%= link_to "'Le management du système d’information dans sa complexité'", 
-                      "https://www.amazon.fr/management-syst%C3%A8me-dinformation-dans-complexit%C3%A9/dp/1784055026/ref=sr_1_5?qid=1687595735", class: "link" %>, (2018), ISTE Editions.  
-        </p>
-      </div>
-    </div>
-
-    <div class="flex flex-wrap lg:flex-nowrap justify-center gap-16 mt-12 lg:px-24 reveal">
-      <div class="flex flex-wrap lg:flex-nowrap justify-center gap-16 my-12">
-        <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
-          <div>
-            <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
-            <br>
-            <cite>
-              Philippe Nougaillon est quelqu'un de très pédagogue qui m'a beaucoup appris. Il m'a permis de gagner en confiance, en cas de difficultés,
-              en cas de difficultés, il prenait le temps de m'expliquer et de m'aider à formuler une solution par moi-même. 
-              C'est aussi quelqu'un de très impliqué dans son travail, très à jour sur les dernières technologies.
-            </cite>
-          </div>
-          <div>
-            <%= link_to "Alexandre Cukier", "https://www.linkedin.com/in/alexandre-cukier/", class:"font-bold" %>
-            <p>
-              Software Developer @ Ridge
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
-        <div>
-          <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
-          <br>
-          <cite>
-            Fiable, ultra compétent, engagé et persévérant, Philippe est quelqu'un qui délivre ses projets en temps et en heure avec une qualité que je n'ai jamais vu ailleurs.
-          </cite>
-        </div>
-        <div>
-          <%= link_to "Sébastien Pourchaire", "https://www.linkedin.com/in/pourchaire/", class:"font-bold" %>
-          <p>
-            CEO @ AirJin
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="flex justify-center flex-col mt-48 mb-24">
-  <h2 class="font-bold text-5xl mb-16 text-accent text-center reveal">
-    Vous avez un projet à nous soumettre ?
-  </h2>
-
-  <div class="flex justify-center reveal">
-    <%= link_to 'nous contacter', contact_path, class: 'btn lg:btn-lg btn-primary btn-outline' %>
-  </div>
-</section>

@@ -1,4 +1,4 @@
-<div class="hero min-h-screen">
+<div class="hero">
   <div class="hero-content flex-col lg:flex-row-reverse gap-8">
 
     <%= link_to "https://www.google.com/maps/place/Le+Plateau+de+Montfermeil+(93)+-+CoWorking/@48.9020773,2.549413,16.3z/data=!4m6!3m5!1s0x47e6112b2f246e53:0xb269496908c8880b!8m2!3d48.9019126!4d2.5532963!16s%2Fg%2F11lhyhzhsp?entry=ttu", target: "_blank", class:'flex-1' do %>
@@ -6,7 +6,7 @@
     <% end %>
 
     <div class="flex-1">
-      <h1 class="text-4xl font-bold my-3">Qui sommes-nous ?</h1>
+      <h1 class="text-4xl lg:text-5xl font-black text-accent my-3">Qui sommes-nous ?</h1>
       <h1 class="text-3xl">
         Studio de conseil en transformation numérique des organisations et
         développement de plateformes Web évolutives.
@@ -18,24 +18,15 @@
           <%= "'Du client au code - du code au client !'".upcase %>
           <sup>*</sup>
         </span>
-        <p>
-          Spécialistes du développement logiciel, quand nous codons,
-          nous codons utile et toujours en cherchant à transformer ce code en un processus-métier qui fait sens pour notre client.
-        </p>
       </p>
-      
-      <%= link_to 'En savoir plus', "#part2", class: 'btn btn-primary btn-outline mt-6' %>
     </div>
   </div>
 </div>
 
-<div id="part2" class="hero min-h-screen mt-16 p-6">
+<section class="hero min-h-screen">
   <div class="p-6">
     <div class="reveal">
-      <h2 class="text-3xl font-bold my-6 underline underline-offset-8">Qui sommes-nous ?</h2>
-      <p class="mt-6 mb-3">
-        Notre Studio de conseil en transformation numérique et développement de plateformes regroupe des développeurs, Product Manager, Social Media Manager, Graphiste, UI-UX Designer et Executive Manager.
-        <br><br>
+      <p class="text-xl mt-6 mb-3">
         Spécialistes du développement logiciel, quand nous codons, nous codons utile et toujours en cherchant à transformer ce code
         Avec une expérience de plus de 20 ans dans le développement d'applications métiers (type 'ERP/CRM/BI'), 
         nous avons mené à bien d'importants projets dans des domaines variés tels que le suivi de production du déploiement de la fibre optique, 
@@ -45,18 +36,10 @@
       </p>
     </div>
 
-    <div class="reveal">
-      <h2 class="text-3xl font-bold my-6 underline underline-offset-8">Clients</h2>
-      <h3>Ils nous ont fait confiance : </h3>
-      <p class="font-bold">
-        <%= Client.pluck(:name).join(', ') %>...
-      </p>
-    </div>
-
-    <div class="reveal">
-      <h2 class="text-3xl font-bold my-6 underline underline-offset-8">Récompenses</h2>
+    <div class="reveal text-xl">
+      <h2 class="text-4xl lg:text-5xl text-center font-black text-accent my-6 mt-24">Récompenses</h2>
       <strong>2010 - Concours Smartphones SNCF/TGV Lab</strong>
-      <p >
+      <p>
         Direction d’un projet de développement d’une application mobile BlackBerry qui améliore la qualité de l’information
         transmise par les chefs de bord durant les trajets. 
         Pendant quatre semaines, sur les lignes TGV Paris-Lyon et Paris-Nantes, 14 chefs de bord ont testé sept applications
@@ -64,47 +47,128 @@
         Développement sponsorisé par RiM (Research in Motion).
       </p>
       <div class="mt-6">
-        <strong>2015 - Prix de l’Innovation VINCI/ETF</strong>, catégorie Management, région Île de France.
-        Conception et réalisation d’une application de suivi de la maintenance ferroviaire (AEMMS).
+        <strong>2015 - Prix de l’Innovation VINCI/ETF</strong>
+        <br>Catégorie Management, région Île de France.
+        <br>Conception et réalisation d’une application de suivi de la maintenance ferroviaire (AEMMS).
       </div>
     </div>
 
-    <div class="reveal">
-      <h2 class="text-3xl font-bold my-6 underline underline-offset-8">
-        Nos projets Open-Source
+    <div id="avis" class="min-h-screen mt-24">
+      <h2 class="text-center text-4xl lg:text-5xl font-bold text-accent mb-12 reveal">
+        Quelques avis clients
       </h2>
+      <div class="px-4">
+        <div class="flex flex-wrap lg:flex-nowrap justify-center gap-16 mt-12 lg:px-24 reveal">
+          <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
+            <div>
+              <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
+              <br>
+              <cite>
+                Philippe est un développeur compétent et passionné par son métier, il a créé notre application de suivi de portefeuille en Ruby on rails il y a plusieurs années et en a assuré la maintenance et les évolutions par la suite. C’est un plaisir de travailler avec lui, je le recommande.
+              </cite>
+            </div>
+            <div>
+              <%= link_to "Léa Gheerardyn", "https://www.linkedin.com/in/l%C3%A9a-gheerardyn-26417869/", class:"font-bold" %>
+              <p>
+                Chef de projet SI @ Scopelec
+              </p>
+            </div>
+          </div>
 
-      <div class="my-6">
-        <p class="text-2xl font-bold">Camino</p> 
-        <strong>Gérer, en équipe et en mobilité, vos projets (Suivi d'interventions, GMAO, etc...)</strong>
-        <p>
-          Découpez vos projets en listes de choses à faire, invitez vos contacts à participer, 
-          assignez aux participants certaines choses à faire et fixez les échéances.
-          Suivez l'activité des participants (commentaires, travaux terminés, etc.).
-        </p>
-        <%= link_to "framalibre.org/camino", "https://framalibre.org/content/camino", class: "link", target: '_blank' %>
+          <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
+            <div>
+              <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
+              <br>
+              <cite>
+                Philippe a été à notre écoute et a parfaitement répondu à notre besoin -
+                Je recommande.
+              </cite>
+            </div>
+            <div>
+              <%= link_to "Christophe Pallandre", "https://www.linkedin.com/in/christophe-pallandre/", class:"font-bold" %>
+              <p>
+                DAF @ Grohe France
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
+            <div>
+              <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
+              <br>
+              <cite>
+                A l'écoute, réactif et compétent. Même sur un secteur d'activité pas habituel, Philippe propose et trouve des solutions adaptées.
+              </cite>
+            </div>
+            <div>
+              <%= link_to "Clément Hallé", "https://www.linkedin.com/in/cl%C3%A9ment-hall%C3%A9-780949137/", class:"font-bold" %>
+              <p>
+                CEO @ Le T-shirt français
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mx-auto md:px-24 mt-16 p-8 pb-12 bg-white shadow rounded-lg reveal">
+          <div>
+            <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
+            <br>
+            <cite>
+              J'ai eu l'occasion de collaborer avec Philippe Nougaillon sur de nombreux projets (dont un projet européen). Philippe Nougaillon a toujours su faire preuve d'un grand professionnalisme. Il allie les qualités d'écoute, de compréhension et de créativité. Il maîtrise parfaitement l'art de la traduction des besoins clients en solutions agiles, robustes et durables.
+              C'est un développeur hors pair et il est toujours à l'affût des technologies prometteuses, et notamment des solutions libres. D'une grande modestie, il est très accessible et sait faire preuve de beaucoup de pédagogie.
+              C’est un professionnel de haut niveau qui sait se mettre au diapason des besoins exprimés. Il propose des solutions pérennes, fiables et fait primer dans sa vision du développement la simplicité de la solution. Partisan de l’innovation frugale, il fournit à ses clients des solutions originales, robustes et parfaitement adaptées. Il a le sens de l’écoute et sait faire preuve d’une grande pédagogie dans les démarches agiles. Il a une expertise étendue sur des secteurs variés. Je le connais principalement pour l’accompagnement fourni dans le cadre de systèmes d’information pédagogiques. Je le recommande sans réserve.
+            </cite>
+          </div>
+          <div class="mt-10">
+            <%= link_to "Philippe Eynaud", "https://www.linkedin.com/in/philippe-eynaud-3a3ab835/", class:"font-bold" %>
+            <p>
+              Professeur en sciences de gestion à l'IAE de Paris, Université Paris 1 Panthéon-Sorbonne
+            </p>
+            <p>
+              Auteur de 
+              <%= link_to "'Le management du système d’information dans sa complexité'", 
+                          "https://www.amazon.fr/management-syst%C3%A8me-dinformation-dans-complexit%C3%A9/dp/1784055026/ref=sr_1_5?qid=1687595735", class: "link" %>, (2018), ISTE Editions.  
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap lg:flex-nowrap justify-center gap-16 mt-12 lg:px-24 reveal">
+          <div class="flex flex-wrap lg:flex-nowrap justify-center gap-16 my-12">
+            <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
+              <div>
+                <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
+                <br>
+                <cite>
+                  Philippe Nougaillon est quelqu'un de très pédagogue qui m'a beaucoup appris. Il m'a permis de gagner en confiance, en cas de difficultés,
+                  en cas de difficultés, il prenait le temps de m'expliquer et de m'aider à formuler une solution par moi-même. 
+                  C'est aussi quelqu'un de très impliqué dans son travail, très à jour sur les dernières technologies.
+                </cite>
+              </div>
+              <div>
+                <%= link_to "Alexandre Cukier", "https://www.linkedin.com/in/alexandre-cukier/", class:"font-bold" %>
+                <p>
+                  Software Developer @ Ridge
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col justify-between p-8 pb-12 gap-8 bg-white shadow rounded-lg">
+            <div>
+              <i class="fa-solid fa-quote-left fa-2xl mb-8" style="color: #000000;"></i>
+              <br>
+              <cite>
+                Fiable, ultra compétent, engagé et persévérant, Philippe est quelqu'un qui délivre ses projets en temps et en heure avec une qualité que je n'ai jamais vu ailleurs.
+              </cite>
+            </div>
+            <div>
+              <%= link_to "Sébastien Pourchaire", "https://www.linkedin.com/in/pourchaire/", class:"font-bold" %>
+              <p>
+                CEO @ AirJin
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="reveal my-6">
-      <p class="text-2xl font-bold">PrestoFacto</p> 
-      <strong>Application de facturation de services journaliers.</strong>
-      <p>
-        Aide les petites organisations dans la gestion et la facturation de leurs prestations journalières (repas, activités...).
-        Développement et maintenance depuis 2009 d’une application de facturation de cantine et autres prestations péri-scolaires, destinée aux petites collectivités, associations, mairies, écoles, etc.
-      </p>
-      <%= link_to "framalibre.org/prestofacto", "https://framalibre.org/content/prestofacto", class: "link", target: '_blank' %>
-    </div>
-
-    <div class="reveal my-6">
-      <p class="text-2xl font-bold">Planning</p>
-      <strong>Planning à l’usage d’un établissement de l’enseignement supérieur.</strong>
-      <p>
-        Plateforme de gestion des cours, intervenants, étudiants, états de services, etc…
-      </p>
-      <%= link_to "github.com/Planning", "https://github.com/philippe-nougaillon/Planning_IAE", class: "link", target: '_blank' %>
-
-      <hr class="mt-3 reveal">
     </div>
 
     <div class="reveal">
@@ -120,13 +184,5 @@
       <hr class="mt-3 reveal">
     </div>
 
-    <div class="flex justify-center flex-col mt-24 mb-12">
-      <h2 class="font-bold text-5xl mb-16 text-accent text-center reveal">
-        Vous avez un projet à nous soumettre ?
-      </h2>
-
-      <%= link_to 'nous contacter', contact_path, class: 'btn lg:btn-lg btn-primary btn-outline mx-auto reveal' %>
-    </div>
-
   </div>
-</div>
+</section>
