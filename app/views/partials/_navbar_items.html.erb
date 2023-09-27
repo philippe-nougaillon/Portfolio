@@ -5,14 +5,13 @@
 <%= navbar_item 'nos_clients', nos_clients_path, 'Clients' %>
 <%= navbar_item 'portfolio', portfolio_path, 'Portfolio' %>
 <li>
-  <%= link_to contact_path, 'data-turbo': false, 
-    class: 'flex gap-4' do %>
-      <span class="flex-1 whitespace-nowrap">Nous contacter</span>
+  <%= link_to contact_path, 'data-turbo': false, class: 'flex gap-4' do %>
+    <span class="flex-1 whitespace-nowrap">Nous contacter</span>
   <% end %>
 </li>
 <li>
-  <%= link_to rechercher_path, 
-              class: 'flex gap-4' do %>
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+  <%= link_to rechercher_path, class: 'flex gap-4' do %>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden lg:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+    <span class="flex-1 whitespace-nowrap lg:hidden">Rechercher</span>
   <% end %>
 </li>
