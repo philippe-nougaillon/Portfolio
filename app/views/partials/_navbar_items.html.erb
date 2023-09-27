@@ -1,10 +1,9 @@
 <%= navbar_item 'a_propos', a_propos_path, 'Qui sommes-nous ?' %>
+<%= navbar_item 'apps', apps_path, 'Logiciels' %>
+<%= navbar_item 'services', services_path, 'Services' %>
+<%= navbar_item 'partenaires', partenaires_path, 'Team / Partners' %>
 <%= navbar_item 'nos_clients', nos_clients_path, 'Clients' %>
 <%= navbar_item 'portfolio', portfolio_path, 'Portfolio' %>
-<%= navbar_item 'partenaires', partenaires_path, 'Partners' %>
-<%= navbar_item 'services', services_path, 'Services' %>
-<%= navbar_item 'apps', apps_path, 'Apps' %>
-<%= navbar_item 'blog', blog_path, 'Blog' %>
 <li>
   <%= link_to contact_path, 'data-turbo': false, 
     class: 'flex gap-4' do %>

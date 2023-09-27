@@ -1,7 +1,7 @@
 <footer class="footer p-10 bg-base-300 text-base-content text-base mt-24">
   <div>
     <p>
-      <span class="text-2xl font-bold"><%= @sitename %></span>
+      <span class="text-2xl font-black"><%= @sitename %></span>
       <br>
 
       <span class="opacity-50">
@@ -20,38 +20,10 @@
       </span>
     </span>
   </div>
-  <div class="mx-auto text-center sm:text-left">
-    <span class="footer-title mx-auto">Navigation</span>
-    <div class="flex justify-between gap-8">
-      <ul>
-        <%= navbar_item 'home', root_path, 'Accueil', 'underline-offset-4 mb-1' %>
-        <%= navbar_item 'a_propos', a_propos_path, 'À propos', 'underline-offset-4 mb-1' %>
-        <%= navbar_item 'nos_clients', nos_clients_path, 'Clients', 'underline-offset-4 mb-1' %>
-        <%= navbar_item 'portfolio', portfolio_path, 'Portfolio', 'underline-offset-4 mb-1' %>
-        <%= navbar_item 'partenaires', partenaires_path, 'Partners', 'underline-offset-4 mb-1' %>
-      </ul>
-      <ul>
-        <%= navbar_item 'services', services_path, 'Services', 'underline-offset-4 mb-1' %>
-        <%= navbar_item 'apps', apps_path, 'Apps', 'underline-offset-4 mb-1' %>
-        <%= navbar_item 'blog', blog_path, 'Blog', 'underline-offset-4 mb-1' %>
-        <%= navbar_item 'contact', contact_path, 'Contact', 'underline-offset-4 mb-1' %>
-        <%= navbar_item 'rechercher', rechercher_path, 'Rechercher', 'underline-offset-4 mb-1' %>
-      </ul>
-    </div>
-  </div> 
-  <div class="mx-auto text-center sm:text-left">
-    <span class="footer-title mx-auto sm:mx-0">Nos apps</span>
-    <ul>
-      <%= navbar_item 'planning', planning_path, 'Planning IAE', 'underline-offset-4 mb-1' %>
-      <%= navbar_item 'camino', camino_path, 'Camino', 'underline-offset-4 mb-1' %>
-      <%= navbar_item 'prestofacto', prestofacto_path, 'PrestoFacto', 'underline-offset-4 mb-1' %>
-      <%= navbar_item 'crystal_data', crystal_data_path, 'Crystal Data', 'underline-offset-4 mb-1' %>
-    </ul>
-  </div>
 </footer>
 <footer class="footer px-10 py-6 border-t bg-base-content text-neutral-content border-base-300">
   <span class="inline">
-    Copyright © 2023 - Tout droits réservés -
+    Copyright © 2012-2023 - Tout droits réservés -
     <%= link_to "Mentions Légales", mentions_legales_path, class:'hover:underline' %>
   </span>
   <div class="md:place-self-center md:justify-self-end">

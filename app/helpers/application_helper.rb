@@ -22,7 +22,7 @@ module ApplicationHelper
   # Create a custom renderer that sets a custom class for block-quotes.
   class CustomRender < Redcarpet::Render::HTML
     def header(text, header_level)
-      %(<h#{header_level} class="font-bold text-#{3 - header_level}xl my-6">#{text}</h#{header_level}>)
+      %(<h#{header_level} class="font-black text-#{3 - header_level}xl my-6">#{text}</h#{header_level}>)
     end
 
     def block_code(code, language)

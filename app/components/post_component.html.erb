@@ -1,6 +1,6 @@
 <%= link_to @post, data: { turbo_frame: "_top" } do %>
   <div class="my-6 lg:px-24">
-    <h2 class="text-3xl font-bold hover:underline">
+    <h2 class="text-3xl font-black hover:underline">
       <%= @post.title %>
     </h2>
     <p class="text-sm opacity-70">
@@ -9,7 +9,7 @@
     <div class="my-2">
       <%= render(TagListComponent.new(tags: @post.tag_list)) %>
     </div>
-    <p class="mt-4 mb-8 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
+    <p class="mt-4 mb-8 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-black first-letter:mr-3 first-letter:float-left">
       <%= truncate(@post.content,length: 220) %>
     </p>
     <div class="divider"></div> 
