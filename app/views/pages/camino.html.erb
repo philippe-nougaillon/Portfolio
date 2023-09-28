@@ -33,78 +33,44 @@
   <div id="carousel" class="carousel min-w-16 sm:w-3/4 mx-auto mt-24">
     <div id="slide1" class="carousel-item relative w-full">
       <%= image_tag "camino/projets.png" %>
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
-        <a href="#slide9" class="btn btn-circle btn-primary btn-outline shadow-lg">❮</a> 
-        <a href="#slide2" class="btn btn-circle btn-primary btn-outline shadow-lg" style="animation: pulse 2s infinite;">❯</a>
-      </div>
     </div> 
     <div id="slide2" class="carousel-item relative w-full">
       <%= image_tag "camino/projet.png" %>
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
-        <a href="#slide1" class="btn btn-circle btn-primary btn-outline shadow-lg">❮</a> 
-        <a href="#slide3" class="btn btn-circle btn-primary btn-outline shadow-lg">❯</a>
-      </div>
     </div> 
     <div id="slide3" class="carousel-item relative w-full">
       <%= image_tag "camino/todolist.png" %>
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
-        <a href="#slide2" class="btn btn-circle btn-primary btn-outline shadow-lg">❮</a> 
-        <a href="#slide4" class="btn btn-circle btn-primary btn-outline shadow-lg">❯</a>
-      </div>
     </div>
     <div id="slide4" class="carousel-item relative w-full">
       <%= image_tag "camino/todo.png" %>
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
-        <a href="#slide3" class="btn btn-circle btn-primary btn-outline shadow-lg">❮</a> 
-        <a href="#slide5" class="btn btn-circle btn-primary btn-outline shadow-lg">❯</a>
-      </div>
     </div>
     <div id="slide5" class="carousel-item relative w-full">
       <%= image_tag "camino/agenda.png" %>
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
-        <a href="#slide4" class="btn btn-circle btn-primary btn-outline shadow-lg">❮</a> 
-        <a href="#slide6" class="btn btn-circle btn-primary btn-outline shadow-lg">❯</a>
-      </div>
     </div>
     <div id="slide6" class="carousel-item relative w-full">
       <%= image_tag "camino/documents.png" %>
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
-        <a href="#slide5" class="btn btn-circle btn-primary btn-outline shadow-lg">❮</a> 
-        <a href="#slide7" class="btn btn-circle btn-primary btn-outline shadow-lg">❯</a>
-      </div>
     </div>
     <div id="slide7" class="carousel-item relative w-full">
       <%= image_tag "camino/tables.png" %>
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
-        <a href="#slide6" class="btn btn-circle btn-primary btn-outline shadow-lg">❮</a> 
-        <a href="#slide8" class="btn btn-circle btn-primary btn-outline shadow-lg">❯</a>
-      </div>
     </div>
     <div id="slide8" class="carousel-item relative w-full">
       <%= image_tag "camino/dashboard.png" %>
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
-        <a href="#slide7" class="btn btn-circle btn-primary btn-outline shadow-lg">❮</a> 
-        <a href="#slide9" class="btn btn-circle btn-primary btn-outline shadow-lg">❯</a>
-      </div>
     </div>
     <div id="slide9" class="carousel-item relative w-full">
       <%= image_tag "camino/user.png" %>
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-5 top-1/2">
-        <a href="#slide8" class="btn btn-circle btn-primary btn-outline shadow-lg">❮</a> 
-        <a href="#slide1" class="btn btn-circle btn-primary btn-outline shadow-lg">❯</a>
-      </div>
     </div>
   </div>
-  <div class="flex flex-wrap justify-center w-full gap-2 mt-4 mb-12">
-    <a href="#slide1" class="btn btn-primary btn-outline btn-xs">1</a> 
-    <a href="#slide2" class="btn btn-primary btn-outline btn-xs">2</a> 
-    <a href="#slide3" class="btn btn-primary btn-outline btn-xs">3</a> 
-    <a href="#slide4" class="btn btn-primary btn-outline btn-xs">4</a> 
-    <a href="#slide5" class="btn btn-primary btn-outline btn-xs">5</a> 
-    <a href="#slide6" class="btn btn-primary btn-outline btn-xs">6</a> 
-    <a href="#slide7" class="btn btn-primary btn-outline btn-xs">7</a> 
-    <a href="#slide8" class="btn btn-primary btn-outline btn-xs">8</a> 
-    <a href="#slide9" class="btn btn-primary btn-outline btn-xs">9</a>
+  <div data-controller="carousel-paginate">
+    <div class="flex flex-wrap justify-center w-full gap-2 mt-4">
+      <a href="#slide1" class="btn btn-primary btn-xs carousel-page" data-action="click->carousel-paginate#activate">1</a> 
+      <a href="#slide2" class="btn btn-primary btn-outline btn-xs carousel-page" data-action="click->carousel-paginate#activate">2</a> 
+      <a href="#slide3" class="btn btn-primary btn-outline btn-xs carousel-page" data-action="click->carousel-paginate#activate">3</a> 
+      <a href="#slide4" class="btn btn-primary btn-outline btn-xs carousel-page" data-action="click->carousel-paginate#activate">4</a> 
+      <a href="#slide5" class="btn btn-primary btn-outline btn-xs carousel-page" data-action="click->carousel-paginate#activate">5</a> 
+      <a href="#slide6" class="btn btn-primary btn-outline btn-xs carousel-page" data-action="click->carousel-paginate#activate">6</a> 
+      <a href="#slide7" class="btn btn-primary btn-outline btn-xs carousel-page" data-action="click->carousel-paginate#activate">7</a> 
+      <a href="#slide8" class="btn btn-primary btn-outline btn-xs carousel-page" data-action="click->carousel-paginate#activate">8</a> 
+      <a href="#slide9" class="btn btn-primary btn-outline btn-xs carousel-page" data-action="click->carousel-paginate#activate">9</a> 
+    </div>
   </div>
 </section>
 
