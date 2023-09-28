@@ -14,10 +14,6 @@
  *= require_self
  */
 
-html{
-  scroll-padding-top: 80px;
-}
-
 *{
   scroll-behavior: smooth !important;
 }
