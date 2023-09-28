@@ -242,14 +242,14 @@ fr:
       title: Accueil
     portfolio:
       title: Portfolio
-    a_propos:
-      title: À propos
+    qui_sommes_nous:
+      title: Qui sommes-nous ?
     nos_clients:
       title: Clients
     services:
       title: Services
-    apps:
-      title: Nos apps
+    logiciels:
+      title: Nos logiciels Open Source
     camino:
       title: Camino
     prestofacto:
@@ -257,9 +257,9 @@ fr:
     planning:
       title: Planning
     crystal_data:
-      title: Crystal Data
+      title: CrystalData
     contact:
-      title: Contact
+      title: Nous contacter
     contact_submit:
       title: Contact
     blog:
@@ -267,7 +267,7 @@ fr:
     rechercher:
       title: Rechercher
     partenaires:
-      title: Partenaires
+      title: Partners
     guide_planning:
       title: Guide Planning
     mentions_légales:
