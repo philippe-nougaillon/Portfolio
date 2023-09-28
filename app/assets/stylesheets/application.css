@@ -53,3 +53,11 @@ body{
 		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 	}
 }
+
+.hover-child-text-white:hover {
+	.badge{
+		background-color: hsl(var(--p)/var(--tw-bg-opacity));
+    color: hsl(var(--pc)/var(--tw-text-opacity));
+    border-color: hsl(var(--p)/var(--tw-border-opacity));
+	}
+}
