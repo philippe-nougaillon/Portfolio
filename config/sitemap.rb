@@ -26,13 +26,13 @@ SitemapGenerator::Sitemap.create do
   #   end
 
   add portfolio_path
-  add a_propos_path
+  add qui_sommes_nous_path
   add blog_path
   add nos_clients_path
   add contact_path
   add confidentialite_path
   add services_path
-  add apps_path
+  add logiciels_path
   add camino_path
   add prestofacto_path
   add planning_path

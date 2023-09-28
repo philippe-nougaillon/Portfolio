@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   controller :pages do
     get :home, to: 'pages#home'
     get :portfolio, to: 'pages#portfolio'
-    get :a_propos, to: 'pages#a_propos'
+    get :qui_sommes_nous, to: 'pages#qui_sommes_nous'
     get :blog, to: 'pages#blog'
     get :nos_clients, to: 'pages#nos_clients'
     get :contact, to: 'pages#contact'
@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     get :confidentialite, to: 'pages#confidentialite'
     get :rechercher, to: 'pages#rechercher'
     get :services, to: 'pages#services'
-    get :apps, to: 'pages#apps'
+    get :logiciels, to: 'pages#logiciels'
     get :camino, to: 'pages#camino'
     get :prestofacto, to: 'pages#prestofacto'
     get :crystal_data, to: 'pages#crystal_data'

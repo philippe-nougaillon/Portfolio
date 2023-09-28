@@ -40,7 +40,7 @@ class PagesController < ApplicationController
     end
   end
 
-  def a_propos
+  def qui_sommes_nous
   end
 
   def blog
@@ -86,7 +86,7 @@ class PagesController < ApplicationController
   def partenaires
   end
 
-  def apps
+  def logiciels
   end
 
   def camino
