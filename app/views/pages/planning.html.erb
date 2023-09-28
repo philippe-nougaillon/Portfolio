@@ -1,8 +1,12 @@
+<%= link_to planning_path, class:"hidden lg:flex fixed bottom-4 right-4 bg-accent w-16 h-16 text-white rounded-full items-center" do %>
+  <i class="fa-solid fa-chevron-up fa-2xl mx-auto"></i>
+<% end %>
+
 <section class="text-center mb-16">
   <h1 class="font-black text-6xl text-accent mb-12 pt-8">
     <i>Planning IAE</i>
   </h1>
-  <h2 class="text-3xl lg:text-4xl mb-12 !leading-10">
+  <h2 class="text-3xl lg:text-4xl mb-12 font-black !leading-10">
     Gérez toutes vos formations et vos salles avec
     <br> une solution simple, abordable et personnalisable
   </h2>
@@ -12,7 +16,7 @@
     <span class="font-black">des universités, écoles de commerce et instituts de formation spécialisés.</span>
   </h3>
 
-  <div class="carousel min-w-16 sm:w-3/4 mx-auto mt-24">
+  <div class="carousel min-w-16 sm:w-3/4 mx-auto mt-24 shadow-lg">
     <div id="slide1" class="carousel-item relative w-full">
       <%= image_tag "projets/planning iae-paris/screen_0.png", alt:"Liste des cours à venir" %>
     </div> 
@@ -52,7 +56,7 @@
   </div>
   <div data-controller="carousel-paginate">
     <div class="flex flex-wrap justify-center w-full gap-2 mt-4">
-      <a href="#slide1" class="btn btn-primary btn-xs carousel-page" data-action="click->carousel-paginate#activate">1</a> 
+      <a href="#slide1" class="btn btn-accent btn-xs carousel-page" data-action="click->carousel-paginate#activate">1</a> 
       <a href="#slide2" class="btn btn-primary btn-outline btn-xs carousel-page" data-action="click->carousel-paginate#activate">2</a> 
       <a href="#slide3" class="btn btn-primary btn-outline btn-xs carousel-page" data-action="click->carousel-paginate#activate">3</a> 
       <a href="#slide4" class="btn btn-primary btn-outline btn-xs carousel-page" data-action="click->carousel-paginate#activate">4</a> 
@@ -209,9 +213,9 @@
     <%= image_tag "projets/planning iae-paris/logo.png", class:"mx-auto mb-8" %>
     <blockquote>
       <p class="text-lg">
-        <i class="fa-solid fa-quote-left" style="color: #000000;"></i>
+        <i class="fa-solid fa-quote-left mr-2" style="color: #000000;"></i>
         Philippe Nougaillon propose des solutions pérennes, fiables et fait primer dans sa vision du développement la simplicité de la solution. Partisan de l'innovation frugale, il fournit à ses clients des solutions originales, robustes et parfaitement adaptées. Il a le sens de l'écoute et sait faire preuve d'une grande pédagogie dans les démarches agiles.
-        <i class="fa-solid fa-quote-right" style="color: #000000;"></i>
+        <i class="fa-solid fa-quote-right ml-2" style="color: #000000;"></i>
       </p>
       <div class="flex items-center jutify-center md:items-start md:justify-start flex-wrap md:flex-nowrap rounded-full bg-base-100 py-2 md:pr-4 w-full md:w-fit mx-auto mt-4">
         <%= image_tag "https://www.iae-paris.com/sites/default/files/styles/360x265/public/2022-05/Eynaud.jpg?itok=Kp7pAjfj", class:"mask mask-circle h-24 mx-auto hidden md:block" %>
@@ -276,7 +280,7 @@
       </div>
       <div class="flex flex-col flex-1">
         <i class="fa-solid fa-envelope-open fa-2xl mb-4"></i>
-        <p class="text-2xl font-black my-4">MailLog</p>
+        <p class="text-2xl font-black my-4">Mail Log</p>
         <p>
           Accédez à l'historique des envois de notification aux étudiants et aux intervenants.
           Identifiez plus facilement les adresses erronées et les notifications non lues.
@@ -312,11 +316,11 @@
         GNU General Public License v3.0
       </p>
     </div>
-    <%= link_to "Voir la page GitHub du projet ➡", "https://github.com/philippe-nougaillon/Planning_IAE", class: "link-primary hover:underline text-xl" %>
+    <%= link_to "Voir la page GitHub du projet ➡", "https://github.com/philippe-nougaillon/Planning_IAE", class: "link link-primary text-xl" %>
   </div>
   <div class="flex-1 mx-auto md:w-2/3">
-    <%= image_tag "logos/framalibre.webp", class:"mb-24" %>
-    <%= image_tag "logos/adullact.png" %>
+    <%= image_tag "logos/adullact.png", class:"mb-24" %>
+    <%= image_tag "logos/framalibre.webp" %>
   </div>
 </section>
 
@@ -334,15 +338,14 @@
           <p class="flex-1 card-title">
             Open source 
           </p>
-          <div class="badge badge-info"><b>SOLO</b></div>
         </div>
         <hr>
         <ul class="text-left">
-          <li><span class="text-success text-2xl mr-4"><b><i class="fa-solid fa-check"></i></b></span>Déployez gratuitement l'application Ruby depuis le GitHub</li>
-          <li><span class="text-success text-2xl mr-4"><b><i class="fa-solid fa-check"></i></b></span>Hébergez le projet sur votre propre infrastructure</li>
-          <li><span class="text-success text-2xl mr-4"><b><i class="fa-solid fa-check"></i></b></span>Vos équipes IT se chargent de la maintenance</li>
-          <li><span class="text-success text-2xl mr-4"><b><i class="fa-solid fa-check"></i></b></span>Vous profitez gratuitement des dernières mises à jour</li>
-          <li><span class="text-success text-2xl mr-4"><b><i class="fa-solid fa-check"></i></b></span>Nombre d'utilisateurs illimité</li>
+          <li class="font-black"><span class="text-success text-2xl mr-4"><b><i class="fa-solid fa-check"></i></b></span>Déployez gratuitement l'application Ruby depuis le GitHub</li>
+          <li class="font-black"><span class="text-success text-2xl mr-4"><b><i class="fa-solid fa-check"></i></b></span>Hébergez le projet sur votre propre infrastructure</li>
+          <li class="font-black"><span class="text-success text-2xl mr-4"><b><i class="fa-solid fa-check"></i></b></span>Vos équipes IT se chargent de la maintenance</li>
+          <li class="font-black"><span class="text-success text-2xl mr-4"><b><i class="fa-solid fa-check"></i></b></span>Vous profitez gratuitement des dernières mises à jour</li>
+          <li class="font-black"><span class="text-success text-2xl mr-4"><b><i class="fa-solid fa-check"></i></b></span>Nombre d'utilisateurs illimité</li>
         </ul>
       </div>
     </div>
@@ -350,17 +353,17 @@
       <div class="card-body items-center text-center">
         <div class="flex gap-2">
           <p class="flex-1 card-title">
-            750 € / Mois
+            Offre PRO
           </p>
-          <div class="badge badge-info"><b>PRO</b></div>
+          <div class="badge badge-info badge-lg"><b>750 € / Mois</b></div>
         </div>
         <hr>
         <ul class="text-left">
-          <li><span class="text-success text-2xl mr-4"><b><i class="fa-solid fa-check"></i></b></span>Nous assurons le déploiement de votre outil</li>
-          <li><span class="text-success text-2xl mr-4"><b><i class="fa-solid fa-check"></i></b></span>Nous importons vos utilisateurs, cours et données existantes</li>
-          <li><span class="text-success text-2xl mr-4"><b><i class="fa-solid fa-check"></i></b></span>Nous assurons accompagnement et maintenance 24 h / 24, 7 j / 7</li>
-          <li><span class="text-success text-2xl mr-4"><b><i class="fa-solid fa-check"></i></b></span>Nous développons vos fonctionnalités sur-mesure</li>
-          <li><span class="text-success text-2xl mr-4"><b><i class="fa-solid fa-check"></i></b></span>Nombre d'utilisateurs illimité</li>
+          <li class="font-black"><span class="text-success text-2xl mr-4"><b><i class="fa-solid fa-check"></i></b></span>Nous assurons le déploiement de votre outil</li>
+          <li class="font-black"><span class="text-success text-2xl mr-4"><b><i class="fa-solid fa-check"></i></b></span>Nous importons vos utilisateurs, cours et données existantes</li>
+          <li class="font-black"><span class="text-success text-2xl mr-4"><b><i class="fa-solid fa-check"></i></b></span>Nous assurons accompagnement et maintenance 24 h / 24, 7 j / 7</li>
+          <li class="font-black"><span class="text-success text-2xl mr-4"><b><i class="fa-solid fa-check"></i></b></span>Nous développons vos fonctionnalités sur-mesure</li>
+          <li class="font-black"><span class="text-success text-2xl mr-4"><b><i class="fa-solid fa-check"></i></b></span>Nombre d'utilisateurs illimité</li>
         </ul>
       </div>
     </div>
@@ -377,25 +380,27 @@
       <div class="flex flex-col items-center">
         <!-- Ajouter ring de daisyUI (avatar)-->
           <%= image_tag "partners/philippe.webp",
-            class: "mask mask-circle object-contain h-48 w-96 mx-auto opacity-70 mb-6"
+            class: "mask mask-squircle object-contain h-48 w-96 mx-auto opacity-70 mb-6"
           %>
-        <h4 class="font-bold text-xl">
+        <h4 class="font-bold text-2xl">
           Philippe
         </h4>
-        <h5 class="italic">
+        <h5 class="italic text-xl">
           Product Manager
           <br>
-          Développeur Senior Ruby on Rails
+          Développeur Senior
+          <br>
+          Ruby on Rails
         </h5>
       </div>
       <div class="flex flex-col items-center">
         <%= image_tag "partners/pierre-emmanuel.webp",
-          class: "mask mask-circle object-contain h-48 w-96 mx-auto opacity-70 mb-6"
+          class: "mask mask-squircle object-contain h-48 w-96 mx-auto opacity-70 mb-6"
         %>
-        <h4 class="font-bold text-xl">
+        <h4 class="font-bold text-2xl">
           Pierre-Emmanuel
         </h4>
-        <h5 class="italic">
+        <h5 class="italic text-xl">
           Développeur Ruby on Rails
         </h5>
       </div>
@@ -412,7 +417,7 @@
             </label>
           </div>
           <%= recaptcha_tags unless %w[localhost 127.0.0.1].include?(request.host) %>
-          <button class="btn btn-success" data-turbo="false">Demandez une démonstration</button>
+          <button class="btn btn-success text-xl" data-turbo="false">Demandez une démonstration</button>
         </div>
       <% end %>
     </div>
