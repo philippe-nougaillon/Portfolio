@@ -1,5 +1,5 @@
 <% tag_cloud(@tags, %w(badge-sm badge badge-md badge-lg)) do |tag, css_class| %>
-    <%= link_to url_for(params.permit!.merge(tag: tag.name)), data: { turbo_frame: "results_frame" }, class: "#{tag.name == params[:tag] ? "" : "hover-child-text-white" }" do %>
+    <%= link_to url_for(params.permit!.merge(tag: tag.name)), data: { turbo_frame: "results_frame" }, class: "hidden lg:visible #{tag.name == params[:tag] ? "" : "hover-child-badge-primary" }" do %>
         <span class="inline-block align-bottom badge <%= css_class %> <%= tag.name == params[:tag] ? "badge-primary" : "badge-outline hover:badge-primary" %>">
             <span class=""><%= tag.name.humanize %></span>
             <% if params[:tag] == tag.name %>

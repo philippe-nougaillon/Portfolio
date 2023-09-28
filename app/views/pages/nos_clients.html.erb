@@ -5,7 +5,7 @@
   </h1>
 
   <%= turbo_frame_tag "results_frame" do %>
-    <div class="mx-auto max-w-max m-16 mt-6 lg:px-24">
+    <div class="invisible lg:visible mx-auto max-w-max m-16 mt-6 lg:px-24">
       <%= render(TagCloudComponent.new(tags: @tags)) %>
     </div>
 

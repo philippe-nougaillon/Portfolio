@@ -54,7 +54,7 @@ body{
 	}
 }
 
-.hover-child-text-white:hover {
+.hover-child-badge-primary:hover {
 	.badge{
 		background-color: hsl(var(--p)/var(--tw-bg-opacity));
     color: hsl(var(--pc)/var(--tw-text-opacity));
