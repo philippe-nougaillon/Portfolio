@@ -1,7 +1,12 @@
 <%= turbo_frame_tag "main_frame" do %>
+    <%
+  set_meta_tags(
+    description: "Rechercher à travers tout le site"
+  )
+  %>
   <section>
-    <h1 class="font-black text-5xl lg:text-6xl text-center text-accent mb-24 pt-8">
-      <i>Rechercher</i>
+    <h1 class="font-black text-5xl lg:text-6xl text-center text-accent mb-24 pt-8 italic">
+      <%= title "Rechercher" %>
     </h1>
 
     <div class="flex justify-center mb-24">

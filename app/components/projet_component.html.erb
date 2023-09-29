@@ -35,11 +35,11 @@
         <div class="mx-auto">
           <div id="<%= dom_id @projet %>">
 
-            <h1 class="my-8 text-4xl font-black text-primary">
+            <h2 class="my-8 text-4xl font-black text-primary">
               <span class="underline underline-offset-8">
                 <%= @projet.nom.upcase %>
               </span>
-            </h1>
+            </h2>
 
             <p class="my-8">
               <% @projet.tags.each do |tag| %>

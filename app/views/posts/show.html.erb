@@ -7,7 +7,7 @@
     <p class="mb-3 text-sm opacity-70"><%= @post.date.strftime("%d/%m/%Y") if @post.date %></p>
     
     <h1 class="text-4xl font-black underline underline-offset-8 mb-6">
-      <%= page_title! @post.title %>
+      <%= title @post.title %>
     </h1>
     
     <div class="mb-6">

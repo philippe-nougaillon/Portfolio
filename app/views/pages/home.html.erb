@@ -1,9 +1,15 @@
+<%
+  set_meta_tags(
+    title: "Bienvenue"
+  )
+%>
+
 <div class="hero min-h-screen top-0 -mt-12" style="background-image: url(<%= asset_path('background.webp') %>)">
   <div class="hero-overlay bg-opacity-60"></div>
   <div class="hero-content text-center text-neutral-content flex-col">
     <p class="mb-5 text-2xl">Notre ambition</p>
     <h1 class="mb-5 text-4xl lg:text-5xl font-black">
-      Traduire les besoins clients en une solution simple, robuste, pérenne et parfaitement adaptée.
+      <%= description "Traduire les besoins clients en une solution simple, robuste, pérenne et parfaitement adaptée." %>
     </h1>
   </div>
 </div>

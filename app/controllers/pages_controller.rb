@@ -71,9 +71,6 @@ class PagesController < ApplicationController
     end
   end
 
-  def confidentialite
-  end
-
   def services
   end
 

@@ -37,7 +37,7 @@ SitemapGenerator::Sitemap.create do
   add prestofacto_path
   add crystal_data_path
   add blog_path
-  add confidentialite_path
+  add mentions_legales_path
 
   Post.where(published: true).find_each do |post|
     add post_path(post), lastmod: post.updated_at

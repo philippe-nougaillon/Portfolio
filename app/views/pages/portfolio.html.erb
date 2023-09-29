@@ -1,7 +1,12 @@
 <%= turbo_frame_tag "main_frame" do %>
+  <%
+  set_meta_tags(
+    description: "Nos derniers projets"
+  )
+  %>
   <section>
-    <h1 class="font-black text-5xl lg:text-6xl text-center text-accent pt-8">
-      <i>Portfolio</i>
+    <h1 class="font-black text-5xl lg:text-6xl text-center text-accent pt-8 italic">
+      <%= title "Portfolio" %>
     </h1>
 
     <%= turbo_frame_tag "results_frame" do %>

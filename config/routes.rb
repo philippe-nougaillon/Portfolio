@@ -13,7 +13,6 @@ Rails.application.routes.draw do
     get :nos_clients, to: 'pages#nos_clients'
     get :contact, to: 'pages#contact'
     post :contact, to: 'pages#contact_submit'
-    get :confidentialite, to: 'pages#confidentialite'
     get :rechercher, to: 'pages#rechercher'
     get :services, to: 'pages#services'
     get :logiciels, to: 'pages#logiciels'
