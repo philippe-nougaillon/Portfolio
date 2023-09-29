@@ -103,3 +103,5 @@ gem "page_title_helper", "~> 6.0"
 gem "rack-rewrite", "~> 1.5"
 
 gem "canonical-rails", "~> 0.2.14"
+
+gem "meta-tags", "~> 2.18"

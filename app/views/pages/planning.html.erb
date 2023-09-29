@@ -1,29 +1,4 @@
-<%= link_to planning_path, id: 'fab', class:"hidden lg:flex fixed bottom-4 right-4 bg-accent w-12 h-12 text-white rounded-full items-center z-50" do %>
-  <i class="fa-solid fa-chevron-up fa mx-auto"></i>
-<% end %>
-<script>
-  // Sélectionnez l'élément que vous souhaitez afficher au scroll
-  var elementToAppear = document.getElementById("fab");
-  elementToAppear.style.display = "none";
-
-  // Définissez la hauteur à partir de laquelle l'élément doit apparaître
-  var heightToAppear = 1400; // par exemple, 300 pixels
-
-  // Ajoutez un gestionnaire d'événement scroll à la fenêtre
-  window.addEventListener("scroll", function() {
-      // Récupérez la position actuelle de défilement
-      var scrollPosition = window.scrollY || window.pageYOffset;
-
-      // Vérifiez si la position de défilement est supérieure ou égale à la hauteur de déclenchement
-      if (scrollPosition >= heightToAppear) {
-          // Modifiez le style de l'élément pour le rendre visible
-          elementToAppear.style.display = "flex";
-      } else {
-          // Si la position de défilement est inférieure à la hauteur de déclenchement, masquez l'élément
-          elementToAppear.style.display = "none";
-      }
-  });
-</script>
+<%= display_meta_tags description: "Gérez toutes vos formations et vos salles avec une solution simple, abordable et personnalisable" %>
 
 <section class="text-center mb-16">
   <h1 class="font-black text-6xl text-accent mb-12 pt-8">
@@ -446,3 +421,30 @@
     </div>
   </div>
 </section>
+
+<%= link_to planning_path, id: 'fab', class:"hidden lg:flex fixed bottom-4 right-4 bg-accent w-12 h-12 text-white rounded-full items-center z-50" do %>
+  <i class="fa-solid fa-chevron-up fa mx-auto"></i>
+<% end %>
+<script>
+  // Sélectionnez l'élément que vous souhaitez afficher au scroll
+  var elementToAppear = document.getElementById("fab");
+  elementToAppear.style.display = "none";
+
+  // Définissez la hauteur à partir de laquelle l'élément doit apparaître
+  var heightToAppear = 1400; // par exemple, 300 pixels
+
+  // Ajoutez un gestionnaire d'événement scroll à la fenêtre
+  window.addEventListener("scroll", function() {
+      // Récupérez la position actuelle de défilement
+      var scrollPosition = window.scrollY || window.pageYOffset;
+
+      // Vérifiez si la position de défilement est supérieure ou égale à la hauteur de déclenchement
+      if (scrollPosition >= heightToAppear) {
+          // Modifiez le style de l'élément pour le rendre visible
+          elementToAppear.style.display = "flex";
+      } else {
+          // Si la position de défilement est inférieure à la hauteur de déclenchement, masquez l'élément
+          elementToAppear.style.display = "none";
+      }
+  });
+</script>
