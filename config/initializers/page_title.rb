@@ -1,1 +1,0 @@
-PageTitleHelper.options[:app] = 'P&P'
