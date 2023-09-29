@@ -1,6 +1,29 @@
-<%= link_to planning_path, class:"hidden lg:flex fixed bottom-4 right-4 bg-accent w-16 h-16 text-white rounded-full items-center" do %>
-  <i class="fa-solid fa-chevron-up fa-2xl mx-auto"></i>
+<%= link_to planning_path, id: 'fab', class:"hidden lg:flex fixed bottom-4 right-4 bg-accent w-12 h-12 text-white rounded-full items-center z-50" do %>
+  <i class="fa-solid fa-chevron-up fa mx-auto"></i>
 <% end %>
+<script>
+  // Sélectionnez l'élément que vous souhaitez afficher au scroll
+  var elementToAppear = document.getElementById("fab");
+  elementToAppear.style.display = "none";
+
+  // Définissez la hauteur à partir de laquelle l'élément doit apparaître
+  var heightToAppear = 1400; // par exemple, 300 pixels
+
+  // Ajoutez un gestionnaire d'événement scroll à la fenêtre
+  window.addEventListener("scroll", function() {
+      // Récupérez la position actuelle de défilement
+      var scrollPosition = window.scrollY || window.pageYOffset;
+
+      // Vérifiez si la position de défilement est supérieure ou égale à la hauteur de déclenchement
+      if (scrollPosition >= heightToAppear) {
+          // Modifiez le style de l'élément pour le rendre visible
+          elementToAppear.style.display = "flex";
+      } else {
+          // Si la position de défilement est inférieure à la hauteur de déclenchement, masquez l'élément
+          elementToAppear.style.display = "none";
+      }
+  });
+</script>
 
 <section class="text-center mb-16">
   <h1 class="font-black text-6xl text-accent mb-12 pt-8">
@@ -71,9 +94,9 @@
     </div>
   </div>
 
-  <div class="flex flex-wrap justify-center gap-4 mt-24">
-    <%= link_to "Vous êtes gestionnaire de formation", planning_path(anchor: "bref"), class: 'btn btn-accent sm:btn-lg' %>
-    <%= link_to "Vous êtes administrateur", planning_path(anchor: "details_fonctionnalites"), class: 'btn btn-secondary sm:btn-lg' %>
+  <div class="hidden lg:flex flex-wrap justify-center gap-4 mt-24">
+    <%= link_to "Vous êtes gestionnaire de formation", planning_path(anchor: "bref"), class: 'btn btn-accent sm:btn-lg max-w-full' %>
+    <%= link_to "Vous êtes administrateur", planning_path(anchor: "details_fonctionnalites"), class: 'btn btn-secondary sm:btn-lg max-w-full' %>
   </div>
 </section>
 
@@ -134,7 +157,6 @@
       <%= image_tag "logos/GoogleCalendar.svg", width: "50px" %>
 
     </div>
-    <%# link_to "Demandez une présentation ->", contact_path, class: "link-primary" %>
   </div>
 </section>
 
@@ -233,7 +255,7 @@
   </div>
 </section>
 
-<section id="details_fonctionnalites" class="bg-secondary text-secondary-content mx-auto w-full text-center pt-24">
+<section class="bg-secondary text-secondary-content mx-auto w-full text-center pt-24">
   <h2 class="apps-title text-center !mb-12">
     Une solution fiable et durable.
     <br>
@@ -255,6 +277,7 @@
           Simplifiez la prévision de vos plans d'activité avec la fonctionnalité Nouvelle Saison. Réservez en masse les créneaux horaires de chaque formation pour une année scolaire complète.
         </p>
       </div>
+      <div id="details_fonctionnalites"></div>
       <div class="flex flex-col flex-1">
         <i class="fa-solid fa-gears fa-2xl mb-4"></i>
         <p class="text-2xl font-black my-4">Workflows intelligents</p>
@@ -376,7 +399,7 @@
     Notre équipe s'engage à vous proposer des solutions parfaitement adaptées à vos besoins, un accompagnement humain et un support technique disponible en cas de besoin.
   </p>
   <div class="flex flex-wrap items-center gap-8 mt-24">
-    <div class="flex flex-1 flex-wrap lg:flex-nowrap gap-8">
+    <div class="flex flex-1 flex-wrap lg:flex-nowrap gap-8 justify-center">
       <div class="flex flex-col items-center">
         <!-- Ajouter ring de daisyUI (avatar)-->
           <%= image_tag "partners/philippe.webp",
@@ -417,7 +440,7 @@
             </label>
           </div>
           <%= recaptcha_tags unless %w[localhost 127.0.0.1].include?(request.host) %>
-          <button class="btn btn-success text-xl" data-turbo="false">Demandez une démonstration</button>
+          <button class="btn btn-success sm:text-xl max-w-full" data-turbo="false">Demandez une démonstration</button>
         </div>
       <% end %>
     </div>

@@ -1,21 +1,23 @@
 <%= turbo_frame_tag "main_frame" do %>
-  <h1 class="font-black text-5xl lg:text-6xl text-center text-accent pt-8">
-    <i>Portfolio</i>
-  </h1>
+  <section>
+    <h1 class="font-black text-5xl lg:text-6xl text-center text-accent pt-8">
+      <i>Portfolio</i>
+    </h1>
 
-  <%= turbo_frame_tag "results_frame" do %>
-    <%= render(StatComponent.new(
-                nbr_projets: @projets.count, 
-                nbr_commits: @projets_commits, 
-                nbr_deploys: @projets_deploys, 
-                nbr_coffees: @projets_coffees)) %>
+    <%= turbo_frame_tag "results_frame" do %>
+      <%= render(StatComponent.new(
+                  nbr_projets: @projets.count, 
+                  nbr_commits: @projets_commits, 
+                  nbr_deploys: @projets_deploys, 
+                  nbr_coffees: @projets_coffees)) %>
 
-    <div class="mx-auto max-w-max m-8 pl-4">
-      <%= render(TagCloudComponent.new(tags: @tags)) %>
-    </div>
+      <div class="mx-auto max-w-max m-8 pl-4">
+        <%= render(TagCloudComponent.new(tags: @tags)) %>
+      </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mx-4 my-6">
-      <%= render(ProjetComponent.with_collection(@projets, user_signed_in: user_signed_in?))%>
-    </div>
-  <% end %>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mx-4 my-6">
+        <%= render(ProjetComponent.with_collection(@projets, user_signed_in: user_signed_in?))%>
+      </div>
+    <% end %>
+  </section>
 <% end %>
