@@ -27,7 +27,7 @@
   </span>
   <div class="md:place-self-center md:justify-self-end">
     <div class="grid grid-flow-col gap-4">
-      <%= mail_to "contact@philnoug.com" do %>
+      <%= link_to contact_path do %>
         <i class="fa-solid fa-envelope fa-2xl"></i>
       <% end %>
       <%= link_to "https://www.linkedin.com/in/philnoug", target: "_blank" do %>
