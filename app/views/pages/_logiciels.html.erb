@@ -1,18 +1,18 @@
 <section>
   <div class="text-center">
-    <h1 class="font-black <%= (action_name != "home") ? 'text-5xl lg:text-6xl' : 'text-4xl lg:text-5xl' %> text-accent pt-8 italic">
+    <h1 class="font-black <%= (action_name != "home") ? 'text-5xl lg:text-6xl' : 'text-4xl lg:text-5xl my-12' %> text-accent pt-8 italic">
       Nos logiciels Open Source
     </h1>
 
-    <h2 class="xl:text-2xl mt-6 px-10 mb-6">
+    <h2 class="xl:text-2xl mt-6 lg:px-10 mb-12">
       Nous avons produit plusieurs logiciels libres, publiés en Open-Source,
       en assurons la maintenance et l'évolution
       pour le compte d'entités publiques et d'un établissement de l'enseignement supérieur
     </h3>
   </div>
 
-  <div class="flex flex-col justify-between gap-4 md:gap-8 lg:gap-16 mx-4 md:mx-8 lg:mx-16 my-6">
-    <div class="flex flex-wrap justify-between w-full gap-4 md:gap-8 lg:gap-16">
+  <div class="flex flex-col justify-between gap-4 md:gap-8 lg:gap-16 md:mx-8 lg:mx-16 my-6">
+    <div class="flex flex-wrap justify-between w-full gap-4 lg:gap-8">
 
       <%= link_to crystal_data_path, class:"flex-1 min-w-fit sm:min-w-min" do %>
         <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white h-full">
@@ -48,7 +48,7 @@
       <% end %>
     </div>
 
-    <div class="flex flex-wrap justify-between w-full gap-4 md:gap-8 lg:gap-16">
+    <div class="flex flex-wrap justify-between w-full gap-4 lg:gap-8">
 
       <%= link_to prestofacto_path, class:"flex-1 min-w-fit sm:min-w-min" do %>
         <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white h-full">
