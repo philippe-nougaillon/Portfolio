@@ -26,7 +26,7 @@
           <%= text_area_tag :contenu, params[:contenu], class:"textarea textarea-bordered w-full", rows: 3, required: true %>
         </div>
         <%= recaptcha_tags unless %w[localhost 127.0.0.1].include?(request.host) %>
-        <%= submit_tag "Envoyer", class:"btn btn-secondary btn-outline" %>
+        <%= submit_tag "Envoyer", class:"btn btn-secondary btn-outline", 'data-turbo': false %>
       </div>
     </div>
   </section>
