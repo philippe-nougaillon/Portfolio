@@ -431,7 +431,7 @@
           <div class="form-control">
             <label class="input-group">
               <span class="text-black">Email</span>
-              <input type="email" class="input input-bordered w-full" required="true" />
+              <%= email_field_tag :email, nil, class: 'input input-bordered w-full', required: true %>
             </label>
           </div>
           <%= recaptcha_tags unless %w[localhost 127.0.0.1].include?(request.host) %>
