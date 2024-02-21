@@ -15,9 +15,6 @@
     content: "• ";
     color: darkred;
   }
-  #camino * {
-    font-size: 20px;
-  }
 </style>
 
 <section>
@@ -74,8 +71,8 @@
   </div>
 </section>
 
-<div class="mx-auto px-2 lg:px-12">
-  <div id="camino">
+<div class="px-8">
+  <div id="camino" class="text-xl">
 
     <h3 class="apps-title">
       Gérez vos projets, en équipe et en mobilité (Suivi d'interventions, GMAO, etc...)
@@ -140,35 +137,34 @@
       </div>
     </div>
     <br>
-
-    <h3 class="apps-title">Projet open-source</h3>
-    <p>
-      Les sources de ce projet sont disponibles ici :
-      <%= link_to "https://github.com/philippe-nougaillon/Camino2", "https://github.com/philippe-nougaillon/Camino2", class:'link', target: '_blank' %>
-    </p>
-
-    <h3 class="apps-title">Développement</h3>
-    <p>
-      CAMINO est développé et maintenu par 
-      <%= link_to 'Philippe NOUGAILLON (Consulting IT)', root_path, class: 'link' %>
-    </p>
-
-    <h3 class="apps-title">Démonstration</h3>
-    <p>
-      Envie de tester le produit ?
-      <%= link_to "Lancer l'instance de démonstration", 'https://camino2.philnoug.com/', class:'link', target: '_blank' %>
-    </p>
-
-    <h3 class="apps-title">Support et services</h3>
-    <p>
-      Vous souhaitez une nouvelle fonctionnalité ou installer CAMINO sur votre serveur Linux ?
-      <%= link_to 'Consultez-nous', '/contact', class: 'link' %>
-    </p>
-
-    <h3 class="apps-title">En savoir plus ?</h3>
-    <p>
-      <%= link_to "Voir en détail les fonctionnalités", 'https://camino2.philnoug.com/about', class: 'link', target: '_blank' %>
-    </p>
-
   </div>
+
+  <p>
+    Pour en savoir plus, veuillez consulter
+    <%= link_to "le guide d'utilisation", 'https://camino2.philnoug.com/about', class: 'link', target: '_blank' %>
+  </p>
+
+  <h3 class="apps-title">Démonstration</h3>
+  <p>
+    Envie de tester le produit ?
+    <%= link_to "Lancer l'instance de démonstration", 'https://camino2.philnoug.com/', class:'link', target: '_blank' %>
+  </p>
+
+  <h3 class="apps-title">Projet libre (open-source)</h3>
+  <p>
+    Les sources de ce projet sont disponibles ici :
+    <%= link_to "https://github.com/philippe-nougaillon/Camino2", "https://github.com/philippe-nougaillon/Camino2", class:'link', target: '_blank' %>
+  </p>
+
+  <h3 class="apps-title">Développement</h3>
+  <p>
+    Camino est développé et maintenu par 
+    <%= link_to 'Philippe NOUGAILLON (Consulting IT)', root_path, class: 'link' %>
+  </p>
+
+  <h3 class="apps-title">Support et services</h3>
+  <p>
+    Vous souhaitez une nouvelle fonctionnalité ou installer Camino sur votre serveur Linux ?
+    <%= link_to 'Consultez notre offre de services', '/contact', class: 'link' %>
+  </p>
 </div>
