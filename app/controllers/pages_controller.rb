@@ -74,14 +74,11 @@ class PagesController < ApplicationController
   def services
   end
 
-  def rechercher
-    unless params[:search].blank?
-      @results = PgSearch.multisearch("%#{ params[:search] }%")
-    end
-  end
-
-  def partenaires
-  end
+  # def rechercher
+  #   unless params[:search].blank?
+  #     @results = PgSearch.multisearch("%#{ params[:search] }%")
+  #   end
+  # end
 
   def logiciels
   end

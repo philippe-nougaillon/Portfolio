@@ -13,7 +13,6 @@ Rails.application.routes.draw do
     get :nos_clients, to: 'pages#nos_clients'
     get :contact, to: 'pages#contact'
     post :contact, to: 'pages#contact_submit'
-    get :rechercher, to: 'pages#rechercher'
     get :services, to: 'pages#services'
     get :logiciels, to: 'pages#logiciels'
     get :camino, to: 'pages#camino'
@@ -21,7 +20,6 @@ Rails.application.routes.draw do
     get :crystal_data, to: 'pages#crystal_data'
     get :planning, to: 'pages#planning'
     get :guide_planning, to: 'pages#guide_planning'
-    get :partenaires, to: 'pages#partenaires'
     get :mentions_légales, to: 'pages#mentions_légales', as: :mentions_legales
   end
 
