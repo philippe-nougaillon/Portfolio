@@ -13,60 +13,6 @@
 
   <div class="flex flex-col justify-between gap-4 md:gap-8 lg:gap-16 md:mx-8 lg:mx-16 my-6">
     <div class="flex flex-wrap justify-between w-full gap-4 lg:gap-8">
-
-      <%= link_to crystal_data_path, class:"flex-1 min-w-fit sm:min-w-min" do %>
-        <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white h-full">
-          <%= image_tag "crystaldata/accueil.png", class:"object-fill w-full" %>
-          <div class="card-body">
-            <hr>
-            <h2 class="card-title text-xl lg:text-2xl text-accent underline underline-offset-8">
-              CrystalData
-            </h2>
-            <p class="my-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-black first-letter:mr-3 first-letter:float-left">
-              Application NO-CODE de base de données en ligne. Vos données métier 'In da Cloud' ! 
-              <br><br>
-              Elle permet de créer des collections d'objets métiers variés (Clients, Interventions, Technicien, Frais, Projets, etc.), de les lier entre elles (Clients <-> Interventions <-> Techniciens), et de les partager avec vos collaborateurs.
-            </p>
-          </div>
-        </div>
-      <% end %>
-
-      <%= link_to camino_path, class:"flex-1 min-w-fit sm:min-w-min", 'data-turbo': false do %>
-        <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white h-full">
-          <%= image_tag "projets/camino/screen_0.png", class:"object-fill w-full" %>
-          <div class="card-body">
-            <hr>
-            <h2 class="card-title text-xl lg:text-2xl text-accent underline underline-offset-8">
-              Camino
-            </h2>
-            <p class="my-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-black first-letter:mr-3 first-letter:float-left">
-              Application Web de gestion de projets, en équipe et en mobilité.
-              <br><br>
-              Elle permet de gérer des projets, des tâches, des ressources, des plannings, des documents, des discussions, etc.
-          </div>
-        </div>
-      <% end %>
-    </div>
-
-    <div class="flex flex-wrap justify-between w-full gap-4 lg:gap-8">
-
-      <%= link_to prestofacto_path, class:"flex-1 min-w-fit sm:min-w-min" do %>
-        <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white h-full">
-          <%= image_tag "projets/prestofacto/screen_0.png", class:"object-fill w-full" %>
-          <div class="card-body">
-            <hr>
-            <h2 class="card-title text-xl lg:text-2xl text-accent underline underline-offset-8">
-              PrestoFacto
-            </h2>
-            <p class="my-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-black first-letter:mr-3 first-letter:float-left">
-              Application de gestion et de facturation des services journaliers.
-              <br><br>
-              Aide les petites organisations dans la gestion et la facturation de leurs prestations (repas, garderie, activités périscolaires, nuitée d'hébergement, colonie de vacances, etc.).
-            </p>
-          </div>
-        </div>
-      <% end %>
-
       <%= link_to planning_path, class:"flex-1 min-w-fit sm:min-w-min", 'data-turbo': false do %>
         <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white h-full">
           <%= image_tag "projets/planning iae-paris/screen_0.png", class:"object-fill w-full" %>
@@ -85,6 +31,57 @@
         </div>
       <% end %>
 
+      <%= link_to crystal_data_path, class:"flex-1 min-w-fit sm:min-w-min", 'data-turbo': false do %>
+        <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white h-full">
+          <%= image_tag "crystaldata/table.png", class:"object-fill w-full pb-9" %>
+          <div class="card-body">
+            <hr>
+            <h2 class="card-title text-xl lg:text-2xl text-accent underline underline-offset-8">
+              CrystalData
+            </h2>
+            <p class="my-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-black first-letter:mr-3 first-letter:float-left">
+              Application NO-CODE de base de données en ligne. Vos données métier 'In da Cloud' ! 
+              <br><br>
+              Elle permet de créer des collections d'objets métiers variés (Clients, Interventions, Technicien, Frais, Projets, etc.), de les lier entre elles (Clients <-> Interventions <-> Techniciens), et de les partager avec vos collaborateurs.
+            </p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="flex flex-wrap justify-between w-full gap-4 lg:gap-8">
+      <%= link_to camino_path, class:"flex-1 min-w-fit sm:min-w-min", 'data-turbo': false do %>
+        <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white h-full">
+          <%= image_tag "projets/camino/screen_0.png", class:"object-fill w-full" %>
+          <div class="card-body">
+            <hr>
+            <h2 class="card-title text-xl lg:text-2xl text-accent underline underline-offset-8">
+              Camino
+            </h2>
+            <p class="my-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-black first-letter:mr-3 first-letter:float-left">
+              Application Web de gestion de projets, en équipe et en mobilité.
+              <br><br>
+              Elle permet de gérer des projets, des tâches, des ressources, des plannings, des documents, des discussions, etc.
+          </div>
+        </div>
+      <% end %>
+
+      <%= link_to prestofacto_path, class:"flex-1 min-w-fit sm:min-w-min", 'data-turbo': false do %>
+        <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white h-full">
+          <%= image_tag "projets/prestofacto/screen_0.png", class:"object-fill w-full" %>
+          <div class="card-body">
+            <hr>
+            <h2 class="card-title text-xl lg:text-2xl text-accent underline underline-offset-8">
+              PrestoFacto
+            </h2>
+            <p class="my-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-black first-letter:mr-3 first-letter:float-left">
+              Application de gestion et de facturation des services journaliers.
+              <br><br>
+              Aide les petites organisations dans la gestion et la facturation de leurs prestations (repas, garderie, activités périscolaires, nuitée d'hébergement, colonie de vacances, etc.).
+            </p>
+          </div>
+        </div>
+      <% end %>
     </div>
 
   </div>
