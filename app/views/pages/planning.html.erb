@@ -354,8 +354,9 @@
       <div class="card-body items-center text-center">
         <div class="flex gap-2">
           <p class="flex-1 card-title">
-            open-source 
+            Offre libre (open source)
           </p>
+          <div class="badge badge-info badge-lg"><b>Gratuit</b></div>
         </div>
         <hr>
         <ul class="text-left">
@@ -435,7 +436,7 @@
             </label>
           </div>
           <%= recaptcha_tags unless %w[localhost 127.0.0.1].include?(request.host) %>
-          <button class="btn btn-success sm:text-xl max-w-full" data-turbo="false">Demandez une démonstration</button>
+          <button class="btn btn-success sm:text-xl max-w-full" data-turbo="false">Demander une démonstration</button>
         </div>
       <% end %>
     </div>
