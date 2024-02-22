@@ -18,7 +18,7 @@
 </style>
 
 <section>
-  <div class="text-center mb-16">
+  <div class="text-center">
     <h1 class="font-black text-5xl lg:text-6xl text-accent mb-6 pt-8 italic">
       <%= title "Camino" %>
     </h1>
@@ -26,8 +26,9 @@
       <%= description "Gérer vos projets, en équipe et en mobilité" %>
     </h2>
   </div>
+</section>
 
-  <div id="carousel" class="carousel min-w-16 sm:w-3/4 mx-auto mt-24 shadow-lg">
+  <div id="carousel" class="carousel min-w-16 sm:w-3/4 mx-auto shadow-lg">
     <div id="slide1" class="carousel-item relative w-full">
       <%= image_tag "camino/projets.png" %>
     </div> 
@@ -69,9 +70,8 @@
       <a href="#slide9" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">9</a> 
     </div>
   </div>
-</section>
 
-<div class="px-8">
+<div class="px-8 mt-12">
   <div id="camino" class="text-xl">
 
     <h3 class="apps-title">

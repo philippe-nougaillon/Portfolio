@@ -35,7 +35,7 @@
         <div class="mx-auto">
           <div id="<%= dom_id @projet %>">
 
-            <h2 class="my-8 text-4xl font-black text-primary">
+            <h2 class="my-8 text-4xl font-black text-accent">
               <span class="underline underline-offset-8">
                 <%= @projet.nom.upcase %>
               </span>
@@ -43,7 +43,7 @@
 
             <p class="my-8">
               <% @projet.tags.each do |tag| %>
-                <div class="badge badge-accent badge-outline"><%= tag %></div>
+                <div class="badge badge-primary badge-outline"><%= tag %></div>
               <% end %>
             </p>
             <br>
