@@ -28,7 +28,6 @@ SitemapGenerator::Sitemap.create do
   add qui_sommes_nous_path
   add logiciels_path
   add services_path
-  add partenaires_path
   add nos_clients_path
   add portfolio_path
   add contact_path
@@ -38,6 +37,8 @@ SitemapGenerator::Sitemap.create do
   add crystal_data_path
   add blog_path
   add mentions_legales_path
+  add emargements_path
+  add guide_planning_path
 
   Post.where(published: true).find_each do |post|
     add post_path(post), lastmod: post.updated_at
