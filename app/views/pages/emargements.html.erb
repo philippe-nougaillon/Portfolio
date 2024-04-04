@@ -1,0 +1,45 @@
+<section class="text-center">
+  <h1 class="font-black text-5xl lg:text-6xl text-accent mb-6 pt-8 italic">
+    <%= title "Émargements" %>
+  </h1>
+  <h2 class="text-lg xl:text-2xl px-6">
+    <%= description "Feuille de présences numériques" %>
+  </h2>
+</section>
+
+
+<div class="px-8">
+  <p class="text-xl my-12">
+    Vous souhaitez remplacer vos feuillez de présences papier par une solution numérique, simple et automatique ?
+    <br><br>
+    Cette application permet de créér des assemblées, d'y associer des participants et de leur envoyer automatiquement 
+    un lien vers un formulaire de signature, 10 minutes avant le début de l'assemblée.
+    <br><br>
+    Pour une confidentialité renforcée, les données de signature stockées dans la base de données sont chiffrées 
+    (<%= link_to "Active Record Encryption", "https://guides.rubyonrails.org/active_record_encryption.html", class:'link', target: '_blank' %>).
+  </p>
+
+  <h3 class="apps-title">Démonstration</h3>
+  <p>
+      Envie de tester l'application ?
+      <%= link_to "Lancer l'instance de démonstration", 'https://emargements.philnoug.com', class:'link', target: '_blank' %>
+  </p>
+
+  <h3 class="apps-title">Projet libre (open-source)</h3>
+  <p>
+      Les sources de ce projet sont disponibles ici :
+      <%= link_to "github.com/philippe-nougaillon/emargements", "https://github.com/philippe-nougaillon/emargements", class:'link', target: '_blank' %>
+  </p> 
+
+  <h3 class="apps-title">Développement</h3>
+  <p>
+      Cette application est développée et maintenue par 
+      <%= link_to 'Philippe NOUGAILLON (Consulting IT)', root_path, class:'link' %>
+  </p>
+
+  <h3 class="apps-title">Support et services</h3>
+  <p>
+      Vous souhaitez une nouvelle fonctionnalité ou l'installer sur votre serveur Linux ?
+      <%= link_to 'Consultez notre offre de services', '/services', class:'link' %>
+  </p>
+</div>

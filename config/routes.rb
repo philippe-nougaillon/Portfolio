@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     get :crystal_data, to: 'pages#crystal_data'
     get :planning, to: 'pages#planning'
     get :guide_planning, to: 'pages#guide_planning'
+    get :emargements, to: 'pages#emargements'
     get :mentions_légales, to: 'pages#mentions_légales', as: :mentions_legales
   end
 

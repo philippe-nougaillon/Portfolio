@@ -84,5 +84,28 @@
       <% end %>
     </div>
 
+    <div class="flex flex-wrap justify-between w-full gap-4 lg:gap-8">
+      <%= link_to emargements_path, class:"flex-1 min-w-fit sm:min-w-min", 'data-turbo': false do %>
+        <div class="card shadow hover:shadow-xl cursor-pointer duration-300 bg-white h-full">
+          <%= image_tag "", class:"object-fill w-full" %>
+          <div class="card-body">
+            <hr>
+            <h2 class="card-title text-xl lg:text-2xl text-accent underline underline-offset-8">
+              Émargements
+            </h2>
+            <p class="my-4 first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-black first-letter:mr-3 first-letter:float-left">
+              Feuille de présences numériques
+              <br><br>
+              Vous souhaitez remplacer vos feuillez de présences papier par une solution numérique, simple et automatique ?
+            </p>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="flex-1 min-w-fit sm:min-w-min">
+      </div>
+
+    </div>
+
   </div>
 </section>
