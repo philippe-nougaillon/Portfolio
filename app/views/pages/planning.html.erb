@@ -462,19 +462,19 @@
 
   <h3 class="text-2xl font-black my-4">Projet libre (open-source)</h3>
   <p>
-    Les sources de ce projet (v3) sont disponibles ici :
-    <%= link_to "github.com/philippe-nougaillon/IAE_Planning", "https://github.com/philippe-nougaillon/IAE_Planning/", class:'link', target: '_blank' %>
+    Les sources du projet sont disponibles ici :
+    <%= link_to "github.com/philippe-nougaillon/Planning_IAE", "https://github.com/philippe-nougaillon/Planning_IAE/", class:'link', target: '_blank' %>
   </p> 
 
   <h3 class="text-2xl font-black my-4">Développement</h3>
   <p>
-    CrystalData est développé et maintenu par 
+    Ce projet est développé et maintenu par 
     <%= link_to 'Philippe NOUGAILLON (Consulting IT)', root_path, class:'link' %>
   </p>
 
   <h3 class="text-2xl font-black my-4">Support et services</h3>
   <p>
-    Vous souhaitez une nouvelle fonctionnalité ou installer CrystalData sur votre serveur Linux ?
+    Vous souhaitez une nouvelle fonctionnalité ou l'installer sur votre serveur Linux ?
     <%= link_to 'Consultez notre offre de services', '/services', class:'link' %>
   </p>
 </section>
@@ -482,6 +482,7 @@
 <%= link_to planning_path, id: 'fab', class:"hidden lg:flex fixed bottom-4 right-4 bg-accent w-12 h-12 text-white rounded-full items-center z-50" do %>
   <i class="fa-solid fa-chevron-up fa mx-auto"></i>
 <% end %>
+
 <script>
   // Sélectionnez l'élément que vous souhaitez afficher au scroll
   var elementToAppear = document.getElementById("fab");
