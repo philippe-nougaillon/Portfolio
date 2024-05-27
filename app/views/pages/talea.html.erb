@@ -1,0 +1,70 @@
+<section class="text-center">
+  <h1 class="font-black text-5xl lg:text-6xl text-accent mb-6 pt-8 italic">
+    <%= title "TALEA 2" %>
+  </h1>
+  <h2 class="text-lg xl:text-2xl px-6">
+    <%= description "Application de gestion des Interventions" %>
+  </h2>
+</section>
+
+<div class="px-8">
+    <p class= "text-xl font-black">
+        L'objectif de cette application est de dématérialiser et de gérer le flux de travail d'un service technique et ainsi d'améliorer significativement l'efficacité des processus internes.
+    </p>
+
+    <p class="text-xl my-8">
+        Poins forts de l'application :
+        <br><br> 
+        Un Workflow simple pour suivre le statut de chaque Intervention (Nouveau, Accepté, En cours, Terminé, Validé, Archivé).
+        <br>
+        Une information claire et partagée entre les parties prenantes et les services (Client/Adhérent, Agent technique, Manager, Comptabilité, Archives)
+        <br>
+        Une référence unique et sur tous les supports (PC/Smartphone)
+        <br>
+    </p>
+
+    <p class="text-xl mt-8">
+        Composition d'une Intervention : 
+        <ul class="list-disc p-8">
+            <li>Description</li>
+            <li>Tags (Urgent, etc.)</li>
+            <li>Client</li>
+            <li>Assignée à</li>
+            <li>Statut (Nouveau, Accepté, En cours, Terminé, Validé, Archivé)</li>
+            <li>Temps passé et temps de pause</li>
+            <li>Photos</li>
+            <li>Commentaires</li>
+            <li>Evaluation</li>
+            <li>Fonctionnalités</li>
+            <li>Recherche et filtres</li>
+            <li>Export Excel des interventions</li>
+            <li>Notification par email des parties prenantes sur changement de Statut</li>
+            <li>Audit trail des modifications (Activité de la base de données)</li>
+        </ul>
+    </p>
+
+  <h3 class="apps-title">Démonstration</h3>
+  <p>
+      Envie de tester l'application ?
+      <%= link_to "Lancer l'instance de démonstration", 'https://talea2-c8c89babd5ea.herokuapp.com/', class:'link', target: '_blank' %>
+  </p>
+
+  <h3 class="apps-title">Développement</h3>
+  <p>
+      Cette application est développée et maintenue par 
+      <%= link_to 'Philippe NOUGAILLON (Consulting IT)', root_path, class:'link' %>
+  </p>
+
+  <h3 class="apps-title">Support et services</h3>
+  <p>
+      Vous souhaitez une nouvelle fonctionnalité ou l'installer sur votre serveur Linux ?
+      <%= link_to 'Consultez notre offre de services', '/services', class:'link' %>
+  </p>
+
+  <h3 class="apps-title">Projet libre (open-source)</h3>
+  <p>
+      Les sources de ce projet sont disponibles ici :
+      <%= link_to "github.com/philippe-nougaillon/talea2", "https://github.com/philippe-nougaillon/talea2", class:'link', target: '_blank' %>
+  </p> 
+
+</div>

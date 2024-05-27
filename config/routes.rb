@@ -11,8 +11,6 @@ Rails.application.routes.draw do
     get :qui_sommes_nous, to: 'pages#qui_sommes_nous'
     get :blog, to: 'pages#blog'
     get :nos_clients, to: 'pages#nos_clients'
-    get :contact, to: 'pages#contact'
-    post :contact, to: 'pages#contact_submit'
     get :services, to: 'pages#services'
     get :logiciels, to: 'pages#logiciels'
     get :camino, to: 'pages#camino'
@@ -21,7 +19,10 @@ Rails.application.routes.draw do
     get :planning, to: 'pages#planning'
     get :guide_planning, to: 'pages#guide_planning'
     get :emargements, to: 'pages#emargements'
+    get :talea, to: 'pages#talea'
     get :mentions_légales, to: 'pages#mentions_légales', as: :mentions_legales
+    get :contact, to: 'pages#contact'
+    post :contact, to: 'pages#contact_submit'
   end
 
   root 'pages#home'

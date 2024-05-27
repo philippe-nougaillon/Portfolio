@@ -7,61 +7,60 @@
   </h2>
 </section>
 
-  <div id="carousel" class="carousel min-w-16 sm:w-3/4 mx-auto shadow-lg">
-    <div id="slide1" class="carousel-item relative w-full">
-      <%= image_tag "emargements/admin.png" %>
-    </div> 
-    <div id="slide2" class="carousel-item relative w-full">
-      <%= image_tag "emargements/assemblee_form.png" %>
-    </div>
-    <div id="slide3" class="carousel-item relative w-full">
-      <%= image_tag "emargements/assemblees.png" %>
-    </div>
-    <div id="slide4" class="carousel-item relative w-full">
-      <%= image_tag "emargements/signature.png" %>
-    </div>
-    <div id="slide5" class="carousel-item relative w-full">
-      <%= image_tag "emargements/emargements.png" %>
-    </div>
-    <div id="slide6" class="carousel-item relative w-full">
-      <%= image_tag "emargements/maillogs.png" %>
-    </div>
-    <div id="slide7" class="carousel-item relative w-full">
-      <%= image_tag "emargements/audits.png" %>
-    </div>
-    <div id="slide8" class="carousel-item relative w-full">
-      <%= image_tag "emargements/emargements_pdf.png" %>
-    </div>
-    <div id="slide9" class="carousel-item relative w-full">
-      <%= image_tag "emargements/tuto.png" %>
-    </div>
-    <div id="slide10" class="carousel-item relative w-full">
-      <%= image_tag "emargements/organisation_form.png" %>
-    </div>
-    <div id="slide11" class="carousel-item relative w-full">
-      <%= image_tag "emargements/import_form.png" %>
-    </div>
-    <div id="slide12" class="carousel-item relative w-full">
-      <%= image_tag "emargements/tuto_fini.png" %>
-    </div>
+<div id="carousel" class="carousel min-w-16 sm:w-3/4 mx-auto shadow-lg">
+  <div id="slide1" class="carousel-item relative w-full">
+    <%= image_tag "emargements/admin.png" %>
+  </div> 
+  <div id="slide2" class="carousel-item relative w-full">
+    <%= image_tag "emargements/assemblee_form.png" %>
   </div>
-  <div data-controller="carousel-paginate">
-    <div class="flex flex-wrap justify-center w-full gap-2 mt-4">
-      <a href="#slide1" class="btn btn-accent hover:btn-accent btn-xs carousel-page" data-action="click->carousel-paginate#activate">1</a> 
-      <a href="#slide2" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">2</a> 
-      <a href="#slide3" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">3</a> 
-      <a href="#slide4" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">4</a> 
-      <a href="#slide5" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">5</a> 
-      <a href="#slide6" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">6</a> 
-      <a href="#slide7" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">7</a> 
-      <a href="#slide8" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">8</a> 
-      <a href="#slide9" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">9</a> 
-      <a href="#slide10" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">10</a> 
-      <a href="#slide11" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">11</a> 
-      <a href="#slide12" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">12</a> 
-    </div>
+  <div id="slide3" class="carousel-item relative w-full">
+    <%= image_tag "emargements/assemblees.png" %>
   </div>
-
+  <div id="slide4" class="carousel-item relative w-full">
+    <%= image_tag "emargements/signature.png" %>
+  </div>
+  <div id="slide5" class="carousel-item relative w-full">
+    <%= image_tag "emargements/emargements.png" %>
+  </div>
+  <div id="slide6" class="carousel-item relative w-full">
+    <%= image_tag "emargements/maillogs.png" %>
+  </div>
+  <div id="slide7" class="carousel-item relative w-full">
+    <%= image_tag "emargements/audits.png" %>
+  </div>
+  <div id="slide8" class="carousel-item relative w-full">
+    <%= image_tag "emargements/emargements_pdf.png" %>
+  </div>
+  <div id="slide9" class="carousel-item relative w-full">
+    <%= image_tag "emargements/tuto.png" %>
+  </div>
+  <div id="slide10" class="carousel-item relative w-full">
+    <%= image_tag "emargements/organisation_form.png" %>
+  </div>
+  <div id="slide11" class="carousel-item relative w-full">
+    <%= image_tag "emargements/import_form.png" %>
+  </div>
+  <div id="slide12" class="carousel-item relative w-full">
+    <%= image_tag "emargements/tuto_fini.png" %>
+  </div>
+</div>
+<div data-controller="carousel-paginate">
+  <div class="flex flex-wrap justify-center w-full gap-2 mt-4">
+    <a href="#slide1" class="btn btn-accent hover:btn-accent btn-xs carousel-page" data-action="click->carousel-paginate#activate">1</a> 
+    <a href="#slide2" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">2</a> 
+    <a href="#slide3" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">3</a> 
+    <a href="#slide4" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">4</a> 
+    <a href="#slide5" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">5</a> 
+    <a href="#slide6" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">6</a> 
+    <a href="#slide7" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">7</a> 
+    <a href="#slide8" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">8</a> 
+    <a href="#slide9" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">9</a> 
+    <a href="#slide10" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">10</a> 
+    <a href="#slide11" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">11</a> 
+    <a href="#slide12" class="btn btn-primary btn-outline btn-xs carousel-page hover:btn-accent" data-action="click->carousel-paginate#activate">12</a> 
+  </div>
+</div>
 
 <div class="px-8">
   <p class="text-xl my-12">
