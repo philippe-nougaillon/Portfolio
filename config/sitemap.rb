@@ -39,9 +39,10 @@ SitemapGenerator::Sitemap.create do
   add mentions_legales_path
   add emargements_path
   add guide_planning_path
+  add talea_path
 
   Post.where(published: true).find_each do |post|
     add post_path(post), lastmod: post.updated_at
   end
-  
+
 end
